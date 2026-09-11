@@ -1,0 +1,14 @@
+node_modules/
+__pycache__/
+*.pyc
+.env
+venv/
+env/
+.DS_Store
+dist/
+build/
+# IMPORTANT: Ignore the source dataset files to prevent committing large private images
+ai/computer_vision/dataset_source/
+ai/computer_vision/dataset/
+data/raw/
+data/processed/

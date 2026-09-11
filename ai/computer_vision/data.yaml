@@ -1,0 +1,12 @@
+# Future YOLO configuration file
+path: ../dataset
+train: images/train
+val: images/val
+test: images/test
+
+# Classes
+nc: 3
+names:
+  0: open_damaged_manhole
+  1: damaged_missing_road_sign
+  2: road_waterlogging
