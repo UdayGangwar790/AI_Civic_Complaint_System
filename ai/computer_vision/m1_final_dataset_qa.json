@@ -1,0 +1,284 @@
+{
+  "directory_structure": {
+    "expected": [
+      "data.yaml",
+      "dataset_manifest.json",
+      "final_split_report.md",
+      "images",
+      "labels"
+    ],
+    "actual": [
+      "data.yaml",
+      "dataset_manifest.json",
+      "final_split_report.md",
+      "images",
+      "labels"
+    ],
+    "unexpected": [],
+    "missing": [],
+    "pass": true
+  },
+  "image_counts_and_pairing": {
+    "split_counts": {
+      "images": {
+        "train": 210,
+        "val": 60,
+        "test": 30
+      },
+      "labels": {
+        "train": 210,
+        "val": 60,
+        "test": 30
+      }
+    },
+    "total_images": 300,
+    "total_labels": 300,
+    "orphan_images_count": 0,
+    "orphan_images": [],
+    "orphan_labels_count": 0,
+    "orphan_labels": [],
+    "pass": true
+  },
+  "image_validation": {
+    "verified_count": 300,
+    "corrupt_count": 0,
+    "corrupt_files": [],
+    "min_dimensions": {
+      "width": 512,
+      "height": 384
+    },
+    "max_dimensions": {
+      "width": 720,
+      "height": 720
+    },
+    "unique_dimensions": {
+      "720x720": 100,
+      "640x640": 100,
+      "512x384": 100
+    },
+    "color_modes": {
+      "RGB": 300
+    },
+    "formats": {
+      "JPEG": 300
+    },
+    "pass": true
+  },
+  "label_validation": {
+    "total_rows": 679,
+    "rows_per_class": {
+      "0": 188,
+      "1": 52,
+      "2": 439
+    },
+    "invalid_rows_count": 0,
+    "invalid_rows": [],
+    "empty_label_files_count": 50,
+    "single_object_files_count": 96,
+    "multi_object_files_count": 154,
+    "pass": true
+  },
+  "class_consistency": {
+    "images_per_class_split": {
+      "train": {
+        "0": 70,
+        "1": 70,
+        "2": 70
+      },
+      "val": {
+        "0": 20,
+        "1": 20,
+        "2": 20
+      },
+      "test": {
+        "0": 10,
+        "1": 10,
+        "2": 10
+      }
+    },
+    "boxes_per_class_split": {
+      "train": {
+        "0": 133,
+        "1": 36,
+        "2": 315
+      },
+      "val": {
+        "0": 39,
+        "1": 11,
+        "2": 85
+      },
+      "test": {
+        "0": 16,
+        "1": 5,
+        "2": 39
+      }
+    },
+    "total_images_per_class": {
+      "0": 100,
+      "1": 100,
+      "2": 100
+    },
+    "unexpected_class_ids": [],
+    "pass": true
+  },
+  "bounding_box_statistics": {
+    "per_class": {
+      "0": {
+        "total_boxes": 188,
+        "boxes_per_total_image": 1.88,
+        "boxes_per_positive_image": 1.88,
+        "width": {
+          "min": 0.0458,
+          "max": 0.7111,
+          "avg": 0.2365
+        },
+        "height": {
+          "min": 0.0236,
+          "max": 0.5125,
+          "avg": 0.1659
+        },
+        "area": {
+          "min": 0.0013,
+          "max": 0.322,
+          "avg": 0.0477
+        }
+      },
+      "1": {
+        "total_boxes": 52,
+        "boxes_per_total_image": 0.52,
+        "boxes_per_positive_image": 1.0,
+        "width": {
+          "min": 0.4274,
+          "max": 1.0,
+          "avg": 0.8063
+        },
+        "height": {
+          "min": 0.627,
+          "max": 1.0,
+          "avg": 0.8757
+        },
+        "area": {
+          "min": 0.2876,
+          "max": 0.988,
+          "avg": 0.7131
+        }
+      },
+      "2": {
+        "total_boxes": 439,
+        "boxes_per_total_image": 4.39,
+        "boxes_per_positive_image": 4.48,
+        "width": {
+          "min": 0.0215,
+          "max": 0.9922,
+          "avg": 0.196
+        },
+        "height": {
+          "min": 0.026,
+          "max": 0.8125,
+          "avg": 0.2758
+        },
+        "area": {
+          "min": 0.0023,
+          "max": 0.8062,
+          "avg": 0.0545
+        }
+      }
+    },
+    "tiny_boxes_count": 0,
+    "large_boxes_count": 44,
+    "boundary_touching_boxes_count": 304
+  },
+  "duplicate_analysis": {
+    "exact_duplicates_count": 0,
+    "exact_duplicates": {},
+    "cross_split_near_duplicates_count": 0,
+    "cross_split_near_duplicates": [],
+    "pass": true
+  },
+  "waterlogging_scene_leakage": {
+    "total_waterlogging_images": 100,
+    "total_base_scenes": 38,
+    "train_scenes_count": 26,
+    "train_scenes": [
+      "waterloggingt-1-_jpg",
+      "waterloggingt-100-_jpg",
+      "waterloggingt-101-_jpg",
+      "waterloggingt-105-_jpg",
+      "waterloggingt-106-_jpg",
+      "waterloggingt-107-_jpg",
+      "waterloggingt-108-_jpg",
+      "waterloggingt-109-_jpg",
+      "waterloggingt-11-_jpg",
+      "waterloggingt-110-_jpg",
+      "waterloggingt-111-_jpg",
+      "waterloggingt-112-_jpg",
+      "waterloggingt-113-_jpg",
+      "waterloggingt-114-_jpg",
+      "waterloggingt-115-_jpg",
+      "waterloggingt-116-_jpg",
+      "waterloggingt-12-_jpg",
+      "waterloggingt-121-_jpg",
+      "waterloggingt-123-_jpg",
+      "waterloggingt-124-_jpg",
+      "waterloggingt-125-_jpg",
+      "waterloggingt-127-_jpg",
+      "waterloggingt-129-_jpg",
+      "waterloggingt-13-_jpg",
+      "waterloggingt-131-_jpg",
+      "waterloggingt-14-_jpg"
+    ],
+    "val_scenes_count": 8,
+    "val_scenes": [
+      "waterloggingt-10-_jpg",
+      "waterloggingt-102-_jpg",
+      "waterloggingt-117-_jpg",
+      "waterloggingt-119-_jpg",
+      "waterloggingt-122-_jpg",
+      "waterloggingt-128-_jpg",
+      "waterloggingt-130-_jpg",
+      "waterloggingt-31-_jpg"
+    ],
+    "test_scenes_count": 4,
+    "test_scenes": [
+      "waterloggingt-103-_jpg",
+      "waterloggingt-104-_jpg",
+      "waterloggingt-126-_jpg",
+      "waterloggingt-145-_jpg"
+    ],
+    "leaking_scenes_count": 0,
+    "leaking_scenes": {},
+    "pass": true
+  },
+  "manifest_consistency": {
+    "manifest_entries_count": 300,
+    "disk_files_count": 300,
+    "errors_count": 0,
+    "errors": [],
+    "pass": true
+  },
+  "data_yaml_validation": {
+    "yaml_file": "C:\\Users\\sushm\\OneDrive\\Desktop\\CIVKI\\ai\\computer_vision\\dataset\\data.yaml",
+    "errors": [],
+    "pass": true
+  },
+  "source_integrity": {
+    "source_counts": {
+      "dataset_source/Manhole": 100,
+      "dataset_source/DamagedSign": 100,
+      "dataset_source/waterlogging": 100,
+      "prepared_sources/manhole_cvki": 100,
+      "prepared_sources/road_sign_cvki": 99,
+      "prepared_sources/waterlogging_cvki": 94,
+      "replacement_sources/road_sign_replacement": 1,
+      "replacement_sources/waterlogging_replacement": 6
+    },
+    "source_modified": false,
+    "pass": true
+  },
+  "reproducibility": {
+    "random_seed": 42,
+    "split_method": "Deterministic Group-Aware Stratified Split (Seed 42)",
+    "pass": true
+  },
+  "final_status": "PASS"
+}

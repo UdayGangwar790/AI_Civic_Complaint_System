@@ -1,0 +1,2208 @@
+{
+  "audit_version": "M1.1",
+  "timestamp": "2026-09-12T11:10:59.077182",
+  "active_dataset_source": {
+    "DamagedSign": {
+      "dataset_name": "DamagedSign",
+      "root_directory": "C:\\Users\\sushm\\OneDrive\\Desktop\\CIVKI\\ai\\computer_vision\\dataset_source\\DamagedSign",
+      "pairing": {
+        "matched_count": 99,
+        "images_without_labels": [
+          "IMG_8903_jpg.rf.617150b5aba1f59762738a5d40af8395"
+        ],
+        "labels_without_images": [
+          "IMG_8293_jpg.rf.86fbdf8b1834f50ea9081a439ab6fbf5"
+        ]
+      },
+      "image_audit": {
+        "total_images": 100,
+        "formats": {
+          "JPEG": 100
+        },
+        "color_modes": {
+          "RGB": 100
+        },
+        "dimensions": {
+          "640x640": 100
+        },
+        "corrupt_count": 0,
+        "corrupt_files": [],
+        "exact_duplicates_count": 0,
+        "exact_duplicate_groups": {},
+        "unique_base_scenes": 92,
+        "augmentation_groups_count": 8,
+        "augmentation_groups": {
+          "IMG_8087_jpg": [
+            "IMG_8087_jpg.rf.794668ab97e5f13c372785cb90fc6354.jpg",
+            "IMG_8087_jpg.rf.f2438568feccf315a62621e6ce71d2d6.jpg"
+          ],
+          "IMG_8106_jpg": [
+            "IMG_8106_jpg.rf.4f7cbc8381810784ed363d38fa6a6925.jpg",
+            "IMG_8106_jpg.rf.8d160e11f0d971014935202b89f94c12.jpg"
+          ],
+          "IMG_8121_jpg": [
+            "IMG_8121_jpg.rf.c6c742d01d11db2700a86a91fd935c72.jpg",
+            "IMG_8121_jpg.rf.ef798e00c15eb0c6a2c01ff31e667b9d.jpg"
+          ],
+          "IMG_8128_jpg": [
+            "IMG_8128_jpg.rf.b17b28d9ace18bdae99b61de6553d2f7.jpg",
+            "IMG_8128_jpg.rf.f5d5650f0e4713cd10d5f08f421e1b0c.jpg"
+          ],
+          "IMG_8162_jpg": [
+            "IMG_8162_jpg.rf.4a661c09d362cb49b7f00c0069aef17e.jpg",
+            "IMG_8162_jpg.rf.a45e967cba9e65fb7d4c280853f86f99.jpg"
+          ],
+          "IMG_8669_jpg": [
+            "IMG_8669_jpg.rf.52e74a17e8c276a3b37e03d3742b3beb.jpg",
+            "IMG_8669_jpg.rf.876cb547a20ac0519b150763a3f7e5d4.jpg"
+          ],
+          "IMG_8776_jpg": [
+            "IMG_8776_jpg.rf.06a91ea69ba33f868eecd63ae2816d6d.jpg",
+            "IMG_8776_jpg.rf.f68f4335acf5b546b264562161076554.jpg"
+          ],
+          "IMG_9029_jpg": [
+            "IMG_9029_jpg.rf.cfced0352f72a57dadb7c273c636d444.jpg",
+            "IMG_9029_jpg.rf.fd037d113b091d214657c4d461e6413f.jpg"
+          ]
+        }
+      },
+      "label_audit": {
+        "count": 100,
+        "empty_files": [],
+        "total_annotations": 104,
+        "detection_bbox_count": 99,
+        "polygon_count": 5,
+        "other_count": 0,
+        "malformed_rows": [],
+        "class_distribution_annotations": {
+          "0": 51,
+          "1": 53
+        },
+        "class_distribution_images": {
+          "0": 51,
+          "1": 49
+        },
+        "image_class_combinations": {
+          "[1]": 49,
+          "[0]": 51
+        },
+        "coords_strictly_out_of_bounds": [],
+        "bbox_edges_out_of_bounds": [
+          {
+            "file": "IMG_8106_jpg.rf.8d160e11f0d971014935202b89f94c12.txt",
+            "line_no": 1,
+            "xmin": 0.29464843749999997,
+            "ymin": 0.19642968750000006,
+            "xmax": 0.7583515624999999,
+            "ymax": 1.0000078125
+          },
+          {
+            "file": "IMG_8128_jpg.rf.b17b28d9ace18bdae99b61de6553d2f7.txt",
+            "line_no": 1,
+            "xmin": 0.16295312499999998,
+            "ymin": 0.013398437500000082,
+            "xmax": 0.772421875,
+            "ymax": 1.0000078125
+          },
+          {
+            "file": "IMG_8156_jpg.rf.e359e1437b412861e33a3efe95cd89b9.txt",
+            "line_no": 1,
+            "xmin": 0.24776562500000004,
+            "ymin": -7.812499999981792e-06,
+            "xmax": 0.8205156250000001,
+            "ymax": 0.9439453124999999
+          },
+          {
+            "file": "IMG_8191_jpg.rf.b6d858d205940011c9ec968ee737d5c9.txt",
+            "line_no": 2,
+            "xmin": 0.3191953125,
+            "ymin": 0.8571484374999999,
+            "xmax": 0.9999921875,
+            "ymax": 1.0000078124999998
+          },
+          {
+            "file": "IMG_8252_jpg.rf.665eb53db93325c8ee65d1cd01a29fda.txt",
+            "line_no": 1,
+            "xmin": 0.3102734375000001,
+            "ymin": 0.10267968750000006,
+            "xmax": 0.7997890625000001,
+            "ymax": 1.0000078125
+          },
+          {
+            "file": "IMG_8285_jpg.rf.15391a4adf5bd9145becb507d0ddf4cf.txt",
+            "line_no": 1,
+            "xmin": 0.25892187499999997,
+            "ymin": 0.029023437500000082,
+            "xmax": 0.782265625,
+            "ymax": 1.0000078125
+          },
+          {
+            "file": "IMG_8308_jpg.rf.5af1cce884957933ad04f5968370b1b4.txt",
+            "line_no": 1,
+            "xmin": 0.02455468750000006,
+            "ymin": 0.04686718749999996,
+            "xmax": 1.0000078125,
+            "ymax": 0.9282578125000001
+          },
+          {
+            "file": "IMG_8355_jpg.rf.fcda9e37ac50cc6576c5b17ce81dabfc.txt",
+            "line_no": 1,
+            "xmin": 0.28124999999999994,
+            "ymin": 0.08705468750000006,
+            "xmax": 0.7951874999999999,
+            "ymax": 1.0000078125
+          },
+          {
+            "file": "IMG_8374_jpg.rf.0f23b566057ed1b7c46374521aa959bd.txt",
+            "line_no": 1,
+            "xmin": 0.22321875000000002,
+            "ymin": -7.812499999981792e-06,
+            "xmax": 0.7812187500000001,
+            "ymax": 0.9751640625
+          },
+          {
+            "file": "IMG_8379_jpg.rf.99445c98efc204f3787b27496a5c2f7d.txt",
+            "line_no": 1,
+            "xmin": 0.0,
+            "ymin": -7.812499999981792e-06,
+            "xmax": 1.0,
+            "ymax": 0.8833203125
+          },
+          {
+            "file": "IMG_8385_jpg.rf.bdf28ca3ab2a803ca457af9bd1142571.txt",
+            "line_no": 1,
+            "xmin": 0.22321875000000002,
+            "ymin": 0.18080468750000006,
+            "xmax": 0.71678125,
+            "ymax": 1.0000078125
+          },
+          {
+            "file": "IMG_8750_jpg.rf.d564325675a78c06111472a423828109.txt",
+            "line_no": 1,
+            "xmin": 0.0,
+            "ymin": 0.00892968750000006,
+            "xmax": 0.99684375,
+            "ymax": 1.0000078125
+          },
+          {
+            "file": "IMG_8795_jpg.rf.1494bfedc8d16c1542454d551cf0d199.txt",
+            "line_no": 1,
+            "xmin": -7.812499999981792e-06,
+            "ymin": 0.011171874999999942,
+            "xmax": 0.8023515625,
+            "ymax": 0.965046875
+          }
+        ],
+        "zero_or_negative_wh": [],
+        "polygon_details": [
+          {
+            "file": "IMG_8702_jpg.rf.06c73635e3a4fe0e5f612862ae8144e5.txt",
+            "line_no": 1,
+            "class_id": 0,
+            "tokens": 19,
+            "num_points": 9
+          },
+          {
+            "file": "IMG_8725_jpg.rf.1c6802aebb5d2ae4eb86a86edc09054b.txt",
+            "line_no": 1,
+            "class_id": 0,
+            "tokens": 9,
+            "num_points": 4
+          },
+          {
+            "file": "IMG_8744_jpg.rf.a9c09cbdcc2b228f62aa9ee3fb7ff8ae.txt",
+            "line_no": 1,
+            "class_id": 0,
+            "tokens": 21,
+            "num_points": 10
+          },
+          {
+            "file": "IMG_8783_jpg.rf.2bc6dd1455e2aecfbe58df0958e86b63.txt",
+            "line_no": 1,
+            "class_id": 0,
+            "tokens": 11,
+            "num_points": 5
+          },
+          {
+            "file": "IMG_9029_jpg.rf.cfced0352f72a57dadb7c273c636d444.txt",
+            "line_no": 1,
+            "class_id": 0,
+            "tokens": 9,
+            "num_points": 4
+          }
+        ]
+      }
+    },
+    "Manhole": {
+      "dataset_name": "Manhole",
+      "root_directory": "C:\\Users\\sushm\\OneDrive\\Desktop\\CIVKI\\ai\\computer_vision\\dataset_source\\Manhole",
+      "pairing": {
+        "matched_count": 100,
+        "images_without_labels": [],
+        "labels_without_images": []
+      },
+      "image_audit": {
+        "total_images": 100,
+        "formats": {
+          "JPEG": 100
+        },
+        "color_modes": {
+          "RGB": 100
+        },
+        "dimensions": {
+          "720x720": 100
+        },
+        "corrupt_count": 0,
+        "corrupt_files": [],
+        "exact_duplicates_count": 0,
+        "exact_duplicate_groups": {},
+        "unique_base_scenes": 100,
+        "augmentation_groups_count": 0,
+        "augmentation_groups": {}
+      },
+      "label_audit": {
+        "count": 100,
+        "empty_files": [],
+        "total_annotations": 188,
+        "detection_bbox_count": 188,
+        "polygon_count": 0,
+        "other_count": 0,
+        "malformed_rows": [],
+        "class_distribution_annotations": {
+          "0": 188
+        },
+        "class_distribution_images": {
+          "0": 100
+        },
+        "image_class_combinations": {
+          "[0]": 100
+        },
+        "coords_strictly_out_of_bounds": [],
+        "bbox_edges_out_of_bounds": [
+          {
+            "file": "img-43.txt",
+            "line_no": 2,
+            "xmin": 0.21666649999999998,
+            "ymin": 0.6458335,
+            "xmax": 0.4555555,
+            "ymax": 1.0000005
+          },
+          {
+            "file": "img-55.txt",
+            "line_no": 5,
+            "xmin": -4.999999999866223e-07,
+            "ymin": 0.037500500000000006,
+            "xmax": 0.2791665,
+            "ymax": 0.1958335
+          },
+          {
+            "file": "img-71.txt",
+            "line_no": 2,
+            "xmin": 0.8861115,
+            "ymin": 0.7513890000000001,
+            "xmax": 1.0000005,
+            "ymax": 0.819445
+          }
+        ],
+        "zero_or_negative_wh": [],
+        "polygon_details": []
+      }
+    },
+    "waterlogging": {
+      "dataset_name": "waterlogging",
+      "root_directory": "C:\\Users\\sushm\\OneDrive\\Desktop\\CIVKI\\ai\\computer_vision\\dataset_source\\waterlogging",
+      "pairing": {
+        "matched_count": 100,
+        "images_without_labels": [],
+        "labels_without_images": []
+      },
+      "image_audit": {
+        "total_images": 100,
+        "formats": {
+          "JPEG": 100
+        },
+        "color_modes": {
+          "RGB": 100
+        },
+        "dimensions": {
+          "512x384": 100
+        },
+        "corrupt_count": 0,
+        "corrupt_files": [],
+        "exact_duplicates_count": 0,
+        "exact_duplicate_groups": {},
+        "unique_base_scenes": 34,
+        "augmentation_groups_count": 33,
+        "augmentation_groups": {
+          "waterloggingt-1-_jpg": [
+            "waterloggingt-1-_jpg.rf.26c13052b1e055c9abbfac2713725620.jpg",
+            "waterloggingt-1-_jpg.rf.39fc73f77b7be228f41a2f673b504c12.jpg",
+            "waterloggingt-1-_jpg.rf.64d7d9bc14c0fc945d50d6d5391fe0ea.jpg"
+          ],
+          "waterloggingt-100-_jpg": [
+            "waterloggingt-100-_jpg.rf.75c9c617143eabcfcddbc2a9217ecd77.jpg",
+            "waterloggingt-100-_jpg.rf.8d02cd2363f09b6518f2883086323a66.jpg",
+            "waterloggingt-100-_jpg.rf.faa3900c35a78d29abfcf58dbaca2aa9.jpg"
+          ],
+          "waterloggingt-102-_jpg": [
+            "waterloggingt-102-_jpg.rf.1a8bd735d4844c6f6494c70d16f69d38.jpg",
+            "waterloggingt-102-_jpg.rf.3301021e42eb5a35c62cf11b8447dc39.jpg",
+            "waterloggingt-102-_jpg.rf.95cf776cada9a363d357dddcdc8e5ecc.jpg"
+          ],
+          "waterloggingt-103-_jpg": [
+            "waterloggingt-103-_jpg.rf.10009ec111cdef89d0e5a8fae80e493c.jpg",
+            "waterloggingt-103-_jpg.rf.7a139c90e83d52a9682e34f6dd618690.jpg",
+            "waterloggingt-103-_jpg.rf.de47130eec1ca2bcbc2f43090193e729.jpg"
+          ],
+          "waterloggingt-104-_jpg": [
+            "waterloggingt-104-_jpg.rf.8d4041dce7fe57557259b2e0286ef361.jpg",
+            "waterloggingt-104-_jpg.rf.e4c15f449ef45024a3943a6acf09bab0.jpg",
+            "waterloggingt-104-_jpg.rf.f2605b716c7e33df7ed2ead8ad891e0f.jpg"
+          ],
+          "waterloggingt-105-_jpg": [
+            "waterloggingt-105-_jpg.rf.26dcaba54000514e49e046d866fa8e63.jpg",
+            "waterloggingt-105-_jpg.rf.bd686139c974f5367749f1387efcf515.jpg",
+            "waterloggingt-105-_jpg.rf.c8c800d329a2fa4ad5b4bfc37baac5bf.jpg"
+          ],
+          "waterloggingt-106-_jpg": [
+            "waterloggingt-106-_jpg.rf.5c2ae13fb8a0d1851a4ca6ed59d68f7e.jpg",
+            "waterloggingt-106-_jpg.rf.b0a85a209dedc0d58abcca50393681bf.jpg",
+            "waterloggingt-106-_jpg.rf.bf822268668aa55e6cb14bcc6b8ce4d0.jpg"
+          ],
+          "waterloggingt-107-_jpg": [
+            "waterloggingt-107-_jpg.rf.320da505c2dfcf839d1866818817eb57.jpg",
+            "waterloggingt-107-_jpg.rf.37a60c585529ac8b042830ea34865fb6.jpg",
+            "waterloggingt-107-_jpg.rf.412e192377e89b948f46d74366efc282.jpg"
+          ],
+          "waterloggingt-108-_jpg": [
+            "waterloggingt-108-_jpg.rf.20f6dc1548e3f13ae30796ae0538b4c2.jpg",
+            "waterloggingt-108-_jpg.rf.c334dc1b4bfcb7fb553987058e797de9.jpg",
+            "waterloggingt-108-_jpg.rf.c35fae837ff65421354ae69a8cbbeae4.jpg"
+          ],
+          "waterloggingt-109-_jpg": [
+            "waterloggingt-109-_jpg.rf.1cc60e8461b447fb2defd811e040f9ee.jpg",
+            "waterloggingt-109-_jpg.rf.876f76bacdb0ddac73056538a45927fe.jpg",
+            "waterloggingt-109-_jpg.rf.9400d0c341b78c819762ea6046da5a65.jpg"
+          ],
+          "waterloggingt-11-_jpg": [
+            "waterloggingt-11-_jpg.rf.533b8ff91c6c988c19951ff4ffc81bd1.jpg",
+            "waterloggingt-11-_jpg.rf.c46d95b368505ce2e2b4d56d0fb6101f.jpg",
+            "waterloggingt-11-_jpg.rf.d3926ae9649b48019ad0de93247b8776.jpg"
+          ],
+          "waterloggingt-110-_jpg": [
+            "waterloggingt-110-_jpg.rf.0f7e64b14fdaa4baf3a88da04e3c40aa.jpg",
+            "waterloggingt-110-_jpg.rf.9f7656a251202ae6a3768d53bf484ac9.jpg",
+            "waterloggingt-110-_jpg.rf.e64ab83a5986ee642135179a119dde32.jpg"
+          ],
+          "waterloggingt-111-_jpg": [
+            "waterloggingt-111-_jpg.rf.39c6acc8aa97e8c1519b71b16edacafe.jpg",
+            "waterloggingt-111-_jpg.rf.9d3dc9cb176633e34e2503d89c7775e4.jpg",
+            "waterloggingt-111-_jpg.rf.b6ad22e5cb9af635858d4d7a7cdcb431.jpg"
+          ],
+          "waterloggingt-112-_jpg": [
+            "waterloggingt-112-_jpg.rf.1530c2b26c1be10129030bf6f918c592.jpg",
+            "waterloggingt-112-_jpg.rf.28e7eeb3313fa0d9325ab62fe7c28378.jpg",
+            "waterloggingt-112-_jpg.rf.43728c3f784660f141a1c0f0d453740e.jpg"
+          ],
+          "waterloggingt-113-_jpg": [
+            "waterloggingt-113-_jpg.rf.061b92e64768f9e0a9848a4682e9420b.jpg",
+            "waterloggingt-113-_jpg.rf.084d6f23234cbf6314345867c4f698d7.jpg",
+            "waterloggingt-113-_jpg.rf.f2c4b9d7dad956dd35c29f8fb0501154.jpg"
+          ],
+          "waterloggingt-114-_jpg": [
+            "waterloggingt-114-_jpg.rf.59969ea013a1a3687220d18eb0c84d06.jpg",
+            "waterloggingt-114-_jpg.rf.5eda7421696a9f024c32d928f3a39eab.jpg",
+            "waterloggingt-114-_jpg.rf.a77c20c66646123b6ed8f2712dc711a2.jpg"
+          ],
+          "waterloggingt-115-_jpg": [
+            "waterloggingt-115-_jpg.rf.21dad62be0187d4a2286185efd45bd90.jpg",
+            "waterloggingt-115-_jpg.rf.3210a5c3958dec55dc6a0ef050badd72.jpg",
+            "waterloggingt-115-_jpg.rf.635c01c23fc97d12f874cf603283a994.jpg"
+          ],
+          "waterloggingt-116-_jpg": [
+            "waterloggingt-116-_jpg.rf.32551d1138be7e0c4bdb64925c0f44eb.jpg",
+            "waterloggingt-116-_jpg.rf.9bd10500ac27cc1bd5a73b306b5b500f.jpg",
+            "waterloggingt-116-_jpg.rf.fac505288582c2b139d1d005b445b23f.jpg"
+          ],
+          "waterloggingt-117-_jpg": [
+            "waterloggingt-117-_jpg.rf.4d269534a563d3d63c13b9242f291121.jpg",
+            "waterloggingt-117-_jpg.rf.708bc840f8b74b7e44d18b76dcbb25e9.jpg",
+            "waterloggingt-117-_jpg.rf.bacd46a5411b62ef597c217f5d0c9007.jpg"
+          ],
+          "waterloggingt-118-_jpg": [
+            "waterloggingt-118-_jpg.rf.9f5101c986e46658c6aeca1712944f37.jpg",
+            "waterloggingt-118-_jpg.rf.c6597fc1e355fcf9749247c701d569cb.jpg",
+            "waterloggingt-118-_jpg.rf.e8e2d340fa97aafa9eba86ac3b67208d.jpg"
+          ],
+          "waterloggingt-119-_jpg": [
+            "waterloggingt-119-_jpg.rf.451f6988a8554b99b4d51bffddfe97df.jpg",
+            "waterloggingt-119-_jpg.rf.af2d38b799d2d210df7b22efe0df8bdd.jpg",
+            "waterloggingt-119-_jpg.rf.d93db3522f1c92d5f1cc5ad0b5515f88.jpg"
+          ],
+          "waterloggingt-12-_jpg": [
+            "waterloggingt-12-_jpg.rf.0789ade816fc0a61a2747f56a4752f37.jpg",
+            "waterloggingt-12-_jpg.rf.20f65b01928efa45d61cc5f969d78a7d.jpg",
+            "waterloggingt-12-_jpg.rf.c064ee6b5e0eeacf45920ff9dbe16e91.jpg"
+          ],
+          "waterloggingt-120-_jpg": [
+            "waterloggingt-120-_jpg.rf.7760ee1f6c2ac158c0524381ec7ba619.jpg",
+            "waterloggingt-120-_jpg.rf.87dd967a6319a38e6b2af6681698bd2e.jpg",
+            "waterloggingt-120-_jpg.rf.fc92afe5a9fd2e2b672c9f906ad2772d.jpg"
+          ],
+          "waterloggingt-121-_jpg": [
+            "waterloggingt-121-_jpg.rf.148214b683fb45d57f49ca772181d434.jpg",
+            "waterloggingt-121-_jpg.rf.71504412e4ffe90699727d8deaddf58e.jpg",
+            "waterloggingt-121-_jpg.rf.90aa6b801e7b610a5ecc58a3ffc6d4ad.jpg"
+          ],
+          "waterloggingt-122-_jpg": [
+            "waterloggingt-122-_jpg.rf.2e00e51a0e70223ad6d729e0a3257b4c.jpg",
+            "waterloggingt-122-_jpg.rf.718008e2ed5779778140c857b6d56dd5.jpg",
+            "waterloggingt-122-_jpg.rf.71bd024023549294cfcccc67d88e177a.jpg"
+          ],
+          "waterloggingt-125-_jpg": [
+            "waterloggingt-125-_jpg.rf.14bd6556d24e30e94d0e5dffeaeb7a37.jpg",
+            "waterloggingt-125-_jpg.rf.558568c9421be9bcd2a50ac467f2cf92.jpg",
+            "waterloggingt-125-_jpg.rf.b3012b4ca4862ee70cffd58bca6652d2.jpg"
+          ],
+          "waterloggingt-126-_jpg": [
+            "waterloggingt-126-_jpg.rf.208aedeeba1a9ae54e0fea4926806386.jpg",
+            "waterloggingt-126-_jpg.rf.7fb34317e3d3f434615e307ac961cd89.jpg",
+            "waterloggingt-126-_jpg.rf.adc92026324c92e8065ad301202dfa9a.jpg"
+          ],
+          "waterloggingt-127-_jpg": [
+            "waterloggingt-127-_jpg.rf.090d8ef8c8e692676e501a52c18bd473.jpg",
+            "waterloggingt-127-_jpg.rf.0e8185f58b2e06d71649cff3a82df08c.jpg",
+            "waterloggingt-127-_jpg.rf.5b6ee9589c8ebaa451f0d866f47c0e2a.jpg"
+          ],
+          "waterloggingt-128-_jpg": [
+            "waterloggingt-128-_jpg.rf.5f4420da5b81992ba7693869e96d14ee.jpg",
+            "waterloggingt-128-_jpg.rf.da43c075e1a93e1a7d1948b6f9febdee.jpg",
+            "waterloggingt-128-_jpg.rf.f8f9cf478e0a5f06653380a47f78144c.jpg"
+          ],
+          "waterloggingt-129-_jpg": [
+            "waterloggingt-129-_jpg.rf.0f16f623499d48aba8c72b8ebd2ad14e.jpg",
+            "waterloggingt-129-_jpg.rf.1cdb041261ac454e7418539144ff25fc.jpg",
+            "waterloggingt-129-_jpg.rf.ee7df173f24985f313e4e622cb363852.jpg"
+          ],
+          "waterloggingt-13-_jpg": [
+            "waterloggingt-13-_jpg.rf.5a5d0632ce434c77e61c160471ba9a81.jpg",
+            "waterloggingt-13-_jpg.rf.7e8e5ba053c088ef775de376799ade88.jpg",
+            "waterloggingt-13-_jpg.rf.ea9f0605d797178c13c7e0f097d25b34.jpg"
+          ],
+          "waterloggingt-130-_jpg": [
+            "waterloggingt-130-_jpg.rf.a7a7dbb9557fe20dff73f25cdbbcf8a3.jpg",
+            "waterloggingt-130-_jpg.rf.bf6b00d8d05de67c449d034c3bc794c6.jpg",
+            "waterloggingt-130-_jpg.rf.f23a8e7d1db74fed9e809c0f502cdee0.jpg"
+          ],
+          "waterloggingt-14-_jpg": [
+            "waterloggingt-14-_jpg.rf.61a44bc7accbf3267e0553ca8d5918c2.jpg",
+            "waterloggingt-14-_jpg.rf.ed32c615be56d69ea5d72b6bb14291fc.jpg",
+            "waterloggingt-14-_jpg.rf.fc4f85a9cfcb85e9014fe91f7ab045b0.jpg"
+          ]
+        }
+      },
+      "label_audit": {
+        "count": 100,
+        "empty_files": [],
+        "total_annotations": 564,
+        "detection_bbox_count": 564,
+        "polygon_count": 0,
+        "other_count": 0,
+        "malformed_rows": [],
+        "class_distribution_annotations": {
+          "0": 453,
+          "1": 111
+        },
+        "class_distribution_images": {
+          "0": 98,
+          "1": 49
+        },
+        "image_class_combinations": {
+          "[0, 1]": 47,
+          "[0]": 51,
+          "[1]": 2
+        },
+        "coords_strictly_out_of_bounds": [],
+        "bbox_edges_out_of_bounds": [],
+        "zero_or_negative_wh": [],
+        "polygon_details": []
+      }
+    }
+  },
+  "cross_dataset_duplicates": {
+    "count": 0,
+    "groups": {}
+  },
+  "full_provenance": {
+    "road_sign": {
+      "source_path": "C:\\Users\\sushm\\OneDrive\\Desktop\\CIVKI\\ai\\computer_vision\\prepared_sources\\road_sign_cvki\\provenance\\source_annotations",
+      "data_yaml": {
+        "train": "../train/images",
+        "val": "../valid/images",
+        "test": "../test/images",
+        "nc": 2,
+        "names": [
+          "Damaged signs",
+          "Healthy signs"
+        ],
+        "roboflow": {
+          "workspace": "tricks-of-every-things",
+          "project": "damaged-signs-hind-vfpku",
+          "version": 1,
+          "license": "CC BY 4.0",
+          "url": "https://universe.roboflow.com/tricks-of-every-things/damaged-signs-hind-vfpku/dataset/1"
+        }
+      },
+      "splits": {
+        "train": {
+          "label_audit": {
+            "count": 1070,
+            "empty_files": [
+              "IMG_8205_jpg.rf.33aa11a6df79572d8fb5724fbb53af84.txt",
+              "IMG_8205_jpg.rf.3ba6b94646039f06ccc7981155614e06.txt",
+              "IMG_8289_jpg.rf.c7b9c4ba589f099c11e08628b02388aa.txt",
+              "IMG_8348_jpg.rf.c5ece22ba2bcd118392a632557a2eae0.txt",
+              "IMG_8657_jpg.rf.886f1fb91446e460a14d234717f4df47.txt",
+              "IMG_8711_jpg.rf.29c0316a3a04f43173558e30e23b91f7.txt",
+              "IMG_8759_jpg.rf.1fc375ed2ab727e6752fc7efcb31aad5.txt",
+              "IMG_8819_jpg.rf.56cfd5f845762cea30b1780fcfc5db1d.txt",
+              "IMG_8835_jpg.rf.30b53c8237cd21967945e6d8e6c4c57f.txt",
+              "IMG_8835_jpg.rf.51b76cba2a008d1480d8e9dc543e0c5b.txt",
+              "IMG_8848_jpg.rf.aee3345275f53e854388282c88050869.txt",
+              "IMG_8913_jpg.rf.cf89a0e7eb583ac57137c70e3d7c7ba2.txt",
+              "IMG_8922_jpg.rf.9902610785778fad588490dc168beba4.txt",
+              "IMG_8922_jpg.rf.ae0ff02a5ec3ddd52696951c9b0a0dba.txt",
+              "IMG_8922_jpg.rf.e009fb67ad6d88fadde58e3012f7e978.txt",
+              "IMG_8934_jpg.rf.47f221215a05ac0fc44e2bd45d144e3d.txt",
+              "IMG_8964_jpg.rf.395df347782bf7d710af7c57f77a1a26.txt"
+            ],
+            "total_annotations": 1090,
+            "detection_bbox_count": 1056,
+            "polygon_count": 34,
+            "other_count": 0,
+            "malformed_rows": [],
+            "class_distribution_annotations": {
+              "0": 640,
+              "1": 450
+            },
+            "class_distribution_images": {
+              "0": 635,
+              "1": 418
+            },
+            "image_class_combinations": {
+              "[1]": 418,
+              "[0]": 635,
+              "empty": 17
+            },
+            "coords_strictly_out_of_bounds": [],
+            "bbox_edges_out_of_bounds": [
+              {
+                "file": "IMG_8100_jpg.rf.8982ac6bdd57cd5bbd63c36f86c2350f.txt",
+                "line_no": 1,
+                "xmin": 0.2522265625,
+                "ymin": 0.10714843750000008,
+                "xmax": 0.7421796875,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8106_jpg.rf.8d160e11f0d971014935202b89f94c12.txt",
+                "line_no": 1,
+                "xmin": 0.29464843749999997,
+                "ymin": 0.19642968750000006,
+                "xmax": 0.7583515624999999,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8127_jpg.rf.4b030702650da584ab315fa75867a37e.txt",
+                "line_no": 1,
+                "xmin": 0.17410156250000008,
+                "ymin": -7.812499999981792e-06,
+                "xmax": 0.8412734375,
+                "ymax": 0.9968515625000001
+              },
+              {
+                "file": "IMG_8128_jpg.rf.b17b28d9ace18bdae99b61de6553d2f7.txt",
+                "line_no": 1,
+                "xmin": 0.16295312499999998,
+                "ymin": 0.013398437500000082,
+                "xmax": 0.772421875,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8135_jpg.rf.12c767d07cdd3ae002f74d5ba61fc481.txt",
+                "line_no": 1,
+                "xmin": 0.004468750000000021,
+                "ymin": 0.16517968750000006,
+                "xmax": 1.0,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8137_jpg.rf.4a0c14b832a81169f233b4635591e279.txt",
+                "line_no": 1,
+                "xmin": 0.1004453125,
+                "ymin": 0.04017968750000006,
+                "xmax": 0.9329296874999999,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8139_jpg.rf.0e8b20ddbdf859fdc866c96f918e1f19.txt",
+                "line_no": 1,
+                "xmin": 0.30133593750000004,
+                "ymin": 0.06027343750000008,
+                "xmax": 0.9990390625000001,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8153_jpg.rf.936c9fb3c1dfa30b34d7bdf504bbd120.txt",
+                "line_no": 2,
+                "xmin": 0.2589296875,
+                "ymin": 0.8727734374999999,
+                "xmax": 0.6413828125000001,
+                "ymax": 1.0000078124999998
+              },
+              {
+                "file": "IMG_8156_jpg.rf.e359e1437b412861e33a3efe95cd89b9.txt",
+                "line_no": 1,
+                "xmin": 0.24776562500000004,
+                "ymin": -7.812499999981792e-06,
+                "xmax": 0.8205156250000001,
+                "ymax": 0.9439453124999999
+              },
+              {
+                "file": "IMG_8165_jpg.rf.b02a16c33198adaa618c4263395ae09c.txt",
+                "line_no": 1,
+                "xmin": 0.0,
+                "ymin": 0.013398437500000082,
+                "xmax": 0.96471875,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8186_jpg.rf.0711335c08cffc0c1b2225a7f1bc580c.txt",
+                "line_no": 1,
+                "xmin": -7.812500000037303e-06,
+                "ymin": 0.0,
+                "xmax": 0.7388828125,
+                "ymax": 1.0
+              },
+              {
+                "file": "IMG_8191_jpg.rf.b6d858d205940011c9ec968ee737d5c9.txt",
+                "line_no": 2,
+                "xmin": 0.3191953125,
+                "ymin": 0.8571484374999999,
+                "xmax": 0.9999921875,
+                "ymax": 1.0000078124999998
+              },
+              {
+                "file": "IMG_8197_jpg.rf.a697dc665a99c8bcc4624cab7d503e88.txt",
+                "line_no": 1,
+                "xmin": 0.30579687499999997,
+                "ymin": 0.09152343750000008,
+                "xmax": 0.802234375,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8205_jpg.rf.13feca7efe1bd83c7a49918b62905b9d.txt",
+                "line_no": 1,
+                "xmin": -7.812499999981792e-06,
+                "ymin": 0.17857031250000005,
+                "xmax": 0.5666015625,
+                "ymax": 0.8224609375
+              },
+              {
+                "file": "IMG_8243_jpg.rf.776b77f8c7cf071da0e334e059c639d2.txt",
+                "line_no": 1,
+                "xmin": 0.28571874999999997,
+                "ymin": 0.029023437500000082,
+                "xmax": 0.9481875,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8249_jpg.rf.8ec801db7b39e0751282c0d697c21d72.txt",
+                "line_no": 2,
+                "xmin": 0.252234375,
+                "ymin": 0.5446484375,
+                "xmax": 0.772890625,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8250_jpg.rf.b81234009ed9907dd13faf03811a9547.txt",
+                "line_no": 1,
+                "xmin": 0.30134375,
+                "ymin": 0.04017968750000006,
+                "xmax": 0.7870625,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8252_jpg.rf.665eb53db93325c8ee65d1cd01a29fda.txt",
+                "line_no": 1,
+                "xmin": 0.3102734375000001,
+                "ymin": 0.10267968750000006,
+                "xmax": 0.7997890625000001,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8254_jpg.rf.33765f231da232fddd9a11c8af07a22a.txt",
+                "line_no": 1,
+                "xmin": -7.812499999981792e-06,
+                "ymin": 0.1495546875,
+                "xmax": 0.5152578125,
+                "ymax": 0.9427578125
+              },
+              {
+                "file": "IMG_8261_jpg.rf.6f99d5580ecb691cfd51b2395093f385.txt",
+                "line_no": 1,
+                "xmin": 0.10267968750000006,
+                "ymin": 0.08928906250000002,
+                "xmax": 1.0000078125,
+                "ymax": 0.8230234375
+              },
+              {
+                "file": "IMG_8268_jpg.rf.1fa40cee213f3cd3158d2d17aad3a9db.txt",
+                "line_no": 1,
+                "xmin": 0.18303124999999998,
+                "ymin": 0.2901796875,
+                "xmax": 0.7955625,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8274_jpg.rf.35925d85fc9a96a4271e65f2a632f8a6.txt",
+                "line_no": 1,
+                "xmin": 0.3258984375,
+                "ymin": 0.06250781249999998,
+                "xmax": 1.0000078125,
+                "ymax": 0.7808671875
+              },
+              {
+                "file": "IMG_8285_jpg.rf.15391a4adf5bd9145becb507d0ddf4cf.txt",
+                "line_no": 1,
+                "xmin": 0.25892187499999997,
+                "ymin": 0.029023437500000082,
+                "xmax": 0.782265625,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8289_jpg.rf.99e0285eda91114d0f77b42a3e55c055.txt",
+                "line_no": 1,
+                "xmin": 0.2566953125,
+                "ymin": -7.812499999981792e-06,
+                "xmax": 0.7742109374999999,
+                "ymax": 0.8381328125
+              },
+              {
+                "file": "IMG_8299_jpg.rf.c29781bd576a8a84b22841ed4c3ac9a6.txt",
+                "line_no": 1,
+                "xmin": 0.00892968750000006,
+                "ymin": 0.13839062500000004,
+                "xmax": 1.0000078125,
+                "ymax": 0.878171875
+              },
+              {
+                "file": "IMG_8308_jpg.rf.5af1cce884957933ad04f5968370b1b4.txt",
+                "line_no": 1,
+                "xmin": 0.02455468750000006,
+                "ymin": 0.04686718749999996,
+                "xmax": 1.0000078125,
+                "ymax": 0.9282578125000001
+              },
+              {
+                "file": "IMG_8311_jpg.rf.bb73313c4efcf842a7b0ee4013a0801d.txt",
+                "line_no": 1,
+                "xmin": 0.16071093749999998,
+                "ymin": 0.029023437500000082,
+                "xmax": 0.7735390624999999,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8325_jpg.rf.0cf4f0458dc8afd677f042cbcccd2581.txt",
+                "line_no": 1,
+                "xmin": 0.029023437500000082,
+                "ymin": 0.04910937500000001,
+                "xmax": 1.0000078125,
+                "ymax": 0.738421875
+              },
+              {
+                "file": "IMG_8328_jpg.rf.29201b11d63de7c312d3d20fb581d72e.txt",
+                "line_no": 1,
+                "xmin": 0.20312500000000006,
+                "ymin": 0.05580468750000006,
+                "xmax": 0.8542812500000001,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8328_jpg.rf.3d56b1ee9c599e47177a83e4cc1ea389.txt",
+                "line_no": 1,
+                "xmin": 0.1428671875,
+                "ymin": 0.013398437500000082,
+                "xmax": 0.8512890625,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8333_jpg.rf.ca6dc5954985bc70ef8aca3549a671cd.txt",
+                "line_no": 1,
+                "xmin": 0.017867187499999992,
+                "ymin": 0.029023437500000082,
+                "xmax": 0.8457265625000001,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8341_jpg.rf.84793d8bac269788d4b8221827422f97.txt",
+                "line_no": 1,
+                "xmin": 0.07811718750000002,
+                "ymin": 0.06027343750000008,
+                "xmax": 0.9124765625,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8350_jpg.rf.4113532c19f7dead5a046e6b8eca5a8f.txt",
+                "line_no": 1,
+                "xmin": 0.15624218750000002,
+                "ymin": 0.00892968750000006,
+                "xmax": 0.8826328125,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8353_jpg.rf.07f6a2493174808b53e119a7f5024afe.txt",
+                "line_no": 1,
+                "xmin": 0.16964843749999997,
+                "ymin": 0.00892968750000006,
+                "xmax": 0.8061953124999999,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8353_jpg.rf.eedba43894861b33e6914a33e1b0bc84.txt",
+                "line_no": 1,
+                "xmin": 0.09152343750000003,
+                "ymin": 0.00892968750000006,
+                "xmax": 0.8758203125,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8355_jpg.rf.fcda9e37ac50cc6576c5b17ce81dabfc.txt",
+                "line_no": 1,
+                "xmin": 0.28124999999999994,
+                "ymin": 0.08705468750000006,
+                "xmax": 0.7951874999999999,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8374_jpg.rf.0f23b566057ed1b7c46374521aa959bd.txt",
+                "line_no": 1,
+                "xmin": 0.22321875000000002,
+                "ymin": -7.812499999981792e-06,
+                "xmax": 0.7812187500000001,
+                "ymax": 0.9751640625
+              },
+              {
+                "file": "IMG_8378_jpg.rf.1189c216f58568f669c4095122745776.txt",
+                "line_no": 1,
+                "xmin": 0.0022343750000000107,
+                "ymin": 0.04464843750000008,
+                "xmax": 0.787484375,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8379_jpg.rf.99445c98efc204f3787b27496a5c2f7d.txt",
+                "line_no": 1,
+                "xmin": 0.0,
+                "ymin": -7.812499999981792e-06,
+                "xmax": 1.0,
+                "ymax": 0.8833203125
+              },
+              {
+                "file": "IMG_8385_jpg.rf.bdf28ca3ab2a803ca457af9bd1142571.txt",
+                "line_no": 1,
+                "xmin": 0.22321875000000002,
+                "ymin": 0.18080468750000006,
+                "xmax": 0.71678125,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8657_jpg.rf.348e2662e8e7044e5feaf6afa71d0241.txt",
+                "line_no": 1,
+                "xmin": 0.039679687500000005,
+                "ymin": 0.00892968750000006,
+                "xmax": 0.9738515624999999,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8657_jpg.rf.3ee008da88ab8f3fac09523120808520.txt",
+                "line_no": 1,
+                "xmin": 0.015625,
+                "ymin": 0.02455468750000006,
+                "xmax": 1.0,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8664_jpg.rf.b884b316360bcf691aeb26664edfedd9.txt",
+                "line_no": 1,
+                "xmin": 0.07589843750000008,
+                "ymin": 0.03349218749999999,
+                "xmax": 1.0000078125,
+                "ymax": 0.9970078124999999
+              },
+              {
+                "file": "IMG_8666_jpg.rf.c3d7fc705ca253a737003c94f41f11f0.txt",
+                "line_no": 1,
+                "xmin": 0.00892968750000006,
+                "ymin": 0.058031250000000034,
+                "xmax": 1.0000078125,
+                "ymax": 0.86378125
+              },
+              {
+                "file": "IMG_8666_jpg.rf.e8e21d07d023400e5c2ca91f2951b402.txt",
+                "line_no": 1,
+                "xmin": 0.00892968750000006,
+                "ymin": 0.015625,
+                "xmax": 1.0000078125,
+                "ymax": 0.86575
+              },
+              {
+                "file": "IMG_8689_jpg.rf.8c823ea4b0d435c1cbf1a153ec2214af.txt",
+                "line_no": 1,
+                "xmin": 0.06472656250000003,
+                "ymin": 0.06027343750000008,
+                "xmax": 0.9051484375000001,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8692_jpg.rf.5f15fb4bc584877d98632d7d25deb73c.txt",
+                "line_no": 1,
+                "xmin": -7.812499999981792e-06,
+                "ymin": 0.01785156250000003,
+                "xmax": 0.9225078124999999,
+                "ymax": 0.9779609375
+              },
+              {
+                "file": "IMG_8692_jpg.rf.75061f1c328c7aa95be48e5876a3eb08.txt",
+                "line_no": 1,
+                "xmin": -7.812499999981792e-06,
+                "ymin": 0.004468750000000021,
+                "xmax": 0.9223203124999999,
+                "ymax": 1.0
+              },
+              {
+                "file": "IMG_8702_jpg.rf.cff80834ab7d44735606237726df5782.txt",
+                "line_no": 1,
+                "xmin": 0.06250781250000004,
+                "ymin": 0.013398437500000082,
+                "xmax": 0.7559921875,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8707_jpg.rf.550ac43b8b3561d4694383571e6412da.txt",
+                "line_no": 1,
+                "xmin": -7.812499999981792e-06,
+                "ymin": 0.024562500000000043,
+                "xmax": 0.9811328124999998,
+                "ymax": 0.93690625
+              },
+              {
+                "file": "IMG_8710_jpg.rf.219d09496b622c4f9bf5ca73635aa3d9.txt",
+                "line_no": 1,
+                "xmin": 0.14955468750000006,
+                "ymin": 0.188328125,
+                "xmax": 1.0000078125,
+                "ymax": 0.873890625
+              },
+              {
+                "file": "IMG_8716_jpg.rf.299a8191e46306301c54e311b6066051.txt",
+                "line_no": 1,
+                "xmin": 0.04028124999999999,
+                "ymin": 0.028117187499999974,
+                "xmax": 0.93653125,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8726_jpg.rf.bd4190aa5ce459a1bea62313a13adbb4.txt",
+                "line_no": 1,
+                "xmin": 0.25668749999999996,
+                "ymin": -7.812499999981792e-06,
+                "xmax": 0.9066562499999999,
+                "ymax": 0.9832265625000001
+              },
+              {
+                "file": "IMG_8728_jpg.rf.4f8d43241a9168f2d6ea23a6f07b669f.txt",
+                "line_no": 1,
+                "xmin": 0.127234375,
+                "ymin": -7.812499999981792e-06,
+                "xmax": 0.907359375,
+                "ymax": 0.9587890625
+              },
+              {
+                "file": "IMG_8735_jpg.rf.91013e7a0c4b60ac7c01772746daf49e.txt",
+                "line_no": 1,
+                "xmin": -7.812499999981792e-06,
+                "ymin": 0.0044609375000000395,
+                "xmax": 0.9960703125000001,
+                "ymax": 0.8982578125
+              },
+              {
+                "file": "IMG_8744_jpg.rf.8a41a2b2bef95000acad863cf0a82258.txt",
+                "line_no": 1,
+                "xmin": 0.14062499999999994,
+                "ymin": 0.013398437500000082,
+                "xmax": 0.8696249999999999,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8746_jpg.rf.34cbb148fd462c24a9ff2236e32c71da.txt",
+                "line_no": 1,
+                "xmin": 0.07143749999999999,
+                "ymin": 0.3894609375,
+                "xmax": 0.99771875,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8746_jpg.rf.ccf464d36390358f8ee37ee5eade904a.txt",
+                "line_no": 1,
+                "xmin": 0.07365624999999998,
+                "ymin": 0.3883984375,
+                "xmax": 1.0,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8747_jpg.rf.a93d6ff28a157d2d5cc34eacd46b00af.txt",
+                "line_no": 1,
+                "xmin": 0.0625,
+                "ymin": 0.04017968750000006,
+                "xmax": 0.9295937500000001,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8750_jpg.rf.d564325675a78c06111472a423828109.txt",
+                "line_no": 1,
+                "xmin": 0.0,
+                "ymin": 0.00892968750000006,
+                "xmax": 0.99684375,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8759_jpg.rf.951797d78962acabbcd56496fc9949ea.txt",
+                "line_no": 1,
+                "xmin": 0.00892968750000006,
+                "ymin": 0.14732812500000003,
+                "xmax": 1.0000078125,
+                "ymax": 0.8533906250000001
+              },
+              {
+                "file": "IMG_8764_jpg.rf.d2e87f530d6577a67e92c5c745f91297.txt",
+                "line_no": 1,
+                "xmin": 0.013398437500000082,
+                "ymin": 0.12500000000000006,
+                "xmax": 1.0000078125,
+                "ymax": 0.9986250000000001
+              },
+              {
+                "file": "IMG_8767_jpg.rf.07dc907440eebcea8dd68d00c78ec26c.txt",
+                "line_no": 1,
+                "xmin": 0.02455468750000006,
+                "ymin": 0.015632812499999982,
+                "xmax": 1.0000078125,
+                "ymax": 0.9364921875000001
+              },
+              {
+                "file": "IMG_8790_jpg.rf.c4a210741d2394a872063fc51e333922.txt",
+                "line_no": 1,
+                "xmin": 0.03794531249999994,
+                "ymin": 0.00892968750000006,
+                "xmax": 0.9953359374999999,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8792_jpg.rf.ce9ed91de9d2d59b9d2d0f38253b8990.txt",
+                "line_no": 1,
+                "xmin": -7.812499999981792e-06,
+                "ymin": 0.011156249999999979,
+                "xmax": 0.8100390625,
+                "ymax": 0.99790625
+              },
+              {
+                "file": "IMG_8794_jpg.rf.ad7a080e29f2704b2762751121e00681.txt",
+                "line_no": 1,
+                "xmin": 0.02008593750000004,
+                "ymin": 0.00892968750000006,
+                "xmax": 0.9856953125000001,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8795_jpg.rf.1494bfedc8d16c1542454d551cf0d199.txt",
+                "line_no": 1,
+                "xmin": -7.812499999981792e-06,
+                "ymin": 0.011171874999999942,
+                "xmax": 0.8023515625,
+                "ymax": 0.965046875
+              },
+              {
+                "file": "IMG_8797_jpg.rf.c1b85e4e3762d16d6f170e8ef0f85635.txt",
+                "line_no": 1,
+                "xmin": 0.02455468750000006,
+                "ymin": 0.060265624999999934,
+                "xmax": 1.0000078125,
+                "ymax": 0.9431406249999998
+              },
+              {
+                "file": "IMG_8799_jpg.rf.9b136481270ab11a188ebd172fd6ee9c.txt",
+                "line_no": 1,
+                "xmin": 0.2901796875,
+                "ymin": 0.02678906250000007,
+                "xmax": 1.0000078125,
+                "ymax": 0.9116484375
+              },
+              {
+                "file": "IMG_8799_jpg.rf.baa12608931e3e21d2b7d0a15edf1177.txt",
+                "line_no": 1,
+                "xmin": -7.812499999981792e-06,
+                "ymin": 0.020078125000000002,
+                "xmax": 0.7550390625000001,
+                "ymax": 0.8766093749999999
+              },
+              {
+                "file": "IMG_8804_jpg.rf.ca189ab8261088e971e545b093a43fe6.txt",
+                "line_no": 1,
+                "xmin": -7.812500000037303e-06,
+                "ymin": 0.0,
+                "xmax": 0.9857265625,
+                "ymax": 1.0
+              },
+              {
+                "file": "IMG_8805_jpg.rf.e0baa9babd4cd58019c9dcc848e462e8.txt",
+                "line_no": 1,
+                "xmin": 0.029023437500000082,
+                "ymin": 0.00892968750000006,
+                "xmax": 1.0000078125,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8806_jpg.rf.5422b146175f3b988a46cb3b82d68063.txt",
+                "line_no": 1,
+                "xmin": 0.00892968750000006,
+                "ymin": -7.812499999981792e-06,
+                "xmax": 1.0000078125,
+                "ymax": 0.9577578125000001
+              },
+              {
+                "file": "IMG_8809_jpg.rf.5334dbe983fd3323291e0d397c1b4f8b.txt",
+                "line_no": 1,
+                "xmin": 0.0,
+                "ymin": -7.812499999981792e-06,
+                "xmax": 0.9942187499999999,
+                "ymax": 0.9500390624999999
+              },
+              {
+                "file": "IMG_8812_jpg.rf.b26ffa9dcfba3ec37544855307cbbab9.txt",
+                "line_no": 1,
+                "xmin": 0.09152343750000008,
+                "ymin": 0.037945312499999995,
+                "xmax": 1.0000078125,
+                "ymax": 0.9764296875
+              },
+              {
+                "file": "IMG_8817_jpg.rf.3050f75abcc0722e85a1f24b9d73cb8c.txt",
+                "line_no": 1,
+                "xmin": 0.25,
+                "ymin": -7.812499999981792e-06,
+                "xmax": 0.84478125,
+                "ymax": 0.7380078125
+              },
+              {
+                "file": "IMG_8819_jpg.rf.9915f92b408ae761ce102fcad7326184.txt",
+                "line_no": 1,
+                "xmin": 0.24777343750000003,
+                "ymin": 0.051343749999999966,
+                "xmax": 1.0000078125,
+                "ymax": 0.86378125
+              },
+              {
+                "file": "IMG_8820_jpg.rf.0ef088581a2c827c211801313594341f.txt",
+                "line_no": 1,
+                "xmin": 0.220984375,
+                "ymin": 0.013398437500000082,
+                "xmax": 0.991390625,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8831_jpg.rf.1d9950a68f9c2731b195e2761171db11.txt",
+                "line_no": 1,
+                "xmin": 0.19642968750000006,
+                "ymin": 0.03125,
+                "xmax": 1.0000078125,
+                "ymax": 1.0
+              },
+              {
+                "file": "IMG_8832_jpg.rf.2c6364871e2f739cf030e6ce248ee050.txt",
+                "line_no": 1,
+                "xmin": 0.008937500000000043,
+                "ymin": 0.013398437500000082,
+                "xmax": 0.9506249999999999,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8833_jpg.rf.964cdfe3bf4319aceb684d096effd902.txt",
+                "line_no": 1,
+                "xmin": 0.3727734375,
+                "ymin": 0.09375,
+                "xmax": 1.0000078125,
+                "ymax": 0.81821875
+              },
+              {
+                "file": "IMG_8839_jpg.rf.77c7aa4c49a38a57fdac657c6a035006.txt",
+                "line_no": 1,
+                "xmin": 0.3415234375,
+                "ymin": 0.05803124999999998,
+                "xmax": 1.0000078125,
+                "ymax": 1.0
+              },
+              {
+                "file": "IMG_8901_jpg.rf.16d4bc3738d64c27cb9323a58786341e.txt",
+                "line_no": 1,
+                "xmin": 0.00892968750000006,
+                "ymin": 0.03794531249999994,
+                "xmax": 1.0000078125,
+                "ymax": 0.9999921875
+              },
+              {
+                "file": "IMG_8903_jpg.rf.697906f4f440d9103af6c4e7a996c012.txt",
+                "line_no": 1,
+                "xmin": 0.04910156249999997,
+                "ymin": -7.812500000037303e-06,
+                "xmax": 0.9976796875,
+                "ymax": 0.9362578125000001
+              },
+              {
+                "file": "IMG_8911_jpg.rf.dd043a55e9299cd93dff9b375ef4a62a.txt",
+                "line_no": 1,
+                "xmin": 0.07589843750000008,
+                "ymin": 0.006695312499999939,
+                "xmax": 1.0000078125,
+                "ymax": 0.9999921875
+              },
+              {
+                "file": "IMG_8921_jpg.rf.69e6740556904e14f9ba95ad46310c72.txt",
+                "line_no": 1,
+                "xmin": 0.0,
+                "ymin": 0.4352734375,
+                "xmax": 1.0,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8926_jpg.rf.0a3d7fecccdc543ebb7afd17a71f0022.txt",
+                "line_no": 1,
+                "xmin": -7.812499999981792e-06,
+                "ymin": 0.015625,
+                "xmax": 0.9841015625,
+                "ymax": 1.0
+              },
+              {
+                "file": "IMG_8927_jpg.rf.eb0da77b6ebe344fd45f2a320155ea7e.txt",
+                "line_no": 1,
+                "xmin": -7.812499999981792e-06,
+                "ymin": 0.008929687500000005,
+                "xmax": 0.9300390625000001,
+                "ymax": 0.9781015625
+              },
+              {
+                "file": "IMG_8929_jpg.rf.36b2fb601a593c0c804add03e3ae46ee.txt",
+                "line_no": 1,
+                "xmin": 0.09152343750000008,
+                "ymin": 0.055804687500000005,
+                "xmax": 1.0000078125,
+                "ymax": 0.9775390625
+              },
+              {
+                "file": "IMG_8932_jpg.rf.c19f11971e02c79e9bd2fd9cd5cf43d5.txt",
+                "line_no": 1,
+                "xmin": 0.12946875000000002,
+                "ymin": 0.05580468750000006,
+                "xmax": 1.0,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8933_jpg.rf.9f0a9960711325df491231ab857dff8b.txt",
+                "line_no": 1,
+                "xmin": 0.02232031249999994,
+                "ymin": 0.029023437500000082,
+                "xmax": 0.9999921875,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8933_jpg.rf.b56715a24c329f3bcb7c78cddea3e538.txt",
+                "line_no": 1,
+                "xmin": 0.011156249999999979,
+                "ymin": 0.00892968750000006,
+                "xmax": 1.0,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8936_jpg.rf.af37e900c5f0b3a9eb3d66f90460cced.txt",
+                "line_no": 1,
+                "xmin": 0.015632812499999926,
+                "ymin": 0.04017968750000006,
+                "xmax": 0.9911484375,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8937_jpg.rf.4e98cbd436a5c63e4bf4b2f67e752b52.txt",
+                "line_no": 1,
+                "xmin": -7.812499999981792e-06,
+                "ymin": 0.058031250000000034,
+                "xmax": 0.9527265625000001,
+                "ymax": 0.90359375
+              },
+              {
+                "file": "IMG_8940_jpg.rf.8243f3fa05484ea1909f12cbb45973c3.txt",
+                "line_no": 1,
+                "xmin": 0.006695312499999939,
+                "ymin": 0.02455468750000006,
+                "xmax": 0.9999921875,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8952_jpg.rf.1a5a057167e97d231d4ab0ced0f97013.txt",
+                "line_no": 1,
+                "xmin": 0.03571093750000004,
+                "ymin": 0.013398437500000082,
+                "xmax": 0.9560390624999999,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8952_jpg.rf.33c74f8ce772aaba4f804f95f5520afc.txt",
+                "line_no": 1,
+                "xmin": 0.031242187500000018,
+                "ymin": 0.02455468750000006,
+                "xmax": 0.9503203125000002,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8953_jpg.rf.6947b4faa518b2afaf32eb6627e52b9e.txt",
+                "line_no": 1,
+                "xmin": 0.078125,
+                "ymin": 0.02455468750000006,
+                "xmax": 0.9369687499999999,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8956_jpg.rf.a9aec296ec1e67aa34bc511d53ae5dd7.txt",
+                "line_no": 1,
+                "xmin": 0.00892968750000006,
+                "ymin": 0.006695312499999939,
+                "xmax": 1.0000078125,
+                "ymax": 0.9999921875
+              },
+              {
+                "file": "IMG_8961_jpg.rf.171b0eafa5aaa12d43b76ceb0c6fbb05.txt",
+                "line_no": 1,
+                "xmin": 0.04464843750000008,
+                "ymin": 7.812499999981792e-06,
+                "xmax": 1.0000078125,
+                "ymax": 0.8169609375
+              },
+              {
+                "file": "IMG_8962_jpg.rf.8ea8de1ee8f7fa486a5a903feca03112.txt",
+                "line_no": 1,
+                "xmin": 0.08258593749999993,
+                "ymin": 0.04464843750000008,
+                "xmax": 0.9446015624999999,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8964_jpg.rf.ef8880501382bc81590eb87616932c65.txt",
+                "line_no": 1,
+                "xmin": 0.024546874999999968,
+                "ymin": -7.812500000009548e-06,
+                "xmax": 0.960453125,
+                "ymax": 0.46403906250000004
+              },
+              {
+                "file": "IMG_8971_jpg.rf.3deef95e4e0b010f3b7a10dd431ea2ce.txt",
+                "line_no": 1,
+                "xmin": 0.013398437500000082,
+                "ymin": 0.10714843750000003,
+                "xmax": 1.0000078125,
+                "ymax": 0.9649765625
+              },
+              {
+                "file": "IMG_8972_jpg.rf.6adb67a64559d6e1d0371be79acf27ac.txt",
+                "line_no": 1,
+                "xmin": 0.0,
+                "ymin": 0.3901171874999999,
+                "xmax": 0.24925000000000003,
+                "ymax": 1.0000078124999998
+              },
+              {
+                "file": "IMG_8972_jpg.rf.70c844a4c3d046d215ce79b4a625d219.txt",
+                "line_no": 1,
+                "xmin": 0.20535156249999997,
+                "ymin": 0.04017968750000006,
+                "xmax": 0.9999921875,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8975_jpg.rf.b910f93f5f0a194f37ba48b4849c0b56.txt",
+                "line_no": 1,
+                "xmin": -7.812499999981792e-06,
+                "ymin": 0.1495546875,
+                "xmax": 0.9691328125,
+                "ymax": 0.8906640625
+              },
+              {
+                "file": "IMG_8976_jpg.rf.2f1fd8033b1f6665c3ccb4682aa32fe3.txt",
+                "line_no": 1,
+                "xmin": -7.812499999981792e-06,
+                "ymin": 0.024546874999999968,
+                "xmax": 0.8455390624999999,
+                "ymax": 0.738046875
+              },
+              {
+                "file": "IMG_8976_jpg.rf.ed5ecdaf89853513684e4323a83d13e0.txt",
+                "line_no": 1,
+                "xmin": -7.812499999981792e-06,
+                "ymin": 0.029015625000000045,
+                "xmax": 0.9149140624999998,
+                "ymax": 0.790453125
+              },
+              {
+                "file": "IMG_8981_jpg.rf.2a1c11a503d402b898f509e1c5b9af2d.txt",
+                "line_no": 1,
+                "xmin": 0.05580468750000006,
+                "ymin": 0.0,
+                "xmax": 1.0000078125,
+                "ymax": 0.8206562500000001
+              },
+              {
+                "file": "IMG_8987_jpg.rf.a1d5bba70eb205fdac19fcfe70aedb92.txt",
+                "line_no": 1,
+                "xmin": 0.13169531249999994,
+                "ymin": 0.06027343750000008,
+                "xmax": 0.9999921875,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8988_jpg.rf.add81c551d67ddd99746b3bca4349901.txt",
+                "line_no": 1,
+                "xmin": 0.05580468750000006,
+                "ymin": 0.07142968750000006,
+                "xmax": 0.9804453125000001,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_9002_jpg.rf.6470ae33879d03fdab1d61808c10fd3b.txt",
+                "line_no": 1,
+                "xmin": 0.004460937499999984,
+                "ymin": -7.812499999981792e-06,
+                "xmax": 0.6315078125,
+                "ymax": 0.8393828125
+              },
+              {
+                "file": "IMG_9004_jpg.rf.0b0bf3bb9c4d28ec6bcaa315c3654697.txt",
+                "line_no": 1,
+                "xmin": -7.812500000092815e-06,
+                "ymin": 0.3169609375,
+                "xmax": 0.9924765625,
+                "ymax": 0.9071328125
+              },
+              {
+                "file": "IMG_9007_jpg.rf.2ebee8155433ac7a0f4411285d217da1.txt",
+                "line_no": 1,
+                "xmin": -7.812499999981792e-06,
+                "ymin": 0.1875,
+                "xmax": 0.9071015624999998,
+                "ymax": 1.0
+              },
+              {
+                "file": "IMG_9007_jpg.rf.ac0788f4953eef16c498553cd8de330d.txt",
+                "line_no": 1,
+                "xmin": 0.12276562500000004,
+                "ymin": 0.18527343750000008,
+                "xmax": 0.994890625,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_9022_jpg.rf.26b417a54bfe83e1f25c2ffd4e7025bb.txt",
+                "line_no": 1,
+                "xmin": 0.04017968750000006,
+                "ymin": 0.017859374999999955,
+                "xmax": 1.0000078125,
+                "ymax": 0.951765625
+              },
+              {
+                "file": "IMG_9022_jpg.rf.69d872fa8e18ad0452587a4d8750c1e8.txt",
+                "line_no": 1,
+                "xmin": -7.812499999981792e-06,
+                "ymin": 0.004468750000000021,
+                "xmax": 0.9767265625000001,
+                "ymax": 0.953
+              },
+              {
+                "file": "IMG_9024_jpg.rf.2cecfd004a5d4d509ad8e60e2dce74cd.txt",
+                "line_no": 1,
+                "xmin": 0.00892968750000006,
+                "ymin": 0.0,
+                "xmax": 1.0000078125,
+                "ymax": 0.8155625000000001
+              },
+              {
+                "file": "IMG_9056_jpg.rf.cb2c907cd805cca3e2aa240e61cc3d6d.txt",
+                "line_no": 1,
+                "xmin": 0.029023437500000082,
+                "ymin": 0.02454687500000008,
+                "xmax": 1.0000078125,
+                "ymax": 0.876140625
+              },
+              {
+                "file": "IMG_9061_jpg.rf.c61bdc0b733c99065ab0ab7669cb8752.txt",
+                "line_no": 1,
+                "xmin": 0.337046875,
+                "ymin": 0.029023437500000082,
+                "xmax": 0.8481406250000001,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_9062_jpg.rf.7625e5ca03b950c95f34a8801198c7ef.txt",
+                "line_no": 1,
+                "xmin": 0.29240625,
+                "ymin": 0.10714843750000008,
+                "xmax": 0.816125,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_9067_jpg.rf.8d51fcc6de3b22254cc055a99ea4f9f2.txt",
+                "line_no": 1,
+                "xmin": 0.031242187499999963,
+                "ymin": 0.013398437500000082,
+                "xmax": 0.9885078125,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_9086_jpg.rf.34098dcbbaf11860ffc8a1c5d73a9fc3.txt",
+                "line_no": 1,
+                "xmin": 0.006703125000000032,
+                "ymin": 0.02455468750000006,
+                "xmax": 0.871546875,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_9099_jpg.rf.dd36d78320d1cf881a0a83229d674383.txt",
+                "line_no": 1,
+                "xmin": 0.1941953125,
+                "ymin": 0.05580468750000006,
+                "xmax": 0.7642734375,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_9112_jpg.rf.2f779f5a94212f1cbc013e6eb8fd8c71.txt",
+                "line_no": 1,
+                "xmin": 0.3526796875,
+                "ymin": 0.046875,
+                "xmax": 1.0000078125,
+                "ymax": 1.0
+              },
+              {
+                "file": "IMG_9112_jpg.rf.8fcfb9ac613304baa739c859f49530da.txt",
+                "line_no": 1,
+                "xmin": 0.3147265625,
+                "ymin": 0.04017968750000006,
+                "xmax": 0.9999921875,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_9118_jpg.rf.4eb0e89f32db004a58c706f01e329d19.txt",
+                "line_no": 1,
+                "xmin": 0.03571093750000004,
+                "ymin": 0.07142968750000006,
+                "xmax": 0.8249765625000001,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_9129_jpg.rf.130472ab60b9ad94d2b1c2a3c7fe7f5e.txt",
+                "line_no": 1,
+                "xmin": 0.0,
+                "ymin": 0.10267968750000006,
+                "xmax": 0.9963749999999999,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "image0-20-_jpeg_jpg.rf.31c8392e2a10ab32ba73a4c79e53b4a6.txt",
+                "line_no": 1,
+                "xmin": -7.812499999981792e-06,
+                "ymin": 0.079171875,
+                "xmax": 0.8928515625,
+                "ymax": 0.9409843749999999
+              },
+              {
+                "file": "image4-19-_jpeg_jpg.rf.89f2b411411a6b28a4fc9d441d92ca9d.txt",
+                "line_no": 1,
+                "xmin": 0.051335937499999984,
+                "ymin": 0.12277343750000008,
+                "xmax": 0.8209140625,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "image6-12-_jpeg_jpg.rf.48a4aad783666c98438b3172982c68f0.txt",
+                "line_no": 1,
+                "xmin": 0.006695312499999939,
+                "ymin": 0.04017968750000006,
+                "xmax": 0.9999921875,
+                "ymax": 1.0000078125
+              }
+            ],
+            "zero_or_negative_wh": [],
+            "polygon_details": [
+              {
+                "file": "IMG_8678_jpg.rf.a31e1f2e773956f785740a56a8738ecf.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 13,
+                "num_points": 6
+              },
+              {
+                "file": "IMG_8693_jpg.rf.f745d7f20e1cba68470ec3315b629b32.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 17,
+                "num_points": 8
+              },
+              {
+                "file": "IMG_8702_jpg.rf.06c73635e3a4fe0e5f612862ae8144e5.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 19,
+                "num_points": 9
+              },
+              {
+                "file": "IMG_8710_jpg.rf.8cd0da790c7a28b453d5dc4ad9241ef6.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 19,
+                "num_points": 9
+              },
+              {
+                "file": "IMG_8725_jpg.rf.1c6802aebb5d2ae4eb86a86edc09054b.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 9,
+                "num_points": 4
+              },
+              {
+                "file": "IMG_8742_jpg.rf.aa880039fa8020ac6f62a6598542cedd.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 25,
+                "num_points": 12
+              },
+              {
+                "file": "IMG_8743_jpg.rf.d0ee39055f407cc8ea5026f3fd196d48.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 21,
+                "num_points": 10
+              },
+              {
+                "file": "IMG_8744_jpg.rf.a9c09cbdcc2b228f62aa9ee3fb7ff8ae.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 21,
+                "num_points": 10
+              },
+              {
+                "file": "IMG_8765_jpg.rf.ecf7c27a7691274ade1ebbd8c6fc3169.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 9,
+                "num_points": 4
+              },
+              {
+                "file": "IMG_8772_jpg.rf.1f92aedcc13b85bda9af8f29921ec6c3.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 7,
+                "num_points": 3
+              },
+              {
+                "file": "IMG_8778_jpg.rf.2d8b5dae01b991bdd2220dbd735b022c.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 9,
+                "num_points": 4
+              },
+              {
+                "file": "IMG_8783_jpg.rf.2bc6dd1455e2aecfbe58df0958e86b63.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 11,
+                "num_points": 5
+              },
+              {
+                "file": "IMG_8795_jpg.rf.3ab926afc80bba1e32a50e485a153f03.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 9,
+                "num_points": 4
+              },
+              {
+                "file": "IMG_8800_jpg.rf.f848da412c060ca14c48417b193e110e.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 13,
+                "num_points": 6
+              },
+              {
+                "file": "IMG_8809_jpg.rf.3b62fc7c8f3a362d63c339fd63f531ed.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 9,
+                "num_points": 4
+              },
+              {
+                "file": "IMG_8810_jpg.rf.44455952e213861120ffaaefcbccc995.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 9,
+                "num_points": 4
+              },
+              {
+                "file": "IMG_8812_jpg.rf.fdaab70bf18dc079e8a66653a69a90a5.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 13,
+                "num_points": 6
+              },
+              {
+                "file": "IMG_8821_jpg.rf.b11f71182bffd321f8509407f5cbb0a3.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 9,
+                "num_points": 4
+              },
+              {
+                "file": "IMG_8822_jpg.rf.0efb6ea267c0bb79d4987ee05d93d9c8.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 13,
+                "num_points": 6
+              },
+              {
+                "file": "IMG_8832_jpg.rf.a688528a7a456068f1de5612b3a7bf7e.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 9,
+                "num_points": 4
+              },
+              {
+                "file": "IMG_8842_jpg.rf.00b792e1ba6149e74efbb72019cf3b7a.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 17,
+                "num_points": 8
+              },
+              {
+                "file": "IMG_8847_jpg.rf.64e5da4ede06780b0de2cbd504290ac3.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 19,
+                "num_points": 9
+              },
+              {
+                "file": "IMG_8923_jpg.rf.99bbcfe2218f28a499d9e7a268ba7b6b.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 9,
+                "num_points": 4
+              },
+              {
+                "file": "IMG_8931_jpg.rf.fcf58412a18376e73d18db9d16d82a5c.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 11,
+                "num_points": 5
+              },
+              {
+                "file": "IMG_8936_jpg.rf.9b52fe001ba2dad705215ec3e3282f90.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 15,
+                "num_points": 7
+              },
+              {
+                "file": "IMG_8940_jpg.rf.18aeb38d1c21bfe3242d3ca601f9152c.txt",
+                "line_no": 2,
+                "class_id": 0,
+                "tokens": 15,
+                "num_points": 7
+              },
+              {
+                "file": "IMG_8940_jpg.rf.e93d4dc57b6c955121f760671ba914ac.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 17,
+                "num_points": 8
+              },
+              {
+                "file": "IMG_8962_jpg.rf.197896b58946bf8e38df0030355bc31a.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 9,
+                "num_points": 4
+              },
+              {
+                "file": "IMG_8965_jpg.rf.0cc357c6329c4575cd82c62e69e23f1b.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 9,
+                "num_points": 4
+              },
+              {
+                "file": "IMG_8970_jpg.rf.38af095e6a1b682aae3e35584118091e.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 11,
+                "num_points": 5
+              },
+              {
+                "file": "IMG_8990_jpg.rf.90fae654cdb5ad56e54d73a7486f6291.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 17,
+                "num_points": 8
+              },
+              {
+                "file": "IMG_8996_jpg.rf.84e24d68018720c317f02f5c2b23d48f.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 9,
+                "num_points": 4
+              },
+              {
+                "file": "IMG_9026_jpg.rf.d76af1c6e303340d598da8d5d114261c.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 25,
+                "num_points": 12
+              },
+              {
+                "file": "IMG_9029_jpg.rf.cfced0352f72a57dadb7c273c636d444.txt",
+                "line_no": 1,
+                "class_id": 0,
+                "tokens": 9,
+                "num_points": 4
+              }
+            ]
+          },
+          "pairing": {
+            "matched_count": 1070,
+            "images_without_labels": [],
+            "labels_without_images": []
+          }
+        },
+        "valid": {
+          "label_audit": {
+            "count": 135,
+            "empty_files": [
+              "IMG_8311_jpg.rf.99714f39aa85a179277fcf05ff19d930.txt"
+            ],
+            "total_annotations": 157,
+            "detection_bbox_count": 156,
+            "polygon_count": 1,
+            "other_count": 0,
+            "malformed_rows": [],
+            "class_distribution_annotations": {
+              "1": 157
+            },
+            "class_distribution_images": {
+              "1": 134
+            },
+            "image_class_combinations": {
+              "[1]": 134,
+              "empty": 1
+            },
+            "coords_strictly_out_of_bounds": [],
+            "bbox_edges_out_of_bounds": [
+              {
+                "file": "IMG_8102_jpg.rf.fb7958a9ef27644a9b0a8730fac32056.txt",
+                "line_no": 1,
+                "xmin": 0.28571874999999997,
+                "ymin": -7.812500000037303e-06,
+                "xmax": 0.8039375,
+                "ymax": 0.8590390625
+              },
+              {
+                "file": "IMG_8122_jpg.rf.0f325466917dc7f02888d9c10703d41f.txt",
+                "line_no": 1,
+                "xmin": 0.31918750000000007,
+                "ymin": 0.08705468750000006,
+                "xmax": 0.82378125,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8249_jpg.rf.0abf1a0eaa78f41183f3451fe7230c92.txt",
+                "line_no": 1,
+                "xmin": 0.22321874999999997,
+                "ymin": 0.013398437500000082,
+                "xmax": 0.7949062499999999,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8274_jpg.rf.6bc277798b28ba24de25557bac4c63d8.txt",
+                "line_no": 1,
+                "xmin": 0.3415234375,
+                "ymin": 0.08035937500000001,
+                "xmax": 1.0000078125,
+                "ymax": 0.775671875
+              },
+              {
+                "file": "IMG_8305_jpg.rf.b3e1ec0212c23deeeaee45d742b05327.txt",
+                "line_no": 1,
+                "xmin": 0.6071484374999999,
+                "ymin": 0.279015625,
+                "xmax": 1.0000078124999998,
+                "ymax": 0.8106093750000001
+              },
+              {
+                "file": "IMG_8333_jpg.rf.ed6edda94759b0c43f6d48101f849eea.txt",
+                "line_no": 1,
+                "xmin": 0.03125,
+                "ymin": 0.04464843750000008,
+                "xmax": 0.85415625,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8338_jpg.rf.aa21025b8bec71df35b0ad2995a10a58.txt",
+                "line_no": 1,
+                "xmin": 0.21428906250000002,
+                "ymin": 0.16517968750000006,
+                "xmax": 0.6802421875,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8338_jpg.rf.f6ec64c5aed698be85ea369bd49e5c20.txt",
+                "line_no": 1,
+                "xmin": 0.22098437500000004,
+                "ymin": 0.16964843750000008,
+                "xmax": 0.646515625,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8348_jpg.rf.5fcb2a7febe58f3264865977ee4ac9ed.txt",
+                "line_no": 1,
+                "xmin": 0.10714843750000003,
+                "ymin": 0.02455468750000006,
+                "xmax": 0.9478828125000001,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8363_jpg.rf.7ee3fba5c4d40101e3831c35c425a62e.txt",
+                "line_no": 1,
+                "xmin": 0.4308046875,
+                "ymin": 0.17186718749999996,
+                "xmax": 1.0000078125,
+                "ymax": 0.8198203125
+              },
+              {
+                "file": "IMG_9086_jpg.rf.4c8add1dadb6c0a5492b94795ccf60d1.txt",
+                "line_no": 1,
+                "xmin": 0.19642968750000006,
+                "ymin": 0.0,
+                "xmax": 1.0000078125,
+                "ymax": 1.0
+              }
+            ],
+            "zero_or_negative_wh": [],
+            "polygon_details": [
+              {
+                "file": "IMG_8377_jpg.rf.ac2ac3996a952a48804bd085121240da.txt",
+                "line_no": 1,
+                "class_id": 1,
+                "tokens": 21,
+                "num_points": 10
+              }
+            ]
+          },
+          "pairing": {
+            "matched_count": 135,
+            "images_without_labels": [],
+            "labels_without_images": []
+          }
+        },
+        "test": {
+          "label_audit": {
+            "count": 134,
+            "empty_files": [],
+            "total_annotations": 156,
+            "detection_bbox_count": 156,
+            "polygon_count": 0,
+            "other_count": 0,
+            "malformed_rows": [],
+            "class_distribution_annotations": {
+              "1": 156
+            },
+            "class_distribution_images": {
+              "1": 134
+            },
+            "image_class_combinations": {
+              "[1]": 134
+            },
+            "coords_strictly_out_of_bounds": [],
+            "bbox_edges_out_of_bounds": [
+              {
+                "file": "IMG_8084_jpg.rf.8384dc639784c2ec83763b45b671961c.txt",
+                "line_no": 2,
+                "xmin": 0.2901796875,
+                "ymin": 0.0022343750000000107,
+                "xmax": 1.0000078125,
+                "ymax": 0.7679843749999999
+              },
+              {
+                "file": "IMG_8115_jpg.rf.3908bb24cd509e2a64dd4dd5e34c2fd2.txt",
+                "line_no": 1,
+                "xmin": 0.03348437500000001,
+                "ymin": 0.00892968750000006,
+                "xmax": 0.6898593749999999,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8158_jpg.rf.e8b456d675fefbabc1f8e90bb82d75db.txt",
+                "line_no": 1,
+                "xmin": -7.812500000009548e-06,
+                "ymin": 0.008921875000000024,
+                "xmax": 0.4905390625,
+                "ymax": 0.988890625
+              },
+              {
+                "file": "IMG_8186_jpg.rf.4a5b396849fded53db187efc3294214d.txt",
+                "line_no": 1,
+                "xmin": 0.004460937499999984,
+                "ymin": 0.07589843750000008,
+                "xmax": 0.6910390625,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8212_jpg.rf.ad43c3b71635e60c4062d7b49cd3e60a.txt",
+                "line_no": 2,
+                "xmin": 0.10714062499999999,
+                "ymin": 0.5602734375,
+                "xmax": 0.548109375,
+                "ymax": 1.0000078125
+              },
+              {
+                "file": "IMG_8274_jpg.rf.e500bbdbfd83a991dd9c06265c2fdcbc.txt",
+                "line_no": 1,
+                "xmin": -7.812499999981792e-06,
+                "ymin": 0.07142187499999997,
+                "xmax": 0.6680390625000001,
+                "ymax": 0.827609375
+              },
+              {
+                "file": "IMG_8377_jpg.rf.ce5169b4360c222caf1c7823a34ce9b6.txt",
+                "line_no": 2,
+                "xmin": 0.5089296875,
+                "ymin": 0.732140625,
+                "xmax": 1.0000078125,
+                "ymax": 0.919546875
+              },
+              {
+                "file": "IMG_9067_jpg.rf.e8b35cc05611d08492a94174175d1d00.txt",
+                "line_no": 1,
+                "xmin": 0.04017968750000006,
+                "ymin": 0.13392968750000006,
+                "xmax": 1.0000078125,
+                "ymax": 1.0000078125
+              }
+            ],
+            "zero_or_negative_wh": [],
+            "polygon_details": []
+          },
+          "pairing": {
+            "matched_count": 134,
+            "images_without_labels": [],
+            "labels_without_images": []
+          }
+        }
+      }
+    },
+    "waterlogging": {
+      "source_path": "C:\\Users\\sushm\\Downloads\\water logging.v1i.yolov8",
+      "data_yaml": {
+        "train": "../train/images",
+        "val": "../valid/images",
+        "test": "../test/images",
+        "nc": 2,
+        "names": [
+          "water_logging ",
+          "water_logging"
+        ],
+        "roboflow": {
+          "workspace": "convergeone-inc",
+          "project": "water-logging-hpkes",
+          "version": 1,
+          "license": "CC BY 4.0",
+          "url": "https://universe.roboflow.com/convergeone-inc/water-logging-hpkes/dataset/1"
+        }
+      },
+      "splits": {
+        "train": {
+          "image_count": 504,
+          "label_audit": {
+            "count": 504,
+            "empty_files": [],
+            "total_annotations": 2713,
+            "detection_bbox_count": 2713,
+            "polygon_count": 0,
+            "other_count": 0,
+            "malformed_rows": [],
+            "class_distribution_annotations": {
+              "0": 2129,
+              "1": 584
+            },
+            "class_distribution_images": {
+              "0": 496,
+              "1": 259
+            },
+            "image_class_combinations": {
+              "[0, 1]": 251,
+              "[0]": 245,
+              "[1]": 8
+            },
+            "coords_strictly_out_of_bounds": [],
+            "bbox_edges_out_of_bounds": [],
+            "zero_or_negative_wh": [],
+            "polygon_details": []
+          },
+          "pairing": {
+            "matched_count": 504,
+            "images_without_labels": [],
+            "labels_without_images": []
+          }
+        },
+        "valid": {
+          "image_count": 31,
+          "label_audit": {
+            "count": 31,
+            "empty_files": [],
+            "total_annotations": 68,
+            "detection_bbox_count": 68,
+            "polygon_count": 0,
+            "other_count": 0,
+            "malformed_rows": [],
+            "class_distribution_annotations": {
+              "0": 68
+            },
+            "class_distribution_images": {
+              "0": 31
+            },
+            "image_class_combinations": {
+              "[0]": 31
+            },
+            "coords_strictly_out_of_bounds": [],
+            "bbox_edges_out_of_bounds": [],
+            "zero_or_negative_wh": [],
+            "polygon_details": []
+          },
+          "pairing": {
+            "matched_count": 31,
+            "images_without_labels": [],
+            "labels_without_images": []
+          }
+        }
+      }
+    }
+  }
+}

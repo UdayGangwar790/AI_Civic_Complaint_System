@@ -1,0 +1,254 @@
+{
+  "module": "M1.5 \u2014 Final Dataset Selection & Split Planning",
+  "status": "BLOCKED_SHORTAGE_APPROVAL_REQUIRED",
+  "target_dataset": {
+    "total_target_images": 300,
+    "per_class_target_images": 100,
+    "target_classes": [
+      {
+        "id": 0,
+        "name": "open_damaged_manhole",
+        "target": 100
+      },
+      {
+        "id": 1,
+        "name": "damaged_missing_road_sign",
+        "target": 100
+      },
+      {
+        "id": 2,
+        "name": "road_waterlogging",
+        "target": 100
+      }
+    ],
+    "target_split_ratio": {
+      "train": 0.7,
+      "val": 0.2,
+      "test": 0.1
+    },
+    "target_split_counts_ideal_300": {
+      "train": {
+        "manhole": 70,
+        "road_sign": 70,
+        "waterlogging": 70,
+        "total": 210
+      },
+      "val": {
+        "manhole": 20,
+        "road_sign": 20,
+        "waterlogging": 20,
+        "total": 60
+      },
+      "test": {
+        "manhole": 10,
+        "road_sign": 10,
+        "waterlogging": 10,
+        "total": 30
+      },
+      "total": 300
+    }
+  },
+  "approved_inventory": {
+    "manhole_cvki": {
+      "total_images": 100,
+      "total_labels": 100,
+      "positive_images": 100,
+      "negative_images": 0,
+      "total_annotations": 188,
+      "zero_annotation_images": 0,
+      "single_annotation_images": 43,
+      "multi_annotation_images": 57,
+      "unique_base_scenes": 100,
+      "exact_duplicates": 0,
+      "near_duplicates": 0,
+      "manual_review_quarantined": 0,
+      "orphans": 0,
+      "shortage": 0
+    },
+    "road_sign_cvki": {
+      "total_images": 99,
+      "total_labels": 99,
+      "positive_images": 51,
+      "negative_images": 48,
+      "total_annotations": 51,
+      "zero_annotation_images": 48,
+      "single_annotation_images": 51,
+      "multi_annotation_images": 0,
+      "unique_base_scenes": 91,
+      "multi_image_base_scenes": 8,
+      "exact_duplicates": 0,
+      "manual_review_quarantined_images": 1,
+      "manual_review_quarantined_labels": 1,
+      "orphan_images_quarantined": [
+        "IMG_8903_jpg.rf.617150b5aba1f59762738a5d40af8395.jpg"
+      ],
+      "orphan_labels_quarantined": [
+        "IMG_8293_jpg.rf.86fbdf8b1834f50ea9081a439ab6fbf5.txt"
+      ],
+      "shortage": 1
+    },
+    "waterlogging_cvki": {
+      "total_images": 94,
+      "total_labels": 94,
+      "positive_images": 92,
+      "negative_images": 2,
+      "total_annotations": 426,
+      "zero_annotation_images": 2,
+      "single_annotation_images": 0,
+      "multi_annotation_images": 92,
+      "unique_base_scenes": 32,
+      "scenes_with_3_images": 31,
+      "scenes_with_1_image": 1,
+      "exact_duplicates": 0,
+      "manual_review_quarantined_images": 6,
+      "manual_review_quarantined_labels": 6,
+      "quarantined_scene_groups": [
+        "waterloggingt-118-_jpg",
+        "waterloggingt-120-_jpg"
+      ],
+      "shortage": 6
+    },
+    "aggregate": {
+      "total_approved_images": 293,
+      "total_approved_labels": 293,
+      "total_positive_images": 243,
+      "total_negative_images": 50,
+      "total_target_annotations": 665,
+      "total_shortage": 7
+    }
+  },
+  "shortage_and_replacement_summary": {
+    "target_total": 300,
+    "approved_total": 293,
+    "net_shortage": 7,
+    "class_breakdown": {
+      "open_damaged_manhole": {
+        "target": 100,
+        "approved": 100,
+        "shortage": 0,
+        "replacement_required": 0
+      },
+      "damaged_missing_road_sign": {
+        "target": 100,
+        "approved": 99,
+        "shortage": 1,
+        "replacement_required": 1
+      },
+      "road_waterlogging": {
+        "target": 100,
+        "approved": 94,
+        "shortage": 6,
+        "replacement_required": 6
+      }
+    },
+    "replacement_status": {
+      "road_sign": {
+        "replacement_required": 1,
+        "verified_unused_in_provenance": false,
+        "note": "Orphan image IMG_8903 and orphan label IMG_8293 cannot be paired safely. No verified replacement exists in active source."
+      },
+      "waterlogging": {
+        "replacement_required": 6,
+        "verified_unused_in_provenance": false,
+        "note": "6 manual-review images from non-civic nature scenes (lake/river shoreline, forest trail) are excluded. No other source images exist in active dataset."
+      }
+    }
+  },
+  "leakage_prevention_strategy": {
+    "manhole": "All 100 images represent independent captures with 0 exact or near-duplicates. Stratified by single vs multi-annotation count.",
+    "road_sign": "91 base scenes. 8 scenes contain 2 Roboflow augmentations. All augmented variations are kept strictly within the same split to avoid intra-scene leakage.",
+    "waterlogging": "32 approved scenes. 31 scenes contain 3 rotation variants, 1 scene contains 1 variant. Splitting is executed strictly by atomic scene group. Zero scene groups span across train/val/test."
+  },
+  "proposed_split_current_293": {
+    "total_images": 293,
+    "train": {
+      "total": 205,
+      "manhole": 70,
+      "road_sign": 69,
+      "waterlogging": 66,
+      "positives": 171,
+      "negatives": 34,
+      "annotations": 462
+    },
+    "val": {
+      "total": 59,
+      "manhole": 20,
+      "road_sign": 20,
+      "waterlogging": 19,
+      "positives": 48,
+      "negatives": 11,
+      "annotations": 127
+    },
+    "test": {
+      "total": 29,
+      "manhole": 10,
+      "road_sign": 10,
+      "waterlogging": 9,
+      "positives": 24,
+      "negatives": 5,
+      "annotations": 76
+    }
+  },
+  "scene_group_assignments": {
+    "waterlogging": {
+      "train_scenes": [
+        "waterloggingt-105-_jpg",
+        "waterloggingt-116-_jpg",
+        "waterloggingt-13-_jpg",
+        "waterloggingt-110-_jpg",
+        "waterloggingt-127-_jpg",
+        "waterloggingt-104-_jpg",
+        "waterloggingt-114-_jpg",
+        "waterloggingt-117-_jpg",
+        "waterloggingt-106-_jpg",
+        "waterloggingt-14-_jpg",
+        "waterloggingt-112-_jpg",
+        "waterloggingt-126-_jpg",
+        "waterloggingt-11-_jpg",
+        "waterloggingt-111-_jpg",
+        "waterloggingt-109-_jpg",
+        "waterloggingt-108-_jpg",
+        "waterloggingt-121-_jpg",
+        "waterloggingt-130-_jpg",
+        "waterloggingt-129-_jpg",
+        "waterloggingt-102-_jpg",
+        "waterloggingt-115-_jpg",
+        "waterloggingt-125-_jpg"
+      ],
+      "val_scenes": [
+        "waterloggingt-128-_jpg",
+        "waterloggingt-131-_jpg",
+        "waterloggingt-119-_jpg",
+        "waterloggingt-12-_jpg",
+        "waterloggingt-1-_jpg",
+        "waterloggingt-103-_jpg",
+        "waterloggingt-107-_jpg"
+      ],
+      "test_scenes": [
+        "waterloggingt-113-_jpg",
+        "waterloggingt-122-_jpg",
+        "waterloggingt-100-_jpg"
+      ]
+    },
+    "road_sign_multi_scenes": {
+      "train_multi_scenes": [
+        "IMG_8776",
+        "IMG_9029",
+        "IMG_8669",
+        "IMG_8162",
+        "IMG_8128",
+        "IMG_8087",
+        "IMG_8106"
+      ],
+      "val_multi_scenes": [],
+      "test_multi_scenes": [
+        "IMG_8121"
+      ]
+    }
+  },
+  "actions_taken": {
+    "final_dataset_directory_modified": false,
+    "yolo_training_performed": false,
+    "data_copied_to_dataset_dir": false
+  }
+}

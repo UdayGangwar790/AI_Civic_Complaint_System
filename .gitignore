@@ -3,12 +3,25 @@ __pycache__/
 *.pyc
 .env
 venv/
+.venv/
 env/
 .DS_Store
 dist/
 build/
+
 # IMPORTANT: Ignore the source dataset files to prevent committing large private images
 ai/computer_vision/dataset_source/
 ai/computer_vision/dataset/
 data/raw/
 data/processed/
+
+# YOLO model weights
+*.pt
+
+# Generated / working datasets
+ai/computer_vision/dataset_improved/
+ai/computer_vision/dataset_m1_13/
+ai/computer_vision/prepared_sources/
+ai/computer_vision/replacement_sources/
+ai/computer_vision/training/
+ai/computer_vision/waterlogging_improvement_review/
