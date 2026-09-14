@@ -1,0 +1,11 @@
+# CIVKI M1.13 - Controlled Correction Multi-Class Civic Object Detection Dataset
+path: C:/Users/sushm/OneDrive/Desktop/CIVKI/ai/computer_vision/dataset_m1_13
+train: images/train
+val: images/val
+test: images/test
+
+nc: 3
+names:
+  0: open_damaged_manhole
+  1: damaged_missing_road_sign
+  2: road_waterlogging

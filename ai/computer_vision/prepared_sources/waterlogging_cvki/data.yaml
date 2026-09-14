@@ -1,0 +1,9 @@
+path: C:\Users\sushm\OneDrive\Desktop\CIVKI\ai\computer_vision\prepared_sources\waterlogging_cvki
+train: images
+val: images
+test: images
+
+nc: 1
+
+names:
+  0: road_waterlogging

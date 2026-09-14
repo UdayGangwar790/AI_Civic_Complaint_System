@@ -1,0 +1,102 @@
+{
+  "source": "C:\\Users\\sushm\\Downloads\\damaged signs Hind.v1i.yolov8",
+  "output": "C:\\Users\\sushm\\OneDrive\\Desktop\\CIVKI\\ai\\computer_vision\\prepared_sources\\road_sign_cvki",
+  "seed": 20260912,
+  "source_counts": {
+    "train_images": 1070,
+    "train_empty_labels": 17,
+    "train_positive": 635,
+    "valid_images": 135,
+    "valid_empty_labels": 1,
+    "valid_positive": 0,
+    "test_images": 134,
+    "test_empty_labels": 0,
+    "test_positive": 0
+  },
+  "status_counts": {
+    "eligible": 1321,
+    "manual_review": 18,
+    "eligible_positive": 635,
+    "eligible_negative": 686
+  },
+  "output_counts": {
+    "train": {
+      "images": 925,
+      "labels": 925,
+      "positive_images": 445,
+      "target_detection_records": 448,
+      "empty_target_labels": 480
+    },
+    "val": {
+      "images": 198,
+      "labels": 198,
+      "positive_images": 95,
+      "target_detection_records": 97,
+      "empty_target_labels": 103
+    },
+    "test": {
+      "images": 198,
+      "labels": 198,
+      "positive_images": 95,
+      "target_detection_records": 95,
+      "empty_target_labels": 103
+    },
+    "manual_review": {
+      "images": 18,
+      "labels": 18,
+      "positive_images": 0,
+      "target_detection_records": 0,
+      "empty_target_labels": 18
+    }
+  },
+  "source_record_counts": {
+    "detection_class_0": 606,
+    "detection_class_1": 762,
+    "segmentation_class_0": 34,
+    "segmentation_class_1": 1,
+    "invalid_label_issue_count": 18,
+    "invalid_nonempty_label_issue_count": 0,
+    "empty_label_count": 18
+  },
+  "target_detection_record_count": 640,
+  "polygon_records_converted_to_boxes": 34,
+  "duplicate_groups_removed": 0,
+  "duplicate_files_removed": 0,
+  "near_duplicate_pairs_reported": 5,
+  "near_duplicate_pairs_sample": [
+    {
+      "a": "train\\images\\IMG_8243_jpg.rf.776b77f8c7cf071da0e334e059c639d2.jpg",
+      "b": "train\\images\\IMG_8243_jpg.rf.cdb498c56c758445297c6a5e3e49e2da.jpg",
+      "hamming_distance": 2
+    },
+    {
+      "a": "train\\images\\IMG_8912_jpg.rf.ba6f6475f5909f027513e9ffd0a93fd7.jpg",
+      "b": "train\\images\\IMG_8912_jpg.rf.ec525a599bfd2981901c65744c80fafc.jpg",
+      "hamming_distance": 2
+    },
+    {
+      "a": "train\\images\\IMG_8969_jpg.rf.01f9c200092f0986f3f5877812cac2d6.jpg",
+      "b": "train\\images\\IMG_8969_jpg.rf.265497b4d49c8e77b2689ffab314358a.jpg",
+      "hamming_distance": 0
+    },
+    {
+      "a": "train\\images\\IMG_8980_jpg.rf.4255718244547baecbc3163a8b1b633c.jpg",
+      "b": "train\\images\\IMG_8980_jpg.rf.535489ea559c06c32f64eabcd3554f2f.jpg",
+      "hamming_distance": 1
+    },
+    {
+      "a": "train\\images\\IMG_9053_jpg.rf.e68e25c70b5fa2b9d3dcad9a096f2c83.jpg",
+      "b": "test\\images\\IMG_9053_jpg.rf.d9a14a76fe549f97c109fe9fb794412d.jpg",
+      "hamming_distance": 1
+    }
+  ],
+  "source_unchanged": true,
+  "source_file_count_before": 2681,
+  "source_file_count_after": 2681,
+  "limitations": [
+    "Images with missing, malformed, invalid, or empty source labels were not treated as negatives.",
+    "Empty labels are conservatively manual_review because programmatic checks cannot establish that they are genuinely negative.",
+    "Source class 1 (healthy signs) annotations were validated and preserved in provenance, but never emitted as positive target labels.",
+    "Perceptual near-duplicate matches are reported only; only exact SHA-256 duplicates were removed."
+  ]
+}

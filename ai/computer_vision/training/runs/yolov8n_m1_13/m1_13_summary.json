@@ -1,0 +1,143 @@
+{
+  "experiment": "yolov8n_m1_13",
+  "date": "2026-09-13",
+  "duration": "4:36:08",
+  "completed_epochs": 81,
+  "best_epoch": 61,
+  "best_fitness": 0.439976,
+  "validation_metrics": {
+    "P": 0.726,
+    "R": 0.59,
+    "mAP50": 0.643,
+    "mAP50_95": 0.417
+  },
+  "m1_8_test_metrics": {
+    "P": 0.838,
+    "R": 0.612,
+    "mAP50": 0.654,
+    "mAP50_95": 0.487
+  },
+  "improved_test_metrics": {
+    "P": 0.65,
+    "R": 0.57,
+    "mAP50": 0.568,
+    "mAP50_95": 0.423
+  },
+  "per_class_m1_8_test": {
+    "overall": {
+      "P": 0.838,
+      "R": 0.612,
+      "mAP50": 0.654,
+      "mAP50_95": 0.487
+    },
+    "open_damaged_manhole": {
+      "P": 0.795,
+      "R": 0.729,
+      "mAP50": 0.776,
+      "mAP50_95": 0.554
+    },
+    "damaged_missing_road_sign": {
+      "P": 0.973,
+      "R": 0.8,
+      "mAP50": 0.833,
+      "mAP50_95": 0.687
+    },
+    "road_waterlogging": {
+      "P": 0.748,
+      "R": 0.308,
+      "mAP50": 0.352,
+      "mAP50_95": 0.221
+    }
+  },
+  "per_class_improved_test": {
+    "overall": {
+      "P": 0.65,
+      "R": 0.57,
+      "mAP50": 0.568,
+      "mAP50_95": 0.423
+    },
+    "open_damaged_manhole": {
+      "P": 0.784,
+      "R": 0.75,
+      "mAP50": 0.776,
+      "mAP50_95": 0.554
+    },
+    "damaged_missing_road_sign": {
+      "P": 0.953,
+      "R": 0.8,
+      "mAP50": 0.843,
+      "mAP50_95": 0.69
+    },
+    "road_waterlogging": {
+      "P": 0.213,
+      "R": 0.16,
+      "mAP50": 0.0841,
+      "mAP50_95": 0.0251
+    }
+  },
+  "baseline_m1_8_test_benchmark": {
+    "overall": {
+      "P": 0.7797,
+      "R": 0.566,
+      "mAP50": 0.6166,
+      "mAP50_95": 0.4279
+    },
+    "open_damaged_manhole": {
+      "P": 0.842,
+      "R": 0.6671,
+      "mAP50": 0.7598,
+      "mAP50_95": 0.5113
+    },
+    "damaged_missing_road_sign": {
+      "P": 0.8294,
+      "R": 0.8,
+      "mAP50": 0.795,
+      "mAP50_95": 0.5987
+    },
+    "road_waterlogging": {
+      "P": 0.6676,
+      "R": 0.2308,
+      "mAP50": 0.2951,
+      "mAP50_95": 0.1737
+    }
+  },
+  "m1_11_improved_test_benchmark": {
+    "overall": {
+      "P": 0.5785,
+      "R": 0.3857,
+      "mAP50": 0.4166,
+      "mAP50_95": 0.2767
+    },
+    "open_damaged_manhole": {
+      "P": 0.5802,
+      "R": 0.6875,
+      "mAP50": 0.6586,
+      "mAP50_95": 0.4426
+    },
+    "damaged_missing_road_sign": {
+      "P": 1.0,
+      "R": 0.3896,
+      "mAP50": 0.545,
+      "mAP50_95": 0.3762
+    },
+    "road_waterlogging": {
+      "P": 0.1552,
+      "R": 0.08,
+      "mAP50": 0.0463,
+      "mAP50_95": 0.0114
+    }
+  },
+  "delta_vs_m1_8_on_m1_8_test": {
+    "mAP50": 0.03739999999999999,
+    "recall": 0.04600000000000004,
+    "precision": 0.05830000000000002,
+    "waterlogging_mAP50": 0.056900000000000006
+  },
+  "delta_vs_m1_11_on_improved_test": {
+    "mAP50": 0.15139999999999992,
+    "recall": 0.18429999999999996,
+    "precision": 0.07150000000000001,
+    "waterlogging_mAP50": 0.03779999999999999
+  },
+  "outcome": "CONFIRMED_RECOVERY_EXCEEDS_BASELINE"
+}

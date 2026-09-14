@@ -1,0 +1,68 @@
+{
+  "run_name": "yolov8n_baseline_300",
+  "timestamp_start": "2026-09-12T14:25:34.722830",
+  "timestamp_end": "2026-09-12T18:58:55.798844",
+  "training_duration_seconds": 16401.08,
+  "training_duration_formatted": "4:33:21",
+  "model": "yolov8n.pt",
+  "model_version": "YOLOv8n (Ultralytics)",
+  "dataset_path": "C:/Users/sushm/OneDrive/Desktop/CIVKI/ai/computer_vision/dataset/data.yaml",
+  "dataset_counts": {
+    "train": 210,
+    "val": 60,
+    "test": 30
+  },
+  "class_names": {
+    "0": "open_damaged_manhole",
+    "1": "damaged_missing_road_sign",
+    "2": "road_waterlogging"
+  },
+  "epochs_requested": 100,
+  "epochs_completed": 100,
+  "best_epoch": 85,
+  "image_size": 640,
+  "batch_size": 16,
+  "seed": 42,
+  "device": "cpu",
+  "workers": 2,
+  "python_version": "3.13.1",
+  "pytorch_version": "2.14.0+cpu",
+  "ultralytics_version": "8.4.149",
+  "best_model_path": "C:\\Users\\sushm\\OneDrive\\Desktop\\CIVKI\\ai\\computer_vision\\training\\runs\\yolov8n_baseline_300\\weights\\best.pt",
+  "last_model_path": "C:\\Users\\sushm\\OneDrive\\Desktop\\CIVKI\\ai\\computer_vision\\training\\runs\\yolov8n_baseline_300\\weights\\last.pt",
+  "validation_metrics": {
+    "precision": 0.6329160475685948,
+    "recall": 0.6569510604455054,
+    "mAP50": 0.6484753667154322,
+    "mAP50-95": 0.4619959144960322
+  },
+  "test_metrics": {
+    "precision": 0.7796824197127119,
+    "recall": 0.5659642300191517,
+    "mAP50": 0.616622399196121,
+    "mAP50-95": 0.4279008382848366,
+    "per_class": {
+      "open_damaged_manhole": {
+        "class_id": 0,
+        "precision": 0.8419740429309178,
+        "recall": 0.6671234592882245,
+        "mAP50": 0.7597646866798022,
+        "mAP50-95": 0.5112956503856226
+      },
+      "damaged_missing_road_sign": {
+        "class_id": 1,
+        "precision": 0.8294436509585251,
+        "recall": 0.8,
+        "mAP50": 0.795,
+        "mAP50-95": 0.5986666666666667
+      },
+      "road_waterlogging": {
+        "class_id": 2,
+        "precision": 0.6676295652486927,
+        "recall": 0.23076923076923078,
+        "mAP50": 0.29510251090856066,
+        "mAP50-95": 0.17374019780222044
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+path: .
+train: images
+val: images
+test: images
+
+nc: 1
+
+names:
+  0: open_damaged_manhole

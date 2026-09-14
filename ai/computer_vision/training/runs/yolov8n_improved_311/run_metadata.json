@@ -1,0 +1,30 @@
+{
+  "run_name": "yolov8n_improved_311",
+  "timestamp_start": "2026-09-12T20:43:32.591950",
+  "timestamp_end": "2026-09-13T00:15:06.332742",
+  "training_duration_seconds": 12693.74,
+  "training_duration_formatted": "3:31:33",
+  "model": "yolov8n.pt",
+  "dataset_path": "C:\\Users\\sushm\\OneDrive\\Desktop\\CIVKI\\ai\\computer_vision\\dataset_improved\\data.yaml",
+  "dataset_counts": {
+    "train": 218,
+    "val": 62,
+    "test": 31
+  },
+  "class_names": {
+    "0": "open_damaged_manhole",
+    "1": "damaged_missing_road_sign",
+    "2": "road_waterlogging"
+  },
+  "epochs_requested": 100,
+  "best_epoch": 76,
+  "device": "cpu",
+  "best_model_path": "C:\\Users\\sushm\\OneDrive\\Desktop\\CIVKI\\ai\\computer_vision\\training\\runs\\yolov8n_improved_311\\weights\\best.pt",
+  "last_model_path": "C:\\Users\\sushm\\OneDrive\\Desktop\\CIVKI\\ai\\computer_vision\\training\\runs\\yolov8n_improved_311\\weights\\last.pt",
+  "test_metrics": {
+    "precision": 0.5784709442704666,
+    "recall": 0.3856846574171288,
+    "mAP50": 0.41662011860122444,
+    "mAP50_95": 0.2767270218594004
+  }
+}

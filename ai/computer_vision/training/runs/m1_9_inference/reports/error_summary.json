@@ -1,0 +1,2010 @@
+{
+  "experiment": "M1.9 YOLOv8n Baseline Controlled Inference & Error Analysis",
+  "checkpoint": "c:\\Users\\sushm\\OneDrive\\Desktop\\CIVKI\\ai\\computer_vision\\training\\runs\\yolov8n_baseline_300\\weights\\best.pt",
+  "checkpoint_epoch": 85,
+  "dataset": "ai/computer_vision/dataset/images/test",
+  "confidence_threshold": 0.25,
+  "iou_match_threshold": 0.5,
+  "total_test_images": 30,
+  "overall_counts": {
+    "ground_truth_instances": 60,
+    "predicted_boxes": 59,
+    "true_positives": 29,
+    "false_positives": 30,
+    "false_negatives": 31,
+    "empirical_precision": 0.4915,
+    "empirical_recall": 0.4833
+  },
+  "class_wise_counts": {
+    "0": {
+      "name": "open_damaged_manhole",
+      "gt": 16,
+      "pred": 23,
+      "tp": 13,
+      "fp": 10,
+      "fn": 3
+    },
+    "1": {
+      "name": "damaged_missing_road_sign",
+      "gt": 5,
+      "pred": 6,
+      "tp": 4,
+      "fp": 2,
+      "fn": 1
+    },
+    "2": {
+      "name": "road_waterlogging",
+      "gt": 39,
+      "pred": 30,
+      "tp": 12,
+      "fp": 18,
+      "fn": 27
+    }
+  },
+  "waterlogging_error_breakdown": {
+    "small_puddles_missed": 10,
+    "diffuse_boundary_misses": 17,
+    "background_shadow_reflection_fps": 18,
+    "cluster_merging_cases": 7,
+    "detected_prominent_puddles": 12
+  },
+  "images": [
+    {
+      "image": "manhole_img-14.jpg",
+      "dimensions": {
+        "width": 720,
+        "height": 720
+      },
+      "ground_truth_count": 2,
+      "predictions_count": 4,
+      "tp_count": 2,
+      "fp_count": 2,
+      "fn_count": 0,
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "box": [
+            144.0,
+            246.0,
+            636.0,
+            524.0
+          ],
+          "matched": true
+        },
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "box": [
+            35.0,
+            196.0,
+            142.0,
+            258.0
+          ],
+          "matched": true
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.8929,
+          "box": [
+            37.8,
+            196.4,
+            163.4,
+            263.4
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 1,
+          "matched_iou": 0.7437
+        },
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.7348,
+          "box": [
+            137.9,
+            249.7,
+            587.2,
+            531.0
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 0,
+          "matched_iou": 0.8586
+        },
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.5911,
+          "box": [
+            659.0,
+            414.2,
+            710.1,
+            454.2
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        },
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.3965,
+          "box": [
+            566.2,
+            373.7,
+            627.1,
+            431.0
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image": "manhole_img-21.jpg",
+      "dimensions": {
+        "width": 720,
+        "height": 720
+      },
+      "ground_truth_count": 2,
+      "predictions_count": 4,
+      "tp_count": 2,
+      "fp_count": 2,
+      "fn_count": 0,
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "box": [
+            244.0,
+            262.0,
+            504.0,
+            534.0
+          ],
+          "matched": true
+        },
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "box": [
+            0.0,
+            595.0,
+            157.0,
+            719.0
+          ],
+          "matched": true
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.7196,
+          "box": [
+            247.0,
+            273.6,
+            466.9,
+            538.1
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 0,
+          "matched_iou": 0.7995
+        },
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.6731,
+          "box": [
+            0.6,
+            618.6,
+            118.9,
+            719.6
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 1,
+          "matched_iou": 0.6079
+        },
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.3017,
+          "box": [
+            317.2,
+            259.9,
+            459.8,
+            381.5
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        },
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.2809,
+          "box": [
+            283.8,
+            413.7,
+            468.7,
+            537.9
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image": "manhole_img-33.jpg",
+      "dimensions": {
+        "width": 720,
+        "height": 720
+      },
+      "ground_truth_count": 2,
+      "predictions_count": 3,
+      "tp_count": 2,
+      "fp_count": 1,
+      "fn_count": 0,
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "box": [
+            255.0,
+            258.0,
+            433.0,
+            358.0
+          ],
+          "matched": true
+        },
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "box": [
+            524.0,
+            339.0,
+            638.0,
+            429.0
+          ],
+          "matched": true
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.9734,
+          "box": [
+            255.5,
+            257.0,
+            438.7,
+            358.3
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 0,
+          "matched_iou": 0.9539
+        },
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.8364,
+          "box": [
+            516.9,
+            341.3,
+            641.6,
+            420.7
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 1,
+          "matched_iou": 0.8148
+        },
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.5579,
+          "box": [
+            155.4,
+            0.0,
+            626.9,
+            70.7
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image": "manhole_img-38.jpg",
+      "dimensions": {
+        "width": 720,
+        "height": 720
+      },
+      "ground_truth_count": 2,
+      "predictions_count": 1,
+      "tp_count": 1,
+      "fp_count": 0,
+      "fn_count": 1,
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "box": [
+            239.0,
+            220.0,
+            465.0,
+            447.0
+          ],
+          "matched": true
+        },
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "box": [
+            397.0,
+            168.0,
+            462.0,
+            211.0
+          ],
+          "matched": false
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.8272,
+          "box": [
+            248.9,
+            222.5,
+            463.2,
+            445.5
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 0,
+          "matched_iou": 0.9315
+        }
+      ]
+    },
+    {
+      "image": "manhole_img-57.jpg",
+      "dimensions": {
+        "width": 720,
+        "height": 720
+      },
+      "ground_truth_count": 1,
+      "predictions_count": 2,
+      "tp_count": 1,
+      "fp_count": 1,
+      "fn_count": 0,
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "box": [
+            274.0,
+            296.0,
+            437.0,
+            391.0
+          ],
+          "matched": true
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.9297,
+          "box": [
+            269.8,
+            299.4,
+            429.8,
+            391.7
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 0,
+          "matched_iou": 0.893
+        },
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.4524,
+          "box": [
+            0.0,
+            0.0,
+            204.0,
+            36.0
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image": "manhole_img-71.jpg",
+      "dimensions": {
+        "width": 720,
+        "height": 720
+      },
+      "ground_truth_count": 2,
+      "predictions_count": 1,
+      "tp_count": 1,
+      "fp_count": 0,
+      "fn_count": 1,
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "box": [
+            290.0,
+            327.0,
+            435.0,
+            443.0
+          ],
+          "matched": true
+        },
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "box": [
+            638.0,
+            541.0,
+            720.0,
+            590.0
+          ],
+          "matched": false
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.922,
+          "box": [
+            290.2,
+            330.0,
+            438.3,
+            445.8
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 0,
+          "matched_iou": 0.9293
+        }
+      ]
+    },
+    {
+      "image": "manhole_img-82.jpg",
+      "dimensions": {
+        "width": 720,
+        "height": 720
+      },
+      "ground_truth_count": 2,
+      "predictions_count": 2,
+      "tp_count": 1,
+      "fp_count": 1,
+      "fn_count": 1,
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "box": [
+            221.0,
+            182.0,
+            470.0,
+            395.0
+          ],
+          "matched": true
+        },
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "box": [
+            453.0,
+            85.0,
+            514.0,
+            121.0
+          ],
+          "matched": false
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.8719,
+          "box": [
+            301.6,
+            494.3,
+            403.7,
+            582.7
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        },
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.8343,
+          "box": [
+            226.6,
+            183.1,
+            481.9,
+            395.6
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 0,
+          "matched_iou": 0.9258
+        }
+      ]
+    },
+    {
+      "image": "manhole_img-88.jpg",
+      "dimensions": {
+        "width": 720,
+        "height": 720
+      },
+      "ground_truth_count": 1,
+      "predictions_count": 2,
+      "tp_count": 1,
+      "fp_count": 1,
+      "fn_count": 0,
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "box": [
+            263.0,
+            314.0,
+            391.0,
+            486.0
+          ],
+          "matched": true
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.9606,
+          "box": [
+            263.3,
+            314.6,
+            393.2,
+            485.6
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 0,
+          "matched_iou": 0.9752
+        },
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.4579,
+          "box": [
+            647.7,
+            0.0,
+            720.0,
+            94.8
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image": "manhole_img-92.jpg",
+      "dimensions": {
+        "width": 720,
+        "height": 720
+      },
+      "ground_truth_count": 1,
+      "predictions_count": 1,
+      "tp_count": 1,
+      "fp_count": 0,
+      "fn_count": 0,
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "box": [
+            171.0,
+            279.0,
+            524.0,
+            493.0
+          ],
+          "matched": true
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.3199,
+          "box": [
+            240.1,
+            279.4,
+            549.7,
+            458.8
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 0,
+          "matched_iou": 0.6354
+        }
+      ]
+    },
+    {
+      "image": "manhole_img-94.jpg",
+      "dimensions": {
+        "width": 720,
+        "height": 720
+      },
+      "ground_truth_count": 1,
+      "predictions_count": 1,
+      "tp_count": 1,
+      "fp_count": 0,
+      "fn_count": 0,
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "box": [
+            180.0,
+            305.0,
+            509.0,
+            426.0
+          ],
+          "matched": true
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.7789,
+          "box": [
+            178.5,
+            261.6,
+            535.6,
+            428.8
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 0,
+          "matched_iou": 0.6667
+        }
+      ]
+    },
+    {
+      "image": "roadsign_IMG_8100_jpg.rf.efaa0d300ce6c59199fb9f6203b98715.jpg",
+      "dimensions": {
+        "width": 640,
+        "height": 640
+      },
+      "ground_truth_count": 0,
+      "predictions_count": 1,
+      "tp_count": 0,
+      "fp_count": 1,
+      "fn_count": 0,
+      "ground_truth": [],
+      "predictions": [
+        {
+          "class_id": 1,
+          "class_name": "damaged_missing_road_sign",
+          "conf": 0.5534,
+          "box": [
+            151.2,
+            1.0,
+            458.8,
+            633.3
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image": "roadsign_IMG_8105_jpg.rf.7d4a4ebca73d1b48e99a5255dbbdd24b.jpg",
+      "dimensions": {
+        "width": 640,
+        "height": 640
+      },
+      "ground_truth_count": 0,
+      "predictions_count": 1,
+      "tp_count": 0,
+      "fp_count": 1,
+      "fn_count": 0,
+      "ground_truth": [],
+      "predictions": [
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.3226,
+          "box": [
+            289.5,
+            149.2,
+            417.6,
+            284.1
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image": "roadsign_IMG_8177_jpg.rf.c0514d0b597f4c360f8b9359ac662be9.jpg",
+      "dimensions": {
+        "width": 640,
+        "height": 640
+      },
+      "ground_truth_count": 0,
+      "predictions_count": 0,
+      "tp_count": 0,
+      "fp_count": 0,
+      "fn_count": 0,
+      "ground_truth": [],
+      "predictions": []
+    },
+    {
+      "image": "roadsign_IMG_8364_jpg.rf.9cb8dcfa2b6c97fc3a4d5db1899b9331.jpg",
+      "dimensions": {
+        "width": 640,
+        "height": 640
+      },
+      "ground_truth_count": 0,
+      "predictions_count": 1,
+      "tp_count": 0,
+      "fp_count": 1,
+      "fn_count": 0,
+      "ground_truth": [],
+      "predictions": [
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.2894,
+          "box": [
+            386.8,
+            579.1,
+            496.2,
+            639.9
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image": "roadsign_IMG_8385_jpg.rf.bdf28ca3ab2a803ca457af9bd1142571.jpg",
+      "dimensions": {
+        "width": 640,
+        "height": 640
+      },
+      "ground_truth_count": 0,
+      "predictions_count": 0,
+      "tp_count": 0,
+      "fp_count": 0,
+      "fn_count": 0,
+      "ground_truth": [],
+      "predictions": []
+    },
+    {
+      "image": "roadsign_IMG_8666_jpg.rf.e79ba09cf8bbb4ca1d2e1e223e5244be.jpg",
+      "dimensions": {
+        "width": 640,
+        "height": 640
+      },
+      "ground_truth_count": 1,
+      "predictions_count": 1,
+      "tp_count": 1,
+      "fp_count": 0,
+      "fn_count": 0,
+      "ground_truth": [
+        {
+          "class_id": 1,
+          "class_name": "damaged_missing_road_sign",
+          "box": [
+            7.1,
+            31.4,
+            617.0,
+            549.2
+          ],
+          "matched": true
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 1,
+          "class_name": "damaged_missing_road_sign",
+          "conf": 0.8196,
+          "box": [
+            3.6,
+            95.4,
+            640.0,
+            629.2
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 0,
+          "matched_iou": 0.7308
+        }
+      ]
+    },
+    {
+      "image": "roadsign_IMG_8678_jpg.rf.bb0bc3d760e66d124ab6970b838a7b11.jpg",
+      "dimensions": {
+        "width": 640,
+        "height": 640
+      },
+      "ground_truth_count": 1,
+      "predictions_count": 1,
+      "tp_count": 1,
+      "fp_count": 0,
+      "fn_count": 0,
+      "ground_truth": [
+        {
+          "class_id": 1,
+          "class_name": "damaged_missing_road_sign",
+          "box": [
+            21.4,
+            22.9,
+            640.0,
+            610.5
+          ],
+          "matched": true
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 1,
+          "class_name": "damaged_missing_road_sign",
+          "conf": 0.8649,
+          "box": [
+            17.1,
+            28.6,
+            551.5,
+            598.8
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 0,
+          "matched_iou": 0.826
+        }
+      ]
+    },
+    {
+      "image": "roadsign_IMG_8695_jpg.rf.6aa4dafe486b4048103989e84791eb39.jpg",
+      "dimensions": {
+        "width": 640,
+        "height": 640
+      },
+      "ground_truth_count": 1,
+      "predictions_count": 2,
+      "tp_count": 1,
+      "fp_count": 1,
+      "fn_count": 0,
+      "ground_truth": [
+        {
+          "class_id": 1,
+          "class_name": "damaged_missing_road_sign",
+          "box": [
+            4.3,
+            30.0,
+            640.0,
+            584.0
+          ],
+          "matched": true
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 1,
+          "class_name": "damaged_missing_road_sign",
+          "conf": 0.9372,
+          "box": [
+            0.0,
+            23.4,
+            634.8,
+            606.6
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 0,
+          "matched_iou": 0.9362
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.3177,
+          "box": [
+            0.0,
+            484.7,
+            78.6,
+            639.7
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image": "roadsign_IMG_8770_jpg.rf.ce11afa1ea33a0a7ced58feed7416701.jpg",
+      "dimensions": {
+        "width": 640,
+        "height": 640
+      },
+      "ground_truth_count": 1,
+      "predictions_count": 1,
+      "tp_count": 1,
+      "fp_count": 0,
+      "fn_count": 0,
+      "ground_truth": [
+        {
+          "class_id": 1,
+          "class_name": "damaged_missing_road_sign",
+          "box": [
+            10.0,
+            14.3,
+            640.0,
+            636.3
+          ],
+          "matched": true
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 1,
+          "class_name": "damaged_missing_road_sign",
+          "conf": 0.9161,
+          "box": [
+            0.8,
+            31.4,
+            618.4,
+            640.0
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 0,
+          "matched_iou": 0.9207
+        }
+      ]
+    },
+    {
+      "image": "roadsign_IMG_8955_jpg.rf.a7a0ee13ea9a42ce421604641ed8063d.jpg",
+      "dimensions": {
+        "width": 640,
+        "height": 640
+      },
+      "ground_truth_count": 1,
+      "predictions_count": 0,
+      "tp_count": 0,
+      "fp_count": 0,
+      "fn_count": 1,
+      "ground_truth": [
+        {
+          "class_id": 1,
+          "class_name": "damaged_missing_road_sign",
+          "box": [
+            25.7,
+            138.6,
+            605.6,
+            604.1
+          ],
+          "matched": false
+        }
+      ],
+      "predictions": []
+    },
+    {
+      "image": "waterlogging_waterloggingt-103-_jpg.rf.10009ec111cdef89d0e5a8fae80e493c.jpg",
+      "dimensions": {
+        "width": 512,
+        "height": 384
+      },
+      "ground_truth_count": 7,
+      "predictions_count": 4,
+      "tp_count": 3,
+      "fp_count": 1,
+      "fn_count": 4,
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            169.0,
+            0.0,
+            277.0,
+            62.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            125.0,
+            108.0,
+            265.0,
+            168.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            343.0,
+            -0.0,
+            512.0,
+            125.0
+          ],
+          "matched": true
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            350.0,
+            138.0,
+            476.0,
+            168.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            187.0,
+            168.0,
+            225.0,
+            384.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            225.0,
+            171.0,
+            246.0,
+            384.0
+          ],
+          "matched": true
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            306.0,
+            168.0,
+            414.0,
+            384.0
+          ],
+          "matched": true
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.9152,
+          "box": [
+            140.5,
+            0.0,
+            232.4,
+            162.0
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.7448,
+          "box": [
+            343.7,
+            0.5,
+            485.7,
+            165.4
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 2,
+          "matched_iou": 0.6581
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.3742,
+          "box": [
+            348.0,
+            170.2,
+            403.5,
+            384.0
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 6,
+          "matched_iou": 0.5087
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.3088,
+          "box": [
+            223.4,
+            167.7,
+            244.7,
+            331.8
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 5,
+          "matched_iou": 0.6599
+        }
+      ]
+    },
+    {
+      "image": "waterlogging_waterloggingt-103-_jpg.rf.7a139c90e83d52a9682e34f6dd618690.jpg",
+      "dimensions": {
+        "width": 512,
+        "height": 384
+      },
+      "ground_truth_count": 6,
+      "predictions_count": 4,
+      "tp_count": 1,
+      "fp_count": 3,
+      "fn_count": 5,
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            0.0,
+            0.0,
+            110.0,
+            50.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            156.0,
+            0.0,
+            250.0,
+            95.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            365.0,
+            156.0,
+            512.0,
+            180.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            0.0,
+            180.0,
+            121.0,
+            384.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            156.0,
+            277.0,
+            250.0,
+            384.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            250.0,
+            180.0,
+            512.0,
+            384.0
+          ],
+          "matched": true
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.9499,
+          "box": [
+            254.9,
+            184.8,
+            512.0,
+            383.3
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 5,
+          "matched_iou": 0.9548
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.8757,
+          "box": [
+            2.5,
+            0.2,
+            175.4,
+            69.4
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.7909,
+          "box": [
+            0.0,
+            268.1,
+            251.0,
+            383.0
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.366,
+          "box": [
+            0.1,
+            180.9,
+            195.6,
+            234.0
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image": "waterlogging_waterloggingt-103-_jpg.rf.de47130eec1ca2bcbc2f43090193e729.jpg",
+      "dimensions": {
+        "width": 512,
+        "height": 384
+      },
+      "ground_truth_count": 5,
+      "predictions_count": 5,
+      "tp_count": 3,
+      "fp_count": 2,
+      "fn_count": 2,
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            0.0,
+            78.0,
+            183.0,
+            176.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            418.0,
+            76.0,
+            512.0,
+            176.0
+          ],
+          "matched": true
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            0.0,
+            250.0,
+            250.0,
+            286.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            250.0,
+            180.0,
+            424.0,
+            255.0
+          ],
+          "matched": true
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            250.0,
+            270.0,
+            373.0,
+            384.0
+          ],
+          "matched": true
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.9538,
+          "box": [
+            249.1,
+            269.5,
+            375.3,
+            383.2
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 4,
+          "matched_iou": 0.9637
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.795,
+          "box": [
+            249.9,
+            185.4,
+            425.6,
+            254.8
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 3,
+          "matched_iou": 0.917
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.7046,
+          "box": [
+            403.8,
+            47.0,
+            511.8,
+            174.5
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 1,
+          "matched_iou": 0.6632
+        },
+        {
+          "class_id": 0,
+          "class_name": "open_damaged_manhole",
+          "conf": 0.3959,
+          "box": [
+            0.0,
+            298.2,
+            42.5,
+            358.2
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.2862,
+          "box": [
+            0.0,
+            0.2,
+            245.1,
+            173.9
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image": "waterlogging_waterloggingt-104-_jpg.rf.8d4041dce7fe57557259b2e0286ef361.jpg",
+      "dimensions": {
+        "width": 512,
+        "height": 384
+      },
+      "ground_truth_count": 3,
+      "predictions_count": 1,
+      "tp_count": 0,
+      "fp_count": 1,
+      "fn_count": 3,
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            187.0,
+            211.0,
+            262.0,
+            384.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            139.0,
+            300.0,
+            181.0,
+            384.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            458.0,
+            211.0,
+            512.0,
+            384.0
+          ],
+          "matched": false
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.2953,
+          "box": [
+            0.0,
+            70.1,
+            31.5,
+            212.1
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image": "waterlogging_waterloggingt-104-_jpg.rf.e4c15f449ef45024a3943a6acf09bab0.jpg",
+      "dimensions": {
+        "width": 512,
+        "height": 384
+      },
+      "ground_truth_count": 5,
+      "predictions_count": 4,
+      "tp_count": 2,
+      "fp_count": 2,
+      "fn_count": 3,
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            28.0,
+            0.0,
+            69.0,
+            36.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            302.0,
+            133.0,
+            429.0,
+            276.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            302.0,
+            47.0,
+            368.0,
+            128.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            50.0,
+            276.0,
+            109.0,
+            384.0
+          ],
+          "matched": true
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            141.0,
+            321.5,
+            200.0,
+            382.5
+          ],
+          "matched": true
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.9108,
+          "box": [
+            49.3,
+            275.3,
+            111.2,
+            381.4
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 3,
+          "matched_iou": 0.9253
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.8252,
+          "box": [
+            138.1,
+            320.3,
+            194.0,
+            371.5
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 4,
+          "matched_iou": 0.6953
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.4517,
+          "box": [
+            0.0,
+            4.5,
+            49.7,
+            272.0
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.4058,
+          "box": [
+            443.7,
+            130.4,
+            472.5,
+            270.2
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image": "waterlogging_waterloggingt-104-_jpg.rf.f2605b716c7e33df7ed2ead8ad891e0f.jpg",
+      "dimensions": {
+        "width": 512,
+        "height": 384
+      },
+      "ground_truth_count": 2,
+      "predictions_count": 3,
+      "tp_count": 1,
+      "fp_count": 2,
+      "fn_count": 1,
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            39.0,
+            0.0,
+            80.0,
+            12.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            285.0,
+            176.0,
+            319.0,
+            384.0
+          ],
+          "matched": true
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.9069,
+          "box": [
+            282.8,
+            251.2,
+            320.1,
+            384.0
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 1,
+          "matched_iou": 0.6012
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.6539,
+          "box": [
+            0.0,
+            0.0,
+            61.1,
+            176.6
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.2659,
+          "box": [
+            329.1,
+            294.9,
+            344.8,
+            384.0
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image": "waterlogging_waterloggingt-126-_jpg.rf.208aedeeba1a9ae54e0fea4926806386.jpg",
+      "dimensions": {
+        "width": 512,
+        "height": 384
+      },
+      "ground_truth_count": 2,
+      "predictions_count": 2,
+      "tp_count": 0,
+      "fp_count": 2,
+      "fn_count": 2,
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            186.0,
+            218.0,
+            373.0,
+            384.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            380.0,
+            218.0,
+            464.0,
+            311.0
+          ],
+          "matched": false
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.7066,
+          "box": [
+            182.4,
+            0.5,
+            512.0,
+            44.6
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.492,
+          "box": [
+            2.8,
+            216.6,
+            498.4,
+            382.6
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image": "waterlogging_waterloggingt-126-_jpg.rf.7fb34317e3d3f434615e307ac961cd89.jpg",
+      "dimensions": {
+        "width": 512,
+        "height": 384
+      },
+      "ground_truth_count": 4,
+      "predictions_count": 3,
+      "tp_count": 1,
+      "fp_count": 2,
+      "fn_count": 3,
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            63.0,
+            30.0,
+            215.0,
+            226.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            62.0,
+            0.0,
+            166.0,
+            20.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            445.0,
+            226.0,
+            512.0,
+            384.0
+          ],
+          "matched": true
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            215.0,
+            281.0,
+            269.0,
+            384.0
+          ],
+          "matched": false
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.7593,
+          "box": [
+            218.2,
+            0.0,
+            283.4,
+            161.5
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.7407,
+          "box": [
+            413.5,
+            225.2,
+            511.7,
+            384.0
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 2,
+          "matched_iou": 0.6738
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.2758,
+          "box": [
+            281.9,
+            0.3,
+            314.3,
+            51.4
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image": "waterlogging_waterloggingt-126-_jpg.rf.adc92026324c92e8065ad301202dfa9a.jpg",
+      "dimensions": {
+        "width": 512,
+        "height": 384
+      },
+      "ground_truth_count": 3,
+      "predictions_count": 4,
+      "tp_count": 1,
+      "fp_count": 3,
+      "fn_count": 2,
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            -0.0,
+            8.0,
+            109.0,
+            188.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            124.0,
+            163.0,
+            193.0,
+            188.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            1.0,
+            188.0,
+            126.0,
+            384.0
+          ],
+          "matched": true
+        }
+      ],
+      "predictions": [
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.8361,
+          "box": [
+            2.9,
+            187.0,
+            121.4,
+            383.5
+          ],
+          "is_tp": true,
+          "matched_gt_idx": 2,
+          "matched_iou": 0.941
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.4926,
+          "box": [
+            218.6,
+            0.0,
+            350.8,
+            167.1
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        },
+        {
+          "class_id": 1,
+          "class_name": "damaged_missing_road_sign",
+          "conf": 0.4011,
+          "box": [
+            1.8,
+            0.0,
+            233.5,
+            186.5
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "conf": 0.37,
+          "box": [
+            302.3,
+            185.0,
+            362.1,
+            384.0
+          ],
+          "is_tp": false,
+          "matched_gt_idx": -1,
+          "matched_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image": "waterlogging_waterloggingt-145-_jpg.rf.c3dabb8c32e8535b5bec3381d1f18c86.jpg",
+      "dimensions": {
+        "width": 512,
+        "height": 384
+      },
+      "ground_truth_count": 2,
+      "predictions_count": 0,
+      "tp_count": 0,
+      "fp_count": 0,
+      "fn_count": 2,
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            332.0,
+            137.0,
+            512.0,
+            211.0
+          ],
+          "matched": false
+        },
+        {
+          "class_id": 2,
+          "class_name": "road_waterlogging",
+          "box": [
+            19.0,
+            153.5,
+            267.0,
+            213.5
+          ],
+          "matched": false
+        }
+      ],
+      "predictions": []
+    }
+  ]
+}

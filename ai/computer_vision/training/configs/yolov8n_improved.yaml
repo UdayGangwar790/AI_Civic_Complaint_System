@@ -1,0 +1,47 @@
+# ==============================================================================
+# CVKI — Civic Vision & Knowledge Intelligence
+# Module 1.11: YOLOv8n Improved Training Configuration
+# ==============================================================================
+
+# Model Specification
+model: yolov8n.pt                  # Pretrained YOLOv8 Nano weights for transfer learning
+
+# Dataset Configuration
+data: C:/Users/sushm/OneDrive/Desktop/CIVKI/ai/computer_vision/dataset_improved/data.yaml
+
+# Training Hyperparameters
+epochs: 100                        # Maximum number of training epochs
+imgsz: 640                         # Input image resolution (640x640)
+batch: 16                          # Batch size
+patience: 20                       # Early stopping patience in epochs without validation improvement
+seed: 42                           # Deterministic random seed for reproducibility
+deterministic: true                # Enforce deterministic algorithmic choices
+
+# Hardware & Execution Environment
+device: cpu                        # Intel Core i5-1235U CPU
+workers: 2                         # DataLoader workers
+
+# Output & Artifact Settings
+project: C:/Users/sushm/OneDrive/Desktop/CIVKI/ai/computer_vision/training/runs
+name: yolov8n_improved_311         # Dedicated run directory
+exist_ok: true
+save: true
+save_period: -1
+plots: true
+val: true
+verbose: true
+
+# M1.10 Gravity-Preserving Augmentation Hyperparameters
+degrees: 0.0                       # STRICTLY ZERO: No 90/180/270 degree in-plane rotations
+flipud: 0.0                        # STRICTLY ZERO: No upside-down vertical flips
+mosaic: 0.0                        # STRICTLY ZERO: No 4-image collage mosaic
+shear: 0.0                         # STRICTLY ZERO: No planar road shearing
+fliplr: 0.5                        # ALLOWED: Horizontal flip (physically realistic)
+hsv_h: 0.015                       # Subtle hue variation
+hsv_s: 0.400                       # Saturation variation
+hsv_v: 0.300                       # Brightness variation
+scale: 0.15                        # Mild scale (+- 15%)
+translate: 0.08                    # Mild translation (+- 8%)
+perspective: 0.0005                # Minimal perspective jitter
+mixup: 0.0                         # ZERO: No cross-scene blending
+copy_paste: 0.0                    # ZERO: No copy-paste water artifacts

@@ -1,0 +1,1449 @@
+{
+  "dataset_name": "road_sign_cvki",
+  "stage": "M1.3 Road Sign Dataset Preparation",
+  "source_path": "C:\\Users\\sushm\\OneDrive\\Desktop\\CIVKI\\ai\\computer_vision\\dataset_source\\DamagedSign",
+  "target_path": "C:\\Users\\sushm\\OneDrive\\Desktop\\CIVKI\\ai\\computer_vision\\prepared_sources\\road_sign_cvki",
+  "source_counts": {
+    "total_images": 100,
+    "total_labels": 100,
+    "matched_pairs": 99,
+    "orphan_images": 1,
+    "orphan_labels": 1
+  },
+  "manual_review": {
+    "images": [
+      "IMG_8903_jpg.rf.617150b5aba1f59762738a5d40af8395.jpg"
+    ],
+    "labels": [
+      "IMG_8293_jpg.rf.86fbdf8b1834f50ea9081a439ab6fbf5.txt"
+    ]
+  },
+  "prepared_counts": {
+    "total_images": 99,
+    "total_labels": 99,
+    "positive_damaged_images": 51,
+    "negative_healthy_images": 48,
+    "polygon_conversions_count": 5
+  },
+  "records": [
+    {
+      "source_image": "IMG_8073_jpg.rf.9163ae422e2c9e7ce09935524c48ac45.jpg",
+      "source_label": "IMG_8073_jpg.rf.9163ae422e2c9e7ce09935524c48ac45.txt",
+      "prepared_image": "IMG_8073_jpg.rf.9163ae422e2c9e7ce09935524c48ac45.jpg",
+      "prepared_label": "IMG_8073_jpg.rf.9163ae422e2c9e7ce09935524c48ac45.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.531671875 0.47728125 0.7061875 0.941171875"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8087_jpg.rf.794668ab97e5f13c372785cb90fc6354.jpg",
+      "source_label": "IMG_8087_jpg.rf.794668ab97e5f13c372785cb90fc6354.txt",
+      "prepared_image": "IMG_8087_jpg.rf.794668ab97e5f13c372785cb90fc6354.jpg",
+      "prepared_label": "IMG_8087_jpg.rf.794668ab97e5f13c372785cb90fc6354.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.45906250000000004 0.508921875 0.877953125 0.464265625"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8087_jpg.rf.f2438568feccf315a62621e6ce71d2d6.jpg",
+      "source_label": "IMG_8087_jpg.rf.f2438568feccf315a62621e6ce71d2d6.txt",
+      "prepared_image": "IMG_8087_jpg.rf.f2438568feccf315a62621e6ce71d2d6.jpg",
+      "prepared_label": "IMG_8087_jpg.rf.f2438568feccf315a62621e6ce71d2d6.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.45348437500000005 0.5245 0.8712500000000001 0.486484375"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8089_jpg.rf.d88d66b336700a7227c7e6dfd32781f8.jpg",
+      "source_label": "IMG_8089_jpg.rf.d88d66b336700a7227c7e6dfd32781f8.txt",
+      "prepared_image": "IMG_8089_jpg.rf.d88d66b336700a7227c7e6dfd32781f8.jpg",
+      "prepared_label": "IMG_8089_jpg.rf.d88d66b336700a7227c7e6dfd32781f8.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.4948125 0.502234375 0.645890625 0.99553125"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8090_jpg.rf.3300d84f8175ad4f004288530ef3bc4d.jpg",
+      "source_label": "IMG_8090_jpg.rf.3300d84f8175ad4f004288530ef3bc4d.txt",
+      "prepared_image": "IMG_8090_jpg.rf.3300d84f8175ad4f004288530ef3bc4d.jpg",
+      "prepared_label": "IMG_8090_jpg.rf.3300d84f8175ad4f004288530ef3bc4d.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.41076562499999997 0.5 0.656359375 1"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8100_jpg.rf.efaa0d300ce6c59199fb9f6203b98715.jpg",
+      "source_label": "IMG_8100_jpg.rf.efaa0d300ce6c59199fb9f6203b98715.txt",
+      "prepared_image": "IMG_8100_jpg.rf.efaa0d300ce6c59199fb9f6203b98715.jpg",
+      "prepared_label": "IMG_8100_jpg.rf.efaa0d300ce6c59199fb9f6203b98715.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.49617187500000004 0.568078125 0.487875 0.86384375"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8105_jpg.rf.7d4a4ebca73d1b48e99a5255dbbdd24b.jpg",
+      "source_label": "IMG_8105_jpg.rf.7d4a4ebca73d1b48e99a5255dbbdd24b.txt",
+      "prepared_image": "IMG_8105_jpg.rf.7d4a4ebca73d1b48e99a5255dbbdd24b.jpg",
+      "prepared_label": "IMG_8105_jpg.rf.7d4a4ebca73d1b48e99a5255dbbdd24b.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.55840625 0.15028125 0.48287500000000005 0.09521874999999999",
+        "1 0.561390625 0.5171718750000001 0.48884375 0.640203125"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8106_jpg.rf.4f7cbc8381810784ed363d38fa6a6925.jpg",
+      "source_label": "IMG_8106_jpg.rf.4f7cbc8381810784ed363d38fa6a6925.txt",
+      "prepared_image": "IMG_8106_jpg.rf.4f7cbc8381810784ed363d38fa6a6925.jpg",
+      "prepared_label": "IMG_8106_jpg.rf.4f7cbc8381810784ed363d38fa6a6925.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.510859375 0.583703125 0.51278125 0.83259375"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8106_jpg.rf.8d160e11f0d971014935202b89f94c12.jpg",
+      "source_label": "IMG_8106_jpg.rf.8d160e11f0d971014935202b89f94c12.txt",
+      "prepared_image": "IMG_8106_jpg.rf.8d160e11f0d971014935202b89f94c12.jpg",
+      "prepared_label": "IMG_8106_jpg.rf.8d160e11f0d971014935202b89f94c12.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.5265 0.59821875 0.463703125 0.8035781249999999"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8107_jpg.rf.3a6cdb866ff10812b39e59fa6012c48e.jpg",
+      "source_label": "IMG_8107_jpg.rf.3a6cdb866ff10812b39e59fa6012c48e.txt",
+      "prepared_image": "IMG_8107_jpg.rf.3a6cdb866ff10812b39e59fa6012c48e.jpg",
+      "prepared_label": "IMG_8107_jpg.rf.3a6cdb866ff10812b39e59fa6012c48e.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.546890625 0.55009375 0.43754687499999995 0.5778749999999999"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8113_jpg.rf.dbd7b522220575d43889a80f88a8ad86.jpg",
+      "source_label": "IMG_8113_jpg.rf.dbd7b522220575d43889a80f88a8ad86.txt",
+      "prepared_image": "IMG_8113_jpg.rf.dbd7b522220575d43889a80f88a8ad86.jpg",
+      "prepared_label": "IMG_8113_jpg.rf.dbd7b522220575d43889a80f88a8ad86.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.478640625 0.51125 0.51084375 0.96"
+      ],
+      "prepared_annotations": [
+        "0 0.478641 0.511250 0.510844 0.960000"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8116_jpg.rf.4e89b65b9027b447761db8f0ac286c13.jpg",
+      "source_label": "IMG_8116_jpg.rf.4e89b65b9027b447761db8f0ac286c13.txt",
+      "prepared_image": "IMG_8116_jpg.rf.4e89b65b9027b447761db8f0ac286c13.jpg",
+      "prepared_label": "IMG_8116_jpg.rf.4e89b65b9027b447761db8f0ac286c13.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.3493125 0.549109375 0.698625 0.90178125"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8121_jpg.rf.c6c742d01d11db2700a86a91fd935c72.jpg",
+      "source_label": "IMG_8121_jpg.rf.c6c742d01d11db2700a86a91fd935c72.txt",
+      "prepared_image": "IMG_8121_jpg.rf.c6c742d01d11db2700a86a91fd935c72.jpg",
+      "prepared_label": "IMG_8121_jpg.rf.c6c742d01d11db2700a86a91fd935c72.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.5124531250000001 0.5 0.614171875 1"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8121_jpg.rf.ef798e00c15eb0c6a2c01ff31e667b9d.jpg",
+      "source_label": "IMG_8121_jpg.rf.ef798e00c15eb0c6a2c01ff31e667b9d.txt",
+      "prepared_image": "IMG_8121_jpg.rf.ef798e00c15eb0c6a2c01ff31e667b9d.jpg",
+      "prepared_label": "IMG_8121_jpg.rf.ef798e00c15eb0c6a2c01ff31e667b9d.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.467796875 0.368796875 0.5338125 0.7108125000000001",
+        "1 0.5016093749999999 0.89396875 0.5389375000000001 0.21204687500000002"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8122_jpg.rf.fc979538ea458e9698d4cb3cf353aecb.jpg",
+      "source_label": "IMG_8122_jpg.rf.fc979538ea458e9698d4cb3cf353aecb.txt",
+      "prepared_image": "IMG_8122_jpg.rf.fc979538ea458e9698d4cb3cf353aecb.jpg",
+      "prepared_label": "IMG_8122_jpg.rf.fc979538ea458e9698d4cb3cf353aecb.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.443453125 0.317265625 0.40031249999999996 0.406875",
+        "1 0.43481249999999994 0.779125 0.423203125 0.42878125"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8125_jpg.rf.916546aa5384f625e1a0308812fe2000.jpg",
+      "source_label": "IMG_8125_jpg.rf.916546aa5384f625e1a0308812fe2000.txt",
+      "prepared_image": "IMG_8125_jpg.rf.916546aa5384f625e1a0308812fe2000.jpg",
+      "prepared_label": "IMG_8125_jpg.rf.916546aa5384f625e1a0308812fe2000.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.515421875 0.555796875 0.43709375 0.8883906250000001"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8128_jpg.rf.b17b28d9ace18bdae99b61de6553d2f7.jpg",
+      "source_label": "IMG_8128_jpg.rf.b17b28d9ace18bdae99b61de6553d2f7.txt",
+      "prepared_image": "IMG_8128_jpg.rf.b17b28d9ace18bdae99b61de6553d2f7.jpg",
+      "prepared_label": "IMG_8128_jpg.rf.b17b28d9ace18bdae99b61de6553d2f7.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.4676875 0.506703125 0.60946875 0.9866093749999999"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8128_jpg.rf.f5d5650f0e4713cd10d5f08f421e1b0c.jpg",
+      "source_label": "IMG_8128_jpg.rf.f5d5650f0e4713cd10d5f08f421e1b0c.txt",
+      "prepared_image": "IMG_8128_jpg.rf.f5d5650f0e4713cd10d5f08f421e1b0c.jpg",
+      "prepared_label": "IMG_8128_jpg.rf.f5d5650f0e4713cd10d5f08f421e1b0c.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.564171875 0.5 0.54796875 1"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8156_jpg.rf.e359e1437b412861e33a3efe95cd89b9.jpg",
+      "source_label": "IMG_8156_jpg.rf.e359e1437b412861e33a3efe95cd89b9.txt",
+      "prepared_image": "IMG_8156_jpg.rf.e359e1437b412861e33a3efe95cd89b9.jpg",
+      "prepared_label": "IMG_8156_jpg.rf.e359e1437b412861e33a3efe95cd89b9.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.534140625 0.47196875 0.57275 0.943953125"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8161_jpg.rf.b44fc056eeea67893d7b5f86a7446fbc.jpg",
+      "source_label": "IMG_8161_jpg.rf.b44fc056eeea67893d7b5f86a7446fbc.txt",
+      "prepared_image": "IMG_8161_jpg.rf.b44fc056eeea67893d7b5f86a7446fbc.jpg",
+      "prepared_label": "IMG_8161_jpg.rf.b44fc056eeea67893d7b5f86a7446fbc.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.5420625 0.419609375 0.802859375 0.8035"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8162_jpg.rf.4a661c09d362cb49b7f00c0069aef17e.jpg",
+      "source_label": "IMG_8162_jpg.rf.4a661c09d362cb49b7f00c0069aef17e.txt",
+      "prepared_image": "IMG_8162_jpg.rf.4a661c09d362cb49b7f00c0069aef17e.jpg",
+      "prepared_label": "IMG_8162_jpg.rf.4a661c09d362cb49b7f00c0069aef17e.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.42803125 0.55803125 0.64178125 0.8839218750000001"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8162_jpg.rf.a45e967cba9e65fb7d4c280853f86f99.jpg",
+      "source_label": "IMG_8162_jpg.rf.a45e967cba9e65fb7d4c280853f86f99.txt",
+      "prepared_image": "IMG_8162_jpg.rf.a45e967cba9e65fb7d4c280853f86f99.jpg",
+      "prepared_label": "IMG_8162_jpg.rf.a45e967cba9e65fb7d4c280853f86f99.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.42018750000000005 0.46401562500000004 0.6439375 0.72715625"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8163_jpg.rf.e3dad279156e4569ec410c8600550cd0.jpg",
+      "source_label": "IMG_8163_jpg.rf.e3dad279156e4569ec410c8600550cd0.txt",
+      "prepared_image": "IMG_8163_jpg.rf.e3dad279156e4569ec410c8600550cd0.jpg",
+      "prepared_label": "IMG_8163_jpg.rf.e3dad279156e4569ec410c8600550cd0.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.5042187499999999 0.515625 0.758421875 0.96875"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8165_jpg.rf.83345b226f9f368f1ada468f58344b05.jpg",
+      "source_label": "IMG_8165_jpg.rf.83345b226f9f368f1ada468f58344b05.txt",
+      "prepared_image": "IMG_8165_jpg.rf.83345b226f9f368f1ada468f58344b05.jpg",
+      "prepared_label": "IMG_8165_jpg.rf.83345b226f9f368f1ada468f58344b05.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.458109375 0.515625 0.8849843749999999 0.96875"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8177_jpg.rf.c0514d0b597f4c360f8b9359ac662be9.jpg",
+      "source_label": "IMG_8177_jpg.rf.c0514d0b597f4c360f8b9359ac662be9.txt",
+      "prepared_image": "IMG_8177_jpg.rf.c0514d0b597f4c360f8b9359ac662be9.jpg",
+      "prepared_label": "IMG_8177_jpg.rf.c0514d0b597f4c360f8b9359ac662be9.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.520359375 0.42557812500000003 0.536234375 0.846703125"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8182_jpg.rf.d0d70f074356fc2c798381b68084014a.jpg",
+      "source_label": "IMG_8182_jpg.rf.d0d70f074356fc2c798381b68084014a.txt",
+      "prepared_image": "IMG_8182_jpg.rf.d0d70f074356fc2c798381b68084014a.jpg",
+      "prepared_label": "IMG_8182_jpg.rf.d0d70f074356fc2c798381b68084014a.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.627390625 0.385734375 0.42890625 0.767"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8191_jpg.rf.b6d858d205940011c9ec968ee737d5c9.jpg",
+      "source_label": "IMG_8191_jpg.rf.b6d858d205940011c9ec968ee737d5c9.txt",
+      "prepared_image": "IMG_8191_jpg.rf.b6d858d205940011c9ec968ee737d5c9.jpg",
+      "prepared_label": "IMG_8191_jpg.rf.b6d858d205940011c9ec968ee737d5c9.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.55284375 0.482484375 0.373546875 0.674796875",
+        "1 0.65959375 0.9285781249999999 0.680796875 0.142859375"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8195_jpg.rf.f08c077512e09643e7d23a54ad77de8c.jpg",
+      "source_label": "IMG_8195_jpg.rf.f08c077512e09643e7d23a54ad77de8c.txt",
+      "prepared_image": "IMG_8195_jpg.rf.f08c077512e09643e7d23a54ad77de8c.jpg",
+      "prepared_label": "IMG_8195_jpg.rf.f08c077512e09643e7d23a54ad77de8c.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.49484374999999997 0.42215625 0.75309375 0.692515625"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8231_jpg.rf.13ed71392ed69ff7ec897e48bd515423.jpg",
+      "source_label": "IMG_8231_jpg.rf.13ed71392ed69ff7ec897e48bd515423.txt",
+      "prepared_image": "IMG_8231_jpg.rf.13ed71392ed69ff7ec897e48bd515423.jpg",
+      "prepared_label": "IMG_8231_jpg.rf.13ed71392ed69ff7ec897e48bd515423.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.46804687500000003 0.41467187499999997 0.66746875 0.8163125000000001"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8241_jpg.rf.ccb1ff63430e9a5c8252dbbd35b222d8.jpg",
+      "source_label": "IMG_8241_jpg.rf.ccb1ff63430e9a5c8252dbbd35b222d8.txt",
+      "prepared_image": "IMG_8241_jpg.rf.ccb1ff63430e9a5c8252dbbd35b222d8.jpg",
+      "prepared_label": "IMG_8241_jpg.rf.ccb1ff63430e9a5c8252dbbd35b222d8.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.567203125 0.52003125 0.496 0.8079218750000001"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8245_jpg.rf.973f7dc0a0e279e0fef796e0a0bedb6f.jpg",
+      "source_label": "IMG_8245_jpg.rf.973f7dc0a0e279e0fef796e0a0bedb6f.txt",
+      "prepared_image": "IMG_8245_jpg.rf.973f7dc0a0e279e0fef796e0a0bedb6f.jpg",
+      "prepared_label": "IMG_8245_jpg.rf.973f7dc0a0e279e0fef796e0a0bedb6f.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.5706562500000001 0.520703125 0.565421875 0.742296875"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8252_jpg.rf.665eb53db93325c8ee65d1cd01a29fda.jpg",
+      "source_label": "IMG_8252_jpg.rf.665eb53db93325c8ee65d1cd01a29fda.txt",
+      "prepared_image": "IMG_8252_jpg.rf.665eb53db93325c8ee65d1cd01a29fda.jpg",
+      "prepared_label": "IMG_8252_jpg.rf.665eb53db93325c8ee65d1cd01a29fda.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.5550312500000001 0.55134375 0.489515625 0.8973281249999999"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8256_jpg.rf.d89d7a76e2e474b974f271d4531b1f01.jpg",
+      "source_label": "IMG_8256_jpg.rf.d89d7a76e2e474b974f271d4531b1f01.txt",
+      "prepared_image": "IMG_8256_jpg.rf.d89d7a76e2e474b974f271d4531b1f01.jpg",
+      "prepared_label": "IMG_8256_jpg.rf.d89d7a76e2e474b974f271d4531b1f01.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.5332343749999999 0.506296875 0.73303125 0.5396875"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8261_jpg.rf.abc10f7c8b39eb75878c6b03ee698cf1.jpg",
+      "source_label": "IMG_8261_jpg.rf.abc10f7c8b39eb75878c6b03ee698cf1.txt",
+      "prepared_image": "IMG_8261_jpg.rf.abc10f7c8b39eb75878c6b03ee698cf1.jpg",
+      "prepared_label": "IMG_8261_jpg.rf.abc10f7c8b39eb75878c6b03ee698cf1.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.55803125 0.51115625 0.8839218750000001 0.9776718750000001"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8266_jpg.rf.056790686b77a191092857e9082c07d8.jpg",
+      "source_label": "IMG_8266_jpg.rf.056790686b77a191092857e9082c07d8.txt",
+      "prepared_image": "IMG_8266_jpg.rf.056790686b77a191092857e9082c07d8.jpg",
+      "prepared_label": "IMG_8266_jpg.rf.056790686b77a191092857e9082c07d8.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.485 0.435484375 0.56821875 0.79059375"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8280_jpg.rf.57b644863dfe0784bdaa3cc11ca82601.jpg",
+      "source_label": "IMG_8280_jpg.rf.57b644863dfe0784bdaa3cc11ca82601.txt",
+      "prepared_image": "IMG_8280_jpg.rf.57b644863dfe0784bdaa3cc11ca82601.jpg",
+      "prepared_label": "IMG_8280_jpg.rf.57b644863dfe0784bdaa3cc11ca82601.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.539046875 0.533484375 0.734359375 0.93303125"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8285_jpg.rf.15391a4adf5bd9145becb507d0ddf4cf.jpg",
+      "source_label": "IMG_8285_jpg.rf.15391a4adf5bd9145becb507d0ddf4cf.txt",
+      "prepared_image": "IMG_8285_jpg.rf.15391a4adf5bd9145becb507d0ddf4cf.jpg",
+      "prepared_label": "IMG_8285_jpg.rf.15391a4adf5bd9145becb507d0ddf4cf.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.52059375 0.514515625 0.52334375 0.9709843749999999"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8308_jpg.rf.5af1cce884957933ad04f5968370b1b4.jpg",
+      "source_label": "IMG_8308_jpg.rf.5af1cce884957933ad04f5968370b1b4.txt",
+      "prepared_image": "IMG_8308_jpg.rf.5af1cce884957933ad04f5968370b1b4.jpg",
+      "prepared_label": "IMG_8308_jpg.rf.5af1cce884957933ad04f5968370b1b4.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.51228125 0.4875625 0.9754531249999999 0.8813906250000001"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8355_jpg.rf.fcda9e37ac50cc6576c5b17ce81dabfc.jpg",
+      "source_label": "IMG_8355_jpg.rf.fcda9e37ac50cc6576c5b17ce81dabfc.txt",
+      "prepared_image": "IMG_8355_jpg.rf.fcda9e37ac50cc6576c5b17ce81dabfc.jpg",
+      "prepared_label": "IMG_8355_jpg.rf.fcda9e37ac50cc6576c5b17ce81dabfc.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.53821875 0.54353125 0.5139375 0.9129531249999999"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8359_jpg.rf.fa5eb3d521b50f7b4307bf7dbec9e5f1.jpg",
+      "source_label": "IMG_8359_jpg.rf.fa5eb3d521b50f7b4307bf7dbec9e5f1.txt",
+      "prepared_image": "IMG_8359_jpg.rf.fa5eb3d521b50f7b4307bf7dbec9e5f1.jpg",
+      "prepared_label": "IMG_8359_jpg.rf.fa5eb3d521b50f7b4307bf7dbec9e5f1.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.40689062500000006 0.545296875 0.53253125 0.42989062499999997"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8364_jpg.rf.9cb8dcfa2b6c97fc3a4d5db1899b9331.jpg",
+      "source_label": "IMG_8364_jpg.rf.9cb8dcfa2b6c97fc3a4d5db1899b9331.txt",
+      "prepared_image": "IMG_8364_jpg.rf.9cb8dcfa2b6c97fc3a4d5db1899b9331.jpg",
+      "prepared_label": "IMG_8364_jpg.rf.9cb8dcfa2b6c97fc3a4d5db1899b9331.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.5305625 0.408328125 0.529875 0.633640625"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8374_jpg.rf.0f23b566057ed1b7c46374521aa959bd.jpg",
+      "source_label": "IMG_8374_jpg.rf.0f23b566057ed1b7c46374521aa959bd.txt",
+      "prepared_image": "IMG_8374_jpg.rf.0f23b566057ed1b7c46374521aa959bd.jpg",
+      "prepared_label": "IMG_8374_jpg.rf.0f23b566057ed1b7c46374521aa959bd.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.50221875 0.48757812500000003 0.558 0.975171875"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8379_jpg.rf.99445c98efc204f3787b27496a5c2f7d.jpg",
+      "source_label": "IMG_8379_jpg.rf.99445c98efc204f3787b27496a5c2f7d.txt",
+      "prepared_image": "IMG_8379_jpg.rf.99445c98efc204f3787b27496a5c2f7d.jpg",
+      "prepared_label": "IMG_8379_jpg.rf.99445c98efc204f3787b27496a5c2f7d.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.5 0.44165625000000003 1 0.883328125"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8385_jpg.rf.bdf28ca3ab2a803ca457af9bd1142571.jpg",
+      "source_label": "IMG_8385_jpg.rf.bdf28ca3ab2a803ca457af9bd1142571.txt",
+      "prepared_image": "IMG_8385_jpg.rf.bdf28ca3ab2a803ca457af9bd1142571.jpg",
+      "prepared_label": "IMG_8385_jpg.rf.bdf28ca3ab2a803ca457af9bd1142571.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.47000000000000003 0.59040625 0.4935625 0.8192031249999999"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8666_jpg.rf.e79ba09cf8bbb4ca1d2e1e223e5244be.jpg",
+      "source_label": "IMG_8666_jpg.rf.e79ba09cf8bbb4ca1d2e1e223e5244be.txt",
+      "prepared_image": "IMG_8666_jpg.rf.e79ba09cf8bbb4ca1d2e1e223e5244be.jpg",
+      "prepared_label": "IMG_8666_jpg.rf.e79ba09cf8bbb4ca1d2e1e223e5244be.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.487625 0.453609375 0.9529375 0.8089999999999999"
+      ],
+      "prepared_annotations": [
+        "0 0.487625 0.453609 0.952937 0.809000"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8669_jpg.rf.52e74a17e8c276a3b37e03d3742b3beb.jpg",
+      "source_label": "IMG_8669_jpg.rf.52e74a17e8c276a3b37e03d3742b3beb.txt",
+      "prepared_image": "IMG_8669_jpg.rf.52e74a17e8c276a3b37e03d3742b3beb.jpg",
+      "prepared_label": "IMG_8669_jpg.rf.52e74a17e8c276a3b37e03d3742b3beb.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.422953125 0.493765625 0.6360781249999999 0.95628125"
+      ],
+      "prepared_annotations": [
+        "0 0.422953 0.493766 0.636078 0.956281"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8669_jpg.rf.876cb547a20ac0519b150763a3f7e5d4.jpg",
+      "source_label": "IMG_8669_jpg.rf.876cb547a20ac0519b150763a3f7e5d4.txt",
+      "prepared_image": "IMG_8669_jpg.rf.876cb547a20ac0519b150763a3f7e5d4.jpg",
+      "prepared_label": "IMG_8669_jpg.rf.876cb547a20ac0519b150763a3f7e5d4.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.4536875 0.51115625 0.594875 0.9776718750000001"
+      ],
+      "prepared_annotations": [
+        "0 0.453688 0.511156 0.594875 0.977672"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8677_jpg.rf.a471346b213226c37f3b8c2853d85f72.jpg",
+      "source_label": "IMG_8677_jpg.rf.a471346b213226c37f3b8c2853d85f72.txt",
+      "prepared_image": "IMG_8677_jpg.rf.a471346b213226c37f3b8c2853d85f72.jpg",
+      "prepared_label": "IMG_8677_jpg.rf.a471346b213226c37f3b8c2853d85f72.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.5335 0.468125 0.723234375 0.9273125"
+      ],
+      "prepared_annotations": [
+        "0 0.533500 0.468125 0.723234 0.927312"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8678_jpg.rf.bb0bc3d760e66d124ab6970b838a7b11.jpg",
+      "source_label": "IMG_8678_jpg.rf.bb0bc3d760e66d124ab6970b838a7b11.txt",
+      "prepared_image": "IMG_8678_jpg.rf.bb0bc3d760e66d124ab6970b838a7b11.jpg",
+      "prepared_label": "IMG_8678_jpg.rf.bb0bc3d760e66d124ab6970b838a7b11.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.516734375 0.49478125000000006 0.9665156250000001 0.9181250000000001"
+      ],
+      "prepared_annotations": [
+        "0 0.516734 0.494781 0.966516 0.918125"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8691_jpg.rf.dfffca34b69d5620f91d659aa6e5a1a7.jpg",
+      "source_label": "IMG_8691_jpg.rf.dfffca34b69d5620f91d659aa6e5a1a7.txt",
+      "prepared_image": "IMG_8691_jpg.rf.dfffca34b69d5620f91d659aa6e5a1a7.jpg",
+      "prepared_label": "IMG_8691_jpg.rf.dfffca34b69d5620f91d659aa6e5a1a7.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.44507812500000005 0.46001562500000004 0.6803281250000001 0.8754062499999999"
+      ],
+      "prepared_annotations": [
+        "0 0.445078 0.460016 0.680328 0.875406"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8692_jpg.rf.3dca3f58a7ecf693e82b16fd5b83c05c.jpg",
+      "source_label": "IMG_8692_jpg.rf.3dca3f58a7ecf693e82b16fd5b83c05c.txt",
+      "prepared_image": "IMG_8692_jpg.rf.3dca3f58a7ecf693e82b16fd5b83c05c.jpg",
+      "prepared_label": "IMG_8692_jpg.rf.3dca3f58a7ecf693e82b16fd5b83c05c.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.55021875 0.515625 0.8995468750000001 0.96875"
+      ],
+      "prepared_annotations": [
+        "0 0.550219 0.515625 0.899547 0.968750"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8695_jpg.rf.6aa4dafe486b4048103989e84791eb39.jpg",
+      "source_label": "IMG_8695_jpg.rf.6aa4dafe486b4048103989e84791eb39.txt",
+      "prepared_image": "IMG_8695_jpg.rf.6aa4dafe486b4048103989e84791eb39.jpg",
+      "prepared_label": "IMG_8695_jpg.rf.6aa4dafe486b4048103989e84791eb39.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.50334375 0.479703125 0.9932968750000001 0.86565625"
+      ],
+      "prepared_annotations": [
+        "0 0.503344 0.479703 0.993297 0.865656"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8702_jpg.rf.06c73635e3a4fe0e5f612862ae8144e5.jpg",
+      "source_label": "IMG_8702_jpg.rf.06c73635e3a4fe0e5f612862ae8144e5.txt",
+      "prepared_image": "IMG_8702_jpg.rf.06c73635e3a4fe0e5f612862ae8144e5.jpg",
+      "prepared_label": "IMG_8702_jpg.rf.06c73635e3a4fe0e5f612862ae8144e5.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.20982142857142866 0.11830357142857144 0.04778507777622769 0.45641068049839567 0.09417002541678303 0.6939638682774137 0.2622266496930803 0.9941054752894811 0.4779255730765207 0.9962754930768696 0.5458863122122628 0.9440486090523856 0.7329976218087335 0.5846454075404577 0.6984784262520927 0.193723337990897 0.4662144524710518 0.01325975145612448"
+      ],
+      "prepared_annotations": [
+        "0 0.390391 0.504768 0.685213 0.983016"
+      ],
+      "polygon_conversions": [
+        {
+          "source_label_file": "IMG_8702_jpg.rf.06c73635e3a4fe0e5f612862ae8144e5.txt",
+          "source_class": 0,
+          "tokens_count": 19,
+          "num_points": 9,
+          "raw_line": "0 0.20982142857142866 0.11830357142857144 0.04778507777622769 0.45641068049839567 0.09417002541678303 0.6939638682774137 0.2622266496930803 0.9941054752894811 0.4779255730765207 0.9962754930768696 0.5458863122122628 0.9440486090523856 0.7329976218087335 0.5846454075404577 0.6984784262520927 0.193723337990897 0.4662144524710518 0.01325975145612448",
+          "x_range": [
+            0.04778507777622769,
+            0.7329976218087335
+          ],
+          "y_range": [
+            0.01325975145612448,
+            0.9962754930768696
+          ],
+          "calculated_bbox": [
+            0,
+            0.390391,
+            0.504768,
+            0.685213,
+            0.983016
+          ],
+          "target_class": 0,
+          "conversion_status": "SUCCESS"
+        }
+      ]
+    },
+    {
+      "source_image": "IMG_8711_jpg.rf.50e1d285f370c2d6984cae252b700b4e.jpg",
+      "source_label": "IMG_8711_jpg.rf.50e1d285f370c2d6984cae252b700b4e.txt",
+      "prepared_image": "IMG_8711_jpg.rf.50e1d285f370c2d6984cae252b700b4e.jpg",
+      "prepared_label": "IMG_8711_jpg.rf.50e1d285f370c2d6984cae252b700b4e.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.509265625 0.44265625000000003 0.8488749999999999 0.80940625"
+      ],
+      "prepared_annotations": [
+        "0 0.509266 0.442656 0.848875 0.809406"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8716_jpg.rf.baf77b003dec3e73880906eab87fdb27.jpg",
+      "source_label": "IMG_8716_jpg.rf.baf77b003dec3e73880906eab87fdb27.txt",
+      "prepared_image": "IMG_8716_jpg.rf.baf77b003dec3e73880906eab87fdb27.jpg",
+      "prepared_label": "IMG_8716_jpg.rf.baf77b003dec3e73880906eab87fdb27.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.49340624999999994 0.48215624999999995 0.884125 0.9553750000000001"
+      ],
+      "prepared_annotations": [
+        "0 0.493406 0.482156 0.884125 0.955375"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8725_jpg.rf.1c6802aebb5d2ae4eb86a86edc09054b.jpg",
+      "source_label": "IMG_8725_jpg.rf.1c6802aebb5d2ae4eb86a86edc09054b.txt",
+      "prepared_image": "IMG_8725_jpg.rf.1c6802aebb5d2ae4eb86a86edc09054b.jpg",
+      "prepared_label": "IMG_8725_jpg.rf.1c6802aebb5d2ae4eb86a86edc09054b.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.14285714285714288 0.15848214285714288 0.22735050746372773 0.9814548492431644 0.8162550245012558 0.8190994262695316 0.757232393537249 0.06458364214215954"
+      ],
+      "prepared_annotations": [
+        "0 0.479556 0.523019 0.673398 0.916871"
+      ],
+      "polygon_conversions": [
+        {
+          "source_label_file": "IMG_8725_jpg.rf.1c6802aebb5d2ae4eb86a86edc09054b.txt",
+          "source_class": 0,
+          "tokens_count": 9,
+          "num_points": 4,
+          "raw_line": "0 0.14285714285714288 0.15848214285714288 0.22735050746372773 0.9814548492431644 0.8162550245012558 0.8190994262695316 0.757232393537249 0.06458364214215954",
+          "x_range": [
+            0.14285714285714288,
+            0.8162550245012558
+          ],
+          "y_range": [
+            0.06458364214215954,
+            0.9814548492431644
+          ],
+          "calculated_bbox": [
+            0,
+            0.479556,
+            0.523019,
+            0.673398,
+            0.916871
+          ],
+          "target_class": 0,
+          "conversion_status": "SUCCESS"
+        }
+      ]
+    },
+    {
+      "source_image": "IMG_8728_jpg.rf.06a642b2e63efb9bc6383006329f831b.jpg",
+      "source_label": "IMG_8728_jpg.rf.06a642b2e63efb9bc6383006329f831b.txt",
+      "prepared_image": "IMG_8728_jpg.rf.06a642b2e63efb9bc6383006329f831b.jpg",
+      "prepared_label": "IMG_8728_jpg.rf.06a642b2e63efb9bc6383006329f831b.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.48785937500000004 0.49996875 0.8551875000000001 0.9999375"
+      ],
+      "prepared_annotations": [
+        "0 0.487859 0.499969 0.855188 0.999938"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8744_jpg.rf.a9c09cbdcc2b228f62aa9ee3fb7ff8ae.jpg",
+      "source_label": "IMG_8744_jpg.rf.a9c09cbdcc2b228f62aa9ee3fb7ff8ae.txt",
+      "prepared_image": "IMG_8744_jpg.rf.a9c09cbdcc2b228f62aa9ee3fb7ff8ae.jpg",
+      "prepared_label": "IMG_8744_jpg.rf.a9c09cbdcc2b228f62aa9ee3fb7ff8ae.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.8370535714285715 0.6316964285714287 0.5874009813581195 0.8196661812918528 0.45641258784702876 0.9812741960797992 0.3100445611136301 0.9359171731131418 0.12076895577566962 0.622358867100307 0.17322553907121918 0.2551383972167969 0.4182007653372627 0.021105085100446442 0.6152775628226144 0 0.8048498971121653 0.11532320295061375 0.8770430428641184 0.3853227751595633"
+      ],
+      "prepared_annotations": [
+        "0 0.498906 0.490637 0.756274 0.981274"
+      ],
+      "polygon_conversions": [
+        {
+          "source_label_file": "IMG_8744_jpg.rf.a9c09cbdcc2b228f62aa9ee3fb7ff8ae.txt",
+          "source_class": 0,
+          "tokens_count": 21,
+          "num_points": 10,
+          "raw_line": "0 0.8370535714285715 0.6316964285714287 0.5874009813581195 0.8196661812918528 0.45641258784702876 0.9812741960797992 0.3100445611136301 0.9359171731131418 0.12076895577566962 0.622358867100307 0.17322553907121918 0.2551383972167969 0.4182007653372627 0.021105085100446442 0.6152775628226144 0 0.8048498971121653 0.11532320295061375 0.8770430428641184 0.3853227751595633",
+          "x_range": [
+            0.12076895577566962,
+            0.8770430428641184
+          ],
+          "y_range": [
+            0.0,
+            0.9812741960797992
+          ],
+          "calculated_bbox": [
+            0,
+            0.498906,
+            0.490637,
+            0.756274,
+            0.981274
+          ],
+          "target_class": 0,
+          "conversion_status": "SUCCESS"
+        }
+      ]
+    },
+    {
+      "source_image": "IMG_8748_jpg.rf.39e374f57242019d5b74b0b914c7a0c2.jpg",
+      "source_label": "IMG_8748_jpg.rf.39e374f57242019d5b74b0b914c7a0c2.txt",
+      "prepared_image": "IMG_8748_jpg.rf.39e374f57242019d5b74b0b914c7a0c2.jpg",
+      "prepared_label": "IMG_8748_jpg.rf.39e374f57242019d5b74b0b914c7a0c2.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.4755625 0.49185937500000004 0.607375 0.7381875"
+      ],
+      "prepared_annotations": [
+        "0 0.475562 0.491859 0.607375 0.738187"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8750_jpg.rf.d564325675a78c06111472a423828109.jpg",
+      "source_label": "IMG_8750_jpg.rf.d564325675a78c06111472a423828109.txt",
+      "prepared_image": "IMG_8750_jpg.rf.d564325675a78c06111472a423828109.jpg",
+      "prepared_label": "IMG_8750_jpg.rf.d564325675a78c06111472a423828109.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.498421875 0.50446875 0.99684375 0.9910781249999999"
+      ],
+      "prepared_annotations": [
+        "0 0.498422 0.504469 0.996844 0.991078"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8770_jpg.rf.ce11afa1ea33a0a7ced58feed7416701.jpg",
+      "source_label": "IMG_8770_jpg.rf.ce11afa1ea33a0a7ced58feed7416701.txt",
+      "prepared_image": "IMG_8770_jpg.rf.ce11afa1ea33a0a7ced58feed7416701.jpg",
+      "prepared_label": "IMG_8770_jpg.rf.ce11afa1ea33a0a7ced58feed7416701.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.5078125 0.508296875 0.984375 0.971953125"
+      ],
+      "prepared_annotations": [
+        "0 0.507812 0.508297 0.984375 0.971953"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8772_jpg.rf.bcb65e078a47da94b52e2400d946f221.jpg",
+      "source_label": "IMG_8772_jpg.rf.bcb65e078a47da94b52e2400d946f221.txt",
+      "prepared_image": "IMG_8772_jpg.rf.bcb65e078a47da94b52e2400d946f221.jpg",
+      "prepared_label": "IMG_8772_jpg.rf.bcb65e078a47da94b52e2400d946f221.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.493453125 0.51784375 0.9422499999999999 0.8839062500000001"
+      ],
+      "prepared_annotations": [
+        "0 0.493453 0.517844 0.942250 0.883906"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8775_jpg.rf.c9b7dd7ade91cb9f309b7a270812edaa.jpg",
+      "source_label": "IMG_8775_jpg.rf.c9b7dd7ade91cb9f309b7a270812edaa.txt",
+      "prepared_image": "IMG_8775_jpg.rf.c9b7dd7ade91cb9f309b7a270812edaa.jpg",
+      "prepared_label": "IMG_8775_jpg.rf.c9b7dd7ade91cb9f309b7a270812edaa.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.47912499999999997 0.481 0.9448593750000001 0.9530625"
+      ],
+      "prepared_annotations": [
+        "0 0.479125 0.481000 0.944859 0.953063"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8776_jpg.rf.06a91ea69ba33f868eecd63ae2816d6d.jpg",
+      "source_label": "IMG_8776_jpg.rf.06a91ea69ba33f868eecd63ae2816d6d.txt",
+      "prepared_image": "IMG_8776_jpg.rf.06a91ea69ba33f868eecd63ae2816d6d.jpg",
+      "prepared_label": "IMG_8776_jpg.rf.06a91ea69ba33f868eecd63ae2816d6d.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.5305 0.5267968749999999 0.7708125 0.7455468749999999"
+      ],
+      "prepared_annotations": [
+        "0 0.530500 0.526797 0.770813 0.745547"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8776_jpg.rf.f68f4335acf5b546b264562161076554.jpg",
+      "source_label": "IMG_8776_jpg.rf.f68f4335acf5b546b264562161076554.txt",
+      "prepared_image": "IMG_8776_jpg.rf.f68f4335acf5b546b264562161076554.jpg",
+      "prepared_label": "IMG_8776_jpg.rf.f68f4335acf5b546b264562161076554.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.473140625 0.5406718749999999 0.7844375 0.760375"
+      ],
+      "prepared_annotations": [
+        "0 0.473141 0.540672 0.784438 0.760375"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8778_jpg.rf.9764a64b899a1e6ea64744b9079ed01f.jpg",
+      "source_label": "IMG_8778_jpg.rf.9764a64b899a1e6ea64744b9079ed01f.txt",
+      "prepared_image": "IMG_8778_jpg.rf.9764a64b899a1e6ea64744b9079ed01f.jpg",
+      "prepared_label": "IMG_8778_jpg.rf.9764a64b899a1e6ea64744b9079ed01f.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.500046875 0.5124531250000001 0.9152812499999999 0.9311562500000001"
+      ],
+      "prepared_annotations": [
+        "0 0.500047 0.512453 0.915281 0.931156"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8783_jpg.rf.2bc6dd1455e2aecfbe58df0958e86b63.jpg",
+      "source_label": "IMG_8783_jpg.rf.2bc6dd1455e2aecfbe58df0958e86b63.txt",
+      "prepared_image": "IMG_8783_jpg.rf.2bc6dd1455e2aecfbe58df0958e86b63.jpg",
+      "prepared_label": "IMG_8783_jpg.rf.2bc6dd1455e2aecfbe58df0958e86b63.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.48437500000000017 0.08705357142857154 0.17353398459298272 0.4688317435128348 0.20109094892229357 0.8345573970249724 0.7951398577008929 0.8197490147181921 0.7977104187011721 0.4190736498151506"
+      ],
+      "prepared_annotations": [
+        "0 0.485622 0.460805 0.624176 0.747504"
+      ],
+      "polygon_conversions": [
+        {
+          "source_label_file": "IMG_8783_jpg.rf.2bc6dd1455e2aecfbe58df0958e86b63.txt",
+          "source_class": 0,
+          "tokens_count": 11,
+          "num_points": 5,
+          "raw_line": "0 0.48437500000000017 0.08705357142857154 0.17353398459298272 0.4688317435128348 0.20109094892229357 0.8345573970249724 0.7951398577008929 0.8197490147181921 0.7977104187011721 0.4190736498151506",
+          "x_range": [
+            0.17353398459298272,
+            0.7977104187011721
+          ],
+          "y_range": [
+            0.08705357142857154,
+            0.8345573970249724
+          ],
+          "calculated_bbox": [
+            0,
+            0.485622,
+            0.460805,
+            0.624176,
+            0.747504
+          ],
+          "target_class": 0,
+          "conversion_status": "SUCCESS"
+        }
+      ]
+    },
+    {
+      "source_image": "IMG_8790_jpg.rf.ea0f1332461df3a62d7940d45fb36c37.jpg",
+      "source_label": "IMG_8790_jpg.rf.ea0f1332461df3a62d7940d45fb36c37.txt",
+      "prepared_image": "IMG_8790_jpg.rf.ea0f1332461df3a62d7940d45fb36c37.jpg",
+      "prepared_label": "IMG_8790_jpg.rf.ea0f1332461df3a62d7940d45fb36c37.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.51115625 0.5 0.9776718750000001 1"
+      ],
+      "prepared_annotations": [
+        "0 0.511156 0.500000 0.977672 1.000000"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8793_jpg.rf.f178865b76fc1cff86f30298de115481.jpg",
+      "source_label": "IMG_8793_jpg.rf.f178865b76fc1cff86f30298de115481.txt",
+      "prepared_image": "IMG_8793_jpg.rf.f178865b76fc1cff86f30298de115481.jpg",
+      "prepared_label": "IMG_8793_jpg.rf.f178865b76fc1cff86f30298de115481.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.5039374999999999 0.360453125 0.5257343750000001 0.720890625"
+      ],
+      "prepared_annotations": [
+        "0 0.503937 0.360453 0.525734 0.720891"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8795_jpg.rf.1494bfedc8d16c1542454d551cf0d199.jpg",
+      "source_label": "IMG_8795_jpg.rf.1494bfedc8d16c1542454d551cf0d199.txt",
+      "prepared_image": "IMG_8795_jpg.rf.1494bfedc8d16c1542454d551cf0d199.jpg",
+      "prepared_label": "IMG_8795_jpg.rf.1494bfedc8d16c1542454d551cf0d199.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.401171875 0.48810937499999996 0.802359375 0.953875"
+      ],
+      "prepared_annotations": [
+        "0 0.401172 0.488109 0.802359 0.953875"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8804_jpg.rf.f1a1f7577a34f6d04a06842185f53a8d.jpg",
+      "source_label": "IMG_8804_jpg.rf.f1a1f7577a34f6d04a06842185f53a8d.txt",
+      "prepared_image": "IMG_8804_jpg.rf.f1a1f7577a34f6d04a06842185f53a8d.jpg",
+      "prepared_label": "IMG_8804_jpg.rf.f1a1f7577a34f6d04a06842185f53a8d.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.52825 0.502234375 0.9270468749999999 0.99553125"
+      ],
+      "prepared_annotations": [
+        "0 0.528250 0.502234 0.927047 0.995531"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8805_jpg.rf.cd4be44991191ab8787630c44403ad79.jpg",
+      "source_label": "IMG_8805_jpg.rf.cd4be44991191ab8787630c44403ad79.txt",
+      "prepared_image": "IMG_8805_jpg.rf.cd4be44991191ab8787630c44403ad79.jpg",
+      "prepared_label": "IMG_8805_jpg.rf.cd4be44991191ab8787630c44403ad79.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.501078125 0.508796875 0.9887499999999999 0.94171875"
+      ],
+      "prepared_annotations": [
+        "0 0.501078 0.508797 0.988750 0.941719"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8806_jpg.rf.9f45e4a6aee4bac49ad6cf5438e2cc29.jpg",
+      "source_label": "IMG_8806_jpg.rf.9f45e4a6aee4bac49ad6cf5438e2cc29.txt",
+      "prepared_image": "IMG_8806_jpg.rf.9f45e4a6aee4bac49ad6cf5438e2cc29.jpg",
+      "prepared_label": "IMG_8806_jpg.rf.9f45e4a6aee4bac49ad6cf5438e2cc29.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.5 0.45685937499999996 1 0.9047812499999999"
+      ],
+      "prepared_annotations": [
+        "0 0.500000 0.456859 1.000000 0.904781"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8813_jpg.rf.079f3b18937040f9721b68b1f1df5a35.jpg",
+      "source_label": "IMG_8813_jpg.rf.079f3b18937040f9721b68b1f1df5a35.txt",
+      "prepared_image": "IMG_8813_jpg.rf.079f3b18937040f9721b68b1f1df5a35.jpg",
+      "prepared_label": "IMG_8813_jpg.rf.079f3b18937040f9721b68b1f1df5a35.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.47734375 0.44839062500000004 0.7046718750000001 0.861078125"
+      ],
+      "prepared_annotations": [
+        "0 0.477344 0.448391 0.704672 0.861078"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8819_jpg.rf.9c0fdefabb03abb0c40b12736041c3ac.jpg",
+      "source_label": "IMG_8819_jpg.rf.9c0fdefabb03abb0c40b12736041c3ac.txt",
+      "prepared_image": "IMG_8819_jpg.rf.9c0fdefabb03abb0c40b12736041c3ac.jpg",
+      "prepared_label": "IMG_8819_jpg.rf.9c0fdefabb03abb0c40b12736041c3ac.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.40356249999999994 0.475296875 0.775875 0.8166718749999999"
+      ],
+      "prepared_annotations": [
+        "0 0.403562 0.475297 0.775875 0.816672"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8855_jpg.rf.997762138de3a84b2d2658a920edb366.jpg",
+      "source_label": "IMG_8855_jpg.rf.997762138de3a84b2d2658a920edb366.txt",
+      "prepared_image": "IMG_8855_jpg.rf.997762138de3a84b2d2658a920edb366.jpg",
+      "prepared_label": "IMG_8855_jpg.rf.997762138de3a84b2d2658a920edb366.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.53575 0.50175 0.8348906250000001 0.93653125"
+      ],
+      "prepared_annotations": [
+        "0 0.535750 0.501750 0.834891 0.936531"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8900_jpg.rf.83825b9de282a8411b65972cbf3892fe.jpg",
+      "source_label": "IMG_8900_jpg.rf.83825b9de282a8411b65972cbf3892fe.txt",
+      "prepared_image": "IMG_8900_jpg.rf.83825b9de282a8411b65972cbf3892fe.jpg",
+      "prepared_label": "IMG_8900_jpg.rf.83825b9de282a8411b65972cbf3892fe.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.47803125 0.5877656250000001 0.9248125 0.666609375"
+      ],
+      "prepared_annotations": [
+        "0 0.478031 0.587766 0.924813 0.666609"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8901_jpg.rf.1b28a0dd72ac328e0aea7ea202a141a5.jpg",
+      "source_label": "IMG_8901_jpg.rf.1b28a0dd72ac328e0aea7ea202a141a5.txt",
+      "prepared_image": "IMG_8901_jpg.rf.1b28a0dd72ac328e0aea7ea202a141a5.jpg",
+      "prepared_label": "IMG_8901_jpg.rf.1b28a0dd72ac328e0aea7ea202a141a5.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.49928125 0.52678125 0.985171875 0.9464218750000001"
+      ],
+      "prepared_annotations": [
+        "0 0.499281 0.526781 0.985172 0.946422"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8902_jpg.rf.dc64d0017973742a4bdc97a02ee6c7f6.jpg",
+      "source_label": "IMG_8902_jpg.rf.dc64d0017973742a4bdc97a02ee6c7f6.txt",
+      "prepared_image": "IMG_8902_jpg.rf.dc64d0017973742a4bdc97a02ee6c7f6.jpg",
+      "prepared_label": "IMG_8902_jpg.rf.dc64d0017973742a4bdc97a02ee6c7f6.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.508015625 0.3645625 0.493703125 0.648765625"
+      ],
+      "prepared_annotations": [
+        "0 0.508016 0.364563 0.493703 0.648766"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8905_jpg.rf.dc472929cfeae9c008d64be5162b552a.jpg",
+      "source_label": "IMG_8905_jpg.rf.dc472929cfeae9c008d64be5162b552a.txt",
+      "prepared_image": "IMG_8905_jpg.rf.dc472929cfeae9c008d64be5162b552a.jpg",
+      "prepared_label": "IMG_8905_jpg.rf.dc472929cfeae9c008d64be5162b552a.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.520546875 0.48539062499999996 0.8893125 0.9082812499999999"
+      ],
+      "prepared_annotations": [
+        "0 0.520547 0.485391 0.889312 0.908281"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8911_jpg.rf.170aabf2cd3fca939793864731bce81d.jpg",
+      "source_label": "IMG_8911_jpg.rf.170aabf2cd3fca939793864731bce81d.txt",
+      "prepared_image": "IMG_8911_jpg.rf.170aabf2cd3fca939793864731bce81d.jpg",
+      "prepared_label": "IMG_8911_jpg.rf.170aabf2cd3fca939793864731bce81d.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.45271875 0.50334375 0.8920468749999999 0.9932968750000001"
+      ],
+      "prepared_annotations": [
+        "0 0.452719 0.503344 0.892047 0.993297"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8926_jpg.rf.546697558752b0a2b8e17e2b01d3f603.jpg",
+      "source_label": "IMG_8926_jpg.rf.546697558752b0a2b8e17e2b01d3f603.txt",
+      "prepared_image": "IMG_8926_jpg.rf.546697558752b0a2b8e17e2b01d3f603.jpg",
+      "prepared_label": "IMG_8926_jpg.rf.546697558752b0a2b8e17e2b01d3f603.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.5002500000000001 0.502234375 0.987125 0.99553125"
+      ],
+      "prepared_annotations": [
+        "0 0.500250 0.502234 0.987125 0.995531"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8931_jpg.rf.66a35baf2bc4719ce5992e3896c64db6.jpg",
+      "source_label": "IMG_8931_jpg.rf.66a35baf2bc4719ce5992e3896c64db6.txt",
+      "prepared_image": "IMG_8931_jpg.rf.66a35baf2bc4719ce5992e3896c64db6.jpg",
+      "prepared_label": "IMG_8931_jpg.rf.66a35baf2bc4719ce5992e3896c64db6.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.394015625 0.46668750000000003 0.774640625 0.9155312500000001"
+      ],
+      "prepared_annotations": [
+        "0 0.394016 0.466688 0.774641 0.915531"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8949_jpg.rf.5bb7d6cddec57210521198df34f1847b.jpg",
+      "source_label": "IMG_8949_jpg.rf.5bb7d6cddec57210521198df34f1847b.txt",
+      "prepared_image": "IMG_8949_jpg.rf.5bb7d6cddec57210521198df34f1847b.jpg",
+      "prepared_label": "IMG_8949_jpg.rf.5bb7d6cddec57210521198df34f1847b.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.459046875 0.508921875 0.49396874999999996 0.9821406250000001"
+      ],
+      "prepared_annotations": [
+        "0 0.459047 0.508922 0.493969 0.982141"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8955_jpg.rf.a7a0ee13ea9a42ce421604641ed8063d.jpg",
+      "source_label": "IMG_8955_jpg.rf.a7a0ee13ea9a42ce421604641ed8063d.txt",
+      "prepared_image": "IMG_8955_jpg.rf.a7a0ee13ea9a42ce421604641ed8063d.jpg",
+      "prepared_label": "IMG_8955_jpg.rf.a7a0ee13ea9a42ce421604641ed8063d.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.49325 0.5801875 0.9061406249999999 0.727328125"
+      ],
+      "prepared_annotations": [
+        "0 0.493250 0.580187 0.906141 0.727328"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8956_jpg.rf.8a06ea25e04c63e44fda3443f959b8fa.jpg",
+      "source_label": "IMG_8956_jpg.rf.8a06ea25e04c63e44fda3443f959b8fa.txt",
+      "prepared_image": "IMG_8956_jpg.rf.8a06ea25e04c63e44fda3443f959b8fa.jpg",
+      "prepared_label": "IMG_8956_jpg.rf.8a06ea25e04c63e44fda3443f959b8fa.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.5 0.49198437500000003 1 0.983953125"
+      ],
+      "prepared_annotations": [
+        "0 0.500000 0.491984 1.000000 0.983953"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8971_jpg.rf.d40fb8b6f651dc4de7771025284e99b9.jpg",
+      "source_label": "IMG_8971_jpg.rf.d40fb8b6f651dc4de7771025284e99b9.txt",
+      "prepared_image": "IMG_8971_jpg.rf.d40fb8b6f651dc4de7771025284e99b9.jpg",
+      "prepared_label": "IMG_8971_jpg.rf.d40fb8b6f651dc4de7771025284e99b9.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.51115625 0.5068125 0.9776718750000001 0.94665625"
+      ],
+      "prepared_annotations": [
+        "0 0.511156 0.506812 0.977672 0.946656"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8981_jpg.rf.1ad2c67e810979a1e5a4168a0e75b7a7.jpg",
+      "source_label": "IMG_8981_jpg.rf.1ad2c67e810979a1e5a4168a0e75b7a7.txt",
+      "prepared_image": "IMG_8981_jpg.rf.1ad2c67e810979a1e5a4168a0e75b7a7.jpg",
+      "prepared_label": "IMG_8981_jpg.rf.1ad2c67e810979a1e5a4168a0e75b7a7.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.500171875 0.41857812499999997 0.9199999999999999 0.837140625"
+      ],
+      "prepared_annotations": [
+        "0 0.500172 0.418578 0.920000 0.837141"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8984_jpg.rf.f3a1dbce9461b377b891da9cd712e67c.jpg",
+      "source_label": "IMG_8984_jpg.rf.f3a1dbce9461b377b891da9cd712e67c.txt",
+      "prepared_image": "IMG_8984_jpg.rf.f3a1dbce9461b377b891da9cd712e67c.jpg",
+      "prepared_label": "IMG_8984_jpg.rf.f3a1dbce9461b377b891da9cd712e67c.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.5 0.477734375 1 0.866171875"
+      ],
+      "prepared_annotations": [
+        "0 0.500000 0.477734 1.000000 0.866172"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_8997_jpg.rf.c0edbb9e5d8461f038392b1a28784822.jpg",
+      "source_label": "IMG_8997_jpg.rf.c0edbb9e5d8461f038392b1a28784822.txt",
+      "prepared_image": "IMG_8997_jpg.rf.c0edbb9e5d8461f038392b1a28784822.jpg",
+      "prepared_label": "IMG_8997_jpg.rf.c0edbb9e5d8461f038392b1a28784822.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.53125 0.409359375 0.9375 0.6669375"
+      ],
+      "prepared_annotations": [
+        "0 0.531250 0.409359 0.937500 0.666937"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_9005_jpg.rf.1324149272c1ca5511d149789cad9076.jpg",
+      "source_label": "IMG_9005_jpg.rf.1324149272c1ca5511d149789cad9076.txt",
+      "prepared_image": "IMG_9005_jpg.rf.1324149272c1ca5511d149789cad9076.jpg",
+      "prepared_label": "IMG_9005_jpg.rf.1324149272c1ca5511d149789cad9076.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.42614062500000005 0.505484375 0.70940625 0.62703125"
+      ],
+      "prepared_annotations": [
+        "0 0.426141 0.505484 0.709406 0.627031"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_9029_jpg.rf.cfced0352f72a57dadb7c273c636d444.jpg",
+      "source_label": "IMG_9029_jpg.rf.cfced0352f72a57dadb7c273c636d444.txt",
+      "prepared_image": "IMG_9029_jpg.rf.cfced0352f72a57dadb7c273c636d444.jpg",
+      "prepared_label": "IMG_9029_jpg.rf.cfced0352f72a57dadb7c273c636d444.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.35937500000000017 0.06250000000000004 0.6960000991821291 0.11747932434082035 0.6888910021100727 0.7353766305106029 0.2685926982334683 0.6677752903529577"
+      ],
+      "prepared_annotations": [
+        "0 0.482296 0.398938 0.427407 0.672877"
+      ],
+      "polygon_conversions": [
+        {
+          "source_label_file": "IMG_9029_jpg.rf.cfced0352f72a57dadb7c273c636d444.txt",
+          "source_class": 0,
+          "tokens_count": 9,
+          "num_points": 4,
+          "raw_line": "0 0.35937500000000017 0.06250000000000004 0.6960000991821291 0.11747932434082035 0.6888910021100727 0.7353766305106029 0.2685926982334683 0.6677752903529577",
+          "x_range": [
+            0.2685926982334683,
+            0.6960000991821291
+          ],
+          "y_range": [
+            0.06250000000000004,
+            0.7353766305106029
+          ],
+          "calculated_bbox": [
+            0,
+            0.482296,
+            0.398938,
+            0.427407,
+            0.672877
+          ],
+          "target_class": 0,
+          "conversion_status": "SUCCESS"
+        }
+      ]
+    },
+    {
+      "source_image": "IMG_9029_jpg.rf.fd037d113b091d214657c4d461e6413f.jpg",
+      "source_label": "IMG_9029_jpg.rf.fd037d113b091d214657c4d461e6413f.txt",
+      "prepared_image": "IMG_9029_jpg.rf.fd037d113b091d214657c4d461e6413f.jpg",
+      "prepared_label": "IMG_9029_jpg.rf.fd037d113b091d214657c4d461e6413f.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.482265625 0.411453125 0.4288125 0.675578125"
+      ],
+      "prepared_annotations": [
+        "0 0.482266 0.411453 0.428812 0.675578"
+      ],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_9075_jpg.rf.54044419da9e36c6c5cd368c4f7be48f.jpg",
+      "source_label": "IMG_9075_jpg.rf.54044419da9e36c6c5cd368c4f7be48f.txt",
+      "prepared_image": "IMG_9075_jpg.rf.54044419da9e36c6c5cd368c4f7be48f.jpg",
+      "prepared_label": "IMG_9075_jpg.rf.54044419da9e36c6c5cd368c4f7be48f.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.588375 0.49859375000000006 0.7794375 0.988265625"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_9076_jpg.rf.efea528e2025e746438a477bd8121fbd.jpg",
+      "source_label": "IMG_9076_jpg.rf.efea528e2025e746438a477bd8121fbd.txt",
+      "prepared_image": "IMG_9076_jpg.rf.efea528e2025e746438a477bd8121fbd.jpg",
+      "prepared_label": "IMG_9076_jpg.rf.efea528e2025e746438a477bd8121fbd.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.510359375 0.609375 0.7975 0.78125"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_9109_jpg.rf.a75842e104d6f89285d2f1cb7b3aa1d6.jpg",
+      "source_label": "IMG_9109_jpg.rf.a75842e104d6f89285d2f1cb7b3aa1d6.txt",
+      "prepared_image": "IMG_9109_jpg.rf.a75842e104d6f89285d2f1cb7b3aa1d6.jpg",
+      "prepared_label": "IMG_9109_jpg.rf.a75842e104d6f89285d2f1cb7b3aa1d6.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.459953125 0.50334375 0.611859375 0.9932968750000001"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_9130_jpg.rf.0b8df3381f09df2ad516403b5a22920f.jpg",
+      "source_label": "IMG_9130_jpg.rf.0b8df3381f09df2ad516403b5a22920f.txt",
+      "prepared_image": "IMG_9130_jpg.rf.0b8df3381f09df2ad516403b5a22920f.jpg",
+      "prepared_label": "IMG_9130_jpg.rf.0b8df3381f09df2ad516403b5a22920f.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.5177968749999999 0.559453125 0.8079218750000001 0.87784375"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "IMG_9131_jpg.rf.2be5a568ebce2d424c9c78c53e06d5d8.jpg",
+      "source_label": "IMG_9131_jpg.rf.2be5a568ebce2d424c9c78c53e06d5d8.txt",
+      "prepared_image": "IMG_9131_jpg.rf.2be5a568ebce2d424c9c78c53e06d5d8.jpg",
+      "prepared_label": "IMG_9131_jpg.rf.2be5a568ebce2d424c9c78c53e06d5d8.txt",
+      "category": "negative_healthy_sign_background",
+      "source_annotations": [
+        "1 0.564734375 0.520625 0.87053125 0.822515625"
+      ],
+      "prepared_annotations": [],
+      "polygon_conversions": []
+    },
+    {
+      "source_image": "image5-14-_jpeg_jpg.rf.29ea84afdc9b9e4d9d9041e0d7d67c20.jpg",
+      "source_label": "image5-14-_jpeg_jpg.rf.29ea84afdc9b9e4d9d9041e0d7d67c20.txt",
+      "prepared_image": "image5-14-_jpeg_jpg.rf.29ea84afdc9b9e4d9d9041e0d7d67c20.jpg",
+      "prepared_label": "image5-14-_jpeg_jpg.rf.29ea84afdc9b9e4d9d9041e0d7d67c20.txt",
+      "category": "positive_damaged_sign",
+      "source_annotations": [
+        "0 0.543875 0.541296875 0.685984375 0.91740625"
+      ],
+      "prepared_annotations": [
+        "0 0.543875 0.541297 0.685984 0.917406"
+      ],
+      "polygon_conversions": []
+    }
+  ]
+}

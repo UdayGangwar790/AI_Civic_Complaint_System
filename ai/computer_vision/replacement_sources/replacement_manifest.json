@@ -1,0 +1,219 @@
+{
+  "module": "M1.5B \u2014 Verified Replacement Dataset Acquisition",
+  "status": "REPLACEMENTS_ACQUIRED_PENDING_APPROVAL",
+  "replacement_summary": {
+    "road_sign_target_shortage": 1,
+    "road_sign_replacements_found": 1,
+    "road_sign_remaining_shortage": 0,
+    "waterlogging_target_shortage": 6,
+    "waterlogging_replacements_found": 6,
+    "waterlogging_remaining_shortage": 0,
+    "total_replacements_acquired": 7,
+    "total_remaining_shortage": 0
+  },
+  "road_sign_replacement": {
+    "candidate_id": "RS-REPL-01",
+    "source_dataset": "damaged signs Hind.v1i.yolov8 (Roboflow project: damaged-signs-hind-vfpku)",
+    "source_split": "train",
+    "original_filename": "IMG_8655_jpg.rf.45544adfcdd97c94f9db3407648a52a1.jpg",
+    "original_label_filename": "IMG_8655_jpg.rf.45544adfcdd97c94f9db3407648a52a1.txt",
+    "source_class": "0: Damaged signs",
+    "target_class": "0: damaged_missing_road_sign",
+    "source_location": "C:\\Users\\sushm\\Downloads\\damaged signs Hind.v1i.yolov8\\train\\images\\IMG_8655_jpg.rf.45544adfcdd97c94f9db3407648a52a1.jpg",
+    "image_dimensions": {
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "mode": "RGB"
+    },
+    "annotation_count": 1,
+    "annotations": [
+      "0 0.5293281249999999 0.49982812499999996 0.7282968750000001 0.8032187499999999"
+    ],
+    "sha256": "d2ccd14f633da4b2f4599373c5847a263cfac2f422a4ab14b3f7cc83e7ad79bf",
+    "duplicate_check_result": {
+      "exact_duplicate_in_approved": false,
+      "exact_duplicate_in_manual_review": false,
+      "scene_overlap_with_approved": false
+    },
+    "scene_group": "IMG_8655",
+    "reason_qualifies": "Verified triangular warning road sign with crumpled/bent metal bottom-right plate on post against blue sky. Clearly damaged road sign with tight, valid bounding box and zero overlap with approved 99 road-sign images."
+  },
+  "waterlogging_replacements": [
+    {
+      "candidate_id": "WL-REPL-01",
+      "source_dataset": "water logging.v1i.yolov8 (Roboflow project: water-logging)",
+      "source_split": "valid",
+      "original_filename": "waterloggingt-10-_jpg.rf.6907c533b135a400dc53b46585bb1ed4.jpg",
+      "original_label_filename": "waterloggingt-10-_jpg.rf.6907c533b135a400dc53b46585bb1ed4.txt",
+      "source_class": "0: water",
+      "target_class": "0: road_waterlogging",
+      "source_location": "C:\\Users\\sushm\\Downloads\\water logging.v1i.yolov8\\valid\\images\\waterloggingt-10-_jpg.rf.6907c533b135a400dc53b46585bb1ed4.jpg",
+      "image_dimensions": {
+        "width": 512,
+        "height": 384,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      "annotation_count": 2,
+      "annotations": [
+        "0 0.091796875 0.53125 0.16015625 0.1171875",
+        "0 0.66796875 0.5247395833333334 0.62109375 0.109375"
+      ],
+      "sha256": "a887e6eff5439f67d49416610640a0fedff6318449dd956c96b4c57758aa320a",
+      "duplicate_check_result": {
+        "exact_duplicate_in_approved": false,
+        "exact_duplicate_in_manual_review": false,
+        "scene_overlap_with_approved": false
+      },
+      "scene_group": "waterloggingt-10-_jpg",
+      "reason_qualifies": "Flooded rural highway crossing with standing water across roadway and car stopped right before flooded section."
+    },
+    {
+      "candidate_id": "WL-REPL-02",
+      "source_dataset": "water logging.v1i.yolov8 (Roboflow project: water-logging)",
+      "source_split": "valid",
+      "original_filename": "waterloggingt-101-_jpg.rf.8e414c06e616a1356b33962850a7a4f6.jpg",
+      "original_label_filename": "waterloggingt-101-_jpg.rf.8e414c06e616a1356b33962850a7a4f6.txt",
+      "source_class": "0: water",
+      "target_class": "0: road_waterlogging",
+      "source_location": "C:\\Users\\sushm\\Downloads\\water logging.v1i.yolov8\\valid\\images\\waterloggingt-101-_jpg.rf.8e414c06e616a1356b33962850a7a4f6.jpg",
+      "image_dimensions": {
+        "width": 512,
+        "height": 384,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      "annotation_count": 3,
+      "annotations": [
+        "0 0.494140625 0.8020833333333334 0.98828125 0.3880208333333333",
+        "0 0.7578125 0.48828125 0.44921875 0.1796875",
+        "0 0.201171875 0.5013020833333334 0.365234375 0.15104166666666666"
+      ],
+      "sha256": "a30a2201cfe9bc5f218198af8836801d0b1c49c0e1e24f88bd1d30a718e12dfd",
+      "duplicate_check_result": {
+        "exact_duplicate_in_approved": false,
+        "exact_duplicate_in_manual_review": false,
+        "scene_overlap_with_approved": false
+      },
+      "scene_group": "waterloggingt-101-_jpg",
+      "reason_qualifies": "Submerged suburban residential roadway with municipal/utility workers wading through knee-deep stagnant water, residential houses and utility poles in background."
+    },
+    {
+      "candidate_id": "WL-REPL-03",
+      "source_dataset": "water logging.v1i.yolov8 (Roboflow project: water-logging)",
+      "source_split": "valid",
+      "original_filename": "waterloggingt-123-_jpg.rf.caafec34b2c9f23b90ebaa43223ffb59.jpg",
+      "original_label_filename": "waterloggingt-123-_jpg.rf.caafec34b2c9f23b90ebaa43223ffb59.txt",
+      "source_class": "0: water",
+      "target_class": "0: road_waterlogging",
+      "source_location": "C:\\Users\\sushm\\Downloads\\water logging.v1i.yolov8\\valid\\images\\waterloggingt-123-_jpg.rf.caafec34b2c9f23b90ebaa43223ffb59.jpg",
+      "image_dimensions": {
+        "width": 512,
+        "height": 384,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      "annotation_count": 3,
+      "annotations": [
+        "0 0.4443359375 0.7669270833333334 0.25390625 0.18489583333333334",
+        "0 0.7919921875 0.8333333333333334 0.33203125 0.11979166666666667",
+        "0 0.119140625 0.7096354166666666 0.228515625 0.12760416666666666"
+      ],
+      "sha256": "512142ea212f1b86c25f7d70dd89a6131593ffa58e09348821cc682adabf367f",
+      "duplicate_check_result": {
+        "exact_duplicate_in_approved": false,
+        "exact_duplicate_in_manual_review": false,
+        "scene_overlap_with_approved": false
+      },
+      "scene_group": "waterloggingt-123-_jpg",
+      "reason_qualifies": "Urban high street/commercial district with storefronts, cars splashing through standing water pooled on roadway."
+    },
+    {
+      "candidate_id": "WL-REPL-04",
+      "source_dataset": "water logging.v1i.yolov8 (Roboflow project: water-logging)",
+      "source_split": "valid",
+      "original_filename": "waterloggingt-124-_jpg.rf.db98b0141ebde1e782c5ae2ba94df6b7.jpg",
+      "original_label_filename": "waterloggingt-124-_jpg.rf.db98b0141ebde1e782c5ae2ba94df6b7.txt",
+      "source_class": "0: water",
+      "target_class": "0: road_waterlogging",
+      "source_location": "C:\\Users\\sushm\\Downloads\\water logging.v1i.yolov8\\valid\\images\\waterloggingt-124-_jpg.rf.db98b0141ebde1e782c5ae2ba94df6b7.jpg",
+      "image_dimensions": {
+        "width": 512,
+        "height": 384,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      "annotation_count": 1,
+      "annotations": [
+        "0 0.5009765625 0.59375 0.9921875 0.8125"
+      ],
+      "sha256": "43792a1ae3fb16d75a232fcda0243cade1c3eb49f497f23caa3cce7f24ef94b9",
+      "duplicate_check_result": {
+        "exact_duplicate_in_approved": false,
+        "exact_duplicate_in_manual_review": false,
+        "scene_overlap_with_approved": false
+      },
+      "scene_group": "waterloggingt-124-_jpg",
+      "reason_qualifies": "Two-lane highway with painted center lines completely submerged by deep stagnant floodwaters covering the road."
+    },
+    {
+      "candidate_id": "WL-REPL-05",
+      "source_dataset": "water logging.v1i.yolov8 (Roboflow project: water-logging)",
+      "source_split": "valid",
+      "original_filename": "waterloggingt-145-_jpg.rf.c3dabb8c32e8535b5bec3381d1f18c86.jpg",
+      "original_label_filename": "waterloggingt-145-_jpg.rf.c3dabb8c32e8535b5bec3381d1f18c86.txt",
+      "source_class": "0: water",
+      "target_class": "0: road_waterlogging",
+      "source_location": "C:\\Users\\sushm\\Downloads\\water logging.v1i.yolov8\\valid\\images\\waterloggingt-145-_jpg.rf.c3dabb8c32e8535b5bec3381d1f18c86.jpg",
+      "image_dimensions": {
+        "width": 512,
+        "height": 384,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      "annotation_count": 2,
+      "annotations": [
+        "0 0.82421875 0.453125 0.3515625 0.19270833333333334",
+        "0 0.279296875 0.4778645833333333 0.484375 0.15625"
+      ],
+      "sha256": "c8a286f0e9da4a01aa2a454e38d7db31c1e8518cd04f2e2aecc1f759c50a4682",
+      "duplicate_check_result": {
+        "exact_duplicate_in_approved": false,
+        "exact_duplicate_in_manual_review": false,
+        "scene_overlap_with_approved": false
+      },
+      "scene_group": "waterloggingt-145-_jpg",
+      "reason_qualifies": "Paved road with official ROAD FLOODED warning sign in foreground and vehicles driving through stagnant floodwater wake."
+    },
+    {
+      "candidate_id": "WL-REPL-06",
+      "source_dataset": "water logging.v1i.yolov8 (Roboflow project: water-logging)",
+      "source_split": "valid",
+      "original_filename": "waterloggingt-31-_jpg.rf.3856f69d93858c8e57d49bfead20d9d9.jpg",
+      "original_label_filename": "waterloggingt-31-_jpg.rf.3856f69d93858c8e57d49bfead20d9d9.txt",
+      "source_class": "0: water",
+      "target_class": "0: road_waterlogging",
+      "source_location": "C:\\Users\\sushm\\Downloads\\water logging.v1i.yolov8\\valid\\images\\waterloggingt-31-_jpg.rf.3856f69d93858c8e57d49bfead20d9d9.jpg",
+      "image_dimensions": {
+        "width": 512,
+        "height": 384,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      "annotation_count": 2,
+      "annotations": [
+        "0 0.6884765625 0.53515625 0.33984375 0.2109375",
+        "0 0.2236328125 0.515625 0.353515625 0.1328125"
+      ],
+      "sha256": "652ed9ab921331fcf356a0ecf7b8f595809d5d683169f705cd6c8877c5e041ce",
+      "duplicate_check_result": {
+        "exact_duplicate_in_approved": false,
+        "exact_duplicate_in_manual_review": false,
+        "scene_overlap_with_approved": false
+      },
+      "scene_group": "waterloggingt-31-_jpg",
+      "reason_qualifies": "Urban roadway underpass under railway bridge with car submerged in deep floodwater filling the roadway lanes."
+    }
+  ]
+}

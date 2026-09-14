@@ -1,0 +1,74 @@
+{
+  "investigation": "CVKI M1.12 Failure Diagnostic Investigation",
+  "date": "2026-09-13",
+  "status": "COMPLETED",
+  "baseline_run": "ai/computer_vision/training/runs/yolov8n_baseline_300/",
+  "improved_run": "ai/computer_vision/training/runs/yolov8n_improved_311/",
+  "baseline_metrics": {
+    "precision": 0.7797,
+    "recall": 0.5660,
+    "mAP50": 0.6166,
+    "mAP50-95": 0.4279
+  },
+  "improved_metrics": {
+    "precision": 0.5785,
+    "recall": 0.3857,
+    "mAP50": 0.4166,
+    "mAP50-95": 0.2767
+  },
+  "best_epoch": {
+    "logged_epochs": 76,
+    "early_stopping_epoch": 76,
+    "best_mAP50_epoch": 76,
+    "best_mAP50_val": 0.6381,
+    "best_mAP50_95_epoch": 56,
+    "best_mAP50_95_val": 0.3919,
+    "verified_best_pt_epoch": 56,
+    "fitness_best_pt": 0.39188
+  },
+  "per_class_metrics": {
+    "open_damaged_manhole": {
+      "m1_8_mAP50": 0.7598,
+      "m1_11_mAP50": 0.6586,
+      "delta_mAP50": -0.1012,
+      "m1_8_recall": 0.6671,
+      "m1_11_recall": 0.6875,
+      "m1_8_precision": 0.8420,
+      "m1_11_precision": 0.5802
+    },
+    "damaged_missing_road_sign": {
+      "m1_8_mAP50": 0.7950,
+      "m1_11_mAP50": 0.5450,
+      "delta_mAP50": -0.2500,
+      "m1_8_recall": 0.8000,
+      "m1_11_recall": 0.3896,
+      "m1_8_precision": 0.8294,
+      "m1_11_precision": 1.0000
+    },
+    "road_waterlogging": {
+      "m1_8_mAP50": 0.2951,
+      "m1_11_mAP50": 0.0463,
+      "delta_mAP50": -0.2488,
+      "m1_8_recall": 0.2308,
+      "m1_11_recall": 0.0800,
+      "m1_8_precision": 0.6676,
+      "m1_11_precision": 0.1552
+    }
+  },
+  "primary_failure_class": "road_waterlogging",
+  "confirmed_findings": [
+    "Disabling mosaic (mosaic=0.0 vs 1.0) and reducing scale jitter (scale=0.15 vs 0.5) caused model-wide degradation, proven by sharp drops in road sign (-25.00 pp) and manhole (-10.12 pp) despite 100% identical training and test data.",
+    "The M1.8 and M1.11 waterlogging test splits share 0 overlapping images (0% overlap); therefore, the benchmark comparison was not a controlled paired experiment.",
+    "best.pt corresponds to Epoch 56 (peak fitness 0.39188), while Epoch 76 represents the early stopping termination epoch (last.pt).",
+    "Late-stage overfitting occurred between Epoch 56 and 76, where training box loss dropped from 0.7622 to 0.6273 while validation loss rose slightly from 1.4845 to 1.4947."
+  ],
+  "suggested_findings": [
+    "Consolidating fragmented boxes reduced waterlogging training instances from 315 to 124 (60.6% drop), starving the feature extractor of critical bounding box gradients.",
+    "Introducing 19 negative waterlogging training images (24.4% of waterlogging data) caused excessive prediction suppression, leading to an 88% False Negative rate on held-out test puddles with model confidences depressed to 0.05-0.18."
+  ],
+  "inconclusive_findings": [
+    "The isolated effect of canonical orientation vs 90/270 degree rotation cannot be isolated without a dedicated single-variable ablation experiment."
+  ],
+  "recommended_next_step": "Module 1.13: Restore standard YOLO augmentations (mosaic=1.0, scale=0.5) with gravity constraints preserved (degrees=0.0, flipud=0.0), recalibrate negative sample ratio to ~10%, and perform a controlled paired evaluation on both M1.8 and M1.11 test splits.",
+  "retraining_performed": false
+}
