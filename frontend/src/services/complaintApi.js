@@ -1,4 +1,5 @@
 import { API_BASE_URL_VALUE } from './detectionApi';
+import { apiFetch } from './apiFetch';
 
 export class ComplaintApiError extends Error {
   constructor(message, status) {
@@ -11,7 +12,7 @@ export class ComplaintApiError extends Error {
 export async function generateComplaintDraft({ detection, location, authority, language, imageAttached }) {
   let response;
   try {
-    response = await fetch(`${API_BASE_URL_VALUE}/api/v1/complaint/draft`, {
+    response = await apiFetch(`${API_BASE_URL_VALUE}/api/v1/complaint/draft`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

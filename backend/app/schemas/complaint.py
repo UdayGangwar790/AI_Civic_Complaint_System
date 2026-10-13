@@ -1,8 +1,9 @@
-from typing import Literal
+from typing import Literal, Optional
 
 from pydantic import BaseModel, Field
 
 from app.schemas.authority import AuthorityParty, AuthorityResult
+from app.schemas.guidance import GovernmentGuidanceResponse
 
 
 Language = Literal["en", "hi", "hinglish"]
@@ -45,3 +46,4 @@ class ComplaintDraftResponse(BaseModel):
     evidence: list[str] = Field(default_factory=list)
     limitations: list[str] = Field(default_factory=list)
     draft_text: str
+    guidance: Optional[GovernmentGuidanceResponse] = None

@@ -92,7 +92,8 @@ class TestModelIntegration(unittest.TestCase):
         status = isolated_service.get_model_status()
         self.assertFalse(status["loaded"])
         self.assertEqual(status["status"], "error")
-        self.assertIn("not found", status["error"].lower())
+        self.assertEqual(status["error"], "Model is unavailable.")
+        self.assertNotIn("non_existent_weights_xyz123.pt", str(status))
         self.assertEqual(status["num_classes"], 0)
 
         with self.assertRaises(RuntimeError) as ctx:

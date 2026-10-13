@@ -56,16 +56,23 @@ class NominatimReverseGeocoder:
             with urlopen(request, timeout=settings.REVERSE_GEOCODER_TIMEOUT_SECONDS) as response:
                 if response.status == 429:
                     raise LocationProviderRateLimited
-                payload = json.loads(response.read().decode("utf-8"))
+                response_body = response.read(1_000_001)
+                if len(response_body) > 1_000_000:
+                    raise LocationProviderError
+                payload = json.loads(response_body.decode("utf-8"))
         except HTTPError as exc:
             if exc.code == 429:
                 raise LocationProviderRateLimited from exc
+            logger.warning("Reverse geocoder request failed (status=%s).", exc.code)
             raise LocationProviderError from exc
         except TimeoutError as exc:
+            logger.warning("Reverse geocoder request timed out.")
             raise LocationProviderTimeout from exc
         except (URLError, ValueError, OSError) as exc:
             if isinstance(getattr(exc, "reason", None), TimeoutError):
+                logger.warning("Reverse geocoder request timed out.")
                 raise LocationProviderTimeout from exc
+            logger.warning("Reverse geocoder request failed (error_type=%s).", type(exc).__name__)
             raise LocationProviderError from exc
 
         if not isinstance(payload, dict):

@@ -1,77 +1,70 @@
-# CVKI (Civic Vision & Knowledge Intelligence)
+# CVKI — Civic Vision & Knowledge Intelligence
 
-## 1. What is CVKI?
-CVKI is an end-to-end civic-tech platform designed to empower citizens to capture road and civic problems, automatically identify them using AI, determine their location, map them to the responsible authority, and guide the complaint generation and tracking process.
+CVKI is a civic-issue reporting application with a React/Vite frontend, a FastAPI backend, MongoDB persistence, and a fixed YOLOv8 model for three issue classes:
 
-## 2. Real-world Problem Being Solved
-Citizens often face civic issues like damaged roads, missing signs, or waterlogging but struggle to identify the exact problem, the responsible department, or the formal way to file a complaint. CVKI bridges this gap using Computer Vision, NLP, and Geospatial mapping.
+- `open_damaged_manhole`
+- `damaged_missing_road_sign`
+- `road_waterlogging`
 
-## 3. Three Initial Detection Classes
-The initial implementation of the Computer Vision module will focus on three critical civic problems:
-1. `open_damaged_manhole` (Class 0)
-2. `damaged_missing_road_sign` (Class 1)
-3. `road_waterlogging` (Class 2)
+The implemented M0–M4 workflows include image detection, location capture and reverse geocoding, complaint drafting and case tracking, duplicate and priority analysis, authority-scoped case operations, notifications, analytics, and audit events. The application prepares citizen-facing information; it does **not** submit complaints to government systems.
 
-## 4. Overall Architecture
-- **Frontend**: React, Vite, Tailwind CSS (Citizen Dashboard, Complaint Tracking)
-- **Backend**: FastAPI, Python (Modular architecture for APIs, user auth, and DB operations)
-- **Database**: MongoDB (Storing users, complaints, locations, etc.)
-- **AI Modules**: YOLO-family object detection (CV), Hugging Face Transformers (NLP)
+This repository is an implementation, not a production-readiness certification. Review the limitations below before deployment.
 
-## 5. Current Development Stage
-The project is currently in the **foundation** phase. The monorepo structure has been created, frontend and backend placeholders are set up, and the architecture is ready for incremental AI module integration. No AI training or detection is currently active.
+## Local setup (Windows)
 
-## 6. Project Folder Structure
-```
-CVKI/
-├── frontend/             # React application
-├── backend/              # FastAPI application
-├── ai/
-│   ├── computer_vision/  # YOLO-based vision models
-│   └── nlp/              # NLP intelligence (future)
-├── data/                 # Raw and processed datasets
-└── docs/                 # Documentation
+Prerequisites: Python 3.13, Node.js/npm, MongoDB, and the model file at `ai/computer_vision/training/runs/yolov8n_m1_13/weights/best.pt`.
+
+From the repository root:
+
+```powershell
+py -3.13 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r backend\requirements.txt
+npm --prefix frontend install
+Copy-Item .env.example backend\.env
 ```
 
-## 7. Dataset Folder Structure
-Initial real-world dataset will be placed in:
-```
-ai/computer_vision/dataset_source/
-├── 01_Open_Damaged_Manhole/
-├── 02_Damaged_Missing_Road_Signs/
-└── 03_Road_Waterlogging/
-```
-*Note: This will consist of approximately 100 user-provided Indian road images per class (Total ~300 images).*
+Edit `backend\.env` for the local environment, especially `MONGODB_URI`. The development JWT secret is not suitable for production. Start MongoDB, then start the backend in one terminal:
 
-## 8. Future YOLO Workflow
-Source Images -> Validate -> Annotate -> Convert to YOLO labels -> Train/Val/Test Split -> Train YOLO -> Evaluate -> Save best.pt -> Inference API.
+```powershell
+Set-Location backend
+..\.venv\Scripts\python.exe -m uvicorn app.main:app --reload
+```
 
-## 9. Frontend Setup
-```bash
-cd frontend
-npm install
+Start the frontend in another terminal:
+
+```powershell
+Set-Location frontend
 npm run dev
 ```
 
-## 10. Backend Setup
-```bash
-cd backend
-python -m venv venv
-venv\Scripts\activate  # On Windows
-pip install -r requirements.txt
-uvicorn app.main:app --reload
+The frontend uses `http://localhost:8000` by default. Set `VITE_API_BASE_URL` when the API is hosted elsewhere. The API documentation is available at `http://localhost:8000/docs`; `/health` is a liveness check and `/ready` reports whether MongoDB and the model are available.
+
+## Tests and frontend checks
+
+From the repository root:
+
+```powershell
+Set-Location backend
+..\.venv\Scripts\python.exe -m pytest
+Set-Location ..\frontend
+npm run lint
+npm run build
 ```
 
-## 11. Environment Variables
-Copy `.env.example` to `.env` and fill in the required values. **Never hardcode secrets in the source code.**
+## Important limitations
 
-## 12. How to Run the Project
-1. Start the backend server (runs on port 8000 by default).
-2. Start the frontend development server (runs on port 5173 by default).
-3. Access the frontend via browser and the backend API docs at `http://localhost:8000/docs`.
+- No live official road-authority registry is configured. The default authority provider returns `not_verified` without authority claims or source records. Client-supplied authority claims are ignored for draft, guidance, and case creation.
+- Complaint and government-portal guidance are drafts only. CVKI does not submit complaints externally.
+- Reverse geocoding uses the configured Nominatim-compatible service; service availability and external usage requirements apply.
+- Rate limiting is in-process and is not shared among multiple backend workers.
+- Audit records include request correlation metadata but are not tamper-evident.
+- The frontend lint command currently exits successfully with three React effect warnings. The production build succeeds with a warning that the main JavaScript bundle exceeds 500 kB.
+- Local development defaults must be replaced with deployment-specific secrets, HTTPS, database controls, CORS origins, and operational monitoring before any production use.
 
-## 13. Future Development Roadmap
-- Integrate YOLO object detection for the 3 core classes.
-- Implement Location and Road Identification services.
-- Implement NLP for intelligent complaint generation.
-- Develop the Citizen Dashboard and escalation mechanisms.
+## Project layout
+
+- `frontend/` — React and Vite user interface
+- `backend/app/` — FastAPI routes, schemas, persistence, and services
+- `backend/tests/` — pytest regression suite
+- `ai/computer_vision/` — model, inference code, and dataset/training assets
+- `docs/` — module and verification documentation

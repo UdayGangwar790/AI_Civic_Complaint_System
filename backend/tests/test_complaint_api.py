@@ -68,22 +68,37 @@ class TestComplaintAPI(unittest.TestCase):
         self.assertEqual(hindi["severity"], hinglish["severity"])
         self.assertEqual(hindi["location"], hinglish["location"])
 
-    def test_verified_authority_is_included(self):
+    def test_client_supplied_authority_claim_is_ignored(self):
         data = self.post_draft(authority=VERIFIED_AUTHORITY).json()
-        self.assertEqual(data["authority_status"], "verified")
-        self.assertEqual(data["suggested_authority"]["name"], "Maintenance Authority")
-        self.assertEqual(len(data["evidence"]), 3)
+        self.assertEqual(data["authority_status"], "not_verified")
+        self.assertIsNone(data["suggested_authority"])
+        self.assertFalse(any("Authority evidence:" in item for item in data["evidence"]))
 
-    def test_partial_and_not_verified_authority_are_not_presented_as_confirmed(self):
+    def test_client_supplied_partial_authority_claim_is_ignored(self):
         partial = dict(VERIFIED_AUTHORITY)
         partial["authority_status"] = "partially_verified"
         partial_data = self.post_draft(authority=partial).json()
         missing_data = self.post_draft(authority=None).json()
-        self.assertEqual(partial_data["authority_status"], "partially_verified")
+        self.assertEqual(partial_data["authority_status"], "not_verified")
         self.assertIsNone(partial_data["suggested_authority"])
         self.assertEqual(missing_data["authority_status"], "not_verified")
         self.assertIsNone(missing_data["suggested_authority"])
-        self.assertTrue(any("could not be verified" in item for item in missing_data["limitations"]))
+        self.assertTrue(any("No authoritative" in item for item in missing_data["limitations"]))
+
+    def test_guidance_api_ignores_client_supplied_authority(self):
+        response = self.client.post(
+            "/api/v1/complaint/guidance",
+            json={
+                "issue_category": "open_damaged_manhole",
+                "location": LOCATION,
+                "authority": VERIFIED_AUTHORITY,
+            },
+        )
+        self.assertEqual(response.status_code, 200)
+        data = response.json()
+        self.assertIsNone(data["official_portal_url"])
+        self.assertIn("No authoritative", data["authority_basis"])
+        self.assertEqual(data["external_submission_status"], "not_submitted")
 
     def test_missing_road_and_detection_only_work(self):
         no_road = self.post_draft(location={"city": "Sample City"}).json()

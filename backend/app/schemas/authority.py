@@ -1,4 +1,16 @@
+from datetime import datetime
 from pydantic import BaseModel, Field
+
+
+class OfficialSourceRecord(BaseModel):
+    source_id: str
+    source_name: str
+    source_type: str
+    source_url: str | None = None
+    source_domain: str | None = None
+    retrieved_at: datetime | None = None
+    evidence_summary: str | None = None
+    supported_fields: list[str] = Field(default_factory=list)
 
 
 class AuthorityContact(BaseModel):
@@ -13,6 +25,7 @@ class AuthorityParty(BaseModel):
     type: str | None = None
     source: str | None = None
     contact: AuthorityContact | None = None
+    official_portal_url: str | None = None
 
 
 class AuthorityEvidence(BaseModel):
@@ -20,6 +33,7 @@ class AuthorityEvidence(BaseModel):
     source_type: str
     reference: str | None = None
     claim: str
+    source_url: str | None = None
 
 
 class AuthorityResult(BaseModel):
@@ -29,6 +43,9 @@ class AuthorityResult(BaseModel):
     builder_or_contractor: AuthorityParty | None = None
     evidence: list[AuthorityEvidence] = Field(default_factory=list)
     limitations: list[str] = Field(default_factory=list)
+    sources: list[OfficialSourceRecord] = Field(default_factory=list)
+    resolved_at: datetime | None = None
+    resolution_message: str | None = None
 
 
 class AuthorityLocation(BaseModel):

@@ -1,4 +1,5 @@
 import { API_BASE_URL_VALUE } from './detectionApi';
+import { apiFetch } from './apiFetch';
 
 export class LocationApiError extends Error {
   constructor(message, status) {
@@ -43,7 +44,7 @@ export async function reverseGeocode({ latitude, longitude }) {
   const params = new URLSearchParams({ latitude, longitude });
   let response;
   try {
-    response = await fetch(`${API_BASE_URL_VALUE}/api/v1/location/reverse-geocode?${params}`);
+    response = await apiFetch(`${API_BASE_URL_VALUE}/api/v1/location/reverse-geocode?${params}`);
   } catch {
     throw new LocationApiError('Location details could not be reached. Coordinates are still available.', 0);
   }

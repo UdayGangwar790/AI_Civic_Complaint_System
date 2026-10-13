@@ -3,6 +3,7 @@ from unittest.mock import patch
 
 from fastapi.testclient import TestClient
 
+from app.core.config import settings
 from app.main import app
 from app.services.location import (
     LocationProviderError,
@@ -113,6 +114,18 @@ class TestLocationAPI(unittest.TestCase):
         self.assertEqual(response.status_code, 429)
         self.assertEqual(response.json()["detail"], "Location provider rate limit reached.")
         mock_reverse.assert_called_once()
+
+    @patch("app.services.location.urlopen", side_effect=TimeoutError)
+    def test_nominatim_timeout_uses_configured_timeout_and_returns_gateway_timeout(self, mock_urlopen):
+        response = self.client.get(
+            "/api/v1/location/reverse-geocode?latitude=12.34&longitude=56.78"
+        )
+        self.assertEqual(response.status_code, 504)
+        self.assertNotIn("road", response.json())
+        self.assertEqual(
+            mock_urlopen.call_args.kwargs["timeout"],
+            settings.REVERSE_GEOCODER_TIMEOUT_SECONDS,
+        )
 
 
 if __name__ == "__main__":

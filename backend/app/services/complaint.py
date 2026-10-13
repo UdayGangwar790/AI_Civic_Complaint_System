@@ -145,6 +145,21 @@ def generate_complaint(request: ComplaintDraftRequest) -> ComplaintDraftResponse
             authority_note = "Responsible road authority could not be verified from available authoritative data."
         description = f"{description}\n\nAuthority: {authority_note}"
 
+    # Generate M3.5 Government Complaint Guidance
+    from app.schemas.guidance import GovernmentGuidanceRequest
+    from app.services.guidance import generate_government_guidance
+
+    guidance = generate_government_guidance(
+        GovernmentGuidanceRequest(
+            issue_category=request.detection.class_name,
+            location=location,
+            authority=request.authority,
+            language=language,
+            complaint_title=title,
+            complaint_description=description,
+        )
+    )
+
     return ComplaintDraftResponse(
         issue_category=request.detection.class_name,
         issue_label=definition.label,
@@ -159,4 +174,5 @@ def generate_complaint(request: ComplaintDraftRequest) -> ComplaintDraftResponse
         evidence=evidence,
         limitations=limitations,
         draft_text=f"{title}\n\n{description}",
+        guidance=guidance,
     )

@@ -1,4 +1,5 @@
 import unittest
+import uuid
 
 from fastapi.testclient import TestClient
 
@@ -36,17 +37,36 @@ BASE_CASE = {
 class TestComplaintCasesAPI(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        import os
+        from app.core.config import settings
+        cls._orig_db_name = settings.MONGODB_DB_NAME
+        settings.MONGODB_DB_NAME = "cvki_test_m2_regression"
         cls.client_cm = TestClient(app)
         cls.client = cls.client_cm.__enter__()
+        email = f"m2_test_{uuid.uuid4().hex}@cvki.internal"
+        reg = cls.client.post("/api/v1/auth/register", json={"email": email, "password": "Password123!"})
+        cls.auth_headers = {"Authorization": f"Bearer {reg.cookies.get('cvki_access_token')}"}
+
+    def setUp(self):
+        self.client.cookies.clear()
 
     @classmethod
     def tearDownClass(cls):
+        import asyncio
+        from app.core.config import settings
+        from app.core.database import mongo_manager
+        if mongo_manager.client is not None:
+            try:
+                asyncio.run(mongo_manager.client.drop_database("cvki_test_m2_regression"))
+            except Exception:
+                pass
         cls.client_cm.__exit__(None, None, None)
+        settings.MONGODB_DB_NAME = cls._orig_db_name
 
     def create_case(self, **overrides):
         payload = dict(BASE_CASE)
         payload.update(overrides)
-        return self.client.post("/api/v1/complaint/cases", json=payload)
+        return self.client.post("/api/v1/complaint/cases", json=payload, headers=self.auth_headers)
 
     def test_create_case_generates_internal_reference_and_initial_status(self):
         response = self.create_case()
@@ -64,18 +84,18 @@ class TestComplaintCasesAPI(unittest.TestCase):
 
     def test_get_case_preserves_edited_text(self):
         created = self.create_case().json()
-        fetched = self.client.get(f"/api/v1/complaint/cases/{created['reference_id']}")
+        fetched = self.client.get(f"/api/v1/complaint/cases/{created['reference_id']}", headers=self.auth_headers)
         self.assertEqual(fetched.status_code, 200)
         self.assertEqual(fetched.json()["complaint"]["title"], "Edited manhole report")
         self.assertEqual(fetched.json()["complaint"]["description"], "Citizen-edited final complaint text.")
 
     def test_missing_case_returns_404(self):
-        self.assertEqual(self.client.get("/api/v1/complaint/cases/CVKI-20990101-ABCDEF").status_code, 404)
-        self.assertEqual(self.client.get("/api/v1/complaint/cases/CVKI-20990101-ABCDEF/status").status_code, 404)
+        self.assertEqual(self.client.get("/api/v1/complaint/cases/CVKI-20990101-ABCDEF", headers=self.auth_headers).status_code, 404)
+        self.assertEqual(self.client.get("/api/v1/complaint/cases/CVKI-20990101-ABCDEF/status", headers=self.auth_headers).status_code, 404)
 
     def test_status_endpoint_distinguishes_cvki_from_external_submission(self):
         reference = self.create_case().json()["reference_id"]
-        data = self.client.get(f"/api/v1/complaint/cases/{reference}/status").json()
+        data = self.client.get(f"/api/v1/complaint/cases/{reference}/status", headers=self.auth_headers).json()
         self.assertEqual(data["reference_id"], reference)
         self.assertEqual(data["status"], "submitted_to_cvki")
         self.assertEqual(data["external_submission_status"], "not_submitted")
@@ -89,7 +109,7 @@ class TestComplaintCasesAPI(unittest.TestCase):
             self.assertEqual(response.status_code, 200)
             self.assertEqual(response.json()["complaint"]["language"], language)
 
-    def test_authority_states_are_preserved(self):
+    def test_client_supplied_authority_claims_are_ignored(self):
         verified = {
             "authority_status": "verified",
             "road_owner": {"name": "Owner", "source": "Official register"},
@@ -100,10 +120,12 @@ class TestComplaintCasesAPI(unittest.TestCase):
         }
         partial = dict(verified)
         partial["authority_status"] = "partially_verified"
-        for authority, expected in ((verified, "verified"), (partial, "partially_verified"), (None, "not_verified")):
+        for authority in (verified, partial, None):
             response = self.create_case(authority=authority)
             self.assertEqual(response.status_code, 200)
-            self.assertEqual(response.json()["authority"]["authority_status"], expected)
+            self.assertEqual(response.json()["authority"]["authority_status"], "not_verified")
+            self.assertIsNone(response.json()["authority"]["road_owner"])
+            self.assertIsNone(response.json()["authority"]["maintenance_authority"])
 
     def test_missing_location_is_allowed(self):
         response = self.create_case(location=None)
@@ -113,8 +135,8 @@ class TestComplaintCasesAPI(unittest.TestCase):
     def test_unsupported_and_invalid_requests_are_rejected(self):
         unsupported = dict(BASE_CASE)
         unsupported["issue"] = {"class_name": "unknown", "label": "Unknown", "severity": "low", "confidence": 0.5}
-        invalid = self.client.post("/api/v1/complaint/cases", json={"issue": BASE_CASE["issue"]})
-        self.assertEqual(self.client.post("/api/v1/complaint/cases", json=unsupported).status_code, 422)
+        invalid = self.client.post("/api/v1/complaint/cases", json={"issue": BASE_CASE["issue"]}, headers=self.auth_headers)
+        self.assertEqual(self.client.post("/api/v1/complaint/cases", json=unsupported, headers=self.auth_headers).status_code, 422)
         self.assertEqual(invalid.status_code, 422)
 
     def test_no_contacts_and_follow_up_safety(self):

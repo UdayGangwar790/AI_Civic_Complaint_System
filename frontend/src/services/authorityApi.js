@@ -1,5 +1,6 @@
 import { API_BASE_URL_VALUE } from './detectionApi';
 import { LocationApiError } from './locationApi';
+import { apiFetch } from './apiFetch';
 
 export async function resolveAuthority({ coordinates, address }) {
   const params = new URLSearchParams({
@@ -12,7 +13,7 @@ export async function resolveAuthority({ coordinates, address }) {
 
   let response;
   try {
-    response = await fetch(`${API_BASE_URL_VALUE}/api/v1/authority/resolve?${params}`);
+    response = await apiFetch(`${API_BASE_URL_VALUE}/api/v1/authority/resolve?${params}`);
   } catch {
     throw new LocationApiError('Authority information could not be reached.', 0);
   }
@@ -25,4 +26,42 @@ export async function resolveAuthority({ coordinates, address }) {
     );
   }
   return payload;
+}
+
+export async function fetchAuthorityMapCases(params = {}) {
+  const token = null;
+  const query = new URLSearchParams();
+  if (params.issue) query.set('issue', params.issue);
+  if (params.priority) query.set('priority', params.priority);
+  if (params.status) query.set('status', params.status);
+  if (params.city) query.set('city', params.city);
+  if (params.created_from) query.set('created_from', params.created_from);
+  if (params.created_to) query.set('created_to', params.created_to);
+  if (params.limit) query.set('limit', params.limit);
+
+  const qs = query.toString();
+  const res = await apiFetch(`${API_BASE_URL_VALUE}/api/v1/authority/map/cases${qs ? `?${qs}` : ''}`, {
+    headers: {
+      'Content-Type': 'application/json',
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+  });
+  const data = await res.json().catch(() => null);
+  if (!res.ok) throw new LocationApiError(data?.detail || 'Failed to load authority cases.', res.status);
+  return data;
+}
+
+export async function updateAuthorityCaseStatus(referenceId, status, reason) {
+  const token = null;
+  const res = await apiFetch(`${API_BASE_URL_VALUE}/api/v1/complaint/cases/${encodeURIComponent(referenceId)}/status`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+    body: JSON.stringify({ status, reason: reason || undefined }),
+  });
+  const data = await res.json().catch(() => null);
+  if (!res.ok) throw new LocationApiError(data?.detail || 'Failed to update case status.', res.status);
+  return data;
 }

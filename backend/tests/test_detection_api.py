@@ -6,6 +6,7 @@ from pathlib import Path
 
 from fastapi.testclient import TestClient
 from PIL import Image
+from unittest.mock import patch
 
 from app.main import app
 from app.core.config import settings
@@ -129,6 +130,22 @@ class TestDetectionAPI(unittest.TestCase):
             cv_model_service._is_loaded = original_state
         self.assertEqual(response.status_code, 503)
         self.assertEqual(response.json()["detail"], "Detection model is unavailable.")
+
+    def test_oversized_upload_is_rejected(self):
+        with patch.object(settings, "MAX_IMAGE_UPLOAD_BYTES", 16):
+            response = self.client.post(
+                "/api/v1/detection/predict",
+                files={"file": ("large.png", image_bytes(), "image/png")},
+            )
+        self.assertEqual(response.status_code, 413)
+
+    def test_excessive_pixel_dimensions_are_rejected(self):
+        with patch.object(settings, "MAX_IMAGE_PIXELS", 100):
+            response = self.client.post(
+                "/api/v1/detection/predict",
+                files={"file": ("large-dimensions.png", image_bytes(), "image/png")},
+            )
+        self.assertEqual(response.status_code, 413)
 
     def test_representative_real_images_preserve_response_integrity(self):
         expected_classes = {

@@ -1,4 +1,7 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000';
+import { apiFetch } from './apiFetch';
+
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
+  || `http://${typeof window === 'undefined' ? 'localhost' : window.location.hostname}:8000`;
 
 const messagesByStatus = {
   400: 'The image could not be read. Choose a valid JPG, PNG, or WEBP image.',
@@ -21,7 +24,7 @@ export async function predictImage(file) {
 
   let response;
   try {
-    response = await fetch(`${API_BASE_URL}/api/v1/detection/predict`, {
+    response = await apiFetch(`${API_BASE_URL}/api/v1/detection/predict`, {
       method: 'POST',
       body: formData,
     });

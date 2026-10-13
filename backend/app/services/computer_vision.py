@@ -1,5 +1,6 @@
 import logging
 from pathlib import Path
+from threading import Lock
 from typing import Any, Optional
 
 from PIL import Image, ImageDraw
@@ -8,6 +9,10 @@ from ultralytics import YOLO
 from app.core.config import settings
 
 logger = logging.getLogger("cvki.services.computer_vision")
+
+
+class ModelUnavailableError(RuntimeError):
+    """The configured model is not available for inference."""
 
 
 class YOLOModelService:
@@ -24,6 +29,7 @@ class YOLOModelService:
         self._model_version: str = settings.YOLO_MODEL_VERSION
         self._class_names: dict[int, str] = {}
         self._num_classes: int = 0
+        self._inference_lock = Lock()
 
     @property
     def is_loaded(self) -> bool:
@@ -39,12 +45,12 @@ class YOLOModelService:
         Validates model file existence and exact civic class mapping.
         """
         target_path = Path(custom_path) if custom_path else settings.get_resolved_model_path()
-        logger.info(f"Initiating YOLO model load from: {target_path}")
+        logger.info("Initiating YOLO model load.")
 
         # 1. Verify model file exists
         if not target_path.exists():
-            error_msg = f"Model weights file not found at expected path: {target_path.name}"
-            logger.error(error_msg)
+            error_msg = "Model weights file is missing."
+            logger.error("YOLO model weights file is missing.")
             self._is_loaded = False
             self._load_error = error_msg
             self._model = None
@@ -81,8 +87,8 @@ class YOLOModelService:
             return True
 
         except Exception as exc:
-            error_msg = f"Failed to load YOLO model: {str(exc)}"
-            logger.error(error_msg, exc_info=True)
+            error_msg = "Model loading failed."
+            logger.error("YOLO model loading failed (error_type=%s).", type(exc).__name__)
             self._is_loaded = False
             self._load_error = error_msg
             self._model = None
@@ -95,7 +101,7 @@ class YOLOModelService:
         Returns the loaded model instance. Raises RuntimeError if not loaded.
         """
         if not self._is_loaded or self._model is None:
-            raise RuntimeError(f"YOLO model is not loaded. Error state: {self._load_error}")
+            raise ModelUnavailableError("YOLO model is not loaded.")
         return self._model
 
     def get_model_status(self) -> dict[str, Any]:
@@ -119,18 +125,19 @@ class YOLOModelService:
             "model_version": self._model_version,
             "num_classes": 0,
             "classes": {},
-            "error": self._load_error or "Model is not loaded",
+            "error": "Model is unavailable.",
         }
 
     def predict(self, image: Image.Image) -> list[dict[str, Any]]:
         """Run inference with the model loaded during application startup."""
         model = self.get_model()
-        results = model(
-            image,
-            conf=settings.YOLO_CONFIDENCE_THRESHOLD,
-            device=settings.YOLO_DEVICE,
-            verbose=False,
-        )
+        with self._inference_lock:
+            results = model(
+                image,
+                conf=settings.YOLO_CONFIDENCE_THRESHOLD,
+                device=settings.YOLO_DEVICE,
+                verbose=False,
+            )
         detections: list[dict[str, Any]] = []
         image_width, image_height = image.size
 
