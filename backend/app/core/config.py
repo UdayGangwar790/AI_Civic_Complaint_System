@@ -93,9 +93,16 @@ class Settings(BaseSettings):
     PRIORITY_WEIGHT_REPEAT: int = 15
     PRIORITY_WEIGHT_LOCATION: int = 10
     PRIORITY_WEIGHT_CONFIDENCE: int = 5
+    PRIORITY_WEIGHT_RECURRENCE: int = 5
     PRIORITY_P1_THRESHOLD: int = 80
     PRIORITY_P2_THRESHOLD: int = 60
     PRIORITY_P3_THRESHOLD: int = 40
+
+    RECURRENCE_WINDOW_DAYS: int = Field(default=180, ge=1)
+    HOTSPOT_WINDOW_DAYS: int = Field(default=30, ge=1)
+    HOTSPOT_MIN_CASES: int = Field(default=3, ge=2)
+    UNRESOLVED_RECOMMENDATION_DAYS: int = Field(default=30, ge=1)
+    MAX_INTELLIGENCE_HISTORY_CANDIDATES: int = Field(default=5000, ge=100)
 
     @model_validator(mode="after")
     def validate_security_configuration(self):

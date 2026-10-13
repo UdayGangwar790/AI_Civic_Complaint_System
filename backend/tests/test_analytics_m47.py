@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 import unittest
 import uuid
 
@@ -437,3 +437,36 @@ class TestAnalyticsM47(unittest.TestCase):
         self.assertEqual(resp.status_code, 200)
         data = resp.json()
         self.assertEqual(data["summary"]["total_cases"], 1)
+
+    def test_20_recent_hotspot_category_unresolved_count_and_window(self):
+        now = datetime.now(timezone.utc)
+        self.cases_col.insert_one(_build_analytics_case("H-1", status="in_progress", created_at=now - timedelta(days=1)))
+        self.cases_col.insert_one(_build_analytics_case("H-2", status="submitted_to_cvki", created_at=now - timedelta(days=2)))
+        self.cases_col.insert_one(_build_analytics_case("H-3", status="resolved", created_at=now - timedelta(days=3)))
+        self.cases_col.insert_one(_build_analytics_case("H-4", issue_class="road_waterlogging", status="in_progress", created_at=now - timedelta(days=4)))
+        self.cases_col.insert_one(_build_analytics_case("H-OLD", created_at=now - timedelta(days=45)))
+
+        response = self.client.get(
+            "/api/v1/admin/analytics",
+            headers={"Authorization": f"Bearer {self.admin_token}"},
+        )
+        self.assertEqual(response.status_code, 200)
+        hotspots = response.json()["hotspots"]
+        self.assertEqual(len(hotspots), 1)
+        hotspot = hotspots[0]
+        self.assertEqual(hotspot["count"], 4)
+        self.assertEqual(hotspot["dominant_issue_category"], "open_damaged_manhole")
+        self.assertEqual(hotspot["unresolved_count"], 3)
+        self.assertEqual(hotspot["time_window_days"], 30)
+        self.assertIn("not proof of a shared cause", hotspot["explanation"])
+
+    def test_21_sparse_recent_locations_are_not_labeled_hotspots(self):
+        now = datetime.now(timezone.utc)
+        self.cases_col.insert_one(_build_analytics_case("S-1", created_at=now - timedelta(days=1)))
+        self.cases_col.insert_one(_build_analytics_case("S-2", created_at=now - timedelta(days=2)))
+        response = self.client.get(
+            "/api/v1/admin/analytics",
+            headers={"Authorization": f"Bearer {self.admin_token}"},
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json()["hotspots"], [])

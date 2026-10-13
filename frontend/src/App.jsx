@@ -46,7 +46,12 @@ import {
   normalizePosition,
   reverseGeocode,
 } from './services/locationApi';
-import { resolveAuthority, fetchAuthorityMapCases, updateAuthorityCaseStatus } from './services/authorityApi';
+import {
+  resolveAuthority,
+  fetchAuthorityMapCases,
+  updateAuthorityCaseStatus,
+  fetchAuthorityCaseIntelligence,
+} from './services/authorityApi';
 import { generateComplaintDraft, ComplaintApiError } from './services/complaintApi';
 import {
   createCvkiCase,
@@ -82,6 +87,7 @@ import {
   fetchDashboardSummary,
   fetchAdminCases,
   fetchAdminCaseDetail,
+  fetchAdminCaseIntelligence,
   assignCase,
   unassignCase,
   fetchAuthorities,
@@ -1292,6 +1298,9 @@ function DetectionWorkspace({ currentUser, onOpenAuth }) {
                     {authority.authority.authority_status.replaceAll('_', ' ')}
                   </span>
                 </div>
+                {authority.authority.citizen_explanation && (
+                  <p className="authority-explanation">{authority.authority.citizen_explanation}</p>
+                )}
                 {authority.authority.authority_status === 'not_verified' && (
                   <p className="authority-warning">
                     CVKI could not verify the responsible authority from available official sources. Please verify the authority before submitting a government complaint.
@@ -1324,11 +1333,19 @@ function DetectionWorkspace({ currentUser, onOpenAuth }) {
                 )}
                 {authority.authority.evidence && authority.authority.evidence.length > 0 && (
                   <div className="authority-evidence">
-                    <span className="section-mini-heading">Evidence</span>
+                    <span className="section-mini-heading">Evidence Trail</span>
                     {authority.authority.evidence.map((item, idx) => (
-                      <strong key={`${item.source_name}-${idx}`}>
-                        {item.source_name}: {item.claim}
-                      </strong>
+                      <div className="authority-evidence-item" key={`${item.source_name}-${idx}`}>
+                        <div className="authority-evidence-meta">
+                          <span>{item.matched_attribute?.replaceAll('_', ' ') || 'Unlinked source record'}</span>
+                          <span className={`authority-evidence-state ${item.verification_state || 'not_verified'}`}>
+                            {(item.verification_state || 'not_verified').replaceAll('_', ' ')}
+                          </span>
+                        </div>
+                        <strong>{item.source_name}: {item.claim}</strong>
+                        {item.reference && <small>Reference: {item.reference}</small>}
+                        {item.explanation && <p>{item.explanation}</p>}
+                      </div>
                     ))}
                   </div>
                 )}
@@ -1861,10 +1878,12 @@ function RoleProtectedRoute({ currentUser, allowedRoles, children, onOpenAuth })
 
 function AdminCaseDetailModal({ referenceId, onClose, onAssignmentChanged }) {
   const [caseData, setCaseData] = useState(null);
+  const [intelligence, setIntelligence] = useState(null);
   const [authorities, setAuthorities] = useState([]);
   const [selectedAuthorityId, setSelectedAuthorityId] = useState('');
   const [targetStatus, setTargetStatus] = useState('');
   const [statusReason, setStatusReason] = useState('');
+  const [resolutionEvidence, setResolutionEvidence] = useState('');
   const [statusUpdating, setStatusUpdating] = useState(false);
   const [loading, setLoading] = useState(true);
   const [actionLoading, setActionLoading] = useState(false);
@@ -1877,12 +1896,14 @@ function AdminCaseDetailModal({ referenceId, onClose, onAssignmentChanged }) {
       setLoading(true);
       setError(null);
       try {
-        const [cData, authList] = await Promise.all([
+        const [cData, authList, caseIntelligence] = await Promise.all([
           fetchAdminCaseDetail(referenceId),
           fetchAuthorities().catch(() => []),
+          fetchAdminCaseIntelligence(referenceId).catch(() => null),
         ]);
         if (!isMounted) return;
         setCaseData(cData);
+        setIntelligence(caseIntelligence);
         setAuthorities(authList);
         if (cData.assignment?.assigned_to_user_id) {
           setSelectedAuthorityId(cData.assignment.assigned_to_user_id);
@@ -1960,11 +1981,19 @@ function AdminCaseDetailModal({ referenceId, onClose, onAssignmentChanged }) {
     setActionMessage(null);
     setError(null);
     try {
-      const updated = await updateCaseStatus(referenceId, targetStatus, statusReason.trim());
-      setCaseData(updated);
-      setActionMessage(`Case status successfully updated to "${updated.status}".`);
+      const statusResult = await updateCaseStatus(
+        referenceId,
+        targetStatus,
+        statusReason.trim(),
+        resolutionEvidence.trim(),
+      );
+      const refreshedCase = await fetchAdminCaseDetail(referenceId);
+      setCaseData(refreshedCase);
+      setIntelligence(await fetchAdminCaseIntelligence(referenceId).catch(() => null));
+      setActionMessage(`Case status successfully updated to "${statusResult.new_status}".`);
       setTargetStatus('');
       setStatusReason('');
+      setResolutionEvidence('');
       if (onAssignmentChanged) onAssignmentChanged(updated);
     } catch (err) {
       setError(err instanceof AdminApiError ? err.message : 'Status update failed.');
@@ -2066,6 +2095,18 @@ function AdminCaseDetailModal({ referenceId, onClose, onAssignmentChanged }) {
                     onChange={(e) => setStatusReason(e.target.value)}
                     disabled={statusUpdating}
                   />
+                  {targetStatus === 'resolved' && (
+                    <input
+                      type="text"
+                      className="status-reason-input"
+                      placeholder="Optional staff resolution note (not repair verification)..."
+                      value={resolutionEvidence}
+                      onChange={(e) => setResolutionEvidence(e.target.value)}
+                      disabled={statusUpdating}
+                      maxLength={500}
+                      aria-label="Optional staff-authored resolution note"
+                    />
+                  )}
                   <button
                     type="submit"
                     className="primary-button small-btn"
@@ -2268,6 +2309,37 @@ function AdminCaseDetailModal({ referenceId, onClose, onAssignmentChanged }) {
                     </div>
                   ) : (
                     <p className="text-muted">No duplicate evaluation stored.</p>
+                  )}
+                </div>
+
+                <div className="admin-section-box">
+                  <h4>Advanced Civic Intelligence (M5.2)</h4>
+                  {intelligence ? (
+                    <div className="case-intelligence-content">
+                      <p><strong>Recurrence:</strong> {intelligence.recurrence.recurrence_detected ? `${intelligence.recurrence.recurrence_count}${intelligence.recurrence.history_scan_complete ? '' : '+'} historical case(s)` : 'Not detected'}</p>
+                      <p className="intelligence-explanation">{intelligence.recurrence.recurrence_explanation}</p>
+                      {intelligence.recurrence.related_historical_case_ids?.length > 0 && (
+                        <p><strong>Related case references:</strong> {intelligence.recurrence.related_historical_case_ids.join(', ')}</p>
+                      )}
+                      <p><strong>Local concentration:</strong> {intelligence.hotspot_detected ? `${intelligence.recent_location_case_count} reports in ${intelligence.hotspot_window_days} days; ${intelligence.recent_location_unresolved_count} open` : 'No hotspot indicated'}</p>
+                      <p className="intelligence-explanation">{intelligence.hotspot_explanation}</p>
+                      <p><strong>Resolution evidence:</strong> {intelligence.resolution_evidence_state.replaceAll('_', ' ')}</p>
+                      <p className="intelligence-explanation">{intelligence.resolution_evidence_explanation}</p>
+                      {intelligence.recommendations?.length > 0 && (
+                        <div>
+                          <strong>Recommendations for review</strong>
+                          <ul className="reasons-list">
+                            {intelligence.recommendations.map((item, index) => (
+                              <li key={`${item.kind}-${index}`}>
+                                {item.message}<small className="recommendation-basis">Basis: {item.basis}</small>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <p className="text-muted">Case intelligence is unavailable for this case.</p>
                   )}
                 </div>
 
@@ -2808,29 +2880,37 @@ function AdminAnalyticsView() {
         </div>
       </div>
 
-      {data.hotspots?.length > 0 && (
+      {(
         <div className="chart-card">
-          <h4>Top Geographic Hotspots &amp; Concentrations</h4>
-          <table className="hotspot-table">
-            <thead>
-              <tr>
-                <th>Rank</th>
-                <th>Road / Corridor</th>
-                <th>City</th>
-                <th>Reported Incidents</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data.hotspots.slice(0, 8).map((h, idx) => (
-                <tr key={idx}>
-                  <td><strong>#{idx + 1}</strong></td>
-                  <td>{h.road || 'Corridor Unnamed'}</td>
-                  <td>{h.city || 'Municipal Area'}</td>
-                  <td><strong>{h.count}</strong> cases</td>
+          <h4>Recent Road/City Concentrations · {data.hotspots?.[0]?.time_window_days || 30} days</h4>
+          {data.hotspots?.length > 0 ? (
+            <table className="hotspot-table">
+              <thead>
+                <tr>
+                  <th>Road / Corridor</th>
+                  <th>City</th>
+                  <th>Reports</th>
+                  <th>Leading category</th>
+                  <th>Open</th>
+                  <th>Interpretation</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {data.hotspots.slice(0, 8).map((hotspot) => (
+                  <tr key={`${hotspot.road}-${hotspot.city || ''}`}>
+                    <td>{hotspot.road}</td>
+                    <td>{hotspot.city || 'City unavailable'}</td>
+                    <td><strong>{hotspot.count}</strong></td>
+                    <td>{formatClassName(hotspot.dominant_issue_category)}</td>
+                    <td>{hotspot.unresolved_count}</td>
+                    <td>{hotspot.explanation}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          ) : (
+            <p className="text-muted">No road/city group met the minimum recent-report threshold. Sparse reports are not labeled as hotspots.</p>
+          )}
         </div>
       )}
     </div>
@@ -3669,6 +3749,20 @@ function AdminDashboardView({ currentUser }) {
 }
 
 function AuthorityCaseSummaryModal({ caseData, onClose }) {
+  const [intelligenceState, setIntelligenceState] = useState(null);
+  const referenceId = caseData?.reference_id;
+
+  useEffect(() => {
+    let isMounted = true;
+    if (!referenceId) return () => { isMounted = false; };
+    fetchAuthorityCaseIntelligence(referenceId)
+      .then((result) => { if (isMounted) setIntelligenceState({ referenceId, result }); })
+      .catch(() => { if (isMounted) setIntelligenceState({ referenceId, result: null }); });
+    return () => { isMounted = false; };
+  }, [referenceId]);
+  const intelligenceLoading = Boolean(referenceId && intelligenceState?.referenceId !== referenceId);
+  const intelligence = intelligenceState?.referenceId === referenceId ? intelligenceState.result : null;
+
   return (
     <div className="modal-backdrop" onClick={onClose} role="dialog" aria-modal="true" aria-labelledby="authority-case-summary-title">
       <div className="modal-card" onClick={(event) => event.stopPropagation()}>
@@ -3692,7 +3786,20 @@ function AuthorityCaseSummaryModal({ caseData, onClose }) {
               <p><strong>Coordinates:</strong> {caseData.latitude}, {caseData.longitude}</p>
               <p><strong>Created:</strong> {formatDate(caseData.created_at)}</p>
             </div>
-            <p className="text-muted">This authority view contains operational summary fields only.</p>
+            <div className="admin-section-box">
+              <h4>Case Intelligence</h4>
+              {intelligenceLoading ? <p className="text-muted">Loading assigned-case intelligence...</p> : intelligence ? (
+                <>
+                  <p><strong>Recurrence:</strong> {intelligence.recurrence.recurrence_detected ? `${intelligence.recurrence.recurrence_count}${intelligence.recurrence.history_scan_complete ? '' : '+'} historical case(s)` : 'Not detected'}</p>
+                  <p className="intelligence-explanation">{intelligence.recurrence.recurrence_explanation}</p>
+                  <p><strong>Resolution evidence:</strong> {intelligence.resolution_evidence_state.replaceAll('_', ' ')}</p>
+                  <p className="intelligence-explanation">{intelligence.resolution_evidence_explanation}</p>
+                  {intelligence.recommendations?.map((item, index) => (
+                    <p className="intelligence-explanation" key={`${item.kind}-${index}`}>{item.message}</p>
+                  ))}
+                </>
+              ) : <p className="text-muted">No intelligence is available for this assigned case.</p>}
+            </div>
           </div>
         ) : (
           <div className="admin-case-body">
@@ -3738,11 +3845,22 @@ function AuthorityPortalView({ currentUser }) {
     if (!window.confirm(`Advance case ${referenceId} status to "${nextStatus.replaceAll('_', ' ')}"?`)) {
       return;
     }
+    let resolutionEvidence;
+    if (nextStatus === 'resolved') {
+      const note = window.prompt('Optional staff-authored resolution note. This records a report; it does not independently verify physical repair.');
+      if (note === null) return;
+      resolutionEvidence = note.trim() || undefined;
+    }
     setActionLoading(true);
     setActionMessage(null);
     setError(null);
     try {
-      await updateAuthorityCaseStatus(referenceId, nextStatus, `Authority operator ${currentUser?.email} executed transition`);
+      await updateAuthorityCaseStatus(
+        referenceId,
+        nextStatus,
+        `Authority operator ${currentUser?.email} executed transition`,
+        resolutionEvidence,
+      );
       setActionMessage(`Case ${referenceId} successfully updated to "${nextStatus}".`);
       await loadAuthorityCases();
     } catch (err) {

@@ -9,6 +9,7 @@ from app.schemas.complaint_case import CaseStatus
 class CaseStatusUpdateRequest(BaseModel):
     status: str = Field(..., description="Target lifecycle status")
     reason: Optional[str] = Field(None, max_length=500, description="Optional explanation for transition")
+    resolution_evidence: Optional[str] = Field(None, min_length=1, max_length=500, description="Optional staff-authored resolution note; does not verify physical repair")
 
 
 class CaseStatusUpdateResponse(BaseModel):

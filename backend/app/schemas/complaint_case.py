@@ -28,6 +28,7 @@ from app.schemas.nlp import NLPAnalysisResponse
 from app.schemas.duplicate import DuplicateCheckResponse
 from app.schemas.priority import PriorityScoreResponse
 from app.schemas.government_submission import GovernmentSubmissionRecord
+from app.schemas.civic_intelligence import RecurrenceAnalysis, ResolutionEvidenceRecord
 
 
 class FollowUp(BaseModel):
@@ -74,6 +75,9 @@ class ComplaintCase(BaseModel):
     nlp_analysis: Optional[NLPAnalysisResponse] = None
     duplicate_analysis: Optional[DuplicateCheckResponse] = None
     priority_analysis: Optional[PriorityScoreResponse] = None
+    recurrence_analysis: Optional[RecurrenceAnalysis] = None
+    resolution_evidence: list[ResolutionEvidenceRecord] = Field(default_factory=list)
+    resolution_evidence_recorded_at: Optional[datetime] = None
     government_submission: Optional[GovernmentSubmissionRecord] = None
     assignment: Optional[CaseAssignment] = None
 

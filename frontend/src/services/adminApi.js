@@ -57,6 +57,10 @@ export async function fetchAdminCaseDetail(referenceId) {
   return adminRequestJson(`${API_BASE_URL_VALUE}/api/v1/admin/cases/${encodeURIComponent(referenceId)}`);
 }
 
+export async function fetchAdminCaseIntelligence(referenceId) {
+  return adminRequestJson(`${API_BASE_URL_VALUE}/api/v1/admin/cases/${encodeURIComponent(referenceId)}/intelligence`);
+}
+
 export async function assignCase(referenceId, authorityUserId) {
   return adminRequestJson(`${API_BASE_URL_VALUE}/api/v1/admin/cases/${encodeURIComponent(referenceId)}/assign`, {
     method: 'POST',
@@ -74,10 +78,14 @@ export async function fetchAuthorities() {
   return adminRequestJson(`${API_BASE_URL_VALUE}/api/v1/admin/authorities`);
 }
 
-export async function updateCaseStatus(referenceId, status, reason = '') {
+export async function updateCaseStatus(referenceId, status, reason = '', resolutionEvidence = '') {
   return adminRequestJson(`${API_BASE_URL_VALUE}/api/v1/complaint/cases/${encodeURIComponent(referenceId)}/status`, {
     method: 'PATCH',
-    body: JSON.stringify({ status, reason: reason || undefined }),
+    body: JSON.stringify({
+      status,
+      reason: reason || undefined,
+      resolution_evidence: resolutionEvidence || undefined,
+    }),
   });
 }
 

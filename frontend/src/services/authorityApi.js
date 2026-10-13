@@ -51,7 +51,7 @@ export async function fetchAuthorityMapCases(params = {}) {
   return data;
 }
 
-export async function updateAuthorityCaseStatus(referenceId, status, reason) {
+export async function updateAuthorityCaseStatus(referenceId, status, reason, resolutionEvidence) {
   const token = null;
   const res = await apiFetch(`${API_BASE_URL_VALUE}/api/v1/complaint/cases/${encodeURIComponent(referenceId)}/status`, {
     method: 'PATCH',
@@ -59,9 +59,25 @@ export async function updateAuthorityCaseStatus(referenceId, status, reason) {
       'Content-Type': 'application/json',
       ...(token ? { Authorization: `Bearer ${token}` } : {}),
     },
-    body: JSON.stringify({ status, reason: reason || undefined }),
+    body: JSON.stringify({
+      status,
+      reason: reason || undefined,
+      resolution_evidence: resolutionEvidence || undefined,
+    }),
   });
   const data = await res.json().catch(() => null);
   if (!res.ok) throw new LocationApiError(data?.detail || 'Failed to update case status.', res.status);
   return data;
+}
+
+export async function fetchAuthorityCaseIntelligence(referenceId) {
+  let response;
+  try {
+    response = await apiFetch(`${API_BASE_URL_VALUE}/api/v1/authority/cases/${encodeURIComponent(referenceId)}/intelligence`);
+  } catch {
+    throw new LocationApiError('Case intelligence could not be reached.', 0);
+  }
+  const payload = await response.json().catch(() => null);
+  if (!response.ok) throw new LocationApiError(payload?.detail || 'Case intelligence is unavailable.', response.status);
+  return payload;
 }

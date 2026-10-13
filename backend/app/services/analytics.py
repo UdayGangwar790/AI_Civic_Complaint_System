@@ -2,11 +2,12 @@ import csv
 import io
 import logging
 import re
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Optional
 
 from pymongo.errors import PyMongoError
 
+from app.core.config import settings
 from app.core.database import COMPLAINT_CASES_COLLECTION, mongo_manager
 from app.models.roles import UserRole
 from app.schemas.analytics import (
@@ -17,6 +18,7 @@ from app.schemas.analytics import (
     ResolutionMetrics,
     TimeSeriesItem,
 )
+from app.schemas.civic_intelligence import HotspotItem
 from app.services.complaint_case import ComplaintCaseDatabaseError
 
 logger = logging.getLogger("cvki.analytics")
@@ -246,7 +248,64 @@ async def get_operational_analytics(
                 )
             )
 
-        # 9. Time series aggregation
+        # 9. Recent, explainable road/city hotspots. Legacy all-time concentrations
+        # above are preserved for existing clients.
+        hotspot_window_days = settings.HOTSPOT_WINDOW_DAYS
+        hotspot_cutoff = datetime.now(timezone.utc) - timedelta(days=hotspot_window_days)
+        hotspot_query = {"$and": [match_query, {"created_at": {"$gte": hotspot_cutoff}}]}
+        hotspot_cursor = cases_col.aggregate([
+            {"$match": hotspot_query},
+            {"$match": {"location.road": {"$type": "string", "$ne": ""}}},
+            {"$addFields": {
+                "_hotspot_road": {"$toLower": {"$trim": {"input": "$location.road"}}},
+                "_hotspot_city": {"$toLower": {"$trim": {"input": {"$ifNull": ["$location.city", ""]}}}},
+                "_hotspot_issue": {"$ifNull": ["$issue.class_name", "other_civic_issue"]},
+                "_hotspot_unresolved": {"$cond": [{"$in": ["$status", ["resolved", "closed"]]}, 0, 1]},
+            }},
+            {"$group": {
+                "_id": {"road": "$_hotspot_road", "city": "$_hotspot_city", "issue": "$_hotspot_issue"},
+                "count": {"$sum": 1},
+                "unresolved_count": {"$sum": "$_hotspot_unresolved"},
+                "road_label": {"$first": "$location.road"},
+                "city_label": {"$first": "$location.city"},
+            }},
+            {"$sort": {"count": -1, "_id.issue": 1}},
+            {"$group": {
+                "_id": {"road": "$_id.road", "city": "$_id.city"},
+                "count": {"$sum": "$count"},
+                "unresolved_count": {"$sum": "$unresolved_count"},
+                "issues": {"$push": {"category": "$_id.issue", "count": "$count"}},
+                "road": {"$first": "$road_label"},
+                "city": {"$first": "$city_label"},
+            }},
+            {"$match": {"count": {"$gte": settings.HOTSPOT_MIN_CASES}}},
+            {"$sort": {"count": -1, "_id.road": 1, "_id.city": 1}},
+            {"$limit": 10},
+        ])
+        raw_hotspots = await hotspot_cursor.to_list(length=10)
+        hotspots: list[HotspotItem] = []
+        for item in raw_hotspots:
+            categories = item.get("issues") or []
+            dominant_issue = categories[0].get("category") if categories else "other_civic_issue"
+            count = int(item.get("count", 0))
+            unresolved_count = int(item.get("unresolved_count", 0))
+            road = item.get("road") or "Unnamed road"
+            city = item.get("city") or None
+            hotspots.append(HotspotItem(
+                road=road,
+                city=city,
+                count=count,
+                dominant_issue_category=dominant_issue,
+                unresolved_count=unresolved_count,
+                time_window_days=hotspot_window_days,
+                explanation=(
+                    f"{count} reports were recorded for this road/city in the previous {hotspot_window_days} days; "
+                    f"{unresolved_count} remain open. The most frequent category is {dominant_issue.replace('_', ' ')}. "
+                    "This is a reporting concentration, not proof of a shared cause."
+                ),
+            ))
+
+        # 10. Time series aggregation
         date_format = "%Y-%m-%d"
         if group_by == "weekly":
             date_format = "%Y-W%V"
@@ -266,7 +325,7 @@ async def get_operational_analytics(
             if r.get("_id"):
                 time_series.append(TimeSeriesItem(date=str(r["_id"]), count=int(r["count"])))
 
-        # 10. Resolution metrics
+        # 11. Resolution metrics
         resolved_total = resolved_cases + closed_cases
         resolution_rate = round((resolved_total / total_cases * 100), 1) if total_cases > 0 else 0.0
         resolution_metrics = ResolutionMetrics(
@@ -293,6 +352,7 @@ async def get_operational_analytics(
             duplicate_distribution=duplicate_distribution,
             authority_distribution=authority_distribution,
             geographic_concentration=geographic_concentration,
+            hotspots=hotspots,
             resolution_metrics=resolution_metrics,
         )
 

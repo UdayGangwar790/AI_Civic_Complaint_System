@@ -1,5 +1,6 @@
 from typing import Any, Optional
 from pydantic import BaseModel, Field
+from app.schemas.civic_intelligence import HotspotItem
 
 
 class AnalyticsSummary(BaseModel):
@@ -46,6 +47,7 @@ class OperationalAnalyticsResponse(BaseModel):
     duplicate_distribution: list[DistributionItem] = Field(default_factory=list)
     authority_distribution: list[DistributionItem] = Field(default_factory=list)
     geographic_concentration: list[ConcentrationItem] = Field(default_factory=list)
+    hotspots: list[HotspotItem] = Field(default_factory=list)
     resolution_metrics: ResolutionMetrics
     disclaimer: str = (
         "This is an explainable engineering prioritization baseline and operational summary, "

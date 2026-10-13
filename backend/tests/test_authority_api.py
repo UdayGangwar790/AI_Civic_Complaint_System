@@ -45,8 +45,10 @@ class TestAuthorityAPI(unittest.TestCase):
             maintenance_authority=AuthorityParty(name="Maintenance Authority", type="public maintainer", source="Official maintenance register"),
             builder_or_contractor=AuthorityParty(name="Project Contractor", type="contractor", source="Official project document"),
             evidence=(
-                AuthorityEvidence(source_name="Official road register", source_type="official_database", reference="record-1", claim="Road owner is Road Owner Authority."),
-                AuthorityEvidence(source_name="Official maintenance register", source_type="official_government", reference="record-2", claim="Maintenance authority is Maintenance Authority."),
+                AuthorityEvidence(source_name="Official road register", source_type="official_database", reference="record-0", claim="Road matches road register.", matched_attribute="road"),
+                AuthorityEvidence(source_name="Official road register", source_type="official_database", reference="record-1", claim="Road owner is Road Owner Authority.", matched_attribute="road_owner"),
+                AuthorityEvidence(source_name="Official maintenance register", source_type="official_government", reference="record-2", claim="Maintenance authority is Maintenance Authority.", matched_attribute="maintenance_authority"),
+                AuthorityEvidence(source_name="Official contract register", source_type="official_contract_record", reference="record-3", claim="Project Contractor is the named concessionaire.", matched_attribute="builder_or_contractor"),
             ),
         )
         response = self.client.get("/api/v1/authority/resolve?latitude=12.34&longitude=56.78")
@@ -56,13 +58,17 @@ class TestAuthorityAPI(unittest.TestCase):
         self.assertEqual(authority["road_owner"]["name"], "Road Owner Authority")
         self.assertEqual(authority["maintenance_authority"]["name"], "Maintenance Authority")
         self.assertEqual(authority["builder_or_contractor"]["name"], "Project Contractor")
-        self.assertEqual(len(authority["evidence"]), 2)
+        self.assertEqual(len(authority["evidence"]), 4)
+        self.assertEqual(authority["citizen_explanation"], "Available source records are explicitly linked to this road and support both road ownership and maintenance responsibility.")
 
     @patch("app.services.authority.authority_provider")
     def test_road_owner_only_is_partially_verified(self, provider):
         provider.lookup.return_value = AuthorityLookup(
             road_owner=AuthorityParty(name="Road Owner Authority", source="Official register"),
-            evidence=(AuthorityEvidence(source_name="Official register", source_type="official_database", claim="Road owner is verified."),),
+            evidence=(
+                AuthorityEvidence(source_name="Road Inventory", source_type="official_database", claim="The reported road matches.", matched_attribute="road"),
+                AuthorityEvidence(source_name="Official register", source_type="official_database", claim="Road owner is verified.", matched_attribute="road_owner"),
+            ),
         )
         response = self.client.get("/api/v1/authority/resolve?latitude=12.34&longitude=56.78")
         self.assertEqual(response.json()["authority"]["authority_status"], "partially_verified")

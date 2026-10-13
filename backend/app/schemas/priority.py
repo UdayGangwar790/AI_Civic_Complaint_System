@@ -24,6 +24,7 @@ class PriorityScoreResponse(BaseModel):
     priority_score: int = Field(ge=0, le=100)
     priority_level: PriorityLevel
     risk_level: RiskLevel
+    recurrence_score: int = Field(default=0, ge=0)
     reasons: list[str] = Field(default_factory=list)
     evidence: list[str] = Field(default_factory=list)
     limitations: list[str] = Field(default_factory=list)

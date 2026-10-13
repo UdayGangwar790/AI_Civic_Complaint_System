@@ -119,6 +119,9 @@ class MongoComplaintCaseRepository(ComplaintCaseRepository):
             "nlp_analysis": case.nlp_analysis.model_dump(mode="python") if case.nlp_analysis else None,
             "duplicate_analysis": case.duplicate_analysis.model_dump(mode="python") if case.duplicate_analysis else None,
             "priority_analysis": case.priority_analysis.model_dump(mode="python") if case.priority_analysis else None,
+            "recurrence_analysis": case.recurrence_analysis.model_dump(mode="python") if case.recurrence_analysis else None,
+            "resolution_evidence": [item.model_dump(mode="python") for item in case.resolution_evidence],
+            "resolution_evidence_recorded_at": case.resolution_evidence_recorded_at,
             "assignment": case.assignment.model_dump(mode="python") if case.assignment else None,
         }
 
@@ -428,25 +431,35 @@ async def create_case(
         except Exception as exc:
             logger.warning("Failed to perform duplicate check during case creation: %s", exc)
 
-    # M3.8 Priority / Risk Intelligence
-    priority_analysis = request.priority_analysis
-    if priority_analysis is None:
-        try:
-            from app.schemas.priority import PriorityScoreRequest
-            from app.services.priority import calculate_priority_score
+    # M5.2 recurrence is separate from M3.7 same-incident duplicate detection.
+    from app.services.civic_intelligence import analyze_recurrence_for_new_case
 
-            priority_analysis = calculate_priority_score(
-                PriorityScoreRequest(
-                    issue_category=request.issue.class_name,
-                    cv_confidence=request.issue.confidence,
-                    nlp_analysis=nlp_analysis,
-                    duplicate_analysis=duplicate_analysis,
-                    location_context=loc,
-                    authority_context=authority,
-                )
-            )
-        except Exception as exc:
-            logger.warning("Failed to calculate priority score during case creation: %s", exc)
+    recurrence_analysis = await analyze_recurrence_for_new_case(
+        issue_category=request.issue.class_name,
+        location=loc,
+        created_at=now,
+    )
+
+    # M3.8 Priority / Risk Intelligence
+    # Case triage is recomputed from server-side inputs so clients cannot bypass M5.2 recurrence.
+    priority_analysis = None
+    try:
+        from app.schemas.priority import PriorityScoreRequest
+        from app.services.priority import calculate_priority_score
+
+        priority_analysis = calculate_priority_score(
+            PriorityScoreRequest(
+                issue_category=request.issue.class_name,
+                cv_confidence=request.issue.confidence,
+                nlp_analysis=nlp_analysis,
+                duplicate_analysis=duplicate_analysis,
+                location_context=loc,
+                authority_context=authority,
+            ),
+            recurrence_analysis=recurrence_analysis,
+        )
+    except Exception as exc:
+        logger.warning("Failed to calculate priority score during case creation: %s", exc)
 
     case = ComplaintCase(
         reference_id=_new_reference_id(),
@@ -463,6 +476,7 @@ async def create_case(
         nlp_analysis=nlp_analysis,
         duplicate_analysis=duplicate_analysis,
         priority_analysis=priority_analysis,
+        recurrence_analysis=recurrence_analysis,
     )
     saved = case_repository.save(case)
     if inspect.isawaitable(saved):

@@ -8,6 +8,7 @@ from app.schemas.priority import (
     PriorityScoreResponse,
     RiskLevel,
 )
+from app.schemas.civic_intelligence import RecurrenceAnalysis
 
 MAJOR_CORRIDOR_KEYWORDS = [
     "highway", "expressway", "arterial", "flyover", "metro", "hospital",
@@ -15,7 +16,10 @@ MAJOR_CORRIDOR_KEYWORDS = [
 ]
 
 
-def calculate_priority_score(request: PriorityScoreRequest) -> PriorityScoreResponse:
+def calculate_priority_score(
+    request: PriorityScoreRequest,
+    recurrence_analysis: RecurrenceAnalysis | None = None,
+) -> PriorityScoreResponse:
     """
     Computes a transparent, explainable civic priority score (0-100)
     for triage decision support based on available multi-modal signals.
@@ -71,16 +75,34 @@ def calculate_priority_score(request: PriorityScoreRequest) -> PriorityScoreResp
         dup = request.duplicate_analysis
         if dup.classification == "duplicate":
             repeat_score = settings.PRIORITY_WEIGHT_REPEAT
-            reasons.append(f"Multiple identical or highly similar complaints recorded nearby (reference {dup.matched_reference_id}).")
+            reasons.append(f"A similar report may describe the same incident (reference {dup.matched_reference_id}); duplicate classification is not recurrence.")
             evidence.append(f"Duplicate reports detected in vicinity (+{repeat_score} pts)")
         elif dup.classification == "possible_duplicate":
             repeat_score = int(settings.PRIORITY_WEIGHT_REPEAT * 0.66)
-            reasons.append(f"Nearby similar civic report detected (reference {dup.matched_reference_id}), indicating recurring problem.")
+            reasons.append(f"A nearby similar report may describe the same incident (reference {dup.matched_reference_id}); recurrence is evaluated separately.")
             evidence.append(f"Possible duplicate report nearby (+{repeat_score} pts)")
         else:
             evidence.append("Complaint verified as unique; no recurring report penalty (+0 pts)")
     else:
         evidence.append("Duplicate analysis not supplied (0 pts)")
+
+    recurrence_score = 0
+    if recurrence_analysis:
+        recurrence = recurrence_analysis
+        if recurrence.recurrence_detected:
+            recurrence_score = min(
+                settings.PRIORITY_WEIGHT_RECURRENCE,
+                recurrence.recurrence_count * 2,
+            )
+            count_label = "at least " if not recurrence.history_scan_complete else ""
+            reasons.append(
+                f"Persisted history records {count_label}{recurrence.recurrence_count} prior same-category case(s) at this location outside the duplicate window."
+            )
+            evidence.append(f"Separate issue recurrence signal (+{recurrence_score} pts, bounded)")
+        else:
+            evidence.append("No qualifying persisted recurrence evidence (0 pts)")
+    else:
+        evidence.append("Recurrence analysis not supplied (0 pts)")
 
     # 4. Location Context Score (up to PRIORITY_WEIGHT_LOCATION = 10)
     location_score = 0
@@ -134,7 +156,7 @@ def calculate_priority_score(request: PriorityScoreRequest) -> PriorityScoreResp
         evidence.append("Authority context not supplied (0 pts)")
 
     # Compute Total Normalized Score
-    raw_score = base_score + text_risk_score + repeat_score + location_score + cv_score
+    raw_score = base_score + text_risk_score + repeat_score + recurrence_score + location_score + cv_score
     priority_score = max(0, min(100, int(round(raw_score))))
 
     # Determine Priority Level and Risk Level
@@ -161,6 +183,7 @@ def calculate_priority_score(request: PriorityScoreRequest) -> PriorityScoreResp
         priority_score=priority_score,
         priority_level=priority_level,
         risk_level=risk_level,
+        recurrence_score=recurrence_score,
         reasons=reasons,
         evidence=evidence,
         limitations=limitations,

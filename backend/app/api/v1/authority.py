@@ -7,8 +7,10 @@ from app.models.roles import UserRole
 from app.schemas.authority import AuthorityLocation, AuthorityResolutionResponse
 from app.services.authority import AuthorityProviderError, AuthorityProviderTimeout, resolve_authority
 from app.schemas.map_case import MapCasesResponse
+from app.schemas.civic_intelligence import CaseIntelligenceResponse
 from app.services.map_case import get_map_cases
-from app.services.complaint_case import ComplaintCaseDatabaseError
+from app.services.civic_intelligence import get_case_intelligence
+from app.services.complaint_case import ComplaintCaseDatabaseError, ComplaintCaseNotFoundError
 from app.core.query_validation import validate_iso_date_range
 
 router = APIRouter()
@@ -35,6 +37,29 @@ async def authority_access_check(
         authorized=True,
         role=current_user.role,
     )
+
+
+@router.get(
+    "/cases/{reference_id}/intelligence",
+    response_model=CaseIntelligenceResponse,
+    summary="Get explainable intelligence for a case assigned to this authority",
+)
+async def get_authority_case_intelligence_endpoint(
+    reference_id: str,
+    current_user: AuthenticatedUser = Depends(require_role(UserRole.AUTHORITY)),
+) -> CaseIntelligenceResponse:
+    try:
+        return await get_case_intelligence(
+            reference_id,
+            actor_user_id=current_user.user_id,
+            actor_role=current_user.role,
+        )
+    except ComplaintCaseNotFoundError:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="CVKI case was not found.")
+    except PermissionError as exc:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail=str(exc))
+    except ComplaintCaseDatabaseError:
+        raise HTTPException(status_code=status.HTTP_503_SERVICE_UNAVAILABLE, detail="Database service is unavailable.")
 
 
 @router.get("/resolve", response_model=AuthorityResolutionResponse, summary="Resolve evidence-backed authority context")

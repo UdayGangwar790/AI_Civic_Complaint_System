@@ -13,6 +13,7 @@ from app.schemas.government_submission import (
     ReadinessStatus,
     SubmissionReadinessResponse,
 )
+from app.services.authority import has_verified_builder_evidence
 
 logger = logging.getLogger("cvki.government_submission")
 
@@ -124,16 +125,10 @@ async def prepare_government_submission(
 
     now = datetime.now(timezone.utc)
 
-    # Authority safety: builder/contractor only when explicitly supported by official evidence
     supported_builder: Optional[AuthorityParty] = None
     if case.authority and case.authority.builder_or_contractor:
-        builder = case.authority.builder_or_contractor
-        evidence_text = " ".join(
-            (e.claim or "") + " " + (e.source_name or "")
-            for e in (case.authority.evidence or [])
-        ).lower()
-        if builder.source or "contractor" in evidence_text or "builder" in evidence_text:
-            supported_builder = builder
+        if has_verified_builder_evidence(case.authority.evidence or []):
+            supported_builder = case.authority.builder_or_contractor
 
     loc_dict = case.location.model_dump() if case.location else {}
 

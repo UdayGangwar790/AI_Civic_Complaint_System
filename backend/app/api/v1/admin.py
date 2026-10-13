@@ -33,6 +33,8 @@ from app.schemas.analytics import OperationalAnalyticsResponse
 from app.services.analytics import get_operational_analytics, generate_analytics_csv
 from app.schemas.audit import AuditLogListResponse, SecurityOverviewResponse
 from app.services.audit import AuditDatabaseError, AuditService
+from app.schemas.civic_intelligence import CaseIntelligenceResponse
+from app.services.civic_intelligence import get_case_intelligence
 from app.core.config import settings
 from app.core.rate_limit import rate_limit_dependency
 from app.core.query_validation import validate_iso_date_range
@@ -163,6 +165,29 @@ async def get_admin_case_detail_endpoint(
         )
 
 
+@router.get(
+    "/cases/{reference_id}/intelligence",
+    response_model=CaseIntelligenceResponse,
+    summary="Get explainable recurrence, resolution, and recommendation intelligence for a case",
+)
+async def get_admin_case_intelligence_endpoint(
+    reference_id: str,
+    current_user: AuthenticatedUser = Depends(require_role(UserRole.ADMIN)),
+) -> CaseIntelligenceResponse:
+    try:
+        return await get_case_intelligence(
+            reference_id,
+            actor_user_id=current_user.user_id,
+            actor_role=current_user.role,
+        )
+    except ComplaintCaseNotFoundError:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="CVKI case was not found.")
+    except PermissionError as exc:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail=str(exc))
+    except ComplaintCaseDatabaseError:
+        raise HTTPException(status_code=status.HTTP_503_SERVICE_UNAVAILABLE, detail="Database service is unavailable.")
+
+
 @router.post(
     "/cases/{reference_id}/assign",
     response_model=ComplaintCase,
@@ -259,6 +284,7 @@ async def admin_update_case_status_endpoint(
             actor_user_id=current_user.user_id,
             actor_role=current_user.role,
             reason=payload.reason,
+            resolution_evidence=payload.resolution_evidence,
         )
     except ComplaintCaseNotFoundError:
         raise HTTPException(

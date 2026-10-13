@@ -425,3 +425,29 @@ class TestCaseStatusWorkflowM45(unittest.TestCase):
             json={"status": "in_progress"},
         )
         self.assertEqual(resp.status_code, 400)
+
+    def test_23_resolution_note_is_attributed_and_persisted(self):
+        ref_id = f"CVKI-STAT-{uuid.uuid4().hex[:6].upper()}"
+        self.cases_col.insert_one(_build_test_case(ref_id, status="in_progress", assigned_to=self.authority_id_1))
+
+        response = self.client.patch(
+            f"/api/v1/complaint/cases/{ref_id}/status",
+            headers={"Authorization": f"Bearer {self.authority_token_1}"},
+            json={"status": "resolved", "resolution_evidence": "Inspection note: cover replaced and verified visually."},
+        )
+        self.assertEqual(response.status_code, 200)
+        document = self.cases_col.find_one({"reference_id": ref_id})
+        self.assertEqual(document["resolution_evidence"][0]["recorded_by_role"], "authority")
+        self.assertEqual(document["resolution_evidence"][0]["note"], "Inspection note: cover replaced and verified visually.")
+        self.assertIsNotNone(document["resolution_evidence_recorded_at"])
+
+    def test_24_resolution_note_rejected_for_non_resolved_transition(self):
+        ref_id = f"CVKI-STAT-{uuid.uuid4().hex[:6].upper()}"
+        self.cases_col.insert_one(_build_test_case(ref_id, status="assigned"))
+
+        response = self.client.patch(
+            f"/api/v1/complaint/cases/{ref_id}/status",
+            headers={"Authorization": f"Bearer {self.admin_token}"},
+            json={"status": "in_progress", "resolution_evidence": "Not a resolution."},
+        )
+        self.assertEqual(response.status_code, 400)

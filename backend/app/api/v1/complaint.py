@@ -295,6 +295,7 @@ async def update_complaint_case_status(
             actor_user_id=current_user.user_id,
             actor_role=current_user.role,
             reason=payload.reason,
+            resolution_evidence=payload.resolution_evidence,
         )
     except ComplaintCaseNotFoundError:
         raise HTTPException(

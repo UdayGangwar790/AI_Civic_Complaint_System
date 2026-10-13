@@ -295,7 +295,22 @@ class TestGovernmentSubmissionM310(unittest.TestCase):
             "CVKI-20261011-GOV014B",
             authority_status="verified",
             builder=builder_supported,
-            evidence=[AuthorityEvidence(source_name="NHAI Contract", source_type="official_contract", claim="Contractor L&T executed BOT project")],
+            evidence=[
+                AuthorityEvidence(
+                    source_name="Road Inventory",
+                    source_type="official_database",
+                    claim="The road matches the official inventory record.",
+                    matched_attribute="road",
+                    verification_state="verified",
+                ),
+                AuthorityEvidence(
+                    source_name="NHAI Contract",
+                    source_type="official_contract",
+                    claim="Contractor L&T executed BOT project.",
+                    matched_attribute="builder_or_contractor",
+                    verification_state="verified",
+                ),
+            ],
         )
         _, resp_b = asyncio.run(prepare_government_submission(case_b, user_id=self.user1_id))
         self.assertIsNotNone(resp_b.package.builder_or_contractor)

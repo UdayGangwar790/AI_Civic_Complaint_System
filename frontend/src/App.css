@@ -77,12 +77,20 @@
 .authority-status.partially_verified { color: #7a6419; background: #fff4af; }
 .authority-status.verified { color: var(--forest); background: var(--lime); }
 .authority-warning { color: #8d5c2a; background: #fff6e5; border-radius: 6px; padding: 9px; font-size: 11px; line-height: 1.45; margin: 0; }
+.authority-explanation { margin: 0; color: var(--ink); font-size: 11px; line-height: 1.5; }
 .authority-panel > p:not(.authority-warning), .authority-evidence, .authority-limitations { display: flex; justify-content: space-between; gap: 12px; margin: 0; font-size: 11px; }
 .authority-panel > p span, .authority-evidence > span, .authority-limitations > span { color: var(--muted); }
 .authority-panel > p strong { text-align: right; }
 .authority-evidence, .authority-limitations { display: grid; justify-content: stretch; gap: 4px; }
 .authority-evidence strong, .authority-limitations strong { font-size: 10px; font-weight: 600; line-height: 1.4; }
 .authority-evidence strong { color: var(--forest); }
+.authority-evidence-item { display: grid; gap: 4px; padding: 7px 8px; border: 1px solid var(--line); border-radius: 6px; background: #f8faf7; }
+.authority-evidence-meta { display: flex; justify-content: space-between; align-items: center; gap: 8px; color: var(--muted); font-size: 9px; text-transform: capitalize; }
+.authority-evidence-state { font-weight: 800; }
+.authority-evidence-state.verified { color: var(--forest); }
+.authority-evidence-state.partially_verified { color: #7a6419; }
+.authority-evidence-state.not_verified { color: #8d5c2a; }
+.authority-evidence-item small, .authority-evidence-item p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.4; }
 .authority-limitations strong { color: var(--muted); }
 .complaint-panel { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); }
 .complaint-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
@@ -368,6 +376,9 @@
   line-height: 1.45;
   margin: 2px 0 0;
 }
+.case-intelligence-content { display: grid; gap: 6px; }
+.case-intelligence-content > p { margin: 0; font-size: 11px; line-height: 1.45; }
+.recommendation-basis { display: block; margin-top: 3px; color: var(--muted); font-size: 10px; line-height: 1.4; }
 .priority-section, .duplicate-section, .nlp-section {
   border-top: 1px solid var(--line);
   padding-top: 12px;
@@ -1550,7 +1561,10 @@
 .chart-bar-fill.p3 { background: #d97706; }
 .chart-bar-fill.p4 { background: #16a34a; }
 .hotspot-table {
+  display: block;
+  overflow-x: auto;
   width: 100%;
+  min-width: 700px;
   border-collapse: collapse;
   font-size: 12px;
 }

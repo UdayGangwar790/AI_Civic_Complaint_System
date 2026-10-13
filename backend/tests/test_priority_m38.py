@@ -5,6 +5,7 @@ from app.main import app
 from app.schemas.authority import AuthorityResult
 from app.schemas.complaint import ComplaintLocation
 from app.schemas.duplicate import DuplicateCheckResponse
+from app.schemas.civic_intelligence import RecurrenceAnalysis
 from app.schemas.nlp import NLPAnalysisResponse
 from app.schemas.priority import PriorityScoreRequest
 from app.services.priority import calculate_priority_score
@@ -316,6 +317,53 @@ class TestPriorityM38(unittest.TestCase):
         # Invalid CV confidence > 1.0
         res2 = self.client.post("/api/v1/priority/score", json={"issue_category": "open_damaged_manhole", "cv_confidence": 1.5})
         self.assertEqual(res2.status_code, 422)
+
+    def test_16_recurrence_adds_a_bounded_explainable_priority_signal(self):
+        recurrence = RecurrenceAnalysis(
+            recurrence_detected=True,
+            recurrence_count=20,
+            recurrence_explanation="Twenty prior cases in the configured window.",
+        )
+        response = calculate_priority_score(
+            PriorityScoreRequest(issue_category="road_waterlogging"),
+            recurrence_analysis=recurrence,
+        )
+        self.assertEqual(response.recurrence_score, 5)
+        self.assertTrue(any("prior same-category" in reason for reason in response.reasons))
+        self.assertTrue(any("recurrence signal (+5 pts" in item for item in response.evidence))
+
+    def test_17_possible_duplicate_does_not_claim_recurrence_without_history_signal(self):
+        response = calculate_priority_score(
+            PriorityScoreRequest(
+                issue_category="open_damaged_manhole",
+                duplicate_analysis=DuplicateCheckResponse(
+                    classification="possible_duplicate",
+                    similarity_score=0.7,
+                    matched_reference_id="CVKI-PRIOR",
+                    issue_match=True,
+                    reason="Similar report nearby.",
+                ),
+            )
+        )
+        self.assertEqual(response.recurrence_score, 0)
+        self.assertTrue(any("recurrence is evaluated separately" in reason for reason in response.reasons))
+
+    def test_18_public_priority_request_cannot_supply_recurrence_history(self):
+        response = self.client.post(
+            "/api/v1/priority/score",
+            json={
+                "issue_category": "road_waterlogging",
+                "recurrence_analysis": {
+                    "recurrence_detected": True,
+                    "recurrence_count": 50,
+                    "recurrence_window_days": 180,
+                    "recurrence_explanation": "Client-provided claim.",
+                },
+            },
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json()["recurrence_score"], 0)
+        self.assertIn("Recurrence analysis not supplied", " ".join(response.json()["evidence"]))
 
 
 if __name__ == "__main__":

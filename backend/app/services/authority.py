@@ -52,6 +52,18 @@ OFFICIAL_SOURCE_TYPES = {
     "official_contract_record",
     "official_database",
     "official_government",
+    "official_portal",
+    "official_contract",
+    "official_project_document",
+    "concession_agreement",
+}
+
+BUILDER_EVIDENCE_TYPES = {
+    "official_tender_record",
+    "official_contract_record",
+    "official_contract",
+    "official_project_document",
+    "concession_agreement",
 }
 
 
@@ -336,6 +348,9 @@ def _validate_evidence_and_sources(
         if stype in DISALLOWED_SOURCE_TYPES:
             rejections.append(f"Evidence from source type '{item.source_type}' is disallowed by official source policy.")
             continue
+        if stype not in OFFICIAL_SOURCE_TYPES:
+            rejections.append(f"Evidence source type '{item.source_type}' is not approved by official source policy.")
+            continue
         if item.source_url and not is_trusted_official_domain(item.source_url):
             rejections.append(f"Evidence URL '{item.source_url}' is not on the trusted official government domain allowlist.")
             continue
@@ -346,12 +361,63 @@ def _validate_evidence_and_sources(
         if stype in DISALLOWED_SOURCE_TYPES:
             rejections.append(f"Source type '{src.source_type}' is disallowed by official source policy.")
             continue
+        if stype not in OFFICIAL_SOURCE_TYPES:
+            rejections.append(f"Source type '{src.source_type}' is not approved by official source policy.")
+            continue
         if src.source_url and not is_trusted_official_domain(src.source_url):
             rejections.append(f"Source URL '{src.source_url}' does not meet official government domain trust criteria.")
             continue
         valid_sources.append(src)
 
     return valid_evidence, valid_sources, rejections
+
+
+def has_verified_builder_evidence(evidence: list[AuthorityEvidence]) -> bool:
+    has_location_link = any(
+        item.matched_attribute in {"road", "jurisdiction"}
+        and item.verification_state == "verified"
+        for item in evidence
+    )
+    has_builder_record = any(
+        item.matched_attribute == "builder_or_contractor"
+        and item.verification_state == "verified"
+        and item.source_type.strip().lower() in BUILDER_EVIDENCE_TYPES
+        for item in evidence
+    )
+    return has_location_link and has_builder_record
+
+
+def _citizen_explanation(
+    authority_status: str,
+    *,
+    has_location_link: bool,
+    has_road_owner: bool,
+    has_maintenance_authority: bool,
+) -> str:
+    if not has_location_link:
+        return (
+            "CVKI could not link available authority records to the reported road or jurisdiction, "
+            "so it has not verified a responsible authority."
+        )
+    if authority_status == "verified":
+        return (
+            "Available source records are explicitly linked to this road and support both road ownership "
+            "and maintenance responsibility."
+        )
+    if authority_status == "partially_verified":
+        supported_roles = []
+        if has_road_owner:
+            supported_roles.append("road ownership")
+        if has_maintenance_authority:
+            supported_roles.append("maintenance responsibility")
+        return (
+            f"Available source records support {' and '.join(supported_roles)}, but do not verify both "
+            "road ownership and maintenance responsibility."
+        )
+    return (
+        "CVKI found evidence linked to this road or jurisdiction, but the available records do not "
+        "establish road ownership or maintenance responsibility."
+    )
 
 
 def resolve_authority(
@@ -388,15 +454,14 @@ def resolve_authority(
             sources=[],
             resolved_at=now,
             resolution_message="No official road record found for this location.",
+            citizen_explanation="CVKI could not fully verify the responsible authority from its available sources.",
         )
 
     raw_evidence = list(lookup.evidence)
     raw_sources = list(lookup.sources)
     valid_evidence, valid_sources, rejections = _validate_evidence_and_sources(raw_evidence, raw_sources)
 
-    has_authority_claim = any((lookup.road_owner, lookup.maintenance_authority, lookup.builder_or_contractor))
-
-    if not has_authority_claim or not valid_evidence:
+    if not valid_evidence:
         limitations = [base_limitation]
         if rejections:
             limitations.extend(rejections)
@@ -410,52 +475,102 @@ def resolve_authority(
             sources=valid_sources,
             resolved_at=now,
             resolution_message="Authoritative evidence is missing or rejected by official source policy.",
+            citizen_explanation="CVKI could not fully verify the responsible authority from its available sources.",
         )
 
-    # Builder/contractor verification: only return when supported by official source document/tender record
-    builder_or_contractor = lookup.builder_or_contractor
-    has_builder_official_support = bool(
-        builder_or_contractor and (
-            (builder_or_contractor.source and any(
-                kw in builder_or_contractor.source.lower()
-                for kw in ("official", "contract", "tender", "project", "concession", "registry", "gazette")
-            ))
-            or any(
-                e.source_type in ("official_tender_record", "official_contract_record", "concession_agreement", "official_project_document")
-                for e in valid_evidence
-            )
+    has_location_link = any(
+        item.matched_attribute in {"road", "jurisdiction"}
+        for item in valid_evidence
+    )
+    road_owner = lookup.road_owner if has_location_link and any(
+        item.matched_attribute == "road_owner" for item in valid_evidence
+    ) else None
+    maintenance_authority = lookup.maintenance_authority if has_location_link and any(
+        item.matched_attribute == "maintenance_authority" for item in valid_evidence
+    ) else None
+    builder_has_explicit_record = bool(
+        lookup.builder_or_contractor
+        and has_location_link
+        and any(
+            item.matched_attribute == "builder_or_contractor"
+            and item.source_type.strip().lower() in BUILDER_EVIDENCE_TYPES
+            for item in valid_evidence
         )
     )
-    if not has_builder_official_support:
-        builder_or_contractor = None
 
-    # Road owner and maintenance authority must NOT be conflated
-    road_owner = lookup.road_owner
-    maintenance_authority = lookup.maintenance_authority
+    # Evidence state is assigned by the resolver; provider-supplied states are not trusted.
+    evidence_trail = []
+    for item in valid_evidence:
+        attribute = item.matched_attribute
+        if attribute in {"road", "jurisdiction"}:
+            verification_state = "verified"
+            explanation = "This source record is explicitly linked to the reported road or jurisdiction."
+        elif attribute == "road_owner" and road_owner:
+            verification_state = "verified"
+            explanation = "This source record supports road ownership for the linked location."
+        elif attribute == "maintenance_authority" and maintenance_authority:
+            verification_state = "verified"
+            explanation = "This source record supports maintenance responsibility for the linked location."
+        elif attribute == "builder_or_contractor" and builder_has_explicit_record:
+            verification_state = "verified"
+            explanation = "This contract, tender, or project record explicitly supports the builder or contractor for the linked location."
+        elif attribute in {"road_owner", "maintenance_authority", "builder_or_contractor"} and not has_location_link:
+            verification_state = "not_verified"
+            explanation = "This authority claim is not linked to evidence identifying the reported road or jurisdiction."
+        elif attribute is None:
+            verification_state = "not_verified"
+            explanation = "This source record is not linked to a specific field and cannot verify an authority role."
+        else:
+            verification_state = "not_verified"
+            explanation = "This source record does not support a returned authority field."
+        evidence_trail.append(item.model_copy(update={
+            "verification_state": verification_state,
+            "explanation": explanation,
+        }))
 
-    # Verification status rule:
-    # "verified": both road_owner AND maintenance_authority are supported by valid evidence
-    # "partially_verified": some authority is supported (e.g. only road_owner), but required roles remain unresolved
-    # "not_verified": no valid authority claim supported
+    builder_or_contractor = (
+        lookup.builder_or_contractor
+        if lookup.builder_or_contractor and has_verified_builder_evidence(evidence_trail)
+        else None
+    )
+
     has_road_and_maintenance = bool(road_owner and maintenance_authority)
-    authority_status = "verified" if has_road_and_maintenance else "partially_verified"
+    has_any_authority_role = bool(road_owner or maintenance_authority)
+    if has_location_link and has_road_and_maintenance:
+        authority_status = "verified"
+    elif has_location_link and has_any_authority_role:
+        authority_status = "partially_verified"
+    else:
+        authority_status = "not_verified"
 
     limitations = []
-    if not has_road_and_maintenance:
-        limitations.append("Available authoritative evidence does not establish every authority role.")
+    if not has_location_link:
+        limitations.append("Available evidence does not link authority claims to the reported road or jurisdiction.")
+    elif not has_any_authority_role:
+        limitations.append("Available evidence does not establish road ownership or maintenance responsibility.")
+    elif not has_road_and_maintenance:
+        limitations.append("Available evidence does not establish every authority role.")
     if rejections:
         limitations.extend(rejections)
+
+    citizen_explanation = _citizen_explanation(
+        authority_status,
+        has_location_link=has_location_link,
+        has_road_owner=road_owner is not None,
+        has_maintenance_authority=maintenance_authority is not None,
+    )
 
     return AuthorityResult(
         authority_status=authority_status,
         road_owner=road_owner,
         maintenance_authority=maintenance_authority,
         builder_or_contractor=builder_or_contractor,
-        evidence=valid_evidence,
+        evidence=evidence_trail,
         limitations=limitations,
         sources=valid_sources,
         resolved_at=lookup.resolved_at or now,
         resolution_message=lookup.resolution_message or ("Authority verified against official source records." if has_road_and_maintenance else "Authority partially verified from available official records."),
+        citizen_explanation=citizen_explanation,
     )
 
 
@@ -475,6 +590,7 @@ def resolve_authority_for_location(location: Any) -> AuthorityResult:
             ],
             resolved_at=datetime.now(timezone.utc),
             resolution_message="Authority could not be verified because coordinates were unavailable.",
+            citizen_explanation="CVKI could not fully verify the responsible authority because coordinates were unavailable.",
         )
 
     return resolve_authority(

@@ -68,6 +68,7 @@ async def transition_case_status(
     actor_user_id: str,
     actor_role: str,
     reason: Optional[str] = None,
+    resolution_evidence: Optional[str] = None,
     db: object = _DEFAULT_DB,
 ) -> CaseStatusUpdateResponse:
     """
@@ -109,6 +110,16 @@ async def transition_case_status(
             )
         except Exception:
             pass
+
+    if resolution_evidence is not None and clean_target != "resolved":
+        msg = "Resolution evidence can only be recorded when marking a case resolved."
+        await _audit_rejection("failure", msg)
+        raise ValueError(msg)
+    clean_resolution_evidence = resolution_evidence.strip() if resolution_evidence is not None else None
+    if resolution_evidence is not None and not clean_resolution_evidence:
+        msg = "Resolution evidence note cannot be empty."
+        await _audit_rejection("failure", msg)
+        raise ValueError(msg)
 
     # 1. Closed case protection
     if current_status == "closed":
@@ -157,6 +168,21 @@ async def transition_case_status(
         "status": clean_target,
         "updated_at": now,
     }
+    update_operators: dict = {"$set": update_fields}
+
+    if clean_target == "resolved":
+        # The marker makes older resolution notes stale after reopen/re-resolution.
+        update_fields["resolution_evidence_recorded_at"] = now
+        if clean_resolution_evidence:
+            update_operators["$push"] = {
+                "resolution_evidence": {
+                    "note": clean_resolution_evidence,
+                    "recorded_at": now,
+                    "recorded_by_role": actor_role,
+                }
+            }
+    elif current_status in {"resolved", "closed"}:
+        update_fields["resolution_evidence_recorded_at"] = now
 
     # If transitioning to 'assigned' and assignment exists, ensure assignment_status is assigned
     if clean_target == "assigned" and case.assignment:
@@ -165,7 +191,7 @@ async def transition_case_status(
     try:
         await cases_col.update_one(
             {"reference_id": reference_id},
-            {"$set": update_fields},
+            update_operators,
         )
     except PyMongoError as exc:
         logger.error("Case status update failed (error_type=%s).", type(exc).__name__)
@@ -215,6 +241,7 @@ async def transition_case_status(
                 "previous_status": current_status,
                 "new_status": clean_target,
                 "reason": reason,
+                "resolution_evidence_recorded": bool(clean_resolution_evidence),
             },
             db=db,
         )

@@ -1,5 +1,17 @@
 from datetime import datetime
+from typing import Literal
+
 from pydantic import BaseModel, Field
+
+
+AuthorityEvidenceAttribute = Literal[
+    "road",
+    "jurisdiction",
+    "road_owner",
+    "maintenance_authority",
+    "builder_or_contractor",
+]
+AuthorityVerificationState = Literal["verified", "partially_verified", "not_verified"]
 
 
 class OfficialSourceRecord(BaseModel):
@@ -34,6 +46,9 @@ class AuthorityEvidence(BaseModel):
     reference: str | None = None
     claim: str
     source_url: str | None = None
+    matched_attribute: AuthorityEvidenceAttribute | None = None
+    verification_state: AuthorityVerificationState | None = None
+    explanation: str | None = None
 
 
 class AuthorityResult(BaseModel):
@@ -46,6 +61,7 @@ class AuthorityResult(BaseModel):
     sources: list[OfficialSourceRecord] = Field(default_factory=list)
     resolved_at: datetime | None = None
     resolution_message: str | None = None
+    citizen_explanation: str | None = None
 
 
 class AuthorityLocation(BaseModel):

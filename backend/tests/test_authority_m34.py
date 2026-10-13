@@ -121,6 +121,19 @@ class TestAuthorityM34(unittest.TestCase):
                     source_name="Municipal Register",
                     source_type="municipal_registry",
                     claim="Road owned and maintained by municipality",
+                    matched_attribute="road",
+                ),
+                AuthorityEvidence(
+                    source_name="Municipal Register",
+                    source_type="municipal_registry",
+                    claim="Municipality owns the road",
+                    matched_attribute="road_owner",
+                ),
+                AuthorityEvidence(
+                    source_name="Municipal Register",
+                    source_type="municipal_registry",
+                    claim="Municipality maintains the road",
+                    matched_attribute="maintenance_authority",
                 ),
             ),
         )
@@ -138,9 +151,16 @@ class TestAuthorityM34(unittest.TestCase):
             maintenance_authority=None,
             evidence=(
                 AuthorityEvidence(
+                    source_name="Road Inventory",
+                    source_type="official_database",
+                    claim="The reported road matches the road inventory record.",
+                    matched_attribute="road",
+                ),
+                AuthorityEvidence(
                     source_name="State Gazette",
                     source_type="official_gazette",
                     claim="Road owner is State Road Department",
+                    matched_attribute="road_owner",
                 ),
             ),
         )
@@ -196,6 +216,124 @@ class TestAuthorityM34(unittest.TestCase):
         data = response.json()["authority"]
         self.assertIsNotNone(data.get("resolved_at"))
         self.assertEqual(data["sources"], [])
+
+    @patch("app.services.authority.authority_provider")
+    def test_16_authority_claims_without_road_link_are_not_verified(self, mock_provider):
+        mock_provider.lookup.return_value = AuthorityLookup(
+            road_owner=AuthorityParty(name="Claimed Owner"),
+            maintenance_authority=AuthorityParty(name="Claimed Maintainer"),
+            evidence=(
+                AuthorityEvidence(
+                    source_name="Official register",
+                    source_type="official_database",
+                    claim="This organization owns the road.",
+                    matched_attribute="road_owner",
+                ),
+                AuthorityEvidence(
+                    source_name="Official register",
+                    source_type="official_database",
+                    claim="This organization maintains the road.",
+                    matched_attribute="maintenance_authority",
+                ),
+            ),
+        )
+        response = self.client.get("/api/v1/authority/resolve?latitude=12.34&longitude=56.78&road=Civic%20Road")
+        data = response.json()["authority"]
+        self.assertEqual(data["authority_status"], "not_verified")
+        self.assertIsNone(data["road_owner"])
+        self.assertIsNone(data["maintenance_authority"])
+        self.assertEqual(data["evidence"][0]["verification_state"], "not_verified")
+        self.assertIn("could not link", data["citizen_explanation"])
+
+    @patch("app.services.authority.authority_provider")
+    def test_17_linked_owner_evidence_is_partial_and_explanation_is_deterministic(self, mock_provider):
+        mock_provider.lookup.return_value = AuthorityLookup(
+            road_owner=AuthorityParty(name="Road Owner"),
+            maintenance_authority=AuthorityParty(name="Unsupported Maintainer"),
+            evidence=(
+                AuthorityEvidence(
+                    source_name="Road Inventory",
+                    source_type="official_database",
+                    claim="The reported road matches this inventory record.",
+                    matched_attribute="road",
+                    verification_state="not_verified",
+                ),
+                AuthorityEvidence(
+                    source_name="Road Register",
+                    source_type="municipal_registry",
+                    claim="The registered owner is Road Owner.",
+                    matched_attribute="road_owner",
+                    verification_state="not_verified",
+                ),
+            ),
+        )
+        first = self.client.get("/api/v1/authority/resolve?latitude=12.34&longitude=56.78&road=Civic%20Road").json()["authority"]
+        second = self.client.get("/api/v1/authority/resolve?latitude=12.34&longitude=56.78&road=Civic%20Road").json()["authority"]
+        self.assertEqual(first["authority_status"], "partially_verified")
+        self.assertIsNone(first["maintenance_authority"])
+        self.assertEqual(first["evidence"][0]["verification_state"], "verified")
+        self.assertEqual(first["evidence"][1]["matched_attribute"], "road_owner")
+        self.assertEqual(first["evidence"][1]["verification_state"], "verified")
+        self.assertEqual(first["citizen_explanation"], second["citizen_explanation"])
+        self.assertIn("do not verify both", first["citizen_explanation"])
+
+    @patch("app.services.authority.authority_provider")
+    def test_18_builder_needs_road_link_and_builder_specific_contract_record(self, mock_provider):
+        mock_provider.lookup.return_value = AuthorityLookup(
+            road_owner=AuthorityParty(name="Road Owner"),
+            maintenance_authority=AuthorityParty(name="Maintainer"),
+            builder_or_contractor=AuthorityParty(name="Unverified Builder", source="contractor list"),
+            evidence=(
+                AuthorityEvidence(
+                    source_name="Road Inventory",
+                    source_type="official_database",
+                    claim="The road matches this record.",
+                    matched_attribute="road",
+                ),
+                AuthorityEvidence(
+                    source_name="Authority Registry",
+                    source_type="official_database",
+                    claim="Owner and maintainer verified.",
+                    matched_attribute="road_owner",
+                ),
+                AuthorityEvidence(
+                    source_name="Authority Registry",
+                    source_type="official_database",
+                    claim="Owner and maintainer verified.",
+                    matched_attribute="maintenance_authority",
+                ),
+                AuthorityEvidence(
+                    source_name="General Project Page",
+                    source_type="government_portal",
+                    claim="A contractor is mentioned in project material.",
+                    matched_attribute="builder_or_contractor",
+                ),
+            ),
+        )
+        response = self.client.get("/api/v1/authority/resolve?latitude=12.34&longitude=56.78&road=Civic%20Road")
+        data = response.json()["authority"]
+        self.assertEqual(data["authority_status"], "verified")
+        self.assertIsNone(data["builder_or_contractor"])
+        self.assertEqual(data["evidence"][-1]["verification_state"], "not_verified")
+
+    @patch("app.services.authority.authority_provider")
+    def test_19_unknown_source_type_cannot_verify_authority(self, mock_provider):
+        mock_provider.lookup.return_value = AuthorityLookup(
+            road_owner=AuthorityParty(name="Claimed Owner"),
+            evidence=(
+                AuthorityEvidence(
+                    source_name="Unregistered source",
+                    source_type="private_directory",
+                    claim="The road belongs to Claimed Owner.",
+                    matched_attribute="road_owner",
+                ),
+            ),
+        )
+        response = self.client.get("/api/v1/authority/resolve?latitude=12.34&longitude=56.78&road=Civic%20Road")
+        data = response.json()["authority"]
+        self.assertEqual(data["authority_status"], "not_verified")
+        self.assertIsNone(data["road_owner"])
+        self.assertTrue(any("not approved" in item for item in data["limitations"]))
 
 
 if __name__ == "__main__":
