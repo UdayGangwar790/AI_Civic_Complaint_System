@@ -2337,6 +2337,13 @@ function AdminCaseDetailModal({ referenceId, onClose, onAssignmentChanged }) {
                           </ul>
                         </div>
                       )}
+                      {intelligence.limitations?.length > 0 && (
+                        <div style={{ marginTop: '8px', borderTop: '1px solid var(--border-color, #e2e8f0)', paddingTop: '6px' }}>
+                          {intelligence.limitations.map((lim, idx) => (
+                            <p key={idx} className="text-muted" style={{ fontSize: '11px', margin: '2px 0' }}>{lim}</p>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   ) : (
                     <p className="text-muted">Case intelligence is unavailable for this case.</p>
@@ -3795,8 +3802,18 @@ function AuthorityCaseSummaryModal({ caseData, onClose }) {
                   <p><strong>Resolution evidence:</strong> {intelligence.resolution_evidence_state.replaceAll('_', ' ')}</p>
                   <p className="intelligence-explanation">{intelligence.resolution_evidence_explanation}</p>
                   {intelligence.recommendations?.map((item, index) => (
-                    <p className="intelligence-explanation" key={`${item.kind}-${index}`}>{item.message}</p>
+                    <div className="intelligence-explanation" key={`${item.kind}-${index}`}>
+                      <p style={{ margin: 0 }}><strong>Recommendation:</strong> {item.message}</p>
+                      {item.basis && <small className="recommendation-basis">Basis: {item.basis}</small>}
+                    </div>
                   ))}
+                  {intelligence.limitations?.length > 0 && (
+                    <div style={{ marginTop: '8px', borderTop: '1px solid var(--border-color, #e2e8f0)', paddingTop: '6px' }}>
+                      {intelligence.limitations.map((lim, idx) => (
+                        <p key={idx} className="text-muted" style={{ fontSize: '11px', margin: '2px 0' }}>{lim}</p>
+                      ))}
+                    </div>
+                  )}
                 </>
               ) : <p className="text-muted">No intelligence is available for this assigned case.</p>}
             </div>
