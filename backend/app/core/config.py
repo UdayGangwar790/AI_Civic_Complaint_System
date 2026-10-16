@@ -104,6 +104,58 @@ class Settings(BaseSettings):
     UNRESOLVED_RECOMMENDATION_DAYS: int = Field(default=30, ge=1)
     MAX_INTELLIGENCE_HISTORY_CANDIDATES: int = Field(default=5000, ge=100)
 
+    # M6.1 Live Authority Intelligence Settings
+    AUTHORITY_CACHE_TTL_SECONDS: int = 86400
+    AUTHORITY_STALE_TTL_SECONDS: int = 604800
+    AUTHORITY_REQUEST_TIMEOUT_SECONDS: float = 3.0
+    AUTHORITY_DEFAULT_REFRESH_DAYS: int = 30
+
+    # M6.2 Advanced Geospatial Intelligence Settings
+    GEO_CACHE_TTL_SECONDS: int = 86400
+    GEO_CACHE_STALE_TTL_SECONDS: int = 604800
+    GEO_SEARCH_DEFAULT_RADIUS_METERS: float = Field(default=250.0, ge=10.0, le=5000.0)
+    GEO_SEARCH_MAX_RADIUS_METERS: float = Field(default=5000.0, ge=100.0)
+    GEO_MAX_NEARBY_CASES: int = Field(default=100, ge=1, le=500)
+    GPS_ACCURACY_THRESHOLD_APPROXIMATE_METERS: float = Field(default=50.0, ge=1.0)
+    GPS_ACCURACY_THRESHOLD_UNRELIABLE_METERS: float = Field(default=150.0, ge=10.0)
+
+    # M6.3 Real-Time External Civic Data Intelligence Settings
+    EXTERNAL_DATA_ENABLED: bool = True
+    EXTERNAL_DATA_REQUEST_TIMEOUT_SECONDS: float = Field(default=4.0, ge=0.5, le=30.0)
+    EXTERNAL_DATA_CACHE_TTL_SECONDS: int = Field(default=1800, ge=60)
+    EXTERNAL_DATA_CACHE_STALE_TTL_SECONDS: int = Field(default=21600, ge=300)
+    WEATHER_PROVIDER_URL: str = "https://api.open-meteo.com/v1/forecast"
+    RAIN_CONTEXT_WINDOW_HOURS: int = Field(default=24, ge=1, le=168)
+    RAIN_HEAVY_THRESHOLD_MM: float = Field(default=35.0, ge=1.0)
+    RAIN_MODERATE_THRESHOLD_MM: float = Field(default=10.0, ge=0.5)
+    RAIN_LIGHT_THRESHOLD_MM: float = Field(default=1.0, ge=0.1)
+    TRAFFIC_PROVIDER_URL: str = ""
+    TRAFFIC_API_KEY: str = ""
+    EXTERNAL_DATA_MAX_WINDOW_HOURS: int = Field(default=168, ge=1)
+    EXTERNAL_DATA_MAX_RADIUS_METERS: float = Field(default=5000.0, ge=100.0)
+
+    # M6.5 Civic Knowledge Graph Traversal & Bounding Settings
+    GRAPH_MAX_DEPTH: int = Field(default=4, ge=1, le=10)
+    GRAPH_MAX_NODES: int = Field(default=200, ge=10, le=2000)
+    GRAPH_MAX_EDGES: int = Field(default=500, ge=10, le=5000)
+
+    # M7.1 Government Integration Foundation Settings
+    GOVERNMENT_INTEGRATION_ENABLED: bool = False
+    GOVERNMENT_STATUS_SYNC_ENABLED: bool = False
+    GOVERNMENT_REQUEST_TIMEOUT_SECONDS: float = Field(default=5.0, ge=1.0, le=60.0)
+    GOVERNMENT_MAX_RETRIES: int = Field(default=2, ge=0, le=10)
+    GOVERNMENT_SYNC_INTERVAL_SECONDS: int = Field(default=3600, ge=60)
+
+    # M7.2 Government Portal / API Adapter Settings
+    CPGRAMS_ENV: str = Field(default="unconfigured", description="CPGRAMS environment: unconfigured, staging, or production")
+    CPGRAMS_BASE_URL: str = Field(default="https://pgportal.gov.in/api/v1", description="Official CPGRAMS Web API Base URL")
+    CPGRAMS_API_KEY: str = Field(default="", description="Secret API key for CPGRAMS dispatch")
+    CPGRAMS_CLIENT_ID: str = Field(default="", description="Registered client ID for CPGRAMS")
+    CPGRAMS_AGENCY_CODE: str = Field(default="MORTH", description="Department/Agency code in CPGRAMS")
+    CPGRAMS_ENABLED: bool = Field(default=False, description="Whether CPGRAMS integration is enabled")
+    NHAI_PORTAL_ENABLED: bool = Field(default=False, description="NHAI portal integration toggle (unverified API)")
+    BBMP_SAHAAYA_ENABLED: bool = Field(default=False, description="BBMP Sahaaya integration toggle (unverified API)")
+
     @model_validator(mode="after")
     def validate_security_configuration(self):
         environment = self.ENVIRONMENT.strip().lower()

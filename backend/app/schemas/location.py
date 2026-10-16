@@ -23,3 +23,9 @@ class LocationResponse(BaseModel):
     source: str | None = None
     resolution_status: str
     message: str | None = None
+    road_type: str | None = None
+    road_reference: str | None = None
+    match_quality: str | None = None
+    source_status: str | None = None
+    accuracy_m: float | None = None
+    postal_code: str | None = None

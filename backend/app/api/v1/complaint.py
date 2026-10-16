@@ -8,6 +8,8 @@ from app.schemas.complaint_case import (
     ComplaintCaseStatus,
     ComplaintHistoryResponse,
 )
+from app.schemas.provenance import CaseProvenanceResponse
+from app.services.provenance_engine import provenance_engine
 from app.services.complaint import UnsupportedIssueError, generate_complaint
 from app.services.authority import (
     AuthorityProviderError,
@@ -317,3 +319,27 @@ async def update_complaint_case_status(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
             detail="Database service is unavailable.",
         )
+
+
+@router.get(
+    "/cases/{reference_id}/provenance",
+    response_model=CaseProvenanceResponse,
+    summary="Get evidence provenance chain for a citizen's complaint case",
+)
+async def get_complaint_case_provenance(
+    reference_id: str,
+    current_user: AuthenticatedUser = Depends(get_current_user),
+) -> CaseProvenanceResponse:
+    try:
+        case = await get_case(reference_id)
+        if case.user_id != current_user.user_id and current_user.role != "admin":
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="CVKI case was not found.")
+        provenance = provenance_engine.generate_case_provenance_chain(case)
+        if current_user.role == "citizen":
+            for claim in provenance.claims:
+                claim.metadata.pop("user_id", None)
+                claim.metadata.pop("email", None)
+                claim.metadata.pop("assigned_to_user_id", None)
+        return provenance
+    except ComplaintCaseNotFoundError:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="CVKI case was not found.")

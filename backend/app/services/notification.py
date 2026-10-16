@@ -493,6 +493,116 @@ async def trigger_gov_submission_prepared_notification(case: ComplaintCase) -> O
     )
 
 
+async def trigger_gov_submission_accepted_notification(
+    case: ComplaintCase,
+    external_reference_id: Optional[str] = None,
+    authority_name: Optional[str] = None,
+) -> Optional[Notification]:
+    """
+    Fires notification when a government integration server confirms submission acceptance (M7.1).
+    """
+    if not case.user_id:
+        return None
+
+    ref_text = f" (Tracking ID: {external_reference_id})" if external_reference_id else ""
+    auth_text = f" to {authority_name}" if authority_name else ""
+    return await create_notification(
+        NotificationCreate(
+            user_id=case.user_id,
+            reference_id=case.reference_id,
+            type="government_submission_accepted",
+            title=f"Government Submission Accepted: {case.reference_id}",
+            message=f"Complaint case {case.reference_id} successfully submitted{auth_text}{ref_text}.",
+            priority=_resolve_case_priority(case),
+            metadata={
+                "reference_id": case.reference_id,
+                "external_reference_id": external_reference_id,
+                "authority": authority_name,
+            },
+        )
+    )
+
+
+async def trigger_gov_submission_rejected_notification(
+    case: ComplaintCase,
+    reason: Optional[str] = None,
+) -> Optional[Notification]:
+    """
+    Fires notification when government integration portal rejects the submission (M7.1).
+    """
+    if not case.user_id:
+        return None
+
+    reason_msg = f" Reason: {reason}" if reason else ""
+    return await create_notification(
+        NotificationCreate(
+            user_id=case.user_id,
+            reference_id=case.reference_id,
+            type="government_submission_rejected",
+            title=f"Government Submission Rejected: {case.reference_id}",
+            message=f"Complaint submission for {case.reference_id} was rejected by government portal.{reason_msg}",
+            priority=_resolve_case_priority(case),
+            metadata={
+                "reference_id": case.reference_id,
+                "reason": reason,
+            },
+        )
+    )
+
+
+async def trigger_gov_submission_status_notification(
+    case: ComplaintCase,
+    raw_status: Optional[str],
+    normalized_status: str,
+) -> Optional[Notification]:
+    """
+    Fires notification when external government status synchronizes (M7.1).
+    """
+    if not case.user_id:
+        return None
+
+    return await create_notification(
+        NotificationCreate(
+            user_id=case.user_id,
+            reference_id=case.reference_id,
+            type="government_submission_status_changed",
+            title=f"Government Status Updated: {case.reference_id}",
+            message=f"External authority status is now '{normalized_status}' (Official raw status: '{raw_status}').",
+            priority=_resolve_case_priority(case),
+            metadata={
+                "reference_id": case.reference_id,
+                "raw_status": raw_status,
+                "normalized_status": normalized_status,
+            },
+        )
+    )
+
+
+async def trigger_gov_reconciliation_required_notification(
+    case: ComplaintCase,
+) -> Optional[Notification]:
+    """
+    Fires notification when submission ended in UNKNOWN_OUTCOME requiring admin reconciliation (M7.1).
+    """
+    if not case.user_id:
+        return None
+
+    return await create_notification(
+        NotificationCreate(
+            user_id=case.user_id,
+            reference_id=case.reference_id,
+            type="government_reconciliation_required",
+            title=f"Submission Reconciliation Pending: {case.reference_id}",
+            message=f"Government portal did not confirm acknowledgment in time for {case.reference_id}. System is reconciling external status safely before any retry.",
+            priority=_resolve_case_priority(case),
+            metadata={
+                "reference_id": case.reference_id,
+                "reconciliation_required": True,
+            },
+        )
+    )
+
+
 async def trigger_case_assigned_notification(
     case: ComplaintCase,
     authority_user_id: str,
@@ -552,3 +662,307 @@ async def trigger_case_unassigned_notification(
 
 # Canonical alias for case status workflow notification
 trigger_case_status_changed_notification = trigger_status_changed_notification
+
+
+async def trigger_gov_reference_confirmed_notification(
+    case: ComplaintCase,
+    integration_id: str,
+    government_reference_id: str,
+    authority_name: Optional[str] = None,
+) -> Optional[Notification]:
+    """
+    Fires notification when an official external tracking ID is confirmed by a government portal (M7.3).
+    """
+    if not case.user_id:
+        return None
+
+    auth_str = f" with {authority_name}" if authority_name else ""
+    return await create_notification(
+        NotificationCreate(
+            user_id=case.user_id,
+            reference_id=case.reference_id,
+            type="government_reference_confirmed",
+            title=f"Official Reference Assigned: {government_reference_id}",
+            message=f"Case {case.reference_id} has been registered{auth_str}. Official Reference ID: {government_reference_id}.",
+            priority=_resolve_case_priority(case),
+            metadata={
+                "reference_id": case.reference_id,
+                "integration_id": integration_id,
+                "government_reference_id": government_reference_id,
+            },
+        )
+    )
+
+
+async def trigger_gov_reference_conflict_notification(
+    case: ComplaintCase,
+    integration_id: str,
+    government_reference_id: str,
+    conflict_reason: str,
+) -> Optional[Notification]:
+    """
+    Fires notification when a government reference conflict is detected (M7.3).
+    """
+    if not case.user_id:
+        return None
+
+    return await create_notification(
+        NotificationCreate(
+            user_id=case.user_id,
+            reference_id=case.reference_id,
+            type="government_reference_conflict",
+            title=f"Reference Conflict Detected: {case.reference_id}",
+            message=f"A conflict was detected for reference {government_reference_id} on {integration_id}: {conflict_reason}",
+            priority="P1",
+            metadata={
+                "reference_id": case.reference_id,
+                "integration_id": integration_id,
+                "government_reference_id": government_reference_id,
+                "conflict_reason": conflict_reason,
+            },
+        )
+    )
+
+
+async def trigger_gov_reference_reconciled_notification(
+    case: ComplaintCase,
+    integration_id: str,
+    government_reference_id: str,
+) -> Optional[Notification]:
+    """
+    Fires notification when UNKNOWN_OUTCOME is reconciled and an official reference is confirmed (M7.3).
+    """
+    if not case.user_id:
+        return None
+
+    return await create_notification(
+        NotificationCreate(
+            user_id=case.user_id,
+            reference_id=case.reference_id,
+            type="government_reference_reconciled",
+            title=f"Reference Reconciled: {government_reference_id}",
+            message=f"Case {case.reference_id} was successfully reconciled with {integration_id}. Confirmed ID: {government_reference_id}.",
+            priority=_resolve_case_priority(case),
+            metadata={
+                "reference_id": case.reference_id,
+                "integration_id": integration_id,
+                "government_reference_id": government_reference_id,
+            },
+        )
+    )
+
+
+async def trigger_gov_status_changed_notification(
+    case: ComplaintCase,
+    integration_id: str,
+    government_reference_id: Optional[str],
+    previous_status: Optional[str],
+    new_status: str,
+    raw_status: Optional[str] = None,
+) -> Optional[Notification]:
+    """
+    Fires notification when external government status meaningfully transitions (M7.4).
+    """
+    if not case.user_id:
+        return None
+
+    ref_str = f" (Docket: {government_reference_id})" if government_reference_id else ""
+    return await create_notification(
+        NotificationCreate(
+            user_id=case.user_id,
+            reference_id=case.reference_id,
+            type="government_status_changed",
+            title=f"Government Status Updated: {new_status.replace('_', ' ').title()}",
+            message=f"Case {case.reference_id}{ref_str} status updated to '{new_status}' by authority portal ({raw_status or new_status}).",
+            priority=_resolve_case_priority(case),
+            metadata={
+                "reference_id": case.reference_id,
+                "integration_id": integration_id,
+                "government_reference_id": government_reference_id,
+                "previous_status": previous_status,
+                "new_status": new_status,
+                "raw_status": raw_status,
+            },
+        )
+    )
+
+
+async def trigger_gov_status_unavailable_notification(
+    case: ComplaintCase,
+    integration_id: str,
+    error_message: Optional[str] = None,
+) -> Optional[Notification]:
+    """
+    Fires notification when government portal status is unavailable or degraded (M7.4).
+    """
+    if not case.user_id:
+        return None
+
+    return await create_notification(
+        NotificationCreate(
+            user_id=case.user_id,
+            reference_id=case.reference_id,
+            type="government_status_unavailable",
+            title=f"Portal Status Unavailable: {case.reference_id}",
+            message=f"External authority portal for case {case.reference_id} is temporarily unavailable. Automated checks will resume.",
+            priority="P4",
+            metadata={
+                "reference_id": case.reference_id,
+                "integration_id": integration_id,
+                "error": error_message,
+            },
+        )
+    )
+
+
+async def trigger_gov_needs_information_notification(
+    case: ComplaintCase,
+    integration_id: str,
+    government_reference_id: Optional[str],
+    details: Optional[str] = None,
+) -> Optional[Notification]:
+    """
+    Fires notification when external government status requires citizen action/information (M7.4/M7.5).
+    """
+    if not case.user_id:
+        return None
+
+    detail_str = f" Details: {details}" if details else " Please review the authority portal or provide requested documents."
+    return await create_notification(
+        NotificationCreate(
+            user_id=case.user_id,
+            reference_id=case.reference_id,
+            type="government_needs_information",
+            title=f"Action Required on Case: {case.reference_id}",
+            message=f"The responsible government department has requested additional clarification for complaint {case.reference_id}.{detail_str}",
+            priority="P1",
+            metadata={
+                "reference_id": case.reference_id,
+                "integration_id": integration_id,
+                "government_reference_id": government_reference_id,
+                "action_required": True,
+            },
+        )
+    )
+
+
+async def trigger_escalation_recommended_notification(
+    case: ComplaintCase,
+    integration_id: str,
+    escalation_level: str,
+    reason: str,
+    recommended_action: str,
+) -> Optional[Notification]:
+    """
+    Fires notification when evidence-based escalation engine recommends follow-up or escalation (M7.5).
+    """
+    if not case.user_id:
+        return None
+
+    level_display = escalation_level.replace("_", " ").title()
+    return await create_notification(
+        NotificationCreate(
+            user_id=case.user_id,
+            reference_id=case.reference_id,
+            type="escalation_recommended",
+            title=f"Case Follow-Up Recommended ({level_display}): {case.reference_id}",
+            message=f"Case {case.reference_id}: {reason}. Recommended action: {recommended_action}",
+            priority="P1" if escalation_level in ("ESCALATE", "HIGH_PRIORITY_FOLLOW_UP") else "P2",
+            metadata={
+                "reference_id": case.reference_id,
+                "integration_id": integration_id,
+                "escalation_level": escalation_level,
+                "reason": reason,
+                "recommended_action": recommended_action,
+            },
+        )
+    )
+
+
+async def trigger_resolution_verification_submitted_notification(
+    case: ComplaintCase,
+    citizen_response: str,
+    verification_status: str,
+) -> Optional[Notification]:
+    """
+    Fires notification when a citizen submits resolution verification for a case (M7.6).
+    """
+    if not case.user_id:
+        return None
+
+    status_display = verification_status.replace("_", " ").title()
+    return await create_notification(
+        NotificationCreate(
+            user_id=case.user_id,
+            reference_id=case.reference_id,
+            type="resolution_verification_submitted",
+            title=f"Resolution Verification Received: {case.reference_id}",
+            message=f"Your resolution feedback ({citizen_response}) has been recorded. Verification status: {status_display}.",
+            priority="P4",
+            metadata={
+                "reference_id": case.reference_id,
+                "citizen_response": citizen_response,
+                "verification_status": verification_status,
+            },
+        )
+    )
+
+
+async def trigger_resolution_verification_disputed_notification(
+    case: ComplaintCase,
+    citizen_response: str,
+    citizen_notes: Optional[str] = None,
+) -> Optional[Notification]:
+    """
+    Fires notification when citizen disputes government resolution (M7.6).
+    Alerts case manager/operators while acknowledging citizen report.
+    """
+    if not case.user_id:
+        return None
+
+    note_str = f" Notes: '{citizen_notes}'" if citizen_notes else ""
+    return await create_notification(
+        NotificationCreate(
+            user_id=case.user_id,
+            reference_id=case.reference_id,
+            type="resolution_verification_disputed",
+            title=f"Resolution Disputed: {case.reference_id}",
+            message=f"You reported complaint {case.reference_id} as STILL UNRESOLVED despite government closure.{note_str} Case has been flagged for audit review.",
+            priority="P1",
+            metadata={
+                "reference_id": case.reference_id,
+                "citizen_response": citizen_response,
+                "disputed": True,
+            },
+        )
+    )
+
+
+async def trigger_resolution_verification_reviewed_notification(
+    case: ComplaintCase,
+    verification_status: str,
+    reviewer_notes: Optional[str] = None,
+) -> Optional[Notification]:
+    """
+    Fires notification when an operator/admin reviews a disputed verification (M7.6).
+    """
+    if not case.user_id:
+        return None
+
+    status_display = verification_status.replace("_", " ").title()
+    remarks_str = f" Remarks: {reviewer_notes}" if reviewer_notes else ""
+    return await create_notification(
+        NotificationCreate(
+            user_id=case.user_id,
+            reference_id=case.reference_id,
+            type="resolution_verification_reviewed",
+            title=f"Resolution Review Completed: {case.reference_id}",
+            message=f"Case manager reviewed resolution verification for complaint {case.reference_id}. Status updated to: {status_display}.{remarks_str}",
+            priority="P2",
+            metadata={
+                "reference_id": case.reference_id,
+                "verification_status": verification_status,
+                "reviewed": True,
+            },
+        )
+    )

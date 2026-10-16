@@ -12,12 +12,23 @@ AuthorityEvidenceAttribute = Literal[
     "builder_or_contractor",
 ]
 AuthorityVerificationState = Literal["verified", "partially_verified", "not_verified"]
+EvidenceFreshness = Literal["fresh", "stale", "unknown"]
+SourceStatus = Literal["live", "cached_fresh", "cached_stale", "unavailable", "not_found", "conflict"]
 
 
 class OfficialSourceRecord(BaseModel):
     source_id: str
     source_name: str
     source_type: str
+    organization: str | None = None
+    base_url: str | None = None
+    allowed_domain: str | None = None
+    jurisdiction_scope: str | None = None
+    supported_roles: list[str] = Field(default_factory=list)
+    supported_road_types: list[str] = Field(default_factory=list)
+    refresh_policy_days: int | None = None
+    active: bool = True
+    last_verified_at: datetime | None = None
     source_url: str | None = None
     source_domain: str | None = None
     retrieved_at: datetime | None = None
@@ -46,9 +57,24 @@ class AuthorityEvidence(BaseModel):
     reference: str | None = None
     claim: str
     source_url: str | None = None
+    source_id: str | None = None
+    source_domain: str | None = None
+    retrieved_at: datetime | None = None
+    freshness: EvidenceFreshness = "unknown"
     matched_attribute: AuthorityEvidenceAttribute | None = None
     verification_state: AuthorityVerificationState | None = None
     explanation: str | None = None
+
+
+class AuthorityConflict(BaseModel):
+    conflicting_attribute: AuthorityEvidenceAttribute
+    source_a: str
+    source_b: str
+    claim_a: str
+    claim_b: str
+    retrieved_at_a: datetime | None = None
+    retrieved_at_b: datetime | None = None
+    explanation: str
 
 
 class AuthorityResult(BaseModel):
@@ -62,6 +88,9 @@ class AuthorityResult(BaseModel):
     resolved_at: datetime | None = None
     resolution_message: str | None = None
     citizen_explanation: str | None = None
+    source_status: SourceStatus | None = None
+    freshness: EvidenceFreshness = "unknown"
+    conflicts: list[AuthorityConflict] = Field(default_factory=list)
 
 
 class AuthorityLocation(BaseModel):

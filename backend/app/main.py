@@ -15,11 +15,15 @@ from app.api.v1.detection import router as detection_router
 from app.api.v1.authority import router as authority_router
 from app.api.v1.auth import router as auth_router
 from app.api.v1.complaint import router as complaint_router
+from app.api.v1.geospatial import router as geospatial_router
 from app.api.v1.location import router as location_router
 from app.api.v1.model import router as model_router
 from app.api.v1.nlp import router as nlp_router
 from app.api.v1.notifications import router as notifications_router
 from app.api.v1.priority import router as priority_router
+from app.api.v1.provenance import router as provenance_router
+from app.api.v1.knowledge_graph import router as knowledge_graph_router
+from app.api.v1.government_integration import router as government_integration_router
 from app.core.config import settings
 from app.core.csrf import verify_csrf_token
 from app.core.database import close_mongo_connection, connect_to_mongo
@@ -194,6 +198,7 @@ app.include_router(model_router, prefix=f"{settings.API_V1_STR}/model", tags=["m
 app.include_router(model_router, prefix="/api/model", tags=["model"])
 app.include_router(detection_router, prefix=f"{settings.API_V1_STR}/detection", tags=["detection"])
 app.include_router(location_router, prefix=f"{settings.API_V1_STR}/location", tags=["location"])
+app.include_router(geospatial_router, prefix=f"{settings.API_V1_STR}/geospatial", tags=["geospatial"])
 app.include_router(authority_router, prefix=f"{settings.API_V1_STR}/authority", tags=["authority"])
 app.include_router(auth_router, prefix=f"{settings.API_V1_STR}/auth", tags=["auth"])
 app.include_router(admin_router, prefix=f"{settings.API_V1_STR}/admin", tags=["admin"])
@@ -201,6 +206,9 @@ app.include_router(complaint_router, prefix=f"{settings.API_V1_STR}/complaint", 
 app.include_router(nlp_router, prefix=f"{settings.API_V1_STR}/nlp", tags=["nlp"])
 app.include_router(priority_router, prefix=f"{settings.API_V1_STR}/priority", tags=["priority"])
 app.include_router(notifications_router, prefix=f"{settings.API_V1_STR}/notifications", tags=["notifications"])
+app.include_router(provenance_router, prefix=f"{settings.API_V1_STR}/provenance", tags=["provenance"])
+app.include_router(knowledge_graph_router, prefix=f"{settings.API_V1_STR}/knowledge-graph", tags=["knowledge-graph"])
+app.include_router(government_integration_router, prefix=settings.API_V1_STR, tags=["government-integration"])
 
 
 @app.get("/")

@@ -2,11 +2,12 @@ import { API_BASE_URL_VALUE } from './detectionApi';
 import { LocationApiError } from './locationApi';
 import { apiFetch } from './apiFetch';
 
-export async function resolveAuthority({ coordinates, address }) {
+export async function resolveAuthority({ coordinates, address, live = true }) {
   const params = new URLSearchParams({
     latitude: coordinates.latitude,
     longitude: coordinates.longitude,
   });
+  if (live) params.set('live', 'true');
   for (const field of ['road', 'area', 'city', 'district', 'state', 'country']) {
     if (address?.[field]) params.set(field, address[field]);
   }
@@ -26,6 +27,12 @@ export async function resolveAuthority({ coordinates, address }) {
     );
   }
   return payload;
+}
+
+export async function fetchOfficialAuthoritySources() {
+  const res = await apiFetch(`${API_BASE_URL_VALUE}/api/v1/authority/sources`);
+  if (!res.ok) throw new LocationApiError('Failed to load official sources.', res.status);
+  return res.json();
 }
 
 export async function fetchAuthorityMapCases(params = {}) {

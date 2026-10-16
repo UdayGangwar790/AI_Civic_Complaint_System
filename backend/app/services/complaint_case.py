@@ -67,6 +67,19 @@ class ComplaintCaseRepository:
     async def list_recent_candidates(self, limit: int = 100) -> list[ComplaintCase]:
         raise NotImplementedError
 
+    async def find_nearby_candidates(
+        self,
+        min_lat: float,
+        min_lon: float,
+        max_lat: float,
+        max_lon: float,
+        cutoff: datetime,
+        issue_category: Optional[str] = None,
+        unresolved_only: bool = False,
+        limit: int = 100,
+    ) -> list[ComplaintCase]:
+        raise NotImplementedError
+
 
 _DEFAULT_DB = object()
 
@@ -103,6 +116,17 @@ class MongoComplaintCaseRepository(ComplaintCaseRepository):
         if updated_at.tzinfo is None:
             updated_at = updated_at.replace(tzinfo=timezone.utc)
 
+        geo_location = None
+        if case.location.latitude is not None and case.location.longitude is not None:
+            try:
+                from app.services.spatial import to_geojson_point
+                geo_location = to_geojson_point(case.location.latitude, case.location.longitude)
+            except Exception:
+                geo_location = None
+
+        if geo_location and not case.geo_location:
+            case = case.model_copy(update={"geo_location": geo_location})
+
         doc = {
             "reference_id": case.reference_id,
             "user_id": case.user_id,
@@ -112,6 +136,7 @@ class MongoComplaintCaseRepository(ComplaintCaseRepository):
             "external_submission_status": "not_submitted",
             "issue": case.issue.model_dump(mode="python"),
             "location": case.location.model_dump(mode="python"),
+            "geo_location": geo_location,
             "authority": case.authority.model_dump(mode="python"),
             "complaint": case.complaint.model_dump(mode="python"),
             "evidence": list(case.evidence),
@@ -243,6 +268,51 @@ class MongoComplaintCaseRepository(ComplaintCaseRepository):
                 logger.warning("Error parsing candidate case: %s", e)
         return cases
 
+    async def find_nearby_candidates(
+        self,
+        min_lat: float,
+        min_lon: float,
+        max_lat: float,
+        max_lon: float,
+        cutoff: datetime,
+        issue_category: Optional[str] = None,
+        unresolved_only: bool = False,
+        limit: int = 100,
+    ) -> list[ComplaintCase]:
+        collection = self._get_collection()
+        query: dict[str, Any] = {
+            "location.latitude": {"$gte": min_lat, "$lte": max_lat},
+            "location.longitude": {"$gte": min_lon, "$lte": max_lon},
+            "created_at": {"$gte": cutoff},
+            "status": {"$ne": "draft"},
+        }
+        if issue_category and issue_category.strip():
+            query["issue.class_name"] = issue_category.strip().lower()
+        if unresolved_only:
+            query["status"] = {"$nin": ["resolved", "closed"]}
+
+        try:
+            cursor = collection.find(query).sort("created_at", -1).limit(limit)
+            docs = await cursor.to_list(length=limit)
+        except (ConnectionFailure, ServerSelectionTimeoutError, PyMongoError) as exc:
+            logger.error("Database error finding nearby candidates: %s", exc.__class__.__name__)
+            raise ComplaintCaseDatabaseError(
+                f"Database error finding nearby candidates: {exc.__class__.__name__}"
+            ) from exc
+
+        cases: list[ComplaintCase] = []
+        for doc in docs:
+            doc.pop("_id", None)
+            if doc.get("created_at") and doc["created_at"].tzinfo is None:
+                doc["created_at"] = doc["created_at"].replace(tzinfo=timezone.utc)
+            if doc.get("updated_at") and doc["updated_at"].tzinfo is None:
+                doc["updated_at"] = doc["updated_at"].replace(tzinfo=timezone.utc)
+            try:
+                cases.append(ComplaintCase.model_validate(doc))
+            except Exception as e:
+                logger.warning("Error parsing candidate case: %s", e)
+        return cases
+
 
 class InMemoryComplaintCaseRepository(ComplaintCaseRepository):
     """
@@ -254,6 +324,13 @@ class InMemoryComplaintCaseRepository(ComplaintCaseRepository):
         self._lock = Lock()
 
     def save(self, case: ComplaintCase) -> ComplaintCase:
+        if case.location.latitude is not None and case.location.longitude is not None and not case.geo_location:
+            try:
+                from app.services.spatial import to_geojson_point
+                geo = to_geojson_point(case.location.latitude, case.location.longitude)
+                case = case.model_copy(update={"geo_location": geo})
+            except Exception:
+                pass
         with self._lock:
             self._cases[case.reference_id] = case
         return case
@@ -308,6 +385,39 @@ class InMemoryComplaintCaseRepository(ComplaintCaseRepository):
             all_cases = list(self._cases.values())
         all_cases.sort(key=lambda c: c.created_at, reverse=True)
         return all_cases[:limit]
+
+    async def find_nearby_candidates(
+        self,
+        min_lat: float,
+        min_lon: float,
+        max_lat: float,
+        max_lon: float,
+        cutoff: datetime,
+        issue_category: Optional[str] = None,
+        unresolved_only: bool = False,
+        limit: int = 100,
+    ) -> list[ComplaintCase]:
+        with self._lock:
+            all_cases = list(self._cases.values())
+        matching = []
+        for c in all_cases:
+            if c.status == "draft":
+                continue
+            loc = c.location
+            if loc.latitude is None or loc.longitude is None:
+                continue
+            c_created = c.created_at if c.created_at.tzinfo is not None else c.created_at.replace(tzinfo=timezone.utc)
+            if c_created < cutoff:
+                continue
+            if not (min_lat <= loc.latitude <= max_lat and min_lon <= loc.longitude <= max_lon):
+                continue
+            if issue_category and c.issue.class_name.lower() != issue_category.strip().lower():
+                continue
+            if unresolved_only and c.status in ("resolved", "closed"):
+                continue
+            matching.append(c)
+        matching.sort(key=lambda c: c.created_at, reverse=True)
+        return matching[:limit]
 
 
 # Default active repository: persistent MongoDB

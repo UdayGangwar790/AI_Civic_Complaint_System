@@ -11,9 +11,22 @@ NotificationType = Literal[
     "follow_up_due",
     "government_submission_prepared",
     "government_submission_status_changed",
+    "government_submission_accepted",
+    "government_submission_rejected",
+    "government_reconciliation_required",
     "case_assigned",
     "case_unassigned",
     "system_notification",
+    "government_reference_confirmed",
+    "government_reference_conflict",
+    "government_reference_reconciled",
+    "government_status_changed",
+    "government_status_unavailable",
+    "government_needs_information",
+    "escalation_recommended",
+    "resolution_verification_submitted",
+    "resolution_verification_disputed",
+    "resolution_verification_reviewed",
 ]
 
 NotificationPriority = Literal["P1", "P2", "P3", "P4"]

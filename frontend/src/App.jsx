@@ -34,7 +34,10 @@ import {
 } from 'lucide-react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import './App.css';
+import { GeospatialContextPanel } from './components/GeospatialContextPanel';
+import { EvidenceProvenancePanel } from './components/EvidenceProvenancePanel';
+import { KnowledgeGraphPanel } from './components/KnowledgeGraphPanel';
+import { GovernmentIntegrationPanel } from './components/GovernmentIntegrationPanel';
 import {
   API_UPLOAD_LIMIT_BYTES,
   DetectionApiError,
@@ -632,6 +635,27 @@ function CaseDetailModal({ referenceId, onClose }) {
                 )}
               </div>
             </div>
+
+            <GeospatialContextPanel
+              referenceId={caseData.reference_id}
+              initialLocation={caseData.location}
+              isStaff={false}
+            />
+
+            <EvidenceProvenancePanel
+              referenceId={caseData.reference_id}
+              isStaff={false}
+            />
+
+            <KnowledgeGraphPanel
+              referenceId={caseData.reference_id}
+              isStaff={false}
+            />
+
+            <GovernmentIntegrationPanel
+              referenceId={caseData.reference_id}
+              isStaff={false}
+            />
 
             <div className="detail-section">
               <h4>Authority & External Submission</h4>
@@ -1294,61 +1318,107 @@ function DetectionWorkspace({ currentUser, onOpenAuth }) {
               <div className="authority-panel">
                 <div className="authority-title">
                   <strong>Responsible Authority</strong>
-                  <span className={`authority-status ${authority.authority.authority_status}`}>
-                    {authority.authority.authority_status.replaceAll('_', ' ')}
-                  </span>
+                  <div className="authority-badges-wrap">
+                    <span className={`authority-status ${authority.authority.authority_status}`}>
+                      {authority.authority.authority_status.replaceAll('_', ' ')}
+                    </span>
+                    {authority.authority.source_status === 'conflict' ? (
+                      <span className="authority-badge conflict">Conflicting Official Sources</span>
+                    ) : authority.authority.freshness === 'stale' || authority.authority.source_status === 'cached_stale' ? (
+                      <span className="authority-badge stale">Stale Evidence</span>
+                    ) : authority.authority.source_status === 'cached_fresh' ? (
+                      <span className="authority-badge cached_fresh">Cached (Fresh)</span>
+                    ) : authority.authority.source_status === 'live' ? (
+                      <span className="authority-badge live">Live Source</span>
+                    ) : authority.authority.source_status === 'unavailable' ? (
+                      <span className="authority-badge unavailable">Source Unavailable</span>
+                    ) : null}
+                  </div>
                 </div>
+
                 {authority.authority.citizen_explanation && (
                   <p className="authority-explanation">{authority.authority.citizen_explanation}</p>
                 )}
-                {authority.authority.authority_status === 'not_verified' && (
+
+                {authority.authority.conflicts && authority.authority.conflicts.length > 0 && (
+                  <div className="authority-conflict-alert">
+                    <strong>Discrepancy in Official Records:</strong>
+                    {authority.authority.conflicts.map((conf, cIdx) => (
+                      <p key={`conf-${cIdx}`}>
+                        {conf.conflicting_attribute?.replaceAll('_', ' ')} conflict between {conf.source_a} ({conf.claim_a}) and {conf.source_b} ({conf.claim_b}).
+                      </p>
+                    ))}
+                  </div>
+                )}
+
+                {authority.authority.authority_status === 'not_verified' && !authority.authority.conflicts?.length && (
                   <p className="authority-warning">
                     CVKI could not verify the responsible authority from available official sources. Please verify the authority before submitting a government complaint.
                   </p>
                 )}
-                {authority.authority.road_owner && (
-                  <p><span>Road owner</span><strong>{authority.authority.road_owner.name}</strong></p>
-                )}
-                {authority.authority.maintenance_authority && (
-                  <p><span>Maintenance authority</span><strong>{authority.authority.maintenance_authority.name}</strong></p>
-                )}
-                {authority.authority.builder_or_contractor && (
-                  <p><span>Builder / contractor</span><strong>{authority.authority.builder_or_contractor.name}</strong></p>
-                )}
-                {authority.authority.sources && authority.authority.sources.length > 0 && (
-                  <div className="authority-sources-block">
-                    <span className="section-mini-heading">Official Sources</span>
-                    {authority.authority.sources.map((src) => (
-                      <div key={src.source_id} className="official-source-item">
-                        <strong>{src.source_name}</strong>
-                        <small>{src.source_type?.replaceAll('_', ' ')}</small>
-                        {src.source_url && (
-                          <a href={src.source_url} target="_blank" rel="noopener noreferrer" className="official-source-link">
-                            {src.source_url} <ExternalLink size={11} />
-                          </a>
-                        )}
+
+                <div className="authority-role-item">
+                  <span>Road Owner</span>
+                  <strong>{authority.authority.road_owner?.name || 'Unverified'}</strong>
+                </div>
+                <div className="authority-role-item">
+                  <span>Maintenance Authority</span>
+                  <strong>
+                    {authority.authority.maintenance_authority?.name || (
+                      authority.authority.conflicts?.some((c) => c.conflicting_attribute === 'maintenance_authority')
+                        ? 'Conflicting Official Records'
+                        : 'Unverified'
+                    )}
+                  </strong>
+                </div>
+                <div className="authority-role-item">
+                  <span>Builder / Contractor</span>
+                  <strong>
+                    {authority.authority.builder_or_contractor?.name || 'None on record (Explicit tender/contract required)'}
+                  </strong>
+                </div>
+
+                {(authority.authority.sources?.length > 0 || authority.authority.evidence?.length > 0) && (
+                  <details className="authority-details">
+                    <summary>Official Source Provenance ({authority.authority.evidence?.length || 0} records)</summary>
+                    {authority.authority.sources && authority.authority.sources.length > 0 && (
+                      <div className="authority-sources-block" style={{ marginTop: '8px' }}>
+                        <span className="section-mini-heading">Official Sources</span>
+                        {authority.authority.sources.map((src) => (
+                          <div key={src.source_id} className="official-source-item">
+                            <strong>{src.source_name}</strong>
+                            <small>{src.source_type?.replaceAll('_', ' ')}</small>
+                            {src.source_url && (
+                              <a href={src.source_url} target="_blank" rel="noopener noreferrer" className="official-source-link">
+                                {src.source_url} <ExternalLink size={11} />
+                              </a>
+                            )}
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                )}
-                {authority.authority.evidence && authority.authority.evidence.length > 0 && (
-                  <div className="authority-evidence">
-                    <span className="section-mini-heading">Evidence Trail</span>
-                    {authority.authority.evidence.map((item, idx) => (
-                      <div className="authority-evidence-item" key={`${item.source_name}-${idx}`}>
-                        <div className="authority-evidence-meta">
-                          <span>{item.matched_attribute?.replaceAll('_', ' ') || 'Unlinked source record'}</span>
-                          <span className={`authority-evidence-state ${item.verification_state || 'not_verified'}`}>
-                            {(item.verification_state || 'not_verified').replaceAll('_', ' ')}
-                          </span>
-                        </div>
-                        <strong>{item.source_name}: {item.claim}</strong>
-                        {item.reference && <small>Reference: {item.reference}</small>}
-                        {item.explanation && <p>{item.explanation}</p>}
+                    )}
+                    {authority.authority.evidence && authority.authority.evidence.length > 0 && (
+                      <div className="authority-evidence" style={{ marginTop: '8px' }}>
+                        <span className="section-mini-heading">Evidence Trail</span>
+                        {authority.authority.evidence.map((item, idx) => (
+                          <div className="authority-evidence-item" key={`${item.source_name}-${idx}`}>
+                            <div className="authority-evidence-meta">
+                              <span>{item.matched_attribute?.replaceAll('_', ' ') || 'Unlinked source record'}</span>
+                              <span className={`authority-evidence-state ${item.verification_state || 'not_verified'}`}>
+                                {(item.verification_state || 'not_verified').replaceAll('_', ' ')}
+                                {item.freshness && item.freshness !== 'unknown' ? ` (${item.freshness})` : ''}
+                              </span>
+                            </div>
+                            <strong>{item.source_name}: {item.claim}</strong>
+                            {item.reference && <small>Reference: {item.reference}</small>}
+                            {item.explanation && <p>{item.explanation}</p>}
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
+                    )}
+                  </details>
                 )}
+
                 {authority.authority.limitations && authority.authority.limitations.length > 0 && (
                   <div className="authority-limitations">
                     <span className="section-mini-heading">Limitations</span>
@@ -2312,6 +2382,22 @@ function AdminCaseDetailModal({ referenceId, onClose, onAssignmentChanged }) {
                   )}
                 </div>
 
+                <GeospatialContextPanel
+                  referenceId={caseData.reference_id}
+                  initialLocation={caseData.location}
+                  isStaff={true}
+                />
+
+                <EvidenceProvenancePanel
+                  referenceId={caseData.reference_id}
+                  isStaff={true}
+                />
+
+                <KnowledgeGraphPanel
+                  referenceId={caseData.reference_id}
+                  isStaff={true}
+                />
+
                 <div className="admin-section-box">
                   <h4>Advanced Civic Intelligence (M5.2)</h4>
                   {intelligence ? (
@@ -2361,6 +2447,11 @@ function AdminCaseDetailModal({ referenceId, onClose, onAssignmentChanged }) {
                     <span className="detail-val">{caseData.external_submission_status || 'not_submitted'}</span>
                   </div>
                 </div>
+
+                <GovernmentIntegrationPanel
+                  referenceId={caseData.reference_id}
+                  isStaff={true}
+                />
               </div>
             </div>
           </div>

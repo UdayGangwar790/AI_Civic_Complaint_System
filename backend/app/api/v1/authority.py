@@ -72,6 +72,7 @@ def resolve_authority_endpoint(
     district: str | None = None,
     state: str | None = None,
     country: str | None = None,
+    live: bool = Query(False, description="Query live official source adapters"),
 ) -> AuthorityResolutionResponse:
     context = {
         "road": road,
@@ -86,6 +87,7 @@ def resolve_authority_endpoint(
             latitude=latitude,
             longitude=longitude,
             context=context,
+            live=live,
         )
     except AuthorityProviderTimeout:
         raise HTTPException(status_code=status.HTTP_504_GATEWAY_TIMEOUT, detail="Authority source timed out.")
@@ -100,6 +102,38 @@ def resolve_authority_endpoint(
         ),
         authority=authority,
     )
+
+
+@router.get(
+    "/sources",
+    summary="List registered official authority intelligence sources",
+)
+def list_official_authority_sources(
+    active_only: bool = Query(True, description="Filter for active official sources only"),
+):
+    """
+    Returns registered official government and statutory road authority sources.
+    Exposes source metadata, allowed domain, supported roles, and refresh policies.
+    """
+    from app.services.authority_registry import list_official_sources
+    sources = list_official_sources(active_only=active_only)
+    return [
+        {
+            "source_id": s.source_id,
+            "organization": s.organization,
+            "source_name": s.source_name,
+            "source_type": s.source_type,
+            "base_url": s.base_url,
+            "allowed_domain": s.allowed_domain,
+            "jurisdiction_scope": s.jurisdiction_scope,
+            "supported_roles": s.supported_roles,
+            "supported_road_types": s.supported_road_types,
+            "refresh_policy_days": s.refresh_policy_days,
+            "active": s.active,
+            "last_verified_at": s.last_verified_at.isoformat() if s.last_verified_at else None,
+        }
+        for s in sources
+    ]
 
 
 @router.get(

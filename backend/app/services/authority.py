@@ -6,6 +6,7 @@ from typing import Any
 from urllib.parse import urlparse
 
 from app.schemas.authority import (
+    AuthorityConflict,
     AuthorityEvidence,
     AuthorityParty,
     AuthorityResult,
@@ -44,6 +45,15 @@ DISALLOWED_SOURCE_TYPES = {
 }
 
 OFFICIAL_SOURCE_TYPES = {
+    # M6.1 official types
+    "official_government_page",
+    "official_open_data",
+    "official_api",
+    "official_project_registry",
+    "official_tender",
+    "official_contract",
+    "official_concession_document",
+    # Legacy official types
     "government_portal",
     "official_gazette",
     "municipal_registry",
@@ -53,15 +63,17 @@ OFFICIAL_SOURCE_TYPES = {
     "official_database",
     "official_government",
     "official_portal",
-    "official_contract",
     "official_project_document",
     "concession_agreement",
 }
 
 BUILDER_EVIDENCE_TYPES = {
+    "official_tender",
+    "official_contract",
+    "official_concession_document",
+    "official_project_registry",
     "official_tender_record",
     "official_contract_record",
-    "official_contract",
     "official_project_document",
     "concession_agreement",
 }
@@ -69,32 +81,12 @@ BUILDER_EVIDENCE_TYPES = {
 
 def is_trusted_official_domain(url_or_domain: str | None) -> bool:
     """
-    Validates whether a URL or domain belongs to an official government / public sector allowlist.
+    Validates whether a URL or domain belongs to an official government / public sector allowlist
+    and satisfies SSRF security protections.
     """
-    if not url_or_domain:
-        return False
-    target = url_or_domain.strip().lower()
-    if "://" in target:
-        try:
-            parsed = urlparse(target)
-            domain = (parsed.netloc or "").split(":")[0].lower()
-        except Exception:
-            return False
-    else:
-        domain = target.split("/")[0].split(":")[0].lower()
-
-    if not domain:
-        return False
-
-    # Check official government TLDs
-    if domain.endswith(".gov.in") or domain.endswith(".nic.in") or domain.endswith(".gov"):
-        return True
-
-    for trusted in OFFICIAL_TRUSTED_DOMAINS:
-        if domain == trusted or domain.endswith("." + trusted):
-            return True
-
-    return False
+    from app.services.authority_registry import is_safe_official_url
+    is_safe, _ = is_safe_official_url(url_or_domain)
+    return is_safe
 
 
 class AuthorityProviderError(Exception):
@@ -114,6 +106,9 @@ class AuthorityLookup:
     sources: tuple[OfficialSourceRecord, ...] = ()
     resolved_at: datetime | None = None
     resolution_message: str | None = None
+    source_status: str | None = None
+    freshness: str = "unknown"
+    conflicts: tuple[AuthorityConflict, ...] = ()
 
 
 class AuthoritySourceProvider(ABC):
@@ -425,11 +420,14 @@ def resolve_authority(
     latitude: float,
     longitude: float,
     context: dict[str, str | None],
+    live: bool = False,
+    provider: AuthoritySourceProvider | None = None,
 ) -> AuthorityResult:
     """
     Resolves evidence-based authority intelligence from configured official sources.
     Strictly differentiates between road_owner, maintenance_authority, and builder_or_contractor.
     Never guesses authority from geographic location alone.
+    Supports live official source adapters, safe caching, freshness tracking, and conflict detection.
     """
     now = datetime.now(timezone.utc)
     base_limitation = (
@@ -437,7 +435,15 @@ def resolve_authority(
         "No authoritative road ownership or maintenance source verified this location."
     )
 
-    lookup = authority_provider.lookup(
+    active_provider = provider
+    if active_provider is None:
+        if live:
+            from app.services.authority_adapter import get_default_live_provider
+            active_provider = get_default_live_provider()
+        else:
+            active_provider = authority_provider
+
+    lookup = active_provider.lookup(
         latitude=latitude,
         longitude=longitude,
         context=context,
@@ -455,6 +461,9 @@ def resolve_authority(
             resolved_at=now,
             resolution_message="No official road record found for this location.",
             citizen_explanation="CVKI could not fully verify the responsible authority from its available sources.",
+            source_status="not_found",
+            freshness="unknown",
+            conflicts=[],
         )
 
     raw_evidence = list(lookup.evidence)
@@ -476,6 +485,9 @@ def resolve_authority(
             resolved_at=now,
             resolution_message="Authoritative evidence is missing or rejected by official source policy.",
             citizen_explanation="CVKI could not fully verify the responsible authority from its available sources.",
+            source_status="unavailable" if rejections else "not_found",
+            freshness="unknown",
+            conflicts=[],
         )
 
     has_location_link = any(
@@ -493,13 +505,27 @@ def resolve_authority(
         and has_location_link
         and any(
             item.matched_attribute == "builder_or_contractor"
-            and item.source_type.strip().lower() in BUILDER_EVIDENCE_TYPES
+            and (item.source_type or "").strip().lower() in BUILDER_EVIDENCE_TYPES
             for item in valid_evidence
         )
     )
 
-    # Evidence state is assigned by the resolver; provider-supplied states are not trusted.
+    # Conflict detection and handling
+    conflicts = list(getattr(lookup, "conflicts", ()))
+    has_maint_conflict = any(c.conflicting_attribute == "maintenance_authority" for c in conflicts)
+    has_owner_conflict = any(c.conflicting_attribute == "road_owner" for c in conflicts)
+
+    if has_maint_conflict:
+        maintenance_authority = None
+    if has_owner_conflict:
+        road_owner = None
+
+    # Freshness calculation
+    from app.services.authority_adapter import _calculate_evidence_freshness
     evidence_trail = []
+    has_any_stale = False
+    has_any_fresh = False
+
     for item in valid_evidence:
         attribute = item.matched_attribute
         if attribute in {"road", "jurisdiction"}:
@@ -517,15 +543,31 @@ def resolve_authority(
         elif attribute in {"road_owner", "maintenance_authority", "builder_or_contractor"} and not has_location_link:
             verification_state = "not_verified"
             explanation = "This authority claim is not linked to evidence identifying the reported road or jurisdiction."
+        elif attribute == "maintenance_authority" and has_maint_conflict:
+            verification_state = "not_verified"
+            explanation = "Conflicting official records exist for maintenance responsibility on this corridor."
+        elif attribute == "road_owner" and has_owner_conflict:
+            verification_state = "not_verified"
+            explanation = "Conflicting official records exist for road ownership on this corridor."
         elif attribute is None:
             verification_state = "not_verified"
             explanation = "This source record is not linked to a specific field and cannot verify an authority role."
         else:
             verification_state = "not_verified"
             explanation = "This source record does not support a returned authority field."
+
+        item_freshness = item.freshness
+        if item_freshness == "unknown" and item.retrieved_at:
+            item_freshness = _calculate_evidence_freshness(item.retrieved_at, 30)
+        if item_freshness == "stale":
+            has_any_stale = True
+        elif item_freshness == "fresh":
+            has_any_fresh = True
+
         evidence_trail.append(item.model_copy(update={
             "verification_state": verification_state,
             "explanation": explanation,
+            "freshness": item_freshness,
         }))
 
     builder_or_contractor = (
@@ -552,6 +594,12 @@ def resolve_authority(
         limitations.append("Available evidence does not establish every authority role.")
     if rejections:
         limitations.extend(rejections)
+    if conflicts:
+        limitations.append("Official sources provide conflicting authority records for this location.")
+    if has_any_stale:
+        limitations.append("Available evidence is stale and requires re-verification against live official sources.")
+    if not builder_or_contractor:
+        limitations.append("Builder or contractor information is unverified: requires explicit official contract, tender, or concession documentation linked to the road.")
 
     citizen_explanation = _citizen_explanation(
         authority_status,
@@ -559,6 +607,30 @@ def resolve_authority(
         has_road_owner=road_owner is not None,
         has_maintenance_authority=maintenance_authority is not None,
     )
+    if conflicts:
+        citizen_explanation = "Official sources provide conflicting authority information for this corridor."
+
+    overall_freshness = getattr(lookup, "freshness", "unknown")
+    if has_any_stale:
+        overall_freshness = "stale"
+    elif has_any_fresh and overall_freshness == "unknown":
+        overall_freshness = "fresh"
+
+    source_status = getattr(lookup, "source_status", None)
+    if conflicts:
+        source_status = "conflict"
+    elif not source_status:
+        source_status = "live" if valid_sources else "not_found"
+
+    resolution_message = lookup.resolution_message
+    if conflicts:
+        resolution_message = "Official sources provide conflicting authority information."
+    elif not resolution_message:
+        resolution_message = (
+            "Authority verified against official source records."
+            if has_road_and_maintenance
+            else "Authority partially verified from available official records."
+        )
 
     return AuthorityResult(
         authority_status=authority_status,
@@ -569,12 +641,19 @@ def resolve_authority(
         limitations=limitations,
         sources=valid_sources,
         resolved_at=lookup.resolved_at or now,
-        resolution_message=lookup.resolution_message or ("Authority verified against official source records." if has_road_and_maintenance else "Authority partially verified from available official records."),
+        resolution_message=resolution_message,
         citizen_explanation=citizen_explanation,
+        source_status=source_status,
+        freshness=overall_freshness,
+        conflicts=conflicts,
     )
 
 
-def resolve_authority_for_location(location: Any) -> AuthorityResult:
+def resolve_authority_for_location(
+    location: Any,
+    live: bool = False,
+    provider: AuthoritySourceProvider | None = None,
+) -> AuthorityResult:
     def value(name: str) -> Any:
         if isinstance(location, dict):
             return location.get(name)
@@ -591,6 +670,9 @@ def resolve_authority_for_location(location: Any) -> AuthorityResult:
             resolved_at=datetime.now(timezone.utc),
             resolution_message="Authority could not be verified because coordinates were unavailable.",
             citizen_explanation="CVKI could not fully verify the responsible authority because coordinates were unavailable.",
+            source_status="not_found",
+            freshness="unknown",
+            conflicts=[],
         )
 
     return resolve_authority(
@@ -604,4 +686,6 @@ def resolve_authority_for_location(location: Any) -> AuthorityResult:
             "state": value("state"),
             "country": value("country"),
         },
+        live=live,
+        provider=provider,
     )

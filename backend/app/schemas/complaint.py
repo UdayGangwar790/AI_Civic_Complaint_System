@@ -1,6 +1,6 @@
 from typing import Literal, Optional
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 from app.schemas.authority import AuthorityParty, AuthorityResult
 from app.schemas.guidance import GovernmentGuidanceResponse
@@ -15,6 +15,8 @@ class ComplaintDetection(BaseModel):
 
 
 class ComplaintLocation(BaseModel):
+    model_config = ConfigDict(extra="allow")
+
     road: str | None = None
     area: str | None = None
     city: str | None = None
@@ -22,6 +24,14 @@ class ComplaintLocation(BaseModel):
     state: str | None = None
     latitude: float | None = Field(default=None, ge=-90.0, le=90.0)
     longitude: float | None = Field(default=None, ge=-180.0, le=180.0)
+
+    @property
+    def accuracy_m(self) -> float | None:
+        return (self.__pydantic_extra__ or {}).get("accuracy_m")
+
+    @property
+    def postal_code(self) -> str | None:
+        return (self.__pydantic_extra__ or {}).get("postal_code")
 
 
 class ComplaintDraftRequest(BaseModel):

@@ -84,6 +84,19 @@ async def get_current_user(
 require_authenticated_user = get_current_user
 
 
+async def get_current_user_optional(
+    request: Request,
+    credentials: Union[HTTPAuthorizationCredentials, None] = Depends(bearer_security),
+) -> Union[AuthenticatedUser, None]:
+    token = credentials.credentials if credentials is not None else request.cookies.get(settings.AUTH_COOKIE_NAME)
+    if not token:
+        return None
+    try:
+        return await get_current_user(request, credentials)
+    except HTTPException:
+        return None
+
+
 def require_roles(*allowed_roles: Union[str, UserRole]) -> Callable:
     """
     Dependency factory that restricts endpoint access to users holding one of the specified roles.

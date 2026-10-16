@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Literal, Optional
+from typing import Any, Literal, Optional
 
 from pydantic import BaseModel, Field
 
@@ -80,6 +80,7 @@ class ComplaintCase(BaseModel):
     resolution_evidence_recorded_at: Optional[datetime] = None
     government_submission: Optional[GovernmentSubmissionRecord] = None
     assignment: Optional[CaseAssignment] = None
+    geo_location: Optional[dict[str, Any]] = None
 
 
 class ComplaintCaseStatus(BaseModel):
