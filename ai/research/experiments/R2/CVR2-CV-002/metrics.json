@@ -1,0 +1,30 @@
+{
+  "experiment_id": "CVR2-CV-002",
+  "status": "COMPLETED",
+  "model_id": "M1.13",
+  "production_status": "UNCHANGED_ACTIVE_PRODUCTION_MODEL",
+  "checkpoint_sha256": "602160d4851e0d79c34cb23b828bde474fc4c164eaf1a1c2a884cfb372f4bda3",
+  "evaluation_provenance": "FROZEN_HISTORICAL_REFERENCE",
+  "historical_benchmarks": {
+    "m1_8_heldout": {
+      "precision": 0.838,
+      "recall": 0.612,
+      "mAP50": 0.654,
+      "mAP50_95": 0.487,
+      "f1": 0.7074
+    },
+    "m1_11_heldout": {
+      "precision": 0.65,
+      "recall": 0.57,
+      "mAP50": 0.568,
+      "mAP50_95": 0.423,
+      "f1": 0.6074
+    }
+  },
+  "cross_dataset_reference": {
+    "dataset_evaluated": "D1 held-out test split (18 images)",
+    "total_detections_produced": 0,
+    "mean_inference_latency_ms": 176.22,
+    "epistemic_note": "Cross-dataset evaluation reflects taxonomy divergence (D0 13 classes vs D1 3 classes). Not a direct 1-to-1 metric comparison."
+  }
+}

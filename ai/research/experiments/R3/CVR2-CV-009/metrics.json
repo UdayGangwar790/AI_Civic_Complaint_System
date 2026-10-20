@@ -1,0 +1,241 @@
+{
+  "experiment_id": "CVR2-CV-009",
+  "status": "COMPLETED",
+  "selected_operating_threshold": 0.1,
+  "total_test_images": 18,
+  "slice_evaluations": {
+    "geographic_slices": {
+      "Bangalore": {
+        "sample_count": 5,
+        "status": "EVALUATED",
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 5,
+          "total_ground_truth_boxes": 4,
+          "total_predicted_boxes": 5,
+          "true_positives": 4,
+          "false_positives": 1,
+          "false_negatives": 0,
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1_score": 0.8889,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 4,
+              "tp": 4,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.8,
+              "recall": 1.0
+            }
+          }
+        }
+      },
+      "Delhi_NCR": {
+        "sample_count": 4,
+        "status": "EVALUATED",
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 4,
+          "total_ground_truth_boxes": 3,
+          "total_predicted_boxes": 5,
+          "true_positives": 3,
+          "false_positives": 2,
+          "false_negatives": 0,
+          "precision": 0.6,
+          "recall": 1.0,
+          "f1_score": 0.75,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 3,
+              "tp": 3,
+              "fp": 2,
+              "fn": 0,
+              "precision": 0.6,
+              "recall": 1.0
+            }
+          }
+        }
+      },
+      "Mumbai": {
+        "sample_count": 4,
+        "status": "EVALUATED",
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 4,
+          "total_ground_truth_boxes": 4,
+          "total_predicted_boxes": 4,
+          "true_positives": 4,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 4,
+              "tp": 4,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            }
+          }
+        }
+      },
+      "Chennai": {
+        "sample_count": 5,
+        "status": "EVALUATED",
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 5,
+          "total_ground_truth_boxes": 4,
+          "total_predicted_boxes": 5,
+          "true_positives": 4,
+          "false_positives": 1,
+          "false_negatives": 0,
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1_score": 0.8889,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 4,
+              "tp": 4,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.8,
+              "recall": 1.0
+            }
+          }
+        }
+      },
+      "Kolkata": {
+        "sample_count": 0,
+        "status": "INSUFFICIENT_SAMPLE",
+        "note": "Fewer than 3 samples in held-out test split. Unsuitable for statistical ranking."
+      }
+    },
+    "defect_class_slices": {
+      "open_damaged_manhole": {
+        "sample_count": 0,
+        "status": "INSUFFICIENT_SAMPLE"
+      },
+      "damaged_missing_road_sign": {
+        "sample_count": 0,
+        "status": "INSUFFICIENT_SAMPLE"
+      },
+      "road_waterlogging": {
+        "sample_count": 15,
+        "status": "EVALUATED",
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 15,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 19,
+          "true_positives": 15,
+          "false_positives": 4,
+          "false_negatives": 0,
+          "precision": 0.7895,
+          "recall": 1.0,
+          "f1_score": 0.8824,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 15,
+              "fp": 4,
+              "fn": 0,
+              "precision": 0.7895,
+              "recall": 1.0
+            }
+          }
+        }
+      }
+    }
+  },
+  "epistemic_caution": "Environmental correlation is not causation. Slices with small sample sizes report INSUFFICIENT_SAMPLE."
+}

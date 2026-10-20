@@ -1,0 +1,53 @@
+{
+  "study_id": "CVKI-R9",
+  "status": "COMPLETE_FOR_PROTOCOL_INPUTS",
+  "empirical_case_provenance": "NOT_AVAILABLE",
+  "frozen_inputs": [
+    {
+      "source_id": "R8_FREEZE_MANIFEST",
+      "path": "ai/research/experiments/R8/freeze_manifest.json",
+      "sha256": "ab165c7e5d62a001103c160869c1879c7a7725c6c8f22529c991783ab494a249"
+    },
+    {
+      "source_id": "R8_DATASET_MANIFEST",
+      "path": "ai/research/experiments/R8/dataset_manifest.json",
+      "sha256": "c63d427251ee12cf8d284c3f29a5fa6ad0f3c051b713186582b467ee2f45b2f6"
+    },
+    {
+      "source_id": "R8_EXPERIMENT",
+      "path": "ai/research/experiments/R8/experiment.json",
+      "sha256": "0de1414033277e01ca0a64776802d5a95a3f38dc15a97a8620002031c1707f31"
+    },
+    {
+      "source_id": "M1_13_CHECKPOINT",
+      "path": "ai/computer_vision/training/runs/yolov8n_m1_13/weights/best.pt",
+      "sha256": "602160d4851e0d79c34cb23b828bde474fc4c164eaf1a1c2a884cfb372f4bda3"
+    },
+    {
+      "source_id": "R3_CHECKPOINT",
+      "path": "ai/research/experiments/R3/CVR2-CV-006/weights/best.pt",
+      "sha256": "72c57f6f052321abfe798edbef862848a2441a3b17fa16997376db93711bbc28"
+    },
+    {
+      "source_id": "R5_MANIFEST",
+      "path": "ai/research/datasets/R5_controlled_shift/manifest.json",
+      "sha256": "d36bd0f653c5650f628ad26d9397b5e843154931f23177918235b94b2f899f0e"
+    },
+    {
+      "source_id": "R5_METRICS",
+      "path": "ai/research/experiments/R5/metrics.json",
+      "sha256": "a07f0ac9271b5af85689346632e181201fb453918408539505ed23059c39b13e"
+    },
+    {
+      "source_id": "R6_MANIFEST",
+      "path": "ai/research/datasets/R6_controlled_sequences/manifest.json",
+      "sha256": "2c793e05dbc068d0ea1907e466a352a06b0728330fef580cd20485464408b348"
+    },
+    {
+      "source_id": "R6_METRICS",
+      "path": "ai/research/experiments/R6/metrics.json",
+      "sha256": "907fc80c19372d344f67b7eb9990169fd47d1315c812b98cdf743513feca7831"
+    }
+  ],
+  "case_results": []
+}

@@ -1,0 +1,47 @@
+experiment_id: CVR2-CV-008
+experiment_type: ablation
+dataset:
+  id: D1
+  version: '1.0'
+  train_split: train
+  val_split: val
+  test_split: test
+model:
+  id: R3-YOLO-ROBUST-BASE
+  version: '1.0'
+  architecture: YOLOv8n
+  input_size: 640
+  confidence_threshold: 0.25
+  iou_threshold: 0.45
+training:
+  seed: 42
+  epochs: EVAL_ONLY
+  batch_size: 1
+  learning_rate: N/A
+  optimizer: N/A
+  device: cpu
+evaluation:
+  metrics:
+  - precision
+  - recall
+  - mAP50
+  - mAP50_95
+  evaluated_on: test
+  reproducibility_class: REPRODUCIBLE CONFIGURATION
+hypothesis:
+  question: Does the calibrated R3 model suppress false positives on verified non-defect
+    background images?
+  hypothesis: At the validation-selected threshold, false alarms on closed manholes
+    and intact signs are minimized.
+  independent_variable: Confidence threshold on negative scenes
+  dependent_variables:
+  - False positives count
+  - Maximum candidate confidence
+  - Trigger category
+  controls:
+  - CVR2-CV-006 frozen checkpoint
+  - D1 verified negative scenes
+  expected_outcome: Zero or low false alarms at operating threshold.
+  actual_outcome: unknown
+  conclusion: unknown
+metadata: {}

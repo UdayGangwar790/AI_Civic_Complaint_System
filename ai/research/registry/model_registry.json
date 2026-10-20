@@ -1,0 +1,75 @@
+{
+  "M1.13": {
+    "model_id": "M1.13",
+    "model_version": "1.13.0",
+    "architecture": "YOLOv8n",
+    "parameter_size": "3.2M",
+    "weights_path": "ai/computer_vision/training/runs/yolov8n_m1_13/weights/best.pt",
+    "parent_model": "M1.8",
+    "provider": "m113_yolo_provider",
+    "task": "object_detection",
+    "input_size": 640,
+    "classes": [
+      "garbage",
+      "pothole",
+      "street_light_issue",
+      "water_leakage",
+      "fallen_tree",
+      "damaged_signboard",
+      "broken_bench",
+      "open_damaged_manhole",
+      "illegal_parking",
+      "sewage_overflow",
+      "encroachment",
+      "unauthorized_posters",
+      "loose_cables"
+    ],
+    "training_dataset": "D0",
+    "training_config": "batch=16, imgsz=640, epochs=100",
+    "checksum": "602160d4851e0d79c34cb23b828bde474fc4c164eaf1a1c2a884cfb372f4bda3",
+    "status": "FROZEN_REFERENCE",
+    "registered_at": "2026-10-19T13:13:08.234295+00:00"
+  },
+  "R2-YOLO-D1-BASE": {
+    "model_id": "R2-YOLO-D1-BASE",
+    "model_version": "1.0.0",
+    "architecture": "YOLOv8n",
+    "parameter_size": "3.01M",
+    "weights_path": "ai\\research\\experiments\\R2\\CVR2-CV-001\\weights\\best.pt",
+    "parent_model": null,
+    "provider": "ultralytics_yolo",
+    "task": "object_detection",
+    "input_size": 640,
+    "classes": [
+      "open_damaged_manhole",
+      "damaged_missing_road_sign",
+      "road_waterlogging"
+    ],
+    "training_dataset": "D1",
+    "training_config": "CFG-CVR2-001",
+    "checksum": "6e217b12a790baaa86dc68308c99d27197ee487938f89b547193fa8ba2966ac3",
+    "status": "RESEARCH_ONLY",
+    "registered_at": "2026-10-19T15:01:16.512719+00:00"
+  },
+  "R3-YOLO-ROBUST-BASE": {
+    "model_id": "R3-YOLO-ROBUST-BASE",
+    "model_version": "1.0.0",
+    "architecture": "YOLOv8n",
+    "parameter_size": "3.01M",
+    "weights_path": "ai\\research\\experiments\\R3\\CVR2-CV-006\\weights\\best.pt",
+    "parent_model": null,
+    "provider": "ultralytics_yolo",
+    "task": "object_detection",
+    "input_size": 640,
+    "classes": [
+      "open_damaged_manhole",
+      "damaged_missing_road_sign",
+      "road_waterlogging"
+    ],
+    "training_dataset": "D1",
+    "training_config": "CFG-CVR2-006",
+    "checksum": "72c57f6f052321abfe798edbef862848a2441a3b17fa16997376db93711bbc28",
+    "status": "RESEARCH_ONLY",
+    "registered_at": "2026-10-19T16:14:14.857845+00:00"
+  }
+}

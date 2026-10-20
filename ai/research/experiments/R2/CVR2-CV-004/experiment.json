@@ -1,0 +1,22 @@
+{
+  "experiment_id": "CVR2-CV-004",
+  "research_version": "2.0.0",
+  "experiment_type": "ablation",
+  "created_at": "2026-10-19T15:03:46.463663+00:00",
+  "status": "PLANNED",
+  "owner": "CVKI Research Team",
+  "description": "Augmentation Ablation comparing Conservative vs Stronger data augmentation regimes",
+  "hypothesis": "Moderate augmentation improves generalization over rigid training without destabilizing bounding-box localization.",
+  "dataset_id": "D1",
+  "dataset_version": "1.0",
+  "model_id": "R2-YOLO-AUG-ABLATION",
+  "model_version": "1.0.0",
+  "config_id": "CFG-CVR2-004",
+  "random_seed": 42,
+  "hardware": "CPU",
+  "software_environment": "PyTorch 2.14.0+cpu",
+  "metrics": {},
+  "artifact_paths": [],
+  "parent_experiment": null,
+  "notes": ""
+}

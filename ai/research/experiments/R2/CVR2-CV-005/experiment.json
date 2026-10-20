@@ -1,0 +1,22 @@
+{
+  "experiment_id": "CVR2-CV-005",
+  "research_version": "2.0.0",
+  "experiment_type": "ablation",
+  "created_at": "2026-10-19T15:09:06.517080+00:00",
+  "status": "PLANNED",
+  "owner": "CVKI Research Team",
+  "description": "Deep diagnostic error analysis across 10 structured failure categories on D1 held-out test data",
+  "hypothesis": "Systematic categorization of model error patterns reveals specific environmental and geometric edge cases rather than random failure.",
+  "dataset_id": "D1",
+  "dataset_version": "1.0",
+  "model_id": "R2-YOLO-ERROR-DIAG",
+  "model_version": "1.0.0",
+  "config_id": "CFG-CVR2-005",
+  "random_seed": 42,
+  "hardware": "CPU",
+  "software_environment": "PyTorch 2.14.0+cpu",
+  "metrics": {},
+  "artifact_paths": [],
+  "parent_experiment": null,
+  "notes": ""
+}

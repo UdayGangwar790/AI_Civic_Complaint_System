@@ -1,0 +1,68 @@
+{
+  "study_id": "CVKI-R7",
+  "provenance_status": "COMPLETE_FOR_AUDITED_INPUTS",
+  "case_evidence_status": "NOT_AVAILABLE",
+  "sources": [
+    {
+      "source_id": "M1_13_CHECKPOINT",
+      "path": "ai/computer_vision/training/runs/yolov8n_m1_13/weights/best.pt",
+      "sha256": "602160d4851e0d79c34cb23b828bde474fc4c164eaf1a1c2a884cfb372f4bda3",
+      "role": "Frozen model identity reference only; not run or modified by R7."
+    },
+    {
+      "source_id": "D0_DATASET",
+      "path": "ai/computer_vision/dataset_m1_13",
+      "file_count": 605,
+      "r7_tree_fingerprint_sha256": "e609ad2e701b1e668d5d1f9474be6b1e2a8240bc61a4adbe1fee096db4ec2658",
+      "role": "Frozen dataset integrity reference; not read as civic-context evidence."
+    },
+    {
+      "source_id": "R3_CHECKPOINT",
+      "path": "ai/research/experiments/R3/CVR2-CV-006/weights/best.pt",
+      "sha256": "72c57f6f052321abfe798edbef862848a2441a3b17fa16997376db93711bbc28",
+      "role": "Frozen R3 checkpoint identity reference; not run or modified by R7."
+    },
+    {
+      "source_id": "D1_DATASET_MANIFEST",
+      "path": "ai/research/datasets/D1/manifests/dataset_manifest.json",
+      "sha256": "9cd74a15bbfe6e152fffb558eea99b60c69881eeea903efe9b31437a6cdc31b8",
+      "role": "Source lineage for R5/R6 controlled CV research; not a citizen case or real-world context record."
+    },
+    {
+      "source_id": "R5_MANIFEST",
+      "path": "ai/research/datasets/R5_controlled_shift/manifest.json",
+      "sha256": "d36bd0f653c5650f628ad26d9397b5e843154931f23177918235b94b2f899f0e",
+      "role": "Checksummed controlled perturbation manifest; synthetic transformations of D1 test images, not real-world weather observations."
+    },
+    {
+      "source_id": "R5_METRICS",
+      "path": "ai/research/experiments/R5/metrics.json",
+      "sha256": "a07f0ac9271b5af85689346632e181201fb453918408539505ed23059c39b13e",
+      "role": "Prior aggregate CV robustness results; no case-linked multimodal observations."
+    },
+    {
+      "source_id": "R6_MANIFEST",
+      "path": "ai/research/datasets/R6_controlled_sequences/manifest.json",
+      "sha256": "2c793e05dbc068d0ea1907e466a352a06b0728330fef580cd20485464408b348",
+      "role": "Checksummed controlled synthetic temporal sequence manifest; not recorded real-world video or civic context."
+    },
+    {
+      "source_id": "R6_METRICS",
+      "path": "ai/research/experiments/R6/metrics.json",
+      "sha256": "907fc80c19372d344f67b7eb9990169fd47d1315c812b98cdf743513feca7831",
+      "role": "Prior aggregate CV temporal evaluation; explicitly reports real-world video evaluation unavailable."
+    }
+  ],
+  "unavailable_evidence": [
+    "case-linked citizen language",
+    "case-linked GPS observations",
+    "road identity and jurisdiction",
+    "road owner and maintenance authority",
+    "explicit tender, contract, concession, or project evidence for builder attribution",
+    "case-linked real weather and rainfall observations",
+    "case-linked traffic observations",
+    "case history and authority updates",
+    "case-level CV detections independently linked to any of the above"
+  ],
+  "interpretation": "Prior CV research provenance establishes lineage of the cited research artifacts only. It does not establish citizen reports, location, jurisdiction, legal responsibility, environmental conditions, causation, or physical truth."
+}

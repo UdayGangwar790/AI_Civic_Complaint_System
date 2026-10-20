@@ -1,0 +1,108 @@
+{
+  "dataset_id": "R7_multimodal_civic_cases",
+  "schema_version": 1,
+  "research_only": true,
+  "case_count": 0,
+  "records": [],
+  "case_construction_status": "INSUFFICIENT_SAMPLE",
+  "reason": "The available legitimate R5/R6 artifacts are controlled computer-vision research evaluations, not case-linked citizen reports or independent civic-context evidence. No case-level CV observations with civic provenance were available.",
+  "no_fabricated_evidence": true,
+  "synthetic_context_created": false,
+  "modality_inventory": [
+    {
+      "modality": "CV_OBSERVATION",
+      "epistemic_state": "MODEL_OBSERVATION",
+      "availability": "INSUFFICIENT_SAMPLE",
+      "case_linked": false,
+      "provenance_refs": ["R5_MANIFEST", "R5_METRICS", "R6_MANIFEST", "R6_METRICS"]
+    },
+    {
+      "modality": "USER_REPORTED",
+      "epistemic_state": "USER_REPORTED",
+      "availability": "NOT_AVAILABLE",
+      "case_linked": false,
+      "provenance_refs": []
+    },
+    {
+      "modality": "GPS",
+      "epistemic_state": "SYSTEM_DERIVED",
+      "availability": "NOT_AVAILABLE",
+      "case_linked": false,
+      "provenance_refs": []
+    },
+    {
+      "modality": "ROAD_IDENTITY",
+      "epistemic_state": "SYSTEM_DERIVED",
+      "availability": "NOT_AVAILABLE",
+      "case_linked": false,
+      "provenance_refs": []
+    },
+    {
+      "modality": "JURISDICTION",
+      "epistemic_state": "SYSTEM_DERIVED",
+      "availability": "NOT_AVAILABLE",
+      "case_linked": false,
+      "provenance_refs": []
+    },
+    {
+      "modality": "ROAD_OWNER",
+      "epistemic_state": "SYSTEM_DERIVED",
+      "availability": "NOT_AVAILABLE",
+      "case_linked": false,
+      "provenance_refs": []
+    },
+    {
+      "modality": "MAINTENANCE_AUTHORITY",
+      "epistemic_state": "SYSTEM_DERIVED",
+      "availability": "NOT_AVAILABLE",
+      "case_linked": false,
+      "provenance_refs": []
+    },
+    {
+      "modality": "BUILDER_CONTRACTOR",
+      "epistemic_state": "SYSTEM_DERIVED",
+      "availability": "NOT_AVAILABLE",
+      "case_linked": false,
+      "explicit_project_evidence_required": true,
+      "provenance_refs": []
+    },
+    {
+      "modality": "WEATHER",
+      "epistemic_state": "OBSERVATION",
+      "availability": "NOT_AVAILABLE",
+      "case_linked": false,
+      "causal_inference_allowed": false,
+      "provenance_refs": []
+    },
+    {
+      "modality": "RAINFALL",
+      "epistemic_state": "OBSERVATION",
+      "availability": "NOT_AVAILABLE",
+      "case_linked": false,
+      "causal_inference_allowed": false,
+      "provenance_refs": []
+    },
+    {
+      "modality": "TRAFFIC",
+      "epistemic_state": "OBSERVATION",
+      "availability": "NOT_AVAILABLE",
+      "case_linked": false,
+      "causal_inference_allowed": false,
+      "provenance_refs": []
+    },
+    {
+      "modality": "CASE_HISTORY",
+      "epistemic_state": "SYSTEM_DERIVED",
+      "availability": "NOT_AVAILABLE",
+      "case_linked": false,
+      "provenance_refs": []
+    },
+    {
+      "modality": "AUTHORITY_UPDATE",
+      "epistemic_state": "AUTHORITY_REPORTED",
+      "availability": "NOT_AVAILABLE",
+      "case_linked": false,
+      "provenance_refs": []
+    }
+  ]
+}

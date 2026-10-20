@@ -1,0 +1,53 @@
+{
+  "study_id": "CVKI-R9",
+  "overall_status": "CASE_DATASET_NOT_AVAILABLE",
+  "empirical_evaluation_status": "NOT_VALIDATED",
+  "protocol_validation_status": "PARTIALLY_VALIDATED",
+  "eligible_case_count": 0,
+  "ground_truth_available": false,
+  "ground_truth_metrics": "NOT_AVAILABLE",
+  "multimodal_accuracy": "NOT_REPORTED",
+  "metrics": {
+    "modality_agreement_rate": {
+      "value": null,
+      "status": "NOT_AVAILABLE",
+      "reason": "No case has two independent evidence modalities."
+    },
+    "conflict_detection_rate": {
+      "value": null,
+      "status": "NOT_AVAILABLE",
+      "reason": "No case-level disagreements exist to classify."
+    },
+    "evidence_completeness": {
+      "value": null,
+      "status": "NOT_AVAILABLE",
+      "reason": "There are no eligible cases."
+    },
+    "provenance_completeness": {
+      "value": null,
+      "status": "DESCRIPTIVE_ONLY",
+      "reason": "Protocol requires provenance for each evidence record; no case-level score can be computed."
+    },
+    "unsupported_inference_rate": {
+      "value": null,
+      "status": "NOT_AVAILABLE",
+      "reason": "No empirical case inferences were made."
+    },
+    "epistemic_violation_count": {
+      "value": null,
+      "status": "DESCRIPTIVE_ONLY",
+      "reason": "Protocol invariants are tested; no empirical case evaluation occurred."
+    },
+    "explanation_traceability": {
+      "value": null,
+      "status": "NOT_AVAILABLE",
+      "reason": "No case explanations were generated."
+    },
+    "human_review_preservation_rate": {
+      "value": null,
+      "status": "NOT_AVAILABLE",
+      "reason": "No case decisions were generated; protocol mandates human review."
+    }
+  },
+  "no_fabricated_confidence_percentages": true
+}

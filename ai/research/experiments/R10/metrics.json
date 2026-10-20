@@ -1,0 +1,211 @@
+{
+  "study_id": "CVKI-R10",
+  "overall_verdict": "INSUFFICIENT_EVIDENCE",
+  "empirical_scope": "Small internal CV evaluation and controlled synthetic perturbation/sequence studies; no eligible multimodal civic cases.",
+  "headline_results": {
+    "R3_primary": {
+      "dataset": "D1/test",
+      "images": 18,
+      "ground_truth_boxes": 15,
+      "class_support": {
+        "open_damaged_manhole": 0,
+        "damaged_missing_road_sign": 0,
+        "road_waterlogging": 15
+      },
+      "confidence": 0.1,
+      "iou": 0.5,
+      "precision": 0.7895,
+      "recall": 1.0,
+      "f1": 0.8824,
+      "tp": 15,
+      "fp": 4,
+      "fn": 0
+    },
+    "R3_secondary": {
+      "dataset": "D1/test",
+      "images": 18,
+      "ground_truth_boxes": 15,
+      "confidence": 0.25,
+      "iou": 0.5,
+      "precision": 1.0,
+      "recall": 0.7333,
+      "f1": 0.8461,
+      "tp": 11,
+      "fp": 0,
+      "fn": 4
+    },
+    "R5_clean_primary": {
+      "dataset": "18 D1/test images; controlled source set",
+      "ground_truth_boxes": 15,
+      "confidence": 0.1,
+      "iou": 0.5,
+      "precision": 0.7895,
+      "recall": 1.0,
+      "f1": 0.8824,
+      "map50": 0.99125,
+      "map50_95": 0.7924805556
+    },
+    "R6_scope": {
+      "source_images": 18,
+      "sequences": 90,
+      "frames": 900,
+      "classes_with_test_support": ["road_waterlogging"],
+      "real_world_video_evaluation": "NOT_AVAILABLE"
+    },
+    "R7_R8_R9": {
+      "eligible_civic_cases": 0,
+      "empirical_multimodal_status": "NOT_VALIDATED"
+    }
+  },
+  "research_stage_table": [
+    {
+      "stage": "R0",
+      "research_question": "Research infrastructure and frozen-baseline safeguards",
+      "dataset": "Infrastructure tests; no empirical dataset",
+      "sample_size": "Not applicable",
+      "model_checkpoint": "M1.13/D0 registry references",
+      "threshold": "Not applicable",
+      "metrics": "Unit/protocol checks",
+      "validation_status": "VALIDATED_FOR_TESTED_INFRASTRUCTURE",
+      "main_finding": "Framework and baseline-protection behavior are exercised by the R0 test suite.",
+      "main_limitation": "Infrastructure tests are not a model-performance evaluation."
+    },
+    {
+      "stage": "R1",
+      "research_question": "D1 dataset construction and QA",
+      "dataset": "D1 research candidate",
+      "sample_size": "122 images; 90 positive labels recorded in QA summary; 86/18/18 split",
+      "model_checkpoint": "None",
+      "threshold": "Not applicable",
+      "metrics": "QA reports zero exact duplicate groups, five near-duplicate pairs, no known cross-split leakage; 122/122 prior privacy-clear claims",
+      "validation_status": "PARTIALLY_VALIDATED",
+      "main_finding": "A small structured CV dataset and QA artifacts exist.",
+      "main_limitation": "Source and license claims conflict; QA summary fields conflict with the dataset card/registry; provenance is not independently reconciled."
+    },
+    {
+      "stage": "R2",
+      "research_question": "D1 baseline, M1.13 reference, hard-negative and augmentation experiments",
+      "dataset": "D1; most evaluations on 18-image test split",
+      "sample_size": "18 test images / 15 positive boxes for primary baseline",
+      "model_checkpoint": "CVR2-CV-001 to CVR2-CV-005; R2 candidate weights and M1.13 reference",
+      "threshold": "Evaluation-dependent; R2.1 found conf=0.001 metric reporting vs operational 0.25 analysis",
+      "metrics": "001 reports mAP50 0.9507, mAP50-95 0.7959 at its validator protocol; 004 mAP50 0.9649 conservative vs 0.5714 strong",
+      "validation_status": "PARTIALLY_VALIDATED",
+      "main_finding": "Aggressive augmentation degraded the recorded test mAP relative to conservative augmentation; R2.1 rejects the hard-negative suppression claim as unsupported.",
+      "main_limitation": "Small D1 split, threshold mismatch in early records, and experiment.json statuses still say PLANNED while metric records say COMPLETED."
+    },
+    {
+      "stage": "R2.1",
+      "research_question": "Metric consistency and scientific audit of R2",
+      "dataset": "R2 artifacts; D1/test and negative scenes",
+      "sample_size": "18 test images, 15 boxes; 3 negative test scenes in cited audit",
+      "model_checkpoint": "R2 candidate checkpoints and frozen M1.13 reference",
+      "threshold": "Resolved as a mismatch between low-confidence validator metric and 0.25 operating analysis",
+      "metrics": "Independent audit reconciles low precision/recall claims and finds zero false detections at 0.25 for both hard-negative arms",
+      "validation_status": "PARTIALLY_VALIDATED",
+      "main_finding": "Hard-negative false-positive reduction claim is unsupported; aggressive augmentation comparison is methodologically controlled.",
+      "main_limitation": "Audit inherits the small and provenance-uncertain D1 corpus."
+    },
+    {
+      "stage": "R3",
+      "research_question": "Robust baseline, corruptions, negative scenes, geographic slices, and failures",
+      "dataset": "D1; test split 18 images / 15 boxes",
+      "sample_size": "18 test images; all 15 positive boxes are road_waterlogging; 32 negative scenes for R3-008",
+      "model_checkpoint": "CVR2-CV-006 frozen research checkpoint",
+      "threshold": "Primary 0.100; secondary 0.250; IoU 0.50",
+      "metrics": "Primary P=0.7895, R=1.0000, F1=0.8824; secondary P=1.0000, R=0.7333, F1=0.8461",
+      "validation_status": "PARTIALLY_VALIDATED",
+      "main_finding": "Fixed-threshold D1/test detections and controlled error/negative-scene analyses are recorded.",
+      "main_limitation": "No class 0/1 test support, small single-source test split, and source/geography claims are not independent ground truth."
+    },
+    {
+      "stage": "R4",
+      "research_question": "Independent D2 cross-dataset and geographic generalization",
+      "dataset": "D2 not created",
+      "sample_size": "0 admitted assets",
+      "model_checkpoint": "R3 checkpoint was not evaluated on D2",
+      "threshold": "0.100/0.250 and IoU 0.50 planned, not evaluated",
+      "metrics": "None",
+      "validation_status": "NOT_AVAILABLE",
+      "main_finding": "No cross-dataset result; source admission stopped on provenance and independence issues.",
+      "main_limitation": "D2 absent; claims about generalization remain unanswered."
+    },
+    {
+      "stage": "R5",
+      "research_question": "Controlled domain shift and robustness",
+      "dataset": "R5 controlled perturbations of D1/test",
+      "sample_size": "18 source images, 15 boxes; 396 generated copies across 22 conditions",
+      "model_checkpoint": "Frozen R3 checkpoint",
+      "threshold": "0.100/0.250; IoU 0.50",
+      "metrics": "Clean primary P=0.7895, R=1.0000, F1=0.8824, mAP50=0.99125; condition-specific fixed-threshold changes recorded",
+      "validation_status": "PARTIALLY_VALIDATED",
+      "main_finding": "Model behavior varies across controlled perturbations; severe blur/noise demonstrate failures within tested conditions.",
+      "main_limitation": "Synthetic transformations of repeated small internal test sources are not external weather or real-world domain validation."
+    },
+    {
+      "stage": "R6",
+      "research_question": "Temporal stability under controlled sequences",
+      "dataset": "Synthetic sequences derived from D1/test stills",
+      "sample_size": "18 source images, 90 sequences, 900 frames; only road_waterlogging has positive support",
+      "model_checkpoint": "Frozen R3 checkpoint",
+      "threshold": "0.100/0.250; IoU 0.50",
+      "metrics": "Five sequence families; e.g. quality degradation primary P=0.8828, R=0.8533, F1=0.8678",
+      "validation_status": "PARTIALLY_VALIDATED",
+      "main_finding": "Temporal rules and controlled frame-level behavior were measured on synthetic sequences.",
+      "main_limitation": "No recorded real-world video; frames repeat/transform the same still-image sources."
+    },
+    {
+      "stage": "R7",
+      "research_question": "Can civic context improve multimodal evidence quality?",
+      "dataset": "R5/R6 provenance audit; no civic case set",
+      "sample_size": "0 eligible multimodal cases",
+      "model_checkpoint": "No inference in R7",
+      "threshold": "Frozen references only",
+      "metrics": "Descriptive source inventory; no case-level metric",
+      "validation_status": "NOT_VALIDATED",
+      "main_finding": "Available controlled CV artifacts do not provide case-linked citizen, location, authority, or environment evidence.",
+      "main_limitation": "No independent civic modalities."
+    },
+    {
+      "stage": "R8",
+      "research_question": "Can a legitimate civic case dataset be acquired and audited?",
+      "dataset": "R8_civic_cases",
+      "sample_size": "0 admitted cases",
+      "model_checkpoint": "No training",
+      "threshold": "Not applicable",
+      "metrics": "D1-D0 exact/near overlap and split sequence audit; source admission audit",
+      "validation_status": "CASE_DATASET_NOT_AVAILABLE",
+      "main_finding": "Case schema and provenance protocol are defined; no auditable multimodal source corpus could be admitted.",
+      "main_limitation": "D1 source claims and per-asset licenses remain unreconciled; R5/R6 are derived artifacts."
+    },
+    {
+      "stage": "R9",
+      "research_question": "Does multimodal evidence improve civic-case evaluation?",
+      "dataset": "Frozen R8; no cases",
+      "sample_size": "0 eligible cases",
+      "model_checkpoint": "No empirical inference",
+      "threshold": "Frozen protocol values; not evaluated",
+      "metrics": "All case-level measures unavailable",
+      "validation_status": "NOT_VALIDATED",
+      "main_finding": "Protocol and epistemic safeguards are defined; no empirical comparison is possible.",
+      "main_limitation": "No case data; no baseline can be ranked."
+    }
+  ],
+  "statistical_significance": "NOT_CLAIMED",
+  "multimodal_accuracy": "NOT_CLAIMED",
+  "confidence_percentages_fabricated": false,
+  "final_regression": {
+    "status": "COMPLETED",
+    "test_files": 45,
+    "passed": 569,
+    "failed": 0,
+    "errors": 0,
+    "warnings": 13,
+    "scope": "R0-R10 research tests including R2.1, plus relevant M8-M12 regressions.",
+    "warning_categories": [
+      "Pydantic class-based config deprecation",
+      "Starlette TestClient/httpx deprecations",
+      "deprecated HTTP_422_UNPROCESSABLE_ENTITY constant"
+    ]
+  }
+}

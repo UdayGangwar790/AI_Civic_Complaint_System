@@ -1,0 +1,53 @@
+{
+  "study_id": "CVKI-R7",
+  "comparison_type": "ABLATION",
+  "status": "INSUFFICIENT_SAMPLE",
+  "shared_case_count": 0,
+  "arms": [
+    {
+      "id": "A",
+      "name": "CV only",
+      "modalities": ["CV_OBSERVATION"],
+      "status": "INSUFFICIENT_SAMPLE"
+    },
+    {
+      "id": "B",
+      "name": "CV + citizen language",
+      "modalities": ["CV_OBSERVATION", "USER_REPORTED"],
+      "status": "NOT_AVAILABLE"
+    },
+    {
+      "id": "C",
+      "name": "CV + location",
+      "modalities": ["CV_OBSERVATION", "GPS", "ROAD_IDENTITY", "JURISDICTION"],
+      "status": "NOT_AVAILABLE"
+    },
+    {
+      "id": "D",
+      "name": "CV + authority",
+      "modalities": ["CV_OBSERVATION", "ROAD_OWNER", "MAINTENANCE_AUTHORITY", "BUILDER_CONTRACTOR"],
+      "status": "NOT_AVAILABLE"
+    },
+    {
+      "id": "E",
+      "name": "CV + environmental context",
+      "modalities": ["CV_OBSERVATION", "WEATHER", "RAINFALL", "TRAFFIC"],
+      "status": "NOT_AVAILABLE"
+    },
+    {
+      "id": "F",
+      "name": "All available modalities",
+      "modalities": "all_available",
+      "status": "INSUFFICIENT_SAMPLE"
+    }
+  ],
+  "comparison_dimensions": [
+    "consistency",
+    "conflict detection",
+    "evidence completeness",
+    "explanation quality",
+    "uncertainty preservation"
+  ],
+  "results": null,
+  "interpretation": "No arm was ranked or optimized because there are no shared case-level observations. The absence of measurable results is not evidence that any modality is ineffective."
+}

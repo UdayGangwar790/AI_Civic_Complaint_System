@@ -1,0 +1,34 @@
+{
+  "experiment_id": "CVKI-R8",
+  "title": "Legitimate Multimodal Civic Case Acquisition & Provenance Framework",
+  "research_only": true,
+  "production_integration": false,
+  "model_training": false,
+  "case_count": 0,
+  "status": "CASE_DATASET_NOT_AVAILABLE",
+  "status_reason": "No independently auditable source case corpus with reconciled per-asset origin, license, and case-level provenance is available. D1 is a research CV candidate whose source claims conflict across its own records and R4 audit; R5/R6 are derived synthetic CV artifacts.",
+  "dataset_id": "R8_civic_cases",
+  "frozen_references": {
+    "m1_13_sha256": "602160d4851e0d79c34cb23b828bde474fc4c164eaf1a1c2a884cfb372f4bda3",
+    "r3_checkpoint_sha256": "72c57f6f052321abfe798edbef862848a2441a3b17fa16997376db93711bbc28",
+    "d0_file_count": 605,
+    "r5_manifest_sha256": "d36bd0f653c5650f628ad26d9397b5e843154931f23177918235b94b2f899f0e",
+    "r5_metrics_sha256": "a07f0ac9271b5af85689346632e181201fb453918408539505ed23059c39b13e",
+    "r6_manifest_sha256": "2c793e05dbc068d0ea1907e466a352a06b0728330fef580cd20485464408b348",
+    "r6_metrics_sha256": "907fc80c19372d344f67b7eb9990169fd47d1315c812b98cdf743513feca7831"
+  },
+  "privacy_review": "Existing D1 QA records report 122/122 clear, zero redactions required; R8 did not independently re-review those images. R8 admitted no case-level personal data.",
+  "independence_review": "Existing D1 report records no exact/near cross-split duplicates; R8 additionally computed zero exact and zero dHash<=4 D1-to-D0 image matches. R5/R6 are known derivatives of D1 test images and are not independent cases.",
+  "final_state": {
+    "D0": "FROZEN",
+    "M1.13": "FROZEN",
+    "R3": "FROZEN",
+    "R5": "FROZEN",
+    "R6": "FROZEN",
+    "R7": "FROZEN RESEARCH RECORD",
+    "R8": "FROZEN RESEARCH RECORD",
+    "PRODUCTION INTEGRATION": false,
+    "NO GIT COMMIT": true,
+    "NO GIT PUSH": true
+  }
+}

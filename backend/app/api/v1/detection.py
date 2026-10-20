@@ -10,6 +10,7 @@ from app.core.config import settings
 from app.core.rate_limit import rate_limit_dependency
 from app.schemas.detection import DetectionResponse
 from app.services.computer_vision import ModelUnavailableError, cv_model_service
+from app.services.cv.runtime import cv_runtime_service
 
 router = APIRouter()
 logger = logging.getLogger("cvki.api.detection")
@@ -29,8 +30,8 @@ _SUPPORTED_IMAGE_FORMATS = {"JPEG", "PNG", "WEBP"}
     ],
 )
 async def predict_image(file: UploadFile = File(...)) -> DetectionResponse:
-    """Validate one image upload and run inference using the shared YOLO model."""
-    if not cv_model_service.is_loaded:
+    """Validate one image upload and run inference using the model-agnostic CV runtime."""
+    if not cv_runtime_service.is_loaded and not cv_model_service.is_loaded:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
             detail="Detection model is unavailable.",

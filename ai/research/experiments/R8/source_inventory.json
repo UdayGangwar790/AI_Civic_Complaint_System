@@ -1,0 +1,112 @@
+{
+  "study_id": "CVKI-R8",
+  "audit_scope": "Existing research artifacts and recorded D1 source claims only; no external source access or production citizen data used.",
+  "sources": [
+    {
+      "source_id": "SRC-BLR-01",
+      "source_name_claimed": "Bengaluru Urban Municipal Corridor Survey",
+      "source_reference": "https://cvki-research.org/sources/blr-corridor",
+      "license_claimed": "CC-BY-4.0",
+      "license_reference": "https://creativecommons.org/licenses/by/4.0/",
+      "provenance": "Claim is recorded in ai/research/datasets/D1/metadata/sources.json; original institutional capture records and per-asset grants are not present.",
+      "modality": ["CV_IMAGE"],
+      "geographic_scope_claimed": "Bengaluru, Karnataka (Urban Arterial)",
+      "temporal_scope_claimed": "2026-08-15 collection date in source registry",
+      "limitations": ["Source identity, URL, grant, and asset linkage are not independently verified.", "Conflicts with other D1 lineage descriptions."],
+      "audit_status": "NOT_ADMITTED_PROVENANCE_UNRECONCILED"
+    },
+    {
+      "source_id": "SRC-DELHI-02",
+      "source_name_claimed": "Delhi NCR Road Hazard Field Corpus",
+      "source_reference": "https://cvki-research.org/sources/delhi-ncr",
+      "license_claimed": "CC-BY-4.0",
+      "license_reference": "https://creativecommons.org/licenses/by/4.0/",
+      "provenance": "Claim is recorded in ai/research/datasets/D1/metadata/sources.json; original institutional capture records and per-asset grants are not present.",
+      "modality": ["CV_IMAGE"],
+      "geographic_scope_claimed": "Delhi / Ring Road (Suburban & Highway)",
+      "temporal_scope_claimed": "2026-07-22 collection date in source registry",
+      "limitations": ["Source identity, URL, grant, and asset linkage are not independently verified.", "Conflicts with other D1 lineage descriptions."],
+      "audit_status": "NOT_ADMITTED_PROVENANCE_UNRECONCILED"
+    },
+    {
+      "source_id": "SRC-MUMBAI-03",
+      "source_name_claimed": "Mumbai Monsoon Waterlogging & Drainage Corpus",
+      "source_reference": "https://cvki-research.org/sources/mumbai-monsoon",
+      "license_claimed": "ODbL-1.0",
+      "license_reference": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "provenance": "Claim is recorded in ai/research/datasets/D1/metadata/sources.json; original institutional capture records and per-asset grants are not present.",
+      "modality": ["CV_IMAGE"],
+      "geographic_scope_claimed": "Mumbai, Maharashtra (Coastal / Monsoon)",
+      "temporal_scope_claimed": "2026-09-02 collection date in source registry",
+      "limitations": ["Source identity, URL, grant, and asset linkage are not independently verified.", "Conflicts with other D1 lineage descriptions."],
+      "audit_status": "NOT_ADMITTED_PROVENANCE_UNRECONCILED"
+    },
+    {
+      "source_id": "SRC-CHENNAI-04",
+      "source_name_claimed": "Chennai Municipal Signage & Road Infrastructure Study",
+      "source_reference": "https://cvki-research.org/sources/chennai-infra",
+      "license_claimed": "CC-BY-SA-4.0",
+      "license_reference": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "provenance": "Claim is recorded in ai/research/datasets/D1/metadata/sources.json; original institutional capture records and per-asset grants are not present.",
+      "modality": ["CV_IMAGE"],
+      "geographic_scope_claimed": "Chennai, Tamil Nadu (Metropolitan)",
+      "temporal_scope_claimed": "2026-06-10 collection date in source registry",
+      "limitations": ["Source identity, URL, grant, and asset linkage are not independently verified.", "Conflicts with other D1 lineage descriptions."],
+      "audit_status": "NOT_ADMITTED_PROVENANCE_UNRECONCILED"
+    },
+    {
+      "source_id": "SRC-QUARANTINE-05",
+      "source_name_claimed": "Unverified Public Web Scraping Candidate",
+      "source_reference": null,
+      "license_claimed": "UNKNOWN",
+      "license_reference": null,
+      "provenance": "Recorded as quarantined in D1 metadata and quarantine log.",
+      "modality": ["CV_IMAGE"],
+      "geographic_scope_claimed": "UNKNOWN",
+      "temporal_scope_claimed": "2026-05-01 claim in registry only",
+      "limitations": ["Unlicensed web scrape; explicitly excluded from D1 usable image/label split."],
+      "audit_status": "QUARANTINED_NOT_ADMITTED"
+    },
+    {
+      "source_id": "D1_RESEARCH_ARTIFACT",
+      "source_name_claimed": "D1 research-candidate dataset",
+      "source_reference": "ai/research/datasets/D1/manifests/dataset_manifest.json",
+      "license_claimed": "Conflicting per-asset claims; not independently established for R8",
+      "license_reference": null,
+      "provenance": "D1 manifest and image records; R4 dataset-construction audit reports source names/scopes and real/simulated lineage are unreconciled.",
+      "modality": ["CV_IMAGE", "CV_LABEL"],
+      "geographic_scope_claimed": "Multiple Indian metros, as claimed by dataset records; not independently verified.",
+      "temporal_scope_claimed": "Unknown at asset level.",
+      "limitations": ["Research-only CV asset; not a civic case or multimodal evidence record.", "Not admitted into R8 case set."],
+      "audit_status": "RESEARCH_REFERENCE_ONLY_NOT_CASE_EVIDENCE"
+    },
+    {
+      "source_id": "R5_CONTROLLED_ARTIFACTS",
+      "source_name_claimed": "R5 controlled image perturbations",
+      "source_reference": "ai/research/datasets/R5_controlled_shift/manifest.json",
+      "license_claimed": "Inherited source claims unresolved; not independently established for R8",
+      "license_reference": null,
+      "provenance": "Checksummed transforms of D1 test images.",
+      "modality": ["CONTROLLED_SYNTHETIC_CV"],
+      "geographic_scope_claimed": "Inherited D1 claim only; not verified.",
+      "temporal_scope_claimed": "Synthetic experiment generation only.",
+      "limitations": ["Not actual weather or environmental observations.", "Not independent real-world cases."],
+      "audit_status": "SYNTHETIC_RESEARCH_ONLY_NOT_CASE_EVIDENCE"
+    },
+    {
+      "source_id": "R6_CONTROLLED_ARTIFACTS",
+      "source_name_claimed": "R6 controlled temporal sequences",
+      "source_reference": "ai/research/datasets/R6_controlled_sequences/manifest.json",
+      "license_claimed": "Inherited source claims unresolved; not independently established for R8",
+      "license_reference": null,
+      "provenance": "Checksummed synthetic temporal frames derived from D1 test still images.",
+      "modality": ["CONTROLLED_SYNTHETIC_CV"],
+      "geographic_scope_claimed": "Inherited D1 claim only; not verified.",
+      "temporal_scope_claimed": "Synthetic sequences; not recorded real-world video.",
+      "limitations": ["R6 explicitly records real-world video evaluation unavailable.", "Not independent real-world cases."],
+      "audit_status": "SYNTHETIC_RESEARCH_ONLY_NOT_CASE_EVIDENCE"
+    }
+  ],
+  "admitted_case_sources": [],
+  "admitted_case_count": 0
+}

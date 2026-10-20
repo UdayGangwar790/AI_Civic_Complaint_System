@@ -1,0 +1,67 @@
+{
+  "experiment_id": "CVKI-R10",
+  "title": "Final CVKI Research v2.x Benchmark & Scientific Evaluation",
+  "research_only": true,
+  "production_integration": false,
+  "frozen_baselines": {
+    "production_model": {
+      "id": "M1.13",
+      "sha256": "602160d4851e0d79c34cb23b828bde474fc4c164eaf1a1c2a884cfb372f4bda3"
+    },
+    "production_dataset": {
+      "id": "D0",
+      "file_count": 605,
+      "tree_sha256": "e609ad2e701b1e668d5d1f9474be6b1e2a8240bc61a4adbe1fee096db4ec2658"
+    },
+    "research_model": {
+      "id": "R3-CVR2-CV-006",
+      "sha256": "72c57f6f052321abfe798edbef862848a2441a3b17fa16997376db93711bbc28",
+      "primary_confidence": 0.1,
+      "secondary_confidence": 0.25,
+      "iou": 0.5
+    },
+    "research_studies": {
+      "R5": "FROZEN",
+      "R6": "FROZEN",
+      "R7": "FROZEN RESEARCH RECORD",
+      "R8": "FROZEN RESEARCH RECORD",
+      "R9": "FROZEN RESEARCH RECORD"
+    }
+  },
+  "overall_verdict": "INSUFFICIENT_EVIDENCE",
+  "verdict_reason": "The repository supports narrow internal CV observations on small D1 splits and controlled synthetic R5/R6 perturbations. D2 is unavailable; R8 admitted zero legitimate civic cases; R9 has no empirical evaluation. Independent source provenance for D1 is unresolved. The full research record does not validate multimodal or broad real-world civic performance.",
+  "major_limitations": [
+    "D1 is a 122-image research candidate; source/license/real-vs-simulated lineage remains unreconciled.",
+    "R3 held-out test contains 18 images and 15 positive boxes, all road_waterlogging; no class-0 or class-1 test boxes.",
+    "D2 and independent cross-dataset evaluation are unavailable.",
+    "R5 uses controlled synthetic transforms of 18 D1 test images, not external weather or domain evidence.",
+    "R6 uses synthetic sequences from D1 still images; real-world video is unavailable.",
+    "R7/R8 have zero eligible civic cases; R9 is protocol-only.",
+    "Geographic and authority fields in D1 are not independently verified; no multimodal responsibility evaluation exists.",
+    "Local CPU timing is not a field-real-time guarantee."
+  ],
+  "regression_summary": {
+    "status": "COMPLETED",
+    "passed": 569,
+    "failed": 0,
+    "errors": 0,
+    "warnings": 13,
+    "test_files": 45,
+    "command_scope": "R0-R10 research regression (including R2.1) plus relevant M8-M12 suites"
+  },
+  "final_state": {
+    "D0": "FROZEN",
+    "M1.13": "FROZEN",
+    "R3": "FROZEN",
+    "R5": "FROZEN",
+    "R6": "FROZEN",
+    "R7": "FROZEN RESEARCH RECORD",
+    "R8": "FROZEN RESEARCH RECORD",
+    "R9": "FROZEN RESEARCH RECORD",
+    "R10": "FINAL RESEARCH RECORD",
+    "PRODUCTION INTEGRATION": false,
+    "NO MODEL REPLACEMENT": true,
+    "NO GIT COMMIT": true,
+    "NO GIT PUSH": true
+  }
+}

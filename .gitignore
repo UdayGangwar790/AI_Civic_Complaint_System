@@ -25,3 +25,7 @@ ai/computer_vision/prepared_sources/
 ai/computer_vision/replacement_sources/
 ai/computer_vision/training/
 ai/computer_vision/waterlogging_improvement_review/
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo

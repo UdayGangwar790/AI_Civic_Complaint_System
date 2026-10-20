@@ -1,0 +1,52 @@
+experiment_id: CVR2-CV-003
+experiment_type: ablation
+dataset:
+  id: D1
+  version: '1.0'
+  train_split: train
+  val_split: val
+  test_split: test
+model:
+  id: R2-YOLO-HN-ABLATION
+  version: '1.0'
+  architecture: YOLOv8n
+  input_size: 640
+  confidence_threshold: 0.25
+  iou_threshold: 0.45
+training:
+  seed: 42
+  epochs: 3
+  batch_size: 8
+  learning_rate: 0.001
+  optimizer: AdamW
+  device: cpu
+evaluation:
+  metrics:
+  - precision
+  - recall
+  - mAP50
+  - mAP50_95
+  evaluated_on: test
+  reproducibility_class: REPRODUCIBLE CONFIGURATION
+hypothesis:
+  question: What is the quantitative effect of hard negatives on civic hazard detection
+    and false positive suppression?
+  hypothesis: Inclusion of hard negatives reduces false positives on closed manholes,
+    healthy signs, and puddles.
+  independent_variable: Presence of 29 hard negatives in training set
+  dependent_variables:
+  - False Positive count on HN test scenes
+  - mAP50
+  - Precision
+  - Recall
+  controls:
+  - YOLOv8n backbone
+  - seed 42
+  - 3 epochs
+  - batch 8
+  - identical held-out test set
+  expected_outcome: Config A (With HN) yields lower false positive rate on negative
+    test scenes.
+  actual_outcome: unknown
+  conclusion: unknown
+metadata: {}

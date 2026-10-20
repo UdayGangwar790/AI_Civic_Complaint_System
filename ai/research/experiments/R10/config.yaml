@@ -1,0 +1,32 @@
+study_id: CVKI-R10
+research_only: true
+production_integration: false
+no_new_model_experiments: true
+source_records:
+  - R0
+  - R1
+  - R2
+  - R2.1
+  - R3
+  - R4
+  - R5
+  - R6
+  - R7
+  - R8
+  - R9
+final_verdict_options:
+  - RESEARCH_VALIDATED
+  - PARTIALLY_VALIDATED
+  - NOT_VALIDATED
+  - INSUFFICIENT_EVIDENCE
+selected_verdict: INSUFFICIENT_EVIDENCE
+thresholds:
+  primary_confidence: 0.100
+  secondary_confidence: 0.250
+  iou: 0.50
+thresholds_are_severity: false
+report_regression_counts:
+  passed: required
+  failed: required
+  errors: required
+  warnings: required

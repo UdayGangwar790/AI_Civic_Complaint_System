@@ -1,0 +1,3 @@
+C:\Users\sushm\OneDrive\Desktop\CIVKI\ai\research\datasets\D1\images\d1_hn_healthy_sign_005.jpg
+C:\Users\sushm\OneDrive\Desktop\CIVKI\ai\research\datasets\D1\images\d1_hn_healthy_sign_004.jpg
+C:\Users\sushm\OneDrive\Desktop\CIVKI\ai\research\datasets\D1\images\d1_hn_healthy_sign_006.jpg

@@ -1,0 +1,53 @@
+{
+  "study_id": "CVKI-R7",
+  "status": "NOT_VALIDATED",
+  "evaluation_type": "DESCRIPTIVE_ONLY",
+  "case_count": 0,
+  "eligible_multimodal_case_count": 0,
+  "case_level_metrics": {
+    "modality_agreement_rate": {
+      "status": "NOT_AVAILABLE",
+      "value": null,
+      "reason": "No case has two independent, case-linked modalities."
+    },
+    "conflict_detection_rate": {
+      "status": "NOT_AVAILABLE",
+      "value": null,
+      "reason": "No case has independent modalities to compare."
+    },
+    "evidence_completeness": {
+      "status": "NOT_AVAILABLE",
+      "value": null,
+      "reason": "No eligible case evidence records exist."
+    },
+    "provenance_completeness": {
+      "status": "DESCRIPTIVE_ONLY",
+      "value": null,
+      "reason": "Provenance is complete for the audited R5/R6 input artifacts; there are no case records to score."
+    },
+    "unsupported_inference_rate": {
+      "status": "NOT_AVAILABLE",
+      "value": null,
+      "reason": "No eligible case-level inferences were made."
+    },
+    "epistemic_violation_count": {
+      "status": "DESCRIPTIVE_ONLY",
+      "value": null,
+      "reason": "No case evaluations occurred. Epistemic boundaries are checked by the R7 test suite."
+    },
+    "explanation_traceability": {
+      "status": "NOT_AVAILABLE",
+      "value": null,
+      "reason": "No eligible case explanations were generated."
+    },
+    "human_review_preservation_rate": {
+      "status": "NOT_AVAILABLE",
+      "value": null,
+      "reason": "No eligible case decisions or recommendations were generated; human review remains required by protocol."
+    }
+  },
+  "ground_truth_metrics": "NOT_AVAILABLE",
+  "fabricated_confidence_percentages": false,
+  "evidence_quality_is_probability": false,
+  "scientific_conclusion": "The available artifacts do not support a claim that multimodal civic context improves assessment consistency, interpretability, or evidence quality."
+}

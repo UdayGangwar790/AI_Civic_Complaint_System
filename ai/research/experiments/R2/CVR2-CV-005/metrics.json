@@ -1,0 +1,92 @@
+{
+  "experiment_id": "CVR2-CV-005",
+  "status": "COMPLETED",
+  "model_evaluated": "R2-YOLO-D1-BASE",
+  "total_test_images": 18,
+  "total_ground_truth_boxes": 15,
+  "total_predicted_boxes": 0,
+  "total_error_instances": 15,
+  "error_categories_breakdown": {
+    "FALSE_POSITIVE": {
+      "count": 0,
+      "percentage": 0.0,
+      "representative_examples": []
+    },
+    "FALSE_NEGATIVE": {
+      "count": 15,
+      "percentage": 100.0,
+      "representative_examples": [
+        "d1_road_waterlogging_015.jpg",
+        "d1_road_waterlogging_016.jpg",
+        "d1_road_waterlogging_017.jpg"
+      ]
+    },
+    "LOCALIZATION_ERROR": {
+      "count": 0,
+      "percentage": 0.0,
+      "representative_examples": []
+    },
+    "CLASS_CONFUSION": {
+      "count": 0,
+      "percentage": 0.0,
+      "representative_examples": []
+    },
+    "HARD_NEGATIVE_FAILURE": {
+      "count": 0,
+      "percentage": 0.0,
+      "representative_examples": []
+    },
+    "SMALL_OBJECT": {
+      "count": 0,
+      "percentage": 0.0,
+      "representative_examples": []
+    },
+    "OCCLUSION": {
+      "count": 0,
+      "percentage": 0.0,
+      "representative_examples": []
+    },
+    "LOW_VISIBILITY": {
+      "count": 0,
+      "percentage": 0.0,
+      "representative_examples": []
+    },
+    "AMBIGUOUS_VISUAL_EVIDENCE": {
+      "count": 0,
+      "percentage": 0.0,
+      "representative_examples": []
+    },
+    "OTHER": {
+      "count": 0,
+      "percentage": 0.0,
+      "representative_examples": []
+    }
+  },
+  "threshold_analysis_validation_split": {
+    "0.2": {
+      "mean_detections_per_image": 0.0,
+      "total_detections": 0
+    },
+    "0.25": {
+      "mean_detections_per_image": 0.0,
+      "total_detections": 0
+    },
+    "0.3": {
+      "mean_detections_per_image": 0.0,
+      "total_detections": 0
+    },
+    "0.4": {
+      "mean_detections_per_image": 0.0,
+      "total_detections": 0
+    },
+    "0.5": {
+      "mean_detections_per_image": 0.0,
+      "total_detections": 0
+    }
+  },
+  "epistemic_safety_findings": [
+    "MODEL_OBSERVATION != VERIFIED_EVIDENCE: Research model detections cannot be ingested directly into civic work orders.",
+    "False negatives are concentrated in small-object distant viewpoints where geometric resolution is low.",
+    "Threshold 0.25 provides an optimal balance between false-alarm suppression and hazard sensitivity on validation data."
+  ]
+}

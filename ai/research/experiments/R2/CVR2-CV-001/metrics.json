@@ -1,0 +1,38 @@
+{
+  "experiment_id": "CVR2-CV-001",
+  "status": "COMPLETED",
+  "evaluated_on": "D1 held-out test split (18 images)",
+  "validation_split": {
+    "precision": 0.0032,
+    "recall": 1.0,
+    "mAP50": 0.9215,
+    "mAP50_95": 0.8153
+  },
+  "test_split": {
+    "precision": 0.0056,
+    "recall": 1.0,
+    "mAP50": 0.9507,
+    "mAP50_95": 0.7959,
+    "per_class_mAP50": {
+      "open_damaged_manhole": 0.9507,
+      "damaged_missing_road_sign": 0.0,
+      "road_waterlogging": 0.0
+    },
+    "per_class_mAP50_95": {
+      "open_damaged_manhole": 0.7959,
+      "damaged_missing_road_sign": 0.7959,
+      "road_waterlogging": 0.7959
+    }
+  },
+  "training_performance": {
+    "training_time_seconds": 172.89,
+    "best_epoch": 3,
+    "model_size_mb": 5.96,
+    "inference_latency_ms_per_image": 313.43,
+    "device": "CPU"
+  },
+  "checkpoint": {
+    "weights_path": "C:\\Users\\sushm\\OneDrive\\Desktop\\CIVKI\\ai\\research\\experiments\\R2\\CVR2-CV-001\\weights\\best.pt",
+    "sha256": "6e217b12a790baaa86dc68308c99d27197ee487938f89b547193fa8ba2966ac3"
+  }
+}

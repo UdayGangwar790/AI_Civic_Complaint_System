@@ -1,0 +1,32 @@
+{
+  "hard_negatives": [
+    {
+      "sample_id": "hn_closed_manhole_001",
+      "target_class": "open_damaged_manhole",
+      "negative_type": "CLOSED_MANHOLE",
+      "description": "Standard flush cast-iron manhole cover securely in place.",
+      "source": "SRC-BLR-01"
+    },
+    {
+      "sample_id": "hn_healthy_sign_001",
+      "target_class": "damaged_missing_road_sign",
+      "negative_type": "HEALTHY_SIGN",
+      "description": "Clean, reflective speed limit sign in full compliance.",
+      "source": "SRC-DELHI-02"
+    },
+    {
+      "sample_id": "hn_wet_road_puddle_001",
+      "target_class": "road_waterlogging",
+      "negative_type": "WET_ROAD_PUDDLE",
+      "description": "Shallow surface dampness without traffic obstruction or pooling.",
+      "source": "SRC-MUMBAI-03"
+    },
+    {
+      "sample_id": "hn_reflection_shadow_001",
+      "target_class": "road_waterlogging",
+      "negative_type": "ROAD_REFLECTION",
+      "description": "Vehicle headlight reflection on asphalt resembling water surface.",
+      "source": "SRC-MUMBAI-03"
+    }
+  ]
+}

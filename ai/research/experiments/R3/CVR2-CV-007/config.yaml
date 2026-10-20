@@ -1,0 +1,49 @@
+experiment_id: CVR2-CV-007
+experiment_type: ablation
+dataset:
+  id: D1
+  version: '1.0'
+  train_split: train
+  val_split: val
+  test_split: test
+model:
+  id: R3-YOLO-ROBUST-BASE
+  version: '1.0'
+  architecture: YOLOv8n
+  input_size: 640
+  confidence_threshold: 0.25
+  iou_threshold: 0.45
+training:
+  seed: 42
+  epochs: EVAL_ONLY
+  batch_size: 1
+  learning_rate: N/A
+  optimizer: N/A
+  device: cpu
+evaluation:
+  metrics:
+  - precision
+  - recall
+  - mAP50
+  - mAP50_95
+  evaluated_on: test
+  reproducibility_class: REPRODUCIBLE CONFIGURATION
+hypothesis:
+  question: How much does civic defect detection degrade under brightness, blur, and
+    noise corruptions?
+  hypothesis: Low-visibility and severe blur cause higher mAP50 degradation than moderate
+    contrast changes.
+  independent_variable: Corruption type and severity level
+  dependent_variables:
+  - Precision
+  - Recall
+  - F1
+  - Absolute mAP degradation
+  controls:
+  - CVR2-CV-006 frozen weights
+  - D1 held-out test split (18 images)
+  - Operating threshold
+  expected_outcome: Degradation correlates monotonically with corruption severity.
+  actual_outcome: unknown
+  conclusion: unknown
+metadata: {}

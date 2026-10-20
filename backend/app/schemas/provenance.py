@@ -27,6 +27,11 @@ class ClaimType(str, Enum):
     GOVERNMENT_STATUS = "government_status"
     ESCALATION_DECISION = "escalation_decision"
     RESOLUTION_VERIFICATION = "resolution_verification"
+    VERNACULAR_NORMALIZATION = "vernacular_normalization"
+    VISUAL_RESOLUTION_AUDIT = "visual_resolution_audit"
+    OPERATIONAL_DECISION_RECOMMENDATION = "operational_decision_recommendation"
+    FIELD_INSPECTION_AUDIT = "field_inspection_audit"
+
 
 
 class SourceType(str, Enum):

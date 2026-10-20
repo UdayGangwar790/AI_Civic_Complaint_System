@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cvki.local/research/r8/case_schema.json",
+  "title": "R8 Research Civic Case",
+  "description": "Optional, provenance-bearing research case schema. Missing fields remain null with an explicit availability state; schema validity does not assert truth.",
+  "type": "object",
+  "required": [
+    "case_id",
+    "verification_state",
+    "provenance"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "image_video_reference": {
+      "type": ["string", "null"]
+    },
+    "issue_category": {
+      "type": ["string", "null"]
+    },
+    "citizen_description": {
+      "type": ["string", "null"],
+      "description": "USER_REPORTED; not independently verified merely by being recorded."
+    },
+    "timestamp": {
+      "type": ["string", "null"]
+    },
+    "approximate_location": {
+      "type": ["object", "null"],
+      "description": "Generalized location only; do not expose unnecessary precise coordinates."
+    },
+    "road_identity": {
+      "type": ["object", "null"]
+    },
+    "jurisdiction": {
+      "type": ["object", "null"]
+    },
+    "authority_evidence": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object"
+      }
+    },
+    "maintenance_authority": {
+      "type": ["object", "null"]
+    },
+    "builder_contractor_evidence": {
+      "type": ["object", "null"],
+      "description": "Supported only by explicit tender, contract, concession, project document, or official registry evidence."
+    },
+    "weather_context": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object"
+      }
+    },
+    "traffic_context": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object"
+      }
+    },
+    "resolution_follow_up_evidence": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object"
+      }
+    },
+    "source": {
+      "type": ["object", "null"]
+    },
+    "license_consent": {
+      "type": ["object", "null"]
+    },
+    "acquisition_timestamp": {
+      "type": ["string", "null"]
+    },
+    "provenance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_reference", "epistemic_state"],
+        "properties": {
+          "source_reference": {
+            "type": "string"
+          },
+          "epistemic_state": {
+            "enum": [
+              "MODEL_OBSERVATION",
+              "USER_REPORTED",
+              "SYSTEM_DERIVED",
+              "AUTHORITY_REPORTED",
+              "OBSERVATION",
+              "VERIFIED_EVIDENCE",
+              "UNKNOWN"
+            ]
+          },
+          "observed_at": {
+            "type": ["string", "null"]
+          },
+          "verification_state": {
+            "type": ["string", "null"]
+          }
+        }
+      }
+    },
+    "verification_state": {
+      "enum": [
+        "NOT_VERIFIED",
+        "PARTIALLY_VERIFIED",
+        "VERIFIED",
+        "CONFLICT",
+        "UNAVAILABLE"
+      ]
+    },
+    "sha256": {
+      "type": ["string", "null"],
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "availability": {
+      "type": "object",
+      "description": "Explicit presence/absence states for optional modalities."
+    }
+  },
+  "additionalProperties": false
+}

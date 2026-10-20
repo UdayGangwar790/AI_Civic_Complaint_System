@@ -323,12 +323,38 @@ class EvidenceProvenanceEngine:
         now = datetime.now(timezone.utc)
         ref = case.reference_id
 
-        # 1. Detection Evidence
+        # 1. Detection Evidence (Model Observation, not physical ground truth)
+        cv_meta = case.metadata.get("cv_inference") if hasattr(case, "metadata") and case.metadata else {}
+        if not cv_meta and hasattr(case, "metadata") and case.metadata:
+            cv_meta = case.metadata
+
+        from app.services.cv.model_registry import model_registry
+        active_desc = model_registry.get_active_model()
+
+        model_id = cv_meta.get("model_id") or (active_desc.model_id if active_desc else "m1.13-yolov8n")
+        model_ver = cv_meta.get("model_version") or (active_desc.model_version if active_desc else "M1.13-yolov8n")
+        model_hash = cv_meta.get("model_hash") or (active_desc.sha256_hash if active_desc else "602160d4851e0d79c34cb23b828bde474fc4c164eaf1a1c2a884cfb372f4bda3")
+        provider_id = cv_meta.get("provider_id") or (active_desc.provider_id if active_desc else "m113_yolo_provider")
+        task_type = cv_meta.get("task_type") or "object_detection"
+
+        det_metadata = {
+            "confidence": case.issue.confidence,
+            "model_version": model_ver,
+            "model_id": model_id,
+            "model_hash": model_hash,
+            "provider_id": provider_id,
+            "task_type": task_type,
+            "observation_type": "model_observation",
+            "ground_truth": False,
+        }
+        if cv_meta.get("bbox"):
+            det_metadata["bbox"] = cv_meta["bbox"]
+
         detection_rec = self.build_evidence_record(
             claim_type=ClaimType.DETECTION,
             case_reference=ref,
             matched_attribute="issue_category",
-            source="YOLOv8 M1.13 Detection Model",
+            source=f"{model_id} Detection Model",
             source_type=SourceType.CV_MODEL,
             provider="CVKI Computer Vision Subsystem",
             observed_at=case.created_at,
@@ -337,7 +363,7 @@ class EvidenceProvenanceEngine:
             verification_state=VerificationState.VERIFIED,
             explanation=f"Computer vision model detected '{case.issue.class_name}' with {round(case.issue.confidence * 100)}% confidence.",
             claim_value=case.issue.class_name,
-            metadata={"confidence": case.issue.confidence, "model_version": "M1.13-yolov8n"},
+            metadata=det_metadata,
         )
         records.append(detection_rec)
 
@@ -588,6 +614,13 @@ class EvidenceProvenanceEngine:
                     claim_value=rev.note,
                 )
                 records.append(res_rec)
+
+        # Include any individually registered active records for this case from repository
+        existing_active = self.repository.find_by_case(ref)
+        existing_ids = {r.evidence_id for r in records}
+        for ear in existing_active:
+            if ear.evidence_id not in existing_ids:
+                records.append(ear)
 
         # Group by category
         claim_groups: dict[str, list[EvidenceRecord]] = {}

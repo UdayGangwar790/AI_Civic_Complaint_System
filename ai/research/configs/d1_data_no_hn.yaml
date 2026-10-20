@@ -1,0 +1,8 @@
+names:
+  0: open_damaged_manhole
+  1: damaged_missing_road_sign
+  2: road_waterlogging
+path: C:\Users\sushm\OneDrive\Desktop\CIVKI\ai\research\datasets\D1
+test: splits/test.txt
+train: splits/train_no_hn.txt
+val: splits/val.txt

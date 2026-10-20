@@ -1,0 +1,22 @@
+{
+  "experiment_id": "CVR2-CV-001",
+  "research_version": "2.0.0",
+  "experiment_type": "baseline",
+  "created_at": "2026-10-19T14:58:11.777121+00:00",
+  "status": "PLANNED",
+  "owner": "CVKI Research Team",
+  "description": "D1 YOLOv8n Research Baseline trained on clean, leak-free D1 Indian civic dataset",
+  "hypothesis": "Controlled training on D1 will demonstrate positive defect learning with zero cross-split leakage.",
+  "dataset_id": "D1",
+  "dataset_version": "1.0",
+  "model_id": "R2-YOLO-D1-BASE",
+  "model_version": "1.0.0",
+  "config_id": "CFG-CVR2-001",
+  "random_seed": 42,
+  "hardware": "CPU (Multi-core)",
+  "software_environment": "PyTorch 2.14.0+cpu, Ultralytics 8.4.149",
+  "metrics": {},
+  "artifact_paths": [],
+  "parent_experiment": null,
+  "notes": ""
+}

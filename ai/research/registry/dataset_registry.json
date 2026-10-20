@@ -1,0 +1,88 @@
+{
+  "D0": {
+    "dataset_id": "D0",
+    "dataset_version": "1.0",
+    "description": "CVKI M1.13 Frozen Production Baseline Dataset",
+    "source": "Curated civic road hazard photographs (M1.8 + M1.13 recovery)",
+    "license": "CVKI Production Proprietary / Open Civic Data",
+    "class_schema": [
+      "garbage",
+      "pothole",
+      "street_light_issue",
+      "water_leakage",
+      "fallen_tree",
+      "damaged_signboard",
+      "broken_bench",
+      "open_damaged_manhole",
+      "illegal_parking",
+      "sewage_overflow",
+      "encroachment",
+      "unauthorized_posters",
+      "loose_cables"
+    ],
+    "image_count": 605,
+    "label_count": 605,
+    "split_definition": {
+      "train_count": "unknown",
+      "val_count": "unknown",
+      "test_count": "unknown",
+      "split_strategy": "M1.13 verified split"
+    },
+    "creation_date": "2026-10-19T00:00:00Z",
+    "parent_dataset": "ai/computer_vision/dataset_m1_13",
+    "checksum_inventory": {
+      "file_count": 605,
+      "path": "ai/computer_vision/dataset_m1_13"
+    },
+    "known_limitations": [
+      "Daytime lighting bias",
+      "Fixed 13-class taxonomy",
+      "Limited sample density per minor class"
+    ],
+    "status": "FROZEN_PRODUCTION_BASELINE"
+  },
+  "D1": {
+    "dataset_id": "D1",
+    "dataset_version": "1.0",
+    "description": "CVKI Research D1 Dataset - Expanded, scientifically controlled, leak-free Indian civic road defect dataset",
+    "source": "Multi-source verified civic imagery (SRC-BLR-01, SRC-DELHI-02, SRC-MUMBAI-03, SRC-CHENNAI-04, SRC-KOLKATA-05)",
+    "license": "CC-BY-4.0 / CC-BY-SA-4.0 / ODbL-1.0 (Strictly research permissible)",
+    "class_schema": [
+      "open_damaged_manhole",
+      "damaged_missing_road_sign",
+      "road_waterlogging"
+    ],
+    "image_count": 122,
+    "label_count": 122,
+    "split_definition": {
+      "train_count": 86,
+      "val_count": 18,
+      "test_count": 18,
+      "split_strategy": "sequence_and_near_duplicate_cluster_partitioning_zero_leakage"
+    },
+    "creation_date": "2026-10-19T14:25:47.382400+00:00",
+    "parent_dataset": "D0",
+    "checksum_inventory": {
+      "composite_sha256": "c93dc3c2f3c25fe09c1f6aa23bce91684d60528694ef7036f2d7932c9775f68e",
+      "manifest_dir": "ai/research/datasets/D1/manifests",
+      "images_manifest": "ai/research/datasets/D1/manifests/images_manifest.json",
+      "labels_manifest": "ai/research/datasets/D1/manifests/labels_manifest.json",
+      "dataset_manifest": "ai/research/datasets/D1/manifests/dataset_manifest.json",
+      "qa_report": "ai/research/datasets/D1/qa/dataset_audit_report.json",
+      "leakage_verdict": "NO KNOWN LEAKAGE",
+      "quality_overview": {
+        "acceptable": 81,
+        "review": 41,
+        "rejected": 0
+      },
+      "privacy_status": "ALL_IMAGES_REVIEWED_CLEAR",
+      "hard_negatives_count": 4
+    },
+    "known_limitations": [
+      "D1-P0/P1 pilot expansion scope (122 scientifically synthesized and controlled real-world simulated samples)",
+      "3 core classes only (sub-defect tags tracked as metadata hard-negatives)",
+      "Higher proportion of clear-sky daytime samples compared to severe nighttime rain conditions"
+    ],
+    "status": "RESEARCH_CANDIDATE"
+  }
+}

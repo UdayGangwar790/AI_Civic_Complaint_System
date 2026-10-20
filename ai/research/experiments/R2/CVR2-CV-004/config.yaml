@@ -1,0 +1,52 @@
+experiment_id: CVR2-CV-004
+experiment_type: ablation
+dataset:
+  id: D1
+  version: '1.0'
+  train_split: train
+  val_split: val
+  test_split: test
+model:
+  id: R2-YOLO-AUG-ABLATION
+  version: '1.0'
+  architecture: YOLOv8n
+  input_size: 640
+  confidence_threshold: 0.25
+  iou_threshold: 0.45
+training:
+  seed: 42
+  epochs: 3
+  batch_size: 8
+  learning_rate: 0.001
+  optimizer: AdamW
+  device: cpu
+evaluation:
+  metrics:
+  - precision
+  - recall
+  - mAP50
+  - mAP50_95
+  evaluated_on: test
+  reproducibility_class: REPRODUCIBLE CONFIGURATION
+hypothesis:
+  question: How does augmentation intensity impact civic defect detection metrics
+    on D1?
+  hypothesis: Conservative augmentation provides superior localization stability on
+    small objects like damaged signs.
+  independent_variable: Augmentation hyperparameters (fliplr, degrees, scale, mosaic)
+  dependent_variables:
+  - mAP50
+  - mAP50-95
+  - precision
+  - recall
+  controls:
+  - YOLOv8n backbone
+  - seed 42
+  - 3 epochs
+  - batch 8
+  - identical D1 train/test splits
+  expected_outcome: Measurable differences in precision-recall balance between conservative
+    and strong regimes.
+  actual_outcome: unknown
+  conclusion: unknown
+metadata: {}

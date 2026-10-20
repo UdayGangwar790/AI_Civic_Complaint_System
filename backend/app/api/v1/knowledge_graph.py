@@ -3,6 +3,8 @@ from typing import Optional
 from urllib.parse import unquote
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 
+from app.core.config import settings
+from app.core.rate_limit import rate_limit_dependency
 from app.api.deps import AuthenticatedUser, get_current_user
 from app.models.roles import UserRole
 from app.schemas.knowledge_graph import (
@@ -16,6 +18,13 @@ from app.services.knowledge_graph import get_knowledge_graph_service
 logger = logging.getLogger("cvki.api.knowledge_graph")
 
 router = APIRouter()
+_graph_rate_limit = Depends(
+    rate_limit_dependency(
+        scope="knowledge_graph",
+        limit=settings.EXPENSIVE_SEARCH_RATE_LIMIT_REQUESTS,
+        window_seconds=settings.EXPENSIVE_SEARCH_RATE_LIMIT_WINDOW_SECONDS,
+    )
+)
 
 
 def _sanitize_subgraph_for_citizen(subgraph: KnowledgeGraphSubgraph) -> KnowledgeGraphSubgraph:
@@ -66,6 +75,7 @@ def _sanitize_subgraph_for_citizen(subgraph: KnowledgeGraphSubgraph) -> Knowledg
     "/cases/{reference_id}",
     response_model=KnowledgeGraphSubgraph,
     summary="Get bounded civic knowledge graph for a complaint case",
+    dependencies=[_graph_rate_limit],
 )
 async def get_case_knowledge_graph(
     reference_id: str,

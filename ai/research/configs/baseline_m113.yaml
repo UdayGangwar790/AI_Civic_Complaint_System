@@ -1,0 +1,53 @@
+experiment_id: CVR2-CV-001
+experiment_type: baseline
+dataset:
+  id: D0
+  version: "1.0"
+  train_split: train
+  val_split: val
+  test_split: test
+model:
+  id: M1.13
+  version: 1.13.0
+  architecture: YOLOv8n
+  input_size: 640
+  confidence_threshold: 0.25
+  iou_threshold: 0.45
+training:
+  seed: 42
+  epochs: 100
+  batch_size: 16
+  learning_rate: unknown
+  optimizer: unknown
+  device: unknown
+evaluation:
+  metrics:
+  - precision
+  - recall
+  - mAP50
+  - mAP50_95
+  evaluated_on: M1.8 held-out test split
+  reproducibility_class: REPRODUCIBLE CONFIGURATION
+hypothesis:
+  question: What is the baseline hazard detection performance of the frozen M1.13
+    YOLOv8n model on the curated 605-sample civic dataset?
+  hypothesis: M1.13 achieves precision >= 0.80 and mAP50 >= 0.60 on the primary held-out
+    test split due to strict data curation in M1.13.
+  independent_variable: data curation protocol (M1.8 -> M1.11 -> M1.13)
+  dependent_variables:
+  - precision
+  - recall
+  - mAP50
+  - mAP50_95
+  controls:
+  - 13 civic classes
+  - 640x640 resolution
+  - confidence 0.25
+  - IoU 0.45
+  expected_outcome: Precision restored to > 0.80 following elimination of label noise
+    observed in M1.11.
+  actual_outcome: Precision = 0.8380, Recall = 0.6120, mAP50 = 0.6540 on M1.8 held-out.
+  conclusion: Curation recovery validated; M1.13 designated as permanent frozen v1 baseline.
+metadata:
+  baseline_reference: true
+  source_milestone: M1.13

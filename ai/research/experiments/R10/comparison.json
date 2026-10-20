@@ -1,0 +1,30 @@
+{
+  "study_id": "CVKI-R10",
+  "comparison_scope": "Synthesis of existing research records; no new uncontrolled experiments.",
+  "production_baseline": {
+    "model_id": "M1.13",
+    "model_sha256": "602160d4851e0d79c34cb23b828bde474fc4c164eaf1a1c2a884cfb372f4bda3",
+    "dataset_id": "D0",
+    "dataset_file_count": 605
+  },
+  "research_baseline": {
+    "checkpoint_id": "R3/CVR2-CV-006",
+    "checkpoint_sha256": "72c57f6f052321abfe798edbef862848a2441a3b17fa16997376db93711bbc28",
+    "primary_confidence": 0.1,
+    "secondary_confidence": 0.25,
+    "iou": 0.5
+  },
+  "synthesis": {
+    "internal_cv_performance": "PARTIALLY_VALIDATED_ON_SMALL_D1_TEST_SPLIT",
+    "controlled_robustness": "PARTIALLY_VALIDATED_WITHIN_SYNTHETIC_R5_R6_CONDITIONS",
+    "independent_cross_dataset_generalization": "NOT_EVALUATED_D2_UNAVAILABLE",
+    "multimodal_civic_evaluation": "NOT_EVALUATED_ZERO_R8_CASES",
+    "overall": "INSUFFICIENT_EVIDENCE"
+  },
+  "non_comparability": [
+    "R2 historical metrics use different inference confidence protocols; R2.1 documents the mismatch.",
+    "R3/R5/R6 share the D1 test source images; transformed or repeated frames are not independent samples.",
+    "M1.13 historical references and D1 results use differing taxonomies/datasets.",
+    "No D2 or independent civic case dataset supports cross-dataset or multimodal comparison."
+  ]
+}

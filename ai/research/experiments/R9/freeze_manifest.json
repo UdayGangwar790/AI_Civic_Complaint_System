@@ -1,0 +1,16 @@
+{
+  "study_id": "CVKI-R9",
+  "freeze_status": "FROZEN_RESEARCH_RECORD",
+  "r8_freeze_manifest_sha256": "ab165c7e5d62a001103c160869c1879c7a7725c6c8f22529c991783ab494a249",
+  "algorithm": "SHA-256",
+  "files": {
+    "README.md": "61238ad29edd3c973ac236ee08f927d5761a64a30cb732e317c494a8c710d8ca",
+    "case_results.json": "bdf56f17ede60e7b7de9f20d690650e8c8892e6d36ebe6455e13bf1d7aff88b8",
+    "comparison.json": "37eaf8327a263273b059e9cee0e3bb9431aa328f0d69a070a761373ba961977f",
+    "config.yaml": "eb0019aaa7a486b2ee90aacb6730074a68f65f86d6449e69ebbe68ce8430dcf8",
+    "experiment.json": "48023ff926f37b3146e46f1b53ed316e5e9bc28c85c217729dbc591b4d8dd8a3",
+    "metrics.json": "592c5f6ecab8e86a6b14cfa38c39b7d8cfbf757a95b9ba94962740711679393b",
+    "provenance.json": "2a5722d56c980846df88a658a99a9d14e53bcbb48f71fc7c7621299f7fc9eb34"
+  },
+  "note": "R9 records are immutable inputs to R10. This manifest does not hash itself."
+}

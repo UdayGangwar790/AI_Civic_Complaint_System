@@ -130,75 +130,57 @@ class YOLOModelService:
 
     def predict(self, image: Image.Image) -> list[dict[str, Any]]:
         """Run inference with the model loaded during application startup."""
-        model = self.get_model()
-        with self._inference_lock:
-            results = model(
-                image,
-                conf=settings.YOLO_CONFIDENCE_THRESHOLD,
-                device=settings.YOLO_DEVICE,
-                verbose=False,
-            )
-        detections: list[dict[str, Any]] = []
-        image_width, image_height = image.size
-
-        for result in results:
-            if result.boxes is None:
-                continue
-            boxes = result.boxes.xyxy.cpu().tolist()
-            class_ids = result.boxes.cls.cpu().tolist()
-            confidences = result.boxes.conf.cpu().tolist()
-            for coordinates, class_id, confidence in zip(boxes, class_ids, confidences):
-                confidence = float(confidence)
-                if confidence < settings.YOLO_CONFIDENCE_THRESHOLD:
-                    continue
-                x1, y1, x2, y2 = coordinates
-                detections.append(
-                    {
-                        "class_id": int(class_id),
-                        "class_name": self._class_names.get(int(class_id), "unknown"),
-                        "confidence": confidence,
-                        "bbox": {
-                            "x1": max(0, min(int(round(x1)), image_width)),
-                            "y1": max(0, min(int(round(y1)), image_height)),
-                            "x2": max(0, min(int(round(x2)), image_width)),
-                            "y2": max(0, min(int(round(y2)), image_height)),
-                        },
-                    }
+        if not self._is_loaded:
+            raise ModelUnavailableError("YOLO model is not loaded.")
+        from app.services.cv.runtime import cv_runtime_service
+        try:
+            return cv_runtime_service.predict_legacy_dict(image)
+        except Exception:
+            model = self.get_model()
+            with self._inference_lock:
+                results = model(
+                    image,
+                    conf=settings.YOLO_CONFIDENCE_THRESHOLD,
+                    device=settings.YOLO_DEVICE,
+                    verbose=False,
                 )
-        return detections
+            detections: list[dict[str, Any]] = []
+            image_width, image_height = image.size
+
+            for result in results:
+                if result.boxes is None:
+                    continue
+                boxes = result.boxes.xyxy.cpu().tolist()
+                class_ids = result.boxes.cls.cpu().tolist()
+                confidences = result.boxes.conf.cpu().tolist()
+                for coordinates, class_id, confidence in zip(boxes, class_ids, confidences):
+                    confidence = float(confidence)
+                    if confidence < settings.YOLO_CONFIDENCE_THRESHOLD:
+                        continue
+                    x1, y1, x2, y2 = coordinates
+                    detections.append(
+                        {
+                            "class_id": int(class_id),
+                            "class_name": self._class_names.get(int(class_id), "unknown"),
+                            "confidence": confidence,
+                            "bbox": {
+                                "x1": max(0, min(int(round(x1)), image_width)),
+                                "y1": max(0, min(int(round(y1)), image_height)),
+                                "x2": max(0, min(int(round(x2)), image_width)),
+                                "y2": max(0, min(int(round(y2)), image_height)),
+                            },
+                        }
+                    )
+            return detections
 
     def annotate_image(
         self,
         image: Image.Image,
         detections: list[dict[str, Any]],
     ) -> Image.Image:
-        """Draw the supplied detections on an in-memory copy of the image."""
-        annotated = image.copy().convert("RGB")
-        draw = ImageDraw.Draw(annotated)
-        image_width, image_height = annotated.size
-
-        for detection in detections:
-            box = detection["bbox"]
-            x1 = max(0, min(int(box["x1"]), image_width))
-            y1 = max(0, min(int(box["y1"]), image_height))
-            x2 = max(0, min(int(box["x2"]), image_width))
-            y2 = max(0, min(int(box["y2"]), image_height))
-            if x1 >= x2 or y1 >= y2:
-                continue
-
-            label = f'{detection["class_name"]} {detection["confidence"]:.2f}'
-            draw.rectangle((x1, y1, x2, y2), outline=(255, 64, 64), width=3)
-            text_left, text_top, text_right, text_bottom = draw.textbbox((0, 0), label)
-            text_width = text_right - text_left
-            text_height = text_bottom - text_top
-            label_y = y1 - text_height - 4 if y1 >= text_height + 4 else y1
-            draw.rectangle(
-                (x1, label_y, x1 + text_width + 6, label_y + text_height + 4),
-                fill=(255, 64, 64),
-            )
-            draw.text((x1 + 3, label_y + 2), label, fill=(255, 255, 255))
-
-        return annotated
+        """Draw the supplied detections on an in-memory copy of the image using decoupled renderer."""
+        from app.services.cv.renderer import render_detections
+        return render_detections(image, detections)
 
 
 # Singleton service instance

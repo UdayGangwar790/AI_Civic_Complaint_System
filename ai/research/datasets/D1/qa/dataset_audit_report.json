@@ -1,0 +1,49 @@
+{
+  "dataset_name": "D1",
+  "dataset_path": "C:\\Users\\sushm\\OneDrive\\Desktop\\CIVKI\\ai\\research\\datasets\\D1",
+  "total_images": 122,
+  "total_annotations": 90,
+  "class_distribution": {
+    "0_open_damaged_manhole": 30,
+    "1_damaged_missing_road_sign": 30,
+    "2_road_waterlogging": 30
+  },
+  "class_balance_status": "BALANCED",
+  "hard_negatives_count": 4,
+  "source_registry_count": 1,
+  "file_validation": {
+    "total_files": 122,
+    "valid_files": 122,
+    "corrupted_or_invalid": 0
+  },
+  "duplicates": {
+    "exact_duplicate_groups": 0,
+    "near_duplicate_pairs": 5
+  },
+  "leakage_audit": {
+    "total_images": 122,
+    "train_count": 86,
+    "val_count": 18,
+    "test_count": 18,
+    "exact_duplicates_across_splits": [],
+    "near_duplicates_across_splits": [],
+    "verdict": "NO KNOWN LEAKAGE"
+  },
+  "quality_overview": {
+    "acceptable": 81,
+    "review": 41,
+    "rejected": 0
+  },
+  "privacy_overview": {
+    "total_reviewed": 122,
+    "clear": 122,
+    "review_required": 0,
+    "redaction_required": 0
+  },
+  "splits_breakdown": {
+    "train": 86,
+    "val": 18,
+    "test": 18
+  },
+  "composite_verdict": "PASSED"
+}

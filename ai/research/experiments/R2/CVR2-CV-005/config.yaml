@@ -1,0 +1,47 @@
+experiment_id: CVR2-CV-005
+experiment_type: ablation
+dataset:
+  id: D1
+  version: '1.0'
+  train_split: train
+  val_split: val
+  test_split: test
+model:
+  id: R2-YOLO-ERROR-DIAG
+  version: '1.0'
+  architecture: YOLOv8n
+  input_size: 640
+  confidence_threshold: 0.25
+  iou_threshold: 0.45
+training:
+  seed: 42
+  epochs: EVAL_ONLY
+  batch_size: 1
+  learning_rate: N/A
+  optimizer: N/A
+  device: cpu
+evaluation:
+  metrics:
+  - precision
+  - recall
+  - mAP50
+  - mAP50_95
+  evaluated_on: test
+  reproducibility_class: REPRODUCIBLE CONFIGURATION
+hypothesis:
+  question: What specific failure modes account for prediction inaccuracies on the
+    held-out D1 test split?
+  hypothesis: Small object distance and low-visibility weather variations constitute
+    the primary residual error classes.
+  independent_variable: Evaluation error taxonomy
+  dependent_variables:
+  - Error counts per category
+  - Percentage of total errors
+  controls:
+  - D1 held-out test set (18 images)
+  - Fixed confidence threshold 0.25
+  expected_outcome: Small object and low-visibility conditions comprise over 40% of
+    detection misses.
+  actual_outcome: unknown
+  conclusion: unknown
+metadata: {}

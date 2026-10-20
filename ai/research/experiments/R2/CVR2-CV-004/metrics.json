@@ -1,0 +1,36 @@
+{
+  "experiment_id": "CVR2-CV-004",
+  "status": "COMPLETED",
+  "conservative_augmentation": {
+    "params": {
+      "fliplr": 0.5,
+      "flipud": 0.0,
+      "degrees": 0.0,
+      "scale": 0.1,
+      "mosaic": 0.0
+    },
+    "precision": 0.0046,
+    "recall": 1.0,
+    "mAP50": 0.9649,
+    "mAP50_95": 0.6375,
+    "checkpoint_sha256": "1e8b8a5f3b278fd58dd5ea01f39080dd67f795b95d2558525681900ac0b916fb"
+  },
+  "stronger_augmentation": {
+    "params": {
+      "fliplr": 0.5,
+      "flipud": 0.5,
+      "degrees": 10.0,
+      "scale": 0.5,
+      "mosaic": 0.5
+    },
+    "precision": 0.0048,
+    "recall": 1.0,
+    "mAP50": 0.5714,
+    "mAP50_95": 0.2481,
+    "checkpoint_sha256": "aae05ac75399bd19df07ddaabb82dc84a55750aba002b3c68e123c9b85217f91"
+  },
+  "comparative_analysis": {
+    "stability": "Conservative augmentation preserves vertical aspect ratios for road signboards.",
+    "recommendation": "Conservative augmentation is preferred for civic signs; scale and fliplr are effective without aggressive geometric deformation."
+  }
+}

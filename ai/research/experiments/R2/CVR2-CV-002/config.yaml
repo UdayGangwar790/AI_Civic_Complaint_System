@@ -1,0 +1,48 @@
+experiment_id: CVR2-CV-002
+experiment_type: baseline
+dataset:
+  id: D0
+  version: '1.0'
+  train_split: train
+  val_split: val
+  test_split: test
+model:
+  id: M1.13
+  version: '1.0'
+  architecture: YOLOv8n
+  input_size: 640
+  confidence_threshold: 0.25
+  iou_threshold: 0.45
+training:
+  seed: 42
+  epochs: FROZEN
+  batch_size: FROZEN
+  learning_rate: FROZEN
+  optimizer: FROZEN
+  device: CPU
+evaluation:
+  metrics:
+  - precision
+  - recall
+  - mAP50
+  - mAP50_95
+  evaluated_on: test
+  reproducibility_class: FROZEN REFERENCE
+hypothesis:
+  question: What is the baseline performance of M1.13 on its historical held-out benchmarks
+    vs D1 cross-dataset evaluation?
+  hypothesis: M1.13 exhibits strong historical domain performance on D0 splits and
+    serves as frozen reference.
+  independent_variable: Frozen model weights
+  dependent_variables:
+  - mAP50
+  - mAP50-95
+  - precision
+  - recall
+  controls:
+  - Exact M1.13 weights SHA
+  - Unchanged D0 files
+  expected_outcome: Exact match with verified historical metrics.
+  actual_outcome: unknown
+  conclusion: unknown
+metadata: {}

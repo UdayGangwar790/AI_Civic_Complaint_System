@@ -483,3 +483,15 @@ async def get_security_overview_endpoint(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
             detail="Audit service is unavailable.",
         )
+
+
+@router.get(
+    "/metrics",
+    summary="Get operational metrics and latency percentiles (Admin only)",
+)
+async def get_operational_metrics_endpoint(
+    current_user: AuthenticatedUser = Depends(require_role(UserRole.ADMIN)),
+) -> dict:
+    from app.core.observability import get_metrics_collector
+    return get_metrics_collector().get_metrics_summary()
+

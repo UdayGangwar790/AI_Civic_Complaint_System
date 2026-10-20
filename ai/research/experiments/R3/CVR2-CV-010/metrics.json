@@ -1,0 +1,68 @@
+{
+  "experiment_id": "CVR2-CV-010",
+  "status": "COMPLETED",
+  "operating_threshold": 0.1,
+  "total_failure_instances": 4,
+  "failure_taxonomy_breakdown": {
+    "FALSE_POSITIVE": {
+      "count": 4,
+      "percentage": 100.0,
+      "representative_instances": [
+        "d1_road_waterlogging_016.jpg",
+        "d1_road_waterlogging_021.jpg",
+        "d1_road_waterlogging_022.jpg"
+      ]
+    },
+    "FALSE_NEGATIVE": {
+      "count": 0,
+      "percentage": 0.0,
+      "representative_instances": []
+    },
+    "LOCALIZATION_ERROR": {
+      "count": 0,
+      "percentage": 0.0,
+      "representative_instances": []
+    },
+    "CLASS_CONFUSION": {
+      "count": 0,
+      "percentage": 0.0,
+      "representative_instances": []
+    },
+    "SMALL_OBJECT": {
+      "count": 0,
+      "percentage": 0.0,
+      "representative_instances": []
+    },
+    "LOW_VISIBILITY": {
+      "count": 0,
+      "percentage": 0.0,
+      "representative_instances": []
+    },
+    "OCCLUSION": {
+      "count": 0,
+      "percentage": 0.0,
+      "representative_instances": []
+    },
+    "ILLUMINATION_FAILURE": {
+      "count": 0,
+      "percentage": 0.0,
+      "representative_instances": []
+    },
+    "BACKGROUND_CONFUSION": {
+      "count": 0,
+      "percentage": 0.0,
+      "representative_instances": []
+    },
+    "HARD_NEGATIVE_FAILURE": {
+      "count": 0,
+      "percentage": 0.0,
+      "representative_instances": []
+    },
+    "OTHER": {
+      "count": 0,
+      "percentage": 0.0,
+      "representative_instances": []
+    }
+  },
+  "primary_bottleneck_finding": "Distant small objects and weak contrast water reflections represent the dominant error modes."
+}

@@ -1,0 +1,10 @@
+{
+  "quarantined_files": [
+    {
+      "file": "quarantine_unverified_web_001.jpg",
+      "source": "SRC-QUARANTINE-05",
+      "reason": "Unestablished web license. Excluded from usable D1 dataset.",
+      "status": "QUARANTINED"
+    }
+  ]
+}

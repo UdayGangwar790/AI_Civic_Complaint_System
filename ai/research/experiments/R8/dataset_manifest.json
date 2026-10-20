@@ -1,0 +1,26 @@
+{
+  "dataset_id": "R8_civic_cases",
+  "version": "1.0",
+  "status": "CASE_DATASET_NOT_AVAILABLE",
+  "case_count": 0,
+  "records": [],
+  "case_schema": "case_schema.json",
+  "source_inventory": "source_inventory.json",
+  "source_manifest_sha256": "ef0091d3032790df4d88d5e7ddad6946ce1794e998ff4c5ec3bd8003298e985d",
+  "dataset_independence_status": "NOT_ESTABLISHED_FOR_CIVIC_CASES",
+  "license_status": "NO_CASE_SOURCE_ADMITTED",
+  "modality_counts": {
+    "CV_OBSERVATION": 0,
+    "USER_REPORTED": 0,
+    "GPS_LOCATION": 0,
+    "ROAD_JURISDICTION": 0,
+    "AUTHORITY": 0,
+    "WEATHER_RAINFALL": 0,
+    "TRAFFIC": 0,
+    "FOLLOW_UP_RESOLUTION": 0
+  },
+  "checksum": {
+    "algorithm": "SHA-256",
+    "manifest_file_sha256": "SELF_HASH_RECORDED_IN_freeze_manifest.json"
+  }
+}

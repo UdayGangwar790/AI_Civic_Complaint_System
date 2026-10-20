@@ -73,6 +73,7 @@ class TestSecurityHardening(unittest.TestCase):
             ENVIRONMENT="production",
             JWT_SECRET=secret,
             CORS_ALLOWED_ORIGINS="https://cvki.example.gov",
+            MONGODB_URI="mongodb://prod-user:prod-pass@prod-cluster.internal:27017/cvki_prod?ssl=true",
         )
         self.assertTrue(config.auth_cookie_secure)
         self.assertEqual(config.COOKIE_SAMESITE, "lax")

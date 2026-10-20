@@ -130,7 +130,7 @@ class Settings(BaseSettings):
     RAIN_MODERATE_THRESHOLD_MM: float = Field(default=10.0, ge=0.5)
     RAIN_LIGHT_THRESHOLD_MM: float = Field(default=1.0, ge=0.1)
     TRAFFIC_PROVIDER_URL: str = ""
-    TRAFFIC_API_KEY: str = ""
+    TRAFFIC_API_KEY: str = Field(default="", repr=False)
     EXTERNAL_DATA_MAX_WINDOW_HOURS: int = Field(default=168, ge=1)
     EXTERNAL_DATA_MAX_RADIUS_METERS: float = Field(default=5000.0, ge=100.0)
 
@@ -149,8 +149,8 @@ class Settings(BaseSettings):
     # M7.2 Government Portal / API Adapter Settings
     CPGRAMS_ENV: str = Field(default="unconfigured", description="CPGRAMS environment: unconfigured, staging, or production")
     CPGRAMS_BASE_URL: str = Field(default="https://pgportal.gov.in/api/v1", description="Official CPGRAMS Web API Base URL")
-    CPGRAMS_API_KEY: str = Field(default="", description="Secret API key for CPGRAMS dispatch")
-    CPGRAMS_CLIENT_ID: str = Field(default="", description="Registered client ID for CPGRAMS")
+    CPGRAMS_API_KEY: str = Field(default="", description="Secret API key for CPGRAMS dispatch", repr=False)
+    CPGRAMS_CLIENT_ID: str = Field(default="", description="Registered client ID for CPGRAMS", repr=False)
     CPGRAMS_AGENCY_CODE: str = Field(default="MORTH", description="Department/Agency code in CPGRAMS")
     CPGRAMS_ENABLED: bool = Field(default=False, description="Whether CPGRAMS integration is enabled")
     NHAI_PORTAL_ENABLED: bool = Field(default=False, description="NHAI portal integration toggle (unverified API)")
@@ -187,6 +187,15 @@ class Settings(BaseSettings):
                 raise ValueError("Production CORS_ALLOWED_ORIGINS entries must use HTTPS.")
             if self.COOKIE_SECURE is False:
                 raise ValueError("COOKIE_SECURE cannot be disabled in production.")
+            if self.MONGODB_URI.strip() in {"mongodb://localhost:27017", "mongodb://127.0.0.1:27017"}:
+                raise ValueError("Production requires an explicitly configured, secure MONGODB_URI.")
+            if self.CPGRAMS_ENABLED:
+                if not self.CPGRAMS_API_KEY.strip() or any(p in self.CPGRAMS_API_KEY.lower() for p in ("placeholder", "change-me", "your_", "replace-with")):
+                    raise ValueError("CPGRAMS_ENABLED in production requires a valid CPGRAMS_API_KEY.")
+                if not self.CPGRAMS_CLIENT_ID.strip():
+                    raise ValueError("CPGRAMS_ENABLED in production requires a valid CPGRAMS_CLIENT_ID.")
+                if not self.CPGRAMS_BASE_URL.startswith("https://"):
+                    raise ValueError("CPGRAMS_BASE_URL in production must use HTTPS.")
 
         if same_site == "none" and not self.auth_cookie_secure:
             raise ValueError("COOKIE_SAMESITE=none requires COOKIE_SECURE=true.")

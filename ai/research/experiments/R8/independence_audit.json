@@ -1,0 +1,59 @@
+{
+  "study_id": "CVKI-R8",
+  "status": "PARTIALLY_VALIDATED",
+  "checks": {
+    "d1_internal_exact_duplicates": {
+      "status": "PASS_REPORTED",
+      "count": 0,
+      "source": "ai/research/datasets/D1/qa/dataset_audit_report.json"
+    },
+    "d1_internal_near_duplicate_pairs": {
+      "status": "PASS_WITHIN_DATASET_REPORTED",
+      "count": 5,
+      "source": "ai/research/datasets/D1/qa/dataset_audit_report.json"
+    },
+    "d1_cross_split_exact_duplicates": {
+      "status": "PASS_REPORTED",
+      "count": 0,
+      "source": "ai/research/datasets/D1/qa/leakage_report.json"
+    },
+    "d1_cross_split_near_duplicates": {
+      "status": "PASS_REPORTED",
+      "count": 0,
+      "source": "ai/research/datasets/D1/qa/leakage_report.json"
+    },
+    "d1_sequence_group_cross_split": {
+      "status": "PASS_RECOMPUTED",
+      "sequence_groups": 41,
+      "groups_spanning_splits": 0
+    },
+    "d1_to_d0_exact_image_overlap": {
+      "status": "PASS_RECOMPUTED",
+      "d1_images": 122,
+      "d0_images": 300,
+      "matching_sha256": 0
+    },
+    "d1_to_d0_near_image_overlap": {
+      "status": "PASS_RECOMPUTED",
+      "method": "64-bit dHash; Hamming distance <= 4",
+      "matching_pairs": 0
+    },
+    "d1_source_independence": {
+      "status": "INCONCLUSIVE",
+      "reason": "Asset source claims, licensing, and real/simulated lineage cannot be independently reconciled; see R4 dataset-construction audit."
+    },
+    "r5_source_overlap": {
+      "status": "KNOWN_DERIVATIVE",
+      "reason": "R5 generated controlled perturbations from D1 test images; variants are not independent real-world cases."
+    },
+    "r6_source_overlap": {
+      "status": "KNOWN_DERIVATIVE",
+      "reason": "R6 generated synthetic temporal frames from D1 test still images; sequences are not recorded independent video."
+    },
+    "r7_case_overlap": {
+      "status": "NO_CASES",
+      "reason": "R7 contains zero multimodal civic cases."
+    }
+  },
+  "overall_independence": "NOT_ESTABLISHED_FOR_CIVIC_CASES"
+}

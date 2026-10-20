@@ -1,0 +1,3032 @@
+{
+  "dataset_path": "ai/computer_vision/dataset_m1_13",
+  "file_count": 605,
+  "inventory_sha256": "dfa866f3010110e463d3bc9a6dc50732ef88114473724ebfe157966c98edbf20",
+  "files": [
+    {
+      "relative_path": "data.yaml",
+      "file_size": 317,
+      "sha256": "31bb30f4b52d1ae23b10c76e7b06ffbc8373381d243284d8ea799a2efbdc3284"
+    },
+    {
+      "relative_path": "dataset_manifest.json",
+      "file_size": 291949,
+      "sha256": "a2336d552abd61d7430de1721dd991ad14d8c1e8fe43603c539f005e5ed29ac3"
+    },
+    {
+      "relative_path": "images/test/manhole_img-14.jpg",
+      "file_size": 144864,
+      "sha256": "73a9c8fda2eb1a36174fcda4b4092c56ab737944e83b48cebb568590c5c9f28e"
+    },
+    {
+      "relative_path": "images/test/manhole_img-21.jpg",
+      "file_size": 137278,
+      "sha256": "5f0170cb3ffe8d51a686843adccf44573e4b981ddcaf9e15d6fd8de190a7a2d8"
+    },
+    {
+      "relative_path": "images/test/manhole_img-33.jpg",
+      "file_size": 72404,
+      "sha256": "ddfd46513821d628a9dc3a985e615bb017a2b017978920cbe5ad52fcbbca65cb"
+    },
+    {
+      "relative_path": "images/test/manhole_img-38.jpg",
+      "file_size": 102905,
+      "sha256": "e661f01aed25af02fdf09676444368a080660fd1a9a0762237077c1d24568261"
+    },
+    {
+      "relative_path": "images/test/manhole_img-57.jpg",
+      "file_size": 146031,
+      "sha256": "27921685bcefc84f951f6cc11fc707802fd5deae6701cc53a55878e6b06d1b94"
+    },
+    {
+      "relative_path": "images/test/manhole_img-71.jpg",
+      "file_size": 100782,
+      "sha256": "3b3ce82788f98d3042800128a155dbe0aa7bc7d7593d07d8a2f3afe2f93d8e2d"
+    },
+    {
+      "relative_path": "images/test/manhole_img-82.jpg",
+      "file_size": 100973,
+      "sha256": "7fab98fc1a4dd43b772b3abf3b4feaa9e56f98037c86c16d109e3208d5540aa8"
+    },
+    {
+      "relative_path": "images/test/manhole_img-88.jpg",
+      "file_size": 102458,
+      "sha256": "19b598ab9a5850d5a753df995cba6984c2af3b8d5de603dfc597d51558d92bb8"
+    },
+    {
+      "relative_path": "images/test/manhole_img-92.jpg",
+      "file_size": 119212,
+      "sha256": "d771525aa478a846fe63c7118e6177ae19f06e6322bbdf5ad6ea38118dfc888a"
+    },
+    {
+      "relative_path": "images/test/manhole_img-94.jpg",
+      "file_size": 91835,
+      "sha256": "32b58ace993e7ab4635b815c154821d3ae0fa3e1388f0c26e3fb475fb75a7f7f"
+    },
+    {
+      "relative_path": "images/test/roadsign_IMG_8100_jpg.rf.efaa0d300ce6c59199fb9f6203b98715.jpg",
+      "file_size": 25672,
+      "sha256": "17619ab0f06a3c9cc68cf1df78cf9fa2981936298fa432c7fca5ce2cd05084ff"
+    },
+    {
+      "relative_path": "images/test/roadsign_IMG_8105_jpg.rf.7d4a4ebca73d1b48e99a5255dbbdd24b.jpg",
+      "file_size": 31346,
+      "sha256": "9a70ab93459f269bb740e2e77999e1c1d2790d5d44c50144964a0b040bf0f29c"
+    },
+    {
+      "relative_path": "images/test/roadsign_IMG_8177_jpg.rf.c0514d0b597f4c360f8b9359ac662be9.jpg",
+      "file_size": 50530,
+      "sha256": "1e69e9cbbdf8bb4d69312f59d8ae1aaf3f676b07c3c74fc3b29c55355c0298de"
+    },
+    {
+      "relative_path": "images/test/roadsign_IMG_8364_jpg.rf.9cb8dcfa2b6c97fc3a4d5db1899b9331.jpg",
+      "file_size": 25443,
+      "sha256": "44f07ece43533d1ad77e75bbfbb0dc88e1fa1bc5b202c9e2fe6c793849b44e62"
+    },
+    {
+      "relative_path": "images/test/roadsign_IMG_8385_jpg.rf.bdf28ca3ab2a803ca457af9bd1142571.jpg",
+      "file_size": 48813,
+      "sha256": "e06c0eb2043dd1cfdd0ef871585a14424397ceae7ab23c4391745d27db634cb8"
+    },
+    {
+      "relative_path": "images/test/roadsign_IMG_8666_jpg.rf.e79ba09cf8bbb4ca1d2e1e223e5244be.jpg",
+      "file_size": 31349,
+      "sha256": "9ac24aa690422ac75c0e70ad889646c5f788473d09b176d6820cf5168ea3680d"
+    },
+    {
+      "relative_path": "images/test/roadsign_IMG_8678_jpg.rf.bb0bc3d760e66d124ab6970b838a7b11.jpg",
+      "file_size": 47903,
+      "sha256": "228fc7fc5172de914ed37616808634e51567968dac8f606b9a44224986aba702"
+    },
+    {
+      "relative_path": "images/test/roadsign_IMG_8695_jpg.rf.6aa4dafe486b4048103989e84791eb39.jpg",
+      "file_size": 30766,
+      "sha256": "5a8a9c68d908281264956686164e659351864dba10a71e0675fffa11db6840e9"
+    },
+    {
+      "relative_path": "images/test/roadsign_IMG_8770_jpg.rf.ce11afa1ea33a0a7ced58feed7416701.jpg",
+      "file_size": 52487,
+      "sha256": "0637352598a1a9abb9c6522b3c5af9a6587116c6d069cb1489247b827453027d"
+    },
+    {
+      "relative_path": "images/test/roadsign_IMG_8955_jpg.rf.a7a0ee13ea9a42ce421604641ed8063d.jpg",
+      "file_size": 60054,
+      "sha256": "d433f7698b56ce4df0bcb5b096fb4274601e8d0d26223faf2486753bcbc6acc0"
+    },
+    {
+      "relative_path": "images/test/waterlogging_improved_waterloggingt-25-_jpg.rf.9b72dfc19a0a62cc28ccc7e9cb169b2c.jpg",
+      "file_size": 49745,
+      "sha256": "d12706706c83ed9265576c48ad54b8dd74d616fe38e16c95d58ec95a3025c28c"
+    },
+    {
+      "relative_path": "images/test/waterlogging_waterloggingt-11-_jpg.rf.c46d95b368505ce2e2b4d56d0fb6101f.jpg",
+      "file_size": 38343,
+      "sha256": "eaec31577e0fb51570ab2e6f2fae8810302d5bfa96c8f6d2a3ae5bec58de30d6"
+    },
+    {
+      "relative_path": "images/test/waterlogging_waterloggingt-11-_jpg.rf.d3926ae9649b48019ad0de93247b8776.jpg",
+      "file_size": 38945,
+      "sha256": "aa3d5d4f4f102c6ce78d692a9b15847d70ad79ea4fa86df253a6f65cd5b308b5"
+    },
+    {
+      "relative_path": "images/test/waterlogging_waterloggingt-110-_jpg.rf.e64ab83a5986ee642135179a119dde32.jpg",
+      "file_size": 43459,
+      "sha256": "90a0a3308875a2b120e09a0a3a3fbcc1cfcc4ba6aa3a8ad2a46e660da417b27b"
+    },
+    {
+      "relative_path": "images/test/waterlogging_waterloggingt-114-_jpg.rf.59969ea013a1a3687220d18eb0c84d06.jpg",
+      "file_size": 45487,
+      "sha256": "46e3758792c12bbf94bc1f6fbd282448296b035e8199fa0405168df0b3fc854b"
+    },
+    {
+      "relative_path": "images/test/waterlogging_waterloggingt-114-_jpg.rf.5eda7421696a9f024c32d928f3a39eab.jpg",
+      "file_size": 26165,
+      "sha256": "45c2ac94c9c2ebf711f71ad15bef96f916124d2701553d1e64517b2e530bc5e6"
+    },
+    {
+      "relative_path": "images/test/waterlogging_waterloggingt-114-_jpg.rf.a77c20c66646123b6ed8f2712dc711a2.jpg",
+      "file_size": 31363,
+      "sha256": "d7c5950926e6f9ea44c155632e19303656a851d0389c5119e32cc2a7f06f405d"
+    },
+    {
+      "relative_path": "images/test/waterlogging_waterloggingt-127-_jpg.rf.0e8185f58b2e06d71649cff3a82df08c.jpg",
+      "file_size": 35846,
+      "sha256": "31ba99a098585513aef9f0f2ec8baea718e1a00604da484e2bbcfcda80a292ff"
+    },
+    {
+      "relative_path": "images/test/waterlogging_waterloggingt-127-_jpg.rf.5b6ee9589c8ebaa451f0d866f47c0e2a.jpg",
+      "file_size": 34391,
+      "sha256": "cf8e907f00ac50e890b94aaeb4a87d988ceb9002492ae34940c8b31c343a6939"
+    },
+    {
+      "relative_path": "images/test/waterlogging_waterloggingt-128-_jpg.rf.5f4420da5b81992ba7693869e96d14ee.jpg",
+      "file_size": 36094,
+      "sha256": "6eacfab91a9d2a52d4dfb6ed99590808800e3f039e716eff8400e526d7baadc2"
+    },
+    {
+      "relative_path": "images/test/waterlogging_waterloggingt-128-_jpg.rf.da43c075e1a93e1a7d1948b6f9febdee.jpg",
+      "file_size": 40004,
+      "sha256": "b36b981e9648a92ebb7411f58677df8281041204597b0052286b515ce2dda902"
+    },
+    {
+      "relative_path": "images/train/manhole_img-1.jpg",
+      "file_size": 104109,
+      "sha256": "a1b2da05c00ea71461a90815005b3b38d8ce8a1d603b3e4d0445513df7ae9a30"
+    },
+    {
+      "relative_path": "images/train/manhole_img-10.jpg",
+      "file_size": 125018,
+      "sha256": "cf7038981864142a0d2fce14e07f6ff6a3a6e13a7815c82921bf2b6e529bbabb"
+    },
+    {
+      "relative_path": "images/train/manhole_img-11.jpg",
+      "file_size": 114792,
+      "sha256": "28d089d3cb02fe597bcd57cdf196bd33e21292b51e33036e184cdaa6b08af58f"
+    },
+    {
+      "relative_path": "images/train/manhole_img-13.jpg",
+      "file_size": 75613,
+      "sha256": "30b9112288bd0c9bed74e9dcfe17fc1f8087af8fd5da260e19b60c3f658fbf36"
+    },
+    {
+      "relative_path": "images/train/manhole_img-18.jpg",
+      "file_size": 85286,
+      "sha256": "c66d2a68de7bc2746f64b3db05bd7aaf08e7b9939ea45baa81c94b5321863f4c"
+    },
+    {
+      "relative_path": "images/train/manhole_img-19.jpg",
+      "file_size": 70458,
+      "sha256": "cb307e2526cd4b61561c41c4c3dd29ae32ea0d66065c53e24785da318bc855cc"
+    },
+    {
+      "relative_path": "images/train/manhole_img-22.jpg",
+      "file_size": 110009,
+      "sha256": "b5a283837e63932329b9dc6015ba6b3035f1adc6884195a88e73500fbae3a91e"
+    },
+    {
+      "relative_path": "images/train/manhole_img-24.jpg",
+      "file_size": 129187,
+      "sha256": "fff32653d81021ab578425f1b65daef2b11504f2583c99970eebae65fc374385"
+    },
+    {
+      "relative_path": "images/train/manhole_img-25.jpg",
+      "file_size": 117880,
+      "sha256": "7db0523b58799b75e53c98cbe4da06491043a2d8e6ea860a1c65f12c2034091b"
+    },
+    {
+      "relative_path": "images/train/manhole_img-26.jpg",
+      "file_size": 71568,
+      "sha256": "61c5d50aa283d0ce65ee2f6134b380e87178f73fded31f2131790b254b3f7cd4"
+    },
+    {
+      "relative_path": "images/train/manhole_img-27.jpg",
+      "file_size": 123414,
+      "sha256": "659604fe98ac80b1b7f4b5d44d0dd6b5955d391cd6351e584fc2dd6e72a3fa0e"
+    },
+    {
+      "relative_path": "images/train/manhole_img-28.jpg",
+      "file_size": 120426,
+      "sha256": "7aeece479ca8618232cea1c0e89d6497d3957c73aa837f2eb5b598a484accf50"
+    },
+    {
+      "relative_path": "images/train/manhole_img-29.jpg",
+      "file_size": 115062,
+      "sha256": "c6f8fcdd6596949adba2da61c68d5ae4f190cc3308e2a7f7352150dfe970af6c"
+    },
+    {
+      "relative_path": "images/train/manhole_img-3.jpg",
+      "file_size": 113959,
+      "sha256": "159f33715cf36ed9f1d0a21bae7d8cb0014061fd22e2a5c3a0965dbf91440343"
+    },
+    {
+      "relative_path": "images/train/manhole_img-30.jpg",
+      "file_size": 145879,
+      "sha256": "4c306840ea2bab1743e5d866667a05c6d24e3c132f890ae43c7916b75ef64951"
+    },
+    {
+      "relative_path": "images/train/manhole_img-31.jpg",
+      "file_size": 113258,
+      "sha256": "4937550477b05aa880ce4adc4104708e496d42eac86ef07bd254ae46ef292db9"
+    },
+    {
+      "relative_path": "images/train/manhole_img-35.jpg",
+      "file_size": 93570,
+      "sha256": "4a71f02bab33a19cabafa29ce137a0d480f246583ba6dc1ab01d0b14c45602c6"
+    },
+    {
+      "relative_path": "images/train/manhole_img-37.jpg",
+      "file_size": 168364,
+      "sha256": "706fa169ca6462174720224a03d5ac7e18e1585b36bf195f38e0fa1ac954a38a"
+    },
+    {
+      "relative_path": "images/train/manhole_img-39.jpg",
+      "file_size": 156272,
+      "sha256": "5ed91bdd1a7bc8ba21187a68765bc9ab450a33d174cdb8f5a49bd903bb5adf3c"
+    },
+    {
+      "relative_path": "images/train/manhole_img-4.jpg",
+      "file_size": 98006,
+      "sha256": "987517abe12477851ceea5ec0c2dcb19a02a7385a2d0ea5ed23960ec7a01878c"
+    },
+    {
+      "relative_path": "images/train/manhole_img-40.jpg",
+      "file_size": 137543,
+      "sha256": "28221d4c92ce3dfe5b27459ba8524c0f75b7e312da3eb660f8f45866e1a62931"
+    },
+    {
+      "relative_path": "images/train/manhole_img-41.jpg",
+      "file_size": 83966,
+      "sha256": "aa8176220c0ebd02c1d9eb7edaf46585390f4e5f8cd91da4c741104c66047da3"
+    },
+    {
+      "relative_path": "images/train/manhole_img-42.jpg",
+      "file_size": 94041,
+      "sha256": "4457ecf8d9e1902c768949bd35544c18ebef57a9575b5ec46950b3d12692bd40"
+    },
+    {
+      "relative_path": "images/train/manhole_img-43.jpg",
+      "file_size": 151572,
+      "sha256": "391d248a2399b6cb9ba6dc3663d8c397d96c7e37bd360b0bc1f7ac4dc5d43ba0"
+    },
+    {
+      "relative_path": "images/train/manhole_img-44.jpg",
+      "file_size": 65404,
+      "sha256": "893a25141405b02a4b7d20fddba02de1306138f4e587faffcd23f1ae274f1c42"
+    },
+    {
+      "relative_path": "images/train/manhole_img-46.jpg",
+      "file_size": 111084,
+      "sha256": "2a396e417428f098a347f50ef744f35a710d0a44b062744fcc12554135adf977"
+    },
+    {
+      "relative_path": "images/train/manhole_img-47.jpg",
+      "file_size": 157091,
+      "sha256": "a3f07caf59144ccaa460767f420f53d0724c38cc0773e2499785a4ad35900991"
+    },
+    {
+      "relative_path": "images/train/manhole_img-48.jpg",
+      "file_size": 118749,
+      "sha256": "bfa704f7682a0dbf7eff3867206da763a41a756d3b9a1fc0e80e4beceaf426d3"
+    },
+    {
+      "relative_path": "images/train/manhole_img-49.jpg",
+      "file_size": 109338,
+      "sha256": "8dbb7d86b14396dd0e0e6e26f5b64a2354baadf4b686efcb00a5abd0a0ec2403"
+    },
+    {
+      "relative_path": "images/train/manhole_img-5.jpg",
+      "file_size": 129227,
+      "sha256": "bb270c9ba41b808606c8550371d5d65634847bbabf01c6715750e8ba749cbcac"
+    },
+    {
+      "relative_path": "images/train/manhole_img-50.jpg",
+      "file_size": 151365,
+      "sha256": "7a2a2ffa83982632864082d0d1dffcf4acbd5cd4df54407c29f4c3154d2a88c8"
+    },
+    {
+      "relative_path": "images/train/manhole_img-51.jpg",
+      "file_size": 79639,
+      "sha256": "1da5f2e06ed8990c6ca20360711bfc5494e1c52d0ec543ad0f95e292038b7994"
+    },
+    {
+      "relative_path": "images/train/manhole_img-52.jpg",
+      "file_size": 121918,
+      "sha256": "3d8b87c83c67039aa0eff8c33b88aabaa5381caa9f0fd9076e4cd943245b7b22"
+    },
+    {
+      "relative_path": "images/train/manhole_img-54.jpg",
+      "file_size": 102265,
+      "sha256": "e7a2acd97b869289379ab4a92f7d1653b16fed05ffce5f10086bbb6b99bc216c"
+    },
+    {
+      "relative_path": "images/train/manhole_img-55.jpg",
+      "file_size": 105666,
+      "sha256": "52ba693616a704f4ea44438212413b5a56faa295097327542ab6ff96c52a3ef3"
+    },
+    {
+      "relative_path": "images/train/manhole_img-56.jpg",
+      "file_size": 111759,
+      "sha256": "54b0c463efe4b37b822b32670f9e12dcf7a488f4d00ffc840c9e9d738b049626"
+    },
+    {
+      "relative_path": "images/train/manhole_img-58.jpg",
+      "file_size": 81394,
+      "sha256": "d7af3acc33e78a1c126ee6c410c169bb7f704a17360e18b7ad927db276fe8d65"
+    },
+    {
+      "relative_path": "images/train/manhole_img-59.jpg",
+      "file_size": 118911,
+      "sha256": "80b5b0549dd2a57f99b3b620ce195272857a2bebd9fb63f8b97e0d2588844c2d"
+    },
+    {
+      "relative_path": "images/train/manhole_img-6.jpg",
+      "file_size": 156767,
+      "sha256": "868dd77a96af8f603dc68d9720d3898d78cb21914198c118e2e7280cffaad6a6"
+    },
+    {
+      "relative_path": "images/train/manhole_img-60.jpg",
+      "file_size": 138953,
+      "sha256": "2ecf25aa528af0f0603e65cdfa7ac7b29eb2879d9f2579a140b6f11196cd53da"
+    },
+    {
+      "relative_path": "images/train/manhole_img-61.jpg",
+      "file_size": 161045,
+      "sha256": "7c1f0c08cc0d5e74b6e4b328eeb118c2167c5af667e79ff5d590dac607d8b6cc"
+    },
+    {
+      "relative_path": "images/train/manhole_img-63.jpg",
+      "file_size": 142749,
+      "sha256": "fbe608c825a72ea570f74978cb1cf2b223b347666bbe35a9ef0ea3f116b10f90"
+    },
+    {
+      "relative_path": "images/train/manhole_img-64.jpg",
+      "file_size": 132613,
+      "sha256": "3f7e614ccdef27acd08f7e6016ca3749f815a88cb7d9bab78b71ba9d49c7849a"
+    },
+    {
+      "relative_path": "images/train/manhole_img-65.jpg",
+      "file_size": 112016,
+      "sha256": "e892b97645e7918144ec325bbf810dee41d175c00a0ec8fd27a7594d0f401ca0"
+    },
+    {
+      "relative_path": "images/train/manhole_img-66.jpg",
+      "file_size": 123732,
+      "sha256": "47494d565d41f203608d530d7a68f26323146da8470f38dd9d5946045413dafe"
+    },
+    {
+      "relative_path": "images/train/manhole_img-67.jpg",
+      "file_size": 52959,
+      "sha256": "0c60379ac0134b54406dada9d29a485383523b6f5ad9f387b6ceb7f9a96444a2"
+    },
+    {
+      "relative_path": "images/train/manhole_img-69.jpg",
+      "file_size": 118270,
+      "sha256": "82cc873478af049cd3a14f08c663e6957e99a0ff02b18d5b1d354fd13c9258f6"
+    },
+    {
+      "relative_path": "images/train/manhole_img-7.jpg",
+      "file_size": 141415,
+      "sha256": "68d24c11e6486188a113f951594e8c3311b4536ee1fed3385edda665dec77e00"
+    },
+    {
+      "relative_path": "images/train/manhole_img-70.jpg",
+      "file_size": 129299,
+      "sha256": "285060c3773c83803b241747562bd97e5f82d69799b7ddee6971b195b0886f99"
+    },
+    {
+      "relative_path": "images/train/manhole_img-72.jpg",
+      "file_size": 142018,
+      "sha256": "6c89765454e87d34e29543d603a94c1f3abe4d6bdb8b77a963da966abd6681d2"
+    },
+    {
+      "relative_path": "images/train/manhole_img-73.jpg",
+      "file_size": 63785,
+      "sha256": "b1fd0ad9132ed973c2feef6676338611cb220b5c4604936753810a128fe3bc1f"
+    },
+    {
+      "relative_path": "images/train/manhole_img-74.jpg",
+      "file_size": 108903,
+      "sha256": "6bebe267126d85f211f02433ab2015531136ce8bd53235c38f68bfb36f858534"
+    },
+    {
+      "relative_path": "images/train/manhole_img-75.jpg",
+      "file_size": 101210,
+      "sha256": "307b88ff7be8248a88b04c82453514de04009bd8c058c303d1628e2658fcd9d3"
+    },
+    {
+      "relative_path": "images/train/manhole_img-76.jpg",
+      "file_size": 117286,
+      "sha256": "68844ef421dbd1cc2127f570903d26e95e484f9b3ea2945374983f9af624b2b3"
+    },
+    {
+      "relative_path": "images/train/manhole_img-78.jpg",
+      "file_size": 122015,
+      "sha256": "bdc1175f0a9452d17c1a177ac86a383cb9ea3670482ac02423a9207e045ab66d"
+    },
+    {
+      "relative_path": "images/train/manhole_img-79.jpg",
+      "file_size": 142911,
+      "sha256": "0ef7cd1d399f019eafb788ac70f26fb0d1707a60d98aa22da4cc9465ce9a27c6"
+    },
+    {
+      "relative_path": "images/train/manhole_img-8.jpg",
+      "file_size": 122457,
+      "sha256": "22b4847d631246eb41c78b71fb0de9ec0fcbe44f88dbecc263653f791adec6d9"
+    },
+    {
+      "relative_path": "images/train/manhole_img-80.jpg",
+      "file_size": 102894,
+      "sha256": "7f13b8a7742f3c7d584fe827d024c4d0dc2e6d27d1a0f7905070506fe3b3a3f0"
+    },
+    {
+      "relative_path": "images/train/manhole_img-81.jpg",
+      "file_size": 89002,
+      "sha256": "f95fd0b10cf9185f49eaf8c065f95a5d44476d21b550170e7eaff315c5b648a4"
+    },
+    {
+      "relative_path": "images/train/manhole_img-83.jpg",
+      "file_size": 93091,
+      "sha256": "3844ff8f2e0fd7d7c037841602ee6b7b4f099955f04f384e8f4976ef693b0cdc"
+    },
+    {
+      "relative_path": "images/train/manhole_img-84.jpg",
+      "file_size": 101104,
+      "sha256": "63c76c249d35c4db3038ba1260a739ee3992377103cc3ae574d93d5ee252f3ef"
+    },
+    {
+      "relative_path": "images/train/manhole_img-85.jpg",
+      "file_size": 124420,
+      "sha256": "e5361f70bef5b8eff60e69bfadef0b246630be528fad91ad350662688cf40f3a"
+    },
+    {
+      "relative_path": "images/train/manhole_img-86.jpg",
+      "file_size": 107898,
+      "sha256": "2d1829537f6e98c11402d209fab93210b8574486c4d020114ddf6f0f3be68468"
+    },
+    {
+      "relative_path": "images/train/manhole_img-89.jpg",
+      "file_size": 116002,
+      "sha256": "2d23a40ef3b596b4f5bfc0637a6fca6c065b94ccab506412bcd447b1e932192c"
+    },
+    {
+      "relative_path": "images/train/manhole_img-9.jpg",
+      "file_size": 90984,
+      "sha256": "4584857db402dc94d56e51d4981477dd00102d016838a6efc1402026eddd6f2f"
+    },
+    {
+      "relative_path": "images/train/manhole_img-90.jpg",
+      "file_size": 111491,
+      "sha256": "9d4d7a2d1e2eeb371a9b1fe6fbb4842bd5234b494671ff014c6fc31f96e56c69"
+    },
+    {
+      "relative_path": "images/train/manhole_img-96.jpg",
+      "file_size": 117937,
+      "sha256": "360249a2622087eba6de3a794c7a3bd696083faeaba8423496fa6ea040ab68dc"
+    },
+    {
+      "relative_path": "images/train/manhole_img-97.jpg",
+      "file_size": 142626,
+      "sha256": "715ffaa753457c4a189c31fc3cc7115a5fec749534a0189f8f57de379165355d"
+    },
+    {
+      "relative_path": "images/train/manhole_img-98.jpg",
+      "file_size": 150565,
+      "sha256": "ef8cf7e0ac08ce35787df7018e389b5a37df2248aabc313caca47d80b47ebf4b"
+    },
+    {
+      "relative_path": "images/train/manhole_img-99.jpg",
+      "file_size": 155860,
+      "sha256": "cab397cdc49a728da644b47b1c95555069baf638bfb7cfe3c0b6f8da94813465"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8073_jpg.rf.9163ae422e2c9e7ce09935524c48ac45.jpg",
+      "file_size": 31680,
+      "sha256": "a451e4c3a07e9526bfbed2a82a5eef67fa453c9cc15100161924a82b69006d7e"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8087_jpg.rf.794668ab97e5f13c372785cb90fc6354.jpg",
+      "file_size": 28253,
+      "sha256": "7a4d16df33b1724f0018100c0c450fb3a21b01818680bcfbb93e7ccdfa5a6e77"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8087_jpg.rf.f2438568feccf315a62621e6ce71d2d6.jpg",
+      "file_size": 27593,
+      "sha256": "a74d48eebff1b3d2d5fc6b5a453c6bbec235680d788025787d72cbdb4fa1960c"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8106_jpg.rf.4f7cbc8381810784ed363d38fa6a6925.jpg",
+      "file_size": 36093,
+      "sha256": "eff1588743fdad82a4a381276c5052a46657a59dbebf77cb3a82a6c2dcf73900"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8106_jpg.rf.8d160e11f0d971014935202b89f94c12.jpg",
+      "file_size": 36885,
+      "sha256": "3c17a8bd80f2d5d29536168fdc247da768f72e9759ceede39fb66816c9786347"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8113_jpg.rf.dbd7b522220575d43889a80f88a8ad86.jpg",
+      "file_size": 21545,
+      "sha256": "ab00faccefb89979fd6cb8a5dd6ffd3693209b29a47943ef87dd54a2db03458f"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8121_jpg.rf.c6c742d01d11db2700a86a91fd935c72.jpg",
+      "file_size": 29038,
+      "sha256": "e5d35895771256ec548fc198916494cba5e98ce55abb34f52ffd534529aab8ab"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8121_jpg.rf.ef798e00c15eb0c6a2c01ff31e667b9d.jpg",
+      "file_size": 28874,
+      "sha256": "7e27a0677a2fac11c380b68671c6e93fb95a716ccd2b55b4a5904afb6120a7a2"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8122_jpg.rf.fc979538ea458e9698d4cb3cf353aecb.jpg",
+      "file_size": 25194,
+      "sha256": "00c092e6950c27927d4057f9da424c014d1b6afa26752f02330d35bd171e3753"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8125_jpg.rf.916546aa5384f625e1a0308812fe2000.jpg",
+      "file_size": 21387,
+      "sha256": "4ed1ca776b3f9282a15f468301181936f00bdaece7f64142fdaec4b20c90203a"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8128_jpg.rf.b17b28d9ace18bdae99b61de6553d2f7.jpg",
+      "file_size": 27878,
+      "sha256": "3a7e6818382887a1cf7096bb75610783a950b7f125ba17c27932b1f8b42b4063"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8128_jpg.rf.f5d5650f0e4713cd10d5f08f421e1b0c.jpg",
+      "file_size": 23505,
+      "sha256": "8de889f5551b2d48efa03953ccc9624e99c1200b69a9fa41acc431a4a6bffbcf"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8156_jpg.rf.e359e1437b412861e33a3efe95cd89b9.jpg",
+      "file_size": 23677,
+      "sha256": "e61adfcf4c902922eeb0147bb6261043769ac368c7241eea134bd2458240a87c"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8161_jpg.rf.b44fc056eeea67893d7b5f86a7446fbc.jpg",
+      "file_size": 32605,
+      "sha256": "371a3c14d19ef2775527854506977d1d9ccd9d866c30eb06bb4e925d5ee4eef1"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8162_jpg.rf.4a661c09d362cb49b7f00c0069aef17e.jpg",
+      "file_size": 29505,
+      "sha256": "628ea4d119d19fddfec51e2ac72b120141b87696a9fcb11aa09531fb1fb1a397"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8162_jpg.rf.a45e967cba9e65fb7d4c280853f86f99.jpg",
+      "file_size": 29156,
+      "sha256": "c30e76277f2d9b71185943243f8f2e561a67462997c43bb1f97dc59dd1266d16"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8163_jpg.rf.e3dad279156e4569ec410c8600550cd0.jpg",
+      "file_size": 35646,
+      "sha256": "8b35025e0bb5e2a5b3f06aaf46ebb97b7e01b3f2b84d1a5b45ec6cc397908a46"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8165_jpg.rf.83345b226f9f368f1ada468f58344b05.jpg",
+      "file_size": 36749,
+      "sha256": "0e2f082122992f6e6807e08ace7f4d30cc206d5d08d927711345155cc9f9158c"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8182_jpg.rf.d0d70f074356fc2c798381b68084014a.jpg",
+      "file_size": 31505,
+      "sha256": "f57218e07fa237aa7c029393ad885014e420f11dec200623d482bb295b030ca5"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8195_jpg.rf.f08c077512e09643e7d23a54ad77de8c.jpg",
+      "file_size": 31998,
+      "sha256": "69070ef6e4aa84d663c92eea464ea9f1f93c60edbcd64cc5d4f6263bcb92fceb"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8231_jpg.rf.13ed71392ed69ff7ec897e48bd515423.jpg",
+      "file_size": 33366,
+      "sha256": "dae5ba61b3297e3dab465efc0e5e21cfe9cd694fd13fbcf718cb05cb00f2724a"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8245_jpg.rf.973f7dc0a0e279e0fef796e0a0bedb6f.jpg",
+      "file_size": 34214,
+      "sha256": "e13f09c21a25d8649ce1a20914103ba46058729dbdaeca0b744e95cabc0fc6d2"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8252_jpg.rf.665eb53db93325c8ee65d1cd01a29fda.jpg",
+      "file_size": 22406,
+      "sha256": "850d5c3bd7bc29fc47d67f40e73a62962b5dd198422aadd6bed9b4e556df2cd5"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8256_jpg.rf.d89d7a76e2e474b974f271d4531b1f01.jpg",
+      "file_size": 22556,
+      "sha256": "b300cd18eb52ee33c796cd911089069c9d7d2818109381c95cbc9f9d7de798bf"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8261_jpg.rf.abc10f7c8b39eb75878c6b03ee698cf1.jpg",
+      "file_size": 27668,
+      "sha256": "8bf98d6393ef19ff0748b7ee429c11699c4d215c802d456df1586b3cccf7512a"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8266_jpg.rf.056790686b77a191092857e9082c07d8.jpg",
+      "file_size": 26615,
+      "sha256": "d9fa2ba0e2101e430169383720dbc9c25d2b2689f89c926a97247819458993df"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8280_jpg.rf.57b644863dfe0784bdaa3cc11ca82601.jpg",
+      "file_size": 18967,
+      "sha256": "46ddd651511ee4ea7c1d1a7410e6265a7dc05958e0f759681df75cdafb116278"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8285_jpg.rf.15391a4adf5bd9145becb507d0ddf4cf.jpg",
+      "file_size": 32222,
+      "sha256": "7a10a1690e80f7080c1aa3e8a022379eb1089be395e3299b237c9818d94678e3"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8308_jpg.rf.5af1cce884957933ad04f5968370b1b4.jpg",
+      "file_size": 33554,
+      "sha256": "e73b3a7a686cde5d2b9c20af16a47903ee3d547a2ca5e97e09bec94bf300b778"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8355_jpg.rf.fcda9e37ac50cc6576c5b17ce81dabfc.jpg",
+      "file_size": 24946,
+      "sha256": "ebf10a92058a70d7a6a86f27a48d72c47c102180b6c6751a78896aca1259a901"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8379_jpg.rf.99445c98efc204f3787b27496a5c2f7d.jpg",
+      "file_size": 30703,
+      "sha256": "5229387def9ba97a50b56323fa60d3b653facadcd2c1cce1f5bc457c0995535a"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8655_jpg.rf.45544adfcdd97c94f9db3407648a52a1.jpg",
+      "file_size": 22608,
+      "sha256": "d2ccd14f633da4b2f4599373c5847a263cfac2f422a4ab14b3f7cc83e7ad79bf"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8669_jpg.rf.52e74a17e8c276a3b37e03d3742b3beb.jpg",
+      "file_size": 43446,
+      "sha256": "07a2e40e7fbd535a997befd05b8741c1ba4f9f47d5a6a05aacb22ee7d95adbb0"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8669_jpg.rf.876cb547a20ac0519b150763a3f7e5d4.jpg",
+      "file_size": 41123,
+      "sha256": "539f0568d1b58a035ae5756d0d701422bf49776f2ed9a698fdc3280e12157bf5"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8677_jpg.rf.a471346b213226c37f3b8c2853d85f72.jpg",
+      "file_size": 54043,
+      "sha256": "d7d109977b3cdfb6ffc1df5070500e3f30b4403949c38f77e4cad0cb0069b38a"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8702_jpg.rf.06c73635e3a4fe0e5f612862ae8144e5.jpg",
+      "file_size": 31743,
+      "sha256": "af5d06f44cda55a65e1d774de0e69123f013609e06a0f8c0fe2185a2fe02f8e4"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8711_jpg.rf.50e1d285f370c2d6984cae252b700b4e.jpg",
+      "file_size": 29201,
+      "sha256": "08d9a26081035fe175bfafdfea104190d27e1b9c968240c53ac173b4503783b0"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8716_jpg.rf.baf77b003dec3e73880906eab87fdb27.jpg",
+      "file_size": 48731,
+      "sha256": "b7dd73246d803ca7e233ef881c3f5ef66220b203b65785aa2014184a7bb4e9e1"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8725_jpg.rf.1c6802aebb5d2ae4eb86a86edc09054b.jpg",
+      "file_size": 21040,
+      "sha256": "4c139bc188de7ec49dbd85f86b53a7674f8d675cc0e4c3acc5a8396322f1cf4f"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8744_jpg.rf.a9c09cbdcc2b228f62aa9ee3fb7ff8ae.jpg",
+      "file_size": 52551,
+      "sha256": "2732930c8a5a20380c8c06de6f1cd9e11d476753217b638ea9755a1631746e71"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8750_jpg.rf.d564325675a78c06111472a423828109.jpg",
+      "file_size": 48989,
+      "sha256": "0873cc3d50813e6646e6fbf9d573a2d9d8b446b74f92aedaa6d1f68255ac76e2"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8772_jpg.rf.bcb65e078a47da94b52e2400d946f221.jpg",
+      "file_size": 36324,
+      "sha256": "241e1cf338a3d7f775c7a28d402dde47582e43d65f1f8993b70b940f92480b1d"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8775_jpg.rf.c9b7dd7ade91cb9f309b7a270812edaa.jpg",
+      "file_size": 47658,
+      "sha256": "81f5777d7164732f91dcd634d7e2b27fb51bedf89b2ea3cac647e74b7fad9ec4"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8776_jpg.rf.06a91ea69ba33f868eecd63ae2816d6d.jpg",
+      "file_size": 26167,
+      "sha256": "fdff6ee042295374278c62cb69eb8fe91ebece3f8e04cffb2d51aaef6945dbab"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8776_jpg.rf.f68f4335acf5b546b264562161076554.jpg",
+      "file_size": 26280,
+      "sha256": "8f16c971977b9082f463e384d959941e22b67aa8dfe22e4c9a2edefe0c03b0aa"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8778_jpg.rf.9764a64b899a1e6ea64744b9079ed01f.jpg",
+      "file_size": 28676,
+      "sha256": "85664386f3fc74fcb6e3bafe9964ab73d39e80f9cd8c754192c31e7e556de100"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8790_jpg.rf.ea0f1332461df3a62d7940d45fb36c37.jpg",
+      "file_size": 43283,
+      "sha256": "4138ae32b25a8d4e273983c07d609dcbda3536ae931cb3695013df540ec47583"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8793_jpg.rf.f178865b76fc1cff86f30298de115481.jpg",
+      "file_size": 32070,
+      "sha256": "8fe01b547ca4e0315b71fa395bb5d6a2ba3a234d44652eb1949b86bab9b6f529"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8795_jpg.rf.1494bfedc8d16c1542454d551cf0d199.jpg",
+      "file_size": 40310,
+      "sha256": "2448a6a313dafae27926ef226ef7b92c1dbdd975573052734d4091e0e63346b4"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8804_jpg.rf.f1a1f7577a34f6d04a06842185f53a8d.jpg",
+      "file_size": 30960,
+      "sha256": "a83542c9fda6c914f7339a2b4afc7b06182a27b0a5d2d5aeb3c9d005a6f22f86"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8805_jpg.rf.cd4be44991191ab8787630c44403ad79.jpg",
+      "file_size": 38783,
+      "sha256": "05ad2f008708a920f33c06fd50c1941711fb27a04922e4aaab65b96f9b839788"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8813_jpg.rf.079f3b18937040f9721b68b1f1df5a35.jpg",
+      "file_size": 33104,
+      "sha256": "a0a525a5841b73366616443723dbafcdb2f73e0c1a1c9253a6261f60e16e360f"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8819_jpg.rf.9c0fdefabb03abb0c40b12736041c3ac.jpg",
+      "file_size": 44559,
+      "sha256": "b7f07771ae40c4e880b41d6d0f516e18e2bd1b34ad64351707c7cff3666bd4da"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8855_jpg.rf.997762138de3a84b2d2658a920edb366.jpg",
+      "file_size": 33268,
+      "sha256": "034d9e92c009f76835bd5ed16656ff29f1c0dbbd62bb360ceabaafa6e1c9891d"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8900_jpg.rf.83825b9de282a8411b65972cbf3892fe.jpg",
+      "file_size": 35020,
+      "sha256": "d8d0bb070d9b4f9117de3ce17a632800e545dff98e9c3982b29a80c7454f63d5"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8902_jpg.rf.dc64d0017973742a4bdc97a02ee6c7f6.jpg",
+      "file_size": 37510,
+      "sha256": "082a3e43551ea560213eebc054cbacd8f678c7152a4dffb29d56245ca14e70e2"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8911_jpg.rf.170aabf2cd3fca939793864731bce81d.jpg",
+      "file_size": 28873,
+      "sha256": "80a277fcfc6a89f2163482f2e831b858230399b794ce912ea91d50109e20e994"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8931_jpg.rf.66a35baf2bc4719ce5992e3896c64db6.jpg",
+      "file_size": 22653,
+      "sha256": "071a65217fdd60a99399be6fb48a1c709f4420279ddc7547c3adb2db9ede59d8"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8949_jpg.rf.5bb7d6cddec57210521198df34f1847b.jpg",
+      "file_size": 47721,
+      "sha256": "30a7a0ead95882711ed6a0c311ffdbbfc4cbc3f1b49f7bba4cd85d279b796bab"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8971_jpg.rf.d40fb8b6f651dc4de7771025284e99b9.jpg",
+      "file_size": 56925,
+      "sha256": "43bd8d643cc20c43e0a184e66f798a808cc0cfca1d20410fa0a94eec2f2678d1"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8981_jpg.rf.1ad2c67e810979a1e5a4168a0e75b7a7.jpg",
+      "file_size": 26858,
+      "sha256": "924fb246da501613133799194412a89ebf6706be24608c386996417b601be2b8"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8984_jpg.rf.f3a1dbce9461b377b891da9cd712e67c.jpg",
+      "file_size": 64963,
+      "sha256": "617ed0cc73ce90c614875ee95e813d8925fda373fdb1c5275c70afec6fd9a99d"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_8997_jpg.rf.c0edbb9e5d8461f038392b1a28784822.jpg",
+      "file_size": 29248,
+      "sha256": "a43dbe8d5fba2e6b1c9826c28952220317b79ee01a6ec6b4a6f8608929fcc003"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_9029_jpg.rf.cfced0352f72a57dadb7c273c636d444.jpg",
+      "file_size": 31366,
+      "sha256": "013c6365a0615c62891dc2d27181a91e7943ef3c704b79bb0530e625b608191c"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_9029_jpg.rf.fd037d113b091d214657c4d461e6413f.jpg",
+      "file_size": 31196,
+      "sha256": "3d5756c90db6198f0811c2f494cec0f1e7f14c60b4c4514aad2986f51d7648f8"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_9075_jpg.rf.54044419da9e36c6c5cd368c4f7be48f.jpg",
+      "file_size": 31926,
+      "sha256": "84eb53fc80bf5e1452c5cb5e0f633f8fef9a4be76aabfa4cd7220b8b3fbd61cc"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_9076_jpg.rf.efea528e2025e746438a477bd8121fbd.jpg",
+      "file_size": 29648,
+      "sha256": "a76827f93715d70e2398e7a0cdb0a8678cc252637cc6bbbeb393989954c8f7ab"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_9109_jpg.rf.a75842e104d6f89285d2f1cb7b3aa1d6.jpg",
+      "file_size": 62174,
+      "sha256": "f1efd4c9d12a111402e4ffabb248f3b57019375992b7f03557dd491c0de67154"
+    },
+    {
+      "relative_path": "images/train/roadsign_IMG_9131_jpg.rf.2be5a568ebce2d424c9c78c53e06d5d8.jpg",
+      "file_size": 20038,
+      "sha256": "3100219473b8d8d2fa8fe66cfbf58e3abe93c21364106898f48de141cbd7b579"
+    },
+    {
+      "relative_path": "images/train/roadsign_image5-14-_jpeg_jpg.rf.29ea84afdc9b9e4d9d9041e0d7d67c20.jpg",
+      "file_size": 32539,
+      "sha256": "eb8a7072823e1b8c0b356527e95c1e4f9756093ffa53ae0044100a7ac066b18f"
+    },
+    {
+      "relative_path": "images/train/waterlogging_improved_waterloggingt-118-_jpg.rf.9f5101c986e46658c6aeca1712944f37.jpg",
+      "file_size": 31516,
+      "sha256": "566be7a9051de12f54215a6f4c824f6b2ed2ab9730cfc7c3e42edc565bdb6523"
+    },
+    {
+      "relative_path": "images/train/waterlogging_improved_waterloggingt-132-_jpg.rf.aa4d62b466c200c94d69ef20035d75ca.jpg",
+      "file_size": 39505,
+      "sha256": "38bf9147f048a5a5ef2cafce3cfc40a8ed0af767c7b7dd772fa61d8b10a242a0"
+    },
+    {
+      "relative_path": "images/train/waterlogging_improved_waterloggingt-138-_jpg.rf.21c39f2535d3ba848811f1aed549245f.jpg",
+      "file_size": 45850,
+      "sha256": "42b2012d152cc09cf5b4419e85bb388070ea1a6586c73988dd494a3f109a951d"
+    },
+    {
+      "relative_path": "images/train/waterlogging_improved_waterloggingt-143-_jpg.rf.7eb50cf74c473096439de90024ba7fe8.jpg",
+      "file_size": 46330,
+      "sha256": "7b121ed22408d64eb67d0b24f538f72cf5d8d46192b02399ba5bd0fa0276a0c0"
+    },
+    {
+      "relative_path": "images/train/waterlogging_improved_waterloggingt-169-_jpg.rf.f639ae5611d8a484589c5642bb3c5b84.jpg",
+      "file_size": 39494,
+      "sha256": "4ce1528a64a73e366a924be35e0badebc2f76f087a36b7b9fa6577422b0802ea"
+    },
+    {
+      "relative_path": "images/train/waterlogging_improved_waterloggingt-181-_jpg.rf.05cabf9934fcf532374d815f9fa935d4.jpg",
+      "file_size": 41162,
+      "sha256": "71e6c12fb3c74db62e2f7fc7cdacd5147f056b5c2ede467b5460f1fee3ebd382"
+    },
+    {
+      "relative_path": "images/train/waterlogging_improved_waterloggingt-184-_jpg.rf.02ac69ccbb5b2d217eaf3bbd5f1e6c8e.jpg",
+      "file_size": 55905,
+      "sha256": "6269bbb789b898cf83c1bd2664613313c9d5134c2f627841bcb463821fabb18a"
+    },
+    {
+      "relative_path": "images/train/waterlogging_improved_waterloggingt-22-_jpg.rf.4d5205173cddf9b96af9550d779bc053.jpg",
+      "file_size": 43642,
+      "sha256": "e9b7525049281b39c9852ac2107a358e0b7e0c4d07f2d8558761030d11b1ca12"
+    },
+    {
+      "relative_path": "images/train/waterlogging_improved_waterloggingt-27-_jpg.rf.1fadb20b17c352cea1abc8af2232d7e9.jpg",
+      "file_size": 31073,
+      "sha256": "ee8dd02b83ed7b171274e4a04f0c2b47b7f7c19a12575f9ce399c45fdda5be55"
+    },
+    {
+      "relative_path": "images/train/waterlogging_improved_waterloggingt-28-_jpg.rf.07bc55e849d0f707b8bd445153ba71c2.jpg",
+      "file_size": 30410,
+      "sha256": "38f94baae0cf0033f07a3ade3e072b4701aa54f175873c69f79281f3b1ffeb9a"
+    },
+    {
+      "relative_path": "images/train/waterlogging_improved_waterloggingt-35-_jpg.rf.9ca699bb867160845544bf94c95dd4cc.jpg",
+      "file_size": 49930,
+      "sha256": "7f5c09e34a2240778b478ea71352edf898e4d227061f542dcba9cff56479573d"
+    },
+    {
+      "relative_path": "images/train/waterlogging_improved_waterloggingt-41-_jpg.rf.11272e810874bf05da4324d71d4f1f44.jpg",
+      "file_size": 41025,
+      "sha256": "1387ec0ccf11e598511137110314f8a7c48ab54d0b95f28d91f61b227ddf3657"
+    },
+    {
+      "relative_path": "images/train/waterlogging_improved_waterloggingt-42-_jpg.rf.2efeaedaf7c1921e4d1dfc9a6651cc19.jpg",
+      "file_size": 52891,
+      "sha256": "d641e4e7779fde587fd4044018acd98a42b4aebbf4de8899bdd2d1bfd5658fc5"
+    },
+    {
+      "relative_path": "images/train/waterlogging_improved_waterloggingt-53-_jpg.rf.f6e918ef4bee62811d5f182421e51022.jpg",
+      "file_size": 26660,
+      "sha256": "4ef2c92b0c5f50d2aca444a32aa67c8a9dc3f01d5dcce33f7c711ae0e7edf260"
+    },
+    {
+      "relative_path": "images/train/waterlogging_improved_waterloggingt-55-_jpg.rf.d27c000374aef60d429146d6330cd6af.jpg",
+      "file_size": 31384,
+      "sha256": "8e17c5aa98cb5c105efd7e1e4bb4dbb8f8e28b0ec2f61db54bf8d5b1f83e2df0"
+    },
+    {
+      "relative_path": "images/train/waterlogging_improved_waterloggingt-61-_jpg.rf.bfc1a334a8e482965107e23a96ebced0.jpg",
+      "file_size": 37166,
+      "sha256": "e1b782f849e4befba2924e1525fcade17afd6744b0047186432ee213fbd1fef0"
+    },
+    {
+      "relative_path": "images/train/waterlogging_improved_waterloggingt-62-_jpg.rf.0f85b101d494bbbe189e59e604e80df7.jpg",
+      "file_size": 32736,
+      "sha256": "ff7d09bfc71a439364a4b2d74ea4ecee41d2d0053f671feb232a18d8512796b3"
+    },
+    {
+      "relative_path": "images/train/waterlogging_improved_waterloggingt-78-_jpg.rf.3b3649658bb68d0c56e8a3eb121b66e9.jpg",
+      "file_size": 38409,
+      "sha256": "1235898775237c6d1286ff387db4cf570efd83cc21d29ae483351ef94d0726f2"
+    },
+    {
+      "relative_path": "images/train/waterlogging_improved_waterloggingt-79-_jpg.rf.2ae06d3e1bad730417c010f5bf2ee14c.jpg",
+      "file_size": 37940,
+      "sha256": "9bdf4b51f47066fb6b56863e3aad0c2ca3721ca18c9219a93cd0ef52fac8dec3"
+    },
+    {
+      "relative_path": "images/train/waterlogging_improved_waterloggingt-91-_jpg.rf.bd07d96b4b118bbfbc019c1e8d575c68.jpg",
+      "file_size": 30722,
+      "sha256": "fef8885eabe0b6119739357d010cf768edc56833f9251d2319f0102f9af3767d"
+    },
+    {
+      "relative_path": "images/train/waterlogging_negative_IMG_8070_jpg.rf.440f012d444257140b9845a79cb7e5e2.jpg",
+      "file_size": 27572,
+      "sha256": "5803731d564233a80b4bb4abb04544b97b36dc83366491624073a1ea97c65d4e"
+    },
+    {
+      "relative_path": "images/train/waterlogging_negative_IMG_8080_jpg.rf.1372954eaaa1b7729dd3137086c621df.jpg",
+      "file_size": 37948,
+      "sha256": "e84210a941f6ba1b00591620de84ab491d38f15ca63b924d7280fb7e6dea0528"
+    },
+    {
+      "relative_path": "images/train/waterlogging_negative_IMG_8084_jpg.rf.8384dc639784c2ec83763b45b671961c.jpg",
+      "file_size": 39066,
+      "sha256": "39d393dcbec81e9307434139d05f253ed3bbe805e85bc1658273bcaf26bc1d71"
+    },
+    {
+      "relative_path": "images/train/waterlogging_negative_IMG_8101_jpg.rf.54fc93e82f99572622d85e89925f203c.jpg",
+      "file_size": 21434,
+      "sha256": "c00e7fd7ff6655491562abc5720523f1398f6339c80f051d4db665b767af4559"
+    },
+    {
+      "relative_path": "images/train/waterlogging_negative_IMG_8103_jpg.rf.3e045aa4476f11f7ceeaf51f68676585.jpg",
+      "file_size": 37443,
+      "sha256": "cbc76f216376f43005b293b90d771b5418e52e9970e184e7e3200905f5af984b"
+    },
+    {
+      "relative_path": "images/train/waterlogging_negative_IMG_8117_jpg.rf.0962bc1c5109d929cf3b5055e6ae2c54.jpg",
+      "file_size": 28920,
+      "sha256": "bf52fc01257acd6962d01ee35a4b3314854757dab11c19626ed9f057d526c953"
+    },
+    {
+      "relative_path": "images/train/waterlogging_negative_IMG_8118_jpg.rf.2f48636bc3811382dcc0b61e658004af.jpg",
+      "file_size": 31478,
+      "sha256": "b45297a01853cd034480780dac3892e0291beab529e3b98079ee79d9f4bff732"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-100-_jpg.rf.8d02cd2363f09b6518f2883086323a66.jpg",
+      "file_size": 30317,
+      "sha256": "1d47436f2bb39793f84daa23e577d21bffd0f70c8fac3996f7fdd3229b7a54c2"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-100-_jpg.rf.faa3900c35a78d29abfcf58dbaca2aa9.jpg",
+      "file_size": 34272,
+      "sha256": "f84de5f9d90a578977cf47e94861c63fad821d94d00657f89a8cfb7018aeb32b"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-102-_jpg.rf.1a8bd735d4844c6f6494c70d16f69d38.jpg",
+      "file_size": 32002,
+      "sha256": "174cb827b9f4838d088aeea82e0d966a5bcbd0df114a3e9e0ca398d846467802"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-102-_jpg.rf.3301021e42eb5a35c62cf11b8447dc39.jpg",
+      "file_size": 34875,
+      "sha256": "ba5d52306802c6f544be092fbafa19812d2b2d83ca4d562e1880f910185ace25"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-102-_jpg.rf.95cf776cada9a363d357dddcdc8e5ecc.jpg",
+      "file_size": 28156,
+      "sha256": "346fe103e6f3308ec6f20908148bb32d307cacce70e07f5bfcc4762e510f3442"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-103-_jpg.rf.10009ec111cdef89d0e5a8fae80e493c.jpg",
+      "file_size": 37751,
+      "sha256": "eb9d2269fef49c474e085febfcf3d8dcb753785047ad60ccc213e37b2d6afb0c"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-103-_jpg.rf.7a139c90e83d52a9682e34f6dd618690.jpg",
+      "file_size": 31792,
+      "sha256": "f93422ac290bb4398a9cfd74baa40ad252626d421bf600bc52856ec39572f695"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-103-_jpg.rf.de47130eec1ca2bcbc2f43090193e729.jpg",
+      "file_size": 34531,
+      "sha256": "50a34ddca0edf404127bd82ca5ea8ba66b6900581ac994c97df434d697f52618"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-104-_jpg.rf.e4c15f449ef45024a3943a6acf09bab0.jpg",
+      "file_size": 35916,
+      "sha256": "201701878bb9be126ece27341c70137bd659338b36331a919a27a903886161e6"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-104-_jpg.rf.f2605b716c7e33df7ed2ead8ad891e0f.jpg",
+      "file_size": 27532,
+      "sha256": "61c51a49d7f1ba9335ba899825c10d3f0bdc56fbefb24eb1a93309f445ab4ce6"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-105-_jpg.rf.bd686139c974f5367749f1387efcf515.jpg",
+      "file_size": 35326,
+      "sha256": "414a0bf7c5bcd93e5e63298a355d237856d4e0d6d2d3ff98375e7e26ad8f0b34"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-105-_jpg.rf.c8c800d329a2fa4ad5b4bfc37baac5bf.jpg",
+      "file_size": 34094,
+      "sha256": "2846915b85c7c7d73c9cd861077739a523259beee7521fb68c4fdc2acef3a074"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-106-_jpg.rf.bf822268668aa55e6cb14bcc6b8ce4d0.jpg",
+      "file_size": 36777,
+      "sha256": "202d6606e2b399ad57c0ec123462c7eb16a21737dbe3db2b50a3ed0330e74101"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-107-_jpg.rf.37a60c585529ac8b042830ea34865fb6.jpg",
+      "file_size": 34871,
+      "sha256": "d7a500ff6df98d3d0b037275772519e5b48e220069c61a91fc3fc058509ea19d"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-108-_jpg.rf.20f6dc1548e3f13ae30796ae0538b4c2.jpg",
+      "file_size": 29860,
+      "sha256": "d5c0432cca8f1c8a1f92f4fb12ad9d50a1a9028b8bcc7691620282bec0fe7825"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-108-_jpg.rf.c334dc1b4bfcb7fb553987058e797de9.jpg",
+      "file_size": 36276,
+      "sha256": "ce89032a57b91a87571f0378eb27b06f8f0fde5e6f15a4f6715cad239c24d561"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-108-_jpg.rf.c35fae837ff65421354ae69a8cbbeae4.jpg",
+      "file_size": 41246,
+      "sha256": "44c0944ef47834900908927a707f842f71524fca6263a3f5dd06a1ca758fa258"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-112-_jpg.rf.43728c3f784660f141a1c0f0d453740e.jpg",
+      "file_size": 35395,
+      "sha256": "5ac2fec979dd6f23c776822ed3eebc1a8b2a855bf0c025e5442f09b807a0d732"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-113-_jpg.rf.061b92e64768f9e0a9848a4682e9420b.jpg",
+      "file_size": 35286,
+      "sha256": "23eb8920fcf7f87df714c5318b76c7e0cf2597af3c0f9679814478896ff3120a"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-113-_jpg.rf.084d6f23234cbf6314345867c4f698d7.jpg",
+      "file_size": 34599,
+      "sha256": "86d32ae1658c312c7f68744d0e14935171e43848ab0ea721995fbeb8f9d119f3"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-113-_jpg.rf.f2c4b9d7dad956dd35c29f8fb0501154.jpg",
+      "file_size": 31936,
+      "sha256": "634b3d8fb63fe4c38f540cc346425d479571435be397d2383bff70be2935da6c"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-115-_jpg.rf.635c01c23fc97d12f874cf603283a994.jpg",
+      "file_size": 31334,
+      "sha256": "92e920fa167ab8449b18b3d31ef5ab1d005dbdd3467870b3a0b5f4ced0b501bc"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-116-_jpg.rf.32551d1138be7e0c4bdb64925c0f44eb.jpg",
+      "file_size": 34620,
+      "sha256": "735486d170e8ef6a3f652b1edd9f9b434e4a1fd8588b8e6cbc7005bd730e48e5"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-119-_jpg.rf.af2d38b799d2d210df7b22efe0df8bdd.jpg",
+      "file_size": 31892,
+      "sha256": "c5bb4320f9b399cecc6d1ed7c87f9658081b53a3235e8c9428045f2c4d8f99cd"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-119-_jpg.rf.d93db3522f1c92d5f1cc5ad0b5515f88.jpg",
+      "file_size": 39426,
+      "sha256": "1f8dc6fa810cf047388b089691901b2760ce26e9111f4a3df91762222699f07e"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-12-_jpg.rf.20f65b01928efa45d61cc5f969d78a7d.jpg",
+      "file_size": 34435,
+      "sha256": "11139c75f8f077625ccef6a85d8e969d0d5f4a067bd73380137af9d80a3e421c"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-12-_jpg.rf.c064ee6b5e0eeacf45920ff9dbe16e91.jpg",
+      "file_size": 39195,
+      "sha256": "b71e7c5e31868e8ec8f175e79bb3fc154d85b9f9eef54220918fcc583790d519"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-121-_jpg.rf.148214b683fb45d57f49ca772181d434.jpg",
+      "file_size": 43908,
+      "sha256": "8869f50e9019202cf70906697a376200c5109398fc2f68b7b36685c4d1181ceb"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-121-_jpg.rf.71504412e4ffe90699727d8deaddf58e.jpg",
+      "file_size": 42755,
+      "sha256": "6ac5c8ea22588810a7c5e01411850ca2ec663855acbc2c94a67f2ac2af924551"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-122-_jpg.rf.2e00e51a0e70223ad6d729e0a3257b4c.jpg",
+      "file_size": 34492,
+      "sha256": "f319e8baeda850e103c7fb7794d37d0e056e5586008d27f1ca61646beb36085c"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-123-_jpg.rf.caafec34b2c9f23b90ebaa43223ffb59.jpg",
+      "file_size": 58385,
+      "sha256": "512142ea212f1b86c25f7d70dd89a6131593ffa58e09348821cc682adabf367f"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-124-_jpg.rf.db98b0141ebde1e782c5ae2ba94df6b7.jpg",
+      "file_size": 29267,
+      "sha256": "43792a1ae3fb16d75a232fcda0243cade1c3eb49f497f23caa3cce7f24ef94b9"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-125-_jpg.rf.558568c9421be9bcd2a50ac467f2cf92.jpg",
+      "file_size": 29556,
+      "sha256": "5c7756e3ca5c831ceb5f269a39ab86e77a8ccb156f2dc99477a885211f064060"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-129-_jpg.rf.1cdb041261ac454e7418539144ff25fc.jpg",
+      "file_size": 38149,
+      "sha256": "42c3f9b0d6940e72d08ff7c01922f4870e3169917383cbfcec5505299bf87f41"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-129-_jpg.rf.ee7df173f24985f313e4e622cb363852.jpg",
+      "file_size": 33009,
+      "sha256": "fadc8ef568a75de766ebb7147653a9ea7d50f5e2f8e654735087982d3915be5b"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-13-_jpg.rf.7e8e5ba053c088ef775de376799ade88.jpg",
+      "file_size": 37981,
+      "sha256": "7ae93e7e674af52a9e394771166e4d7ae482f8972cfac9741663687f1fba57c9"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-130-_jpg.rf.bf6b00d8d05de67c449d034c3bc794c6.jpg",
+      "file_size": 38982,
+      "sha256": "83f2af143378092c7df4c7dc4138b7c8a65cd1e1e1f9bc317b7b49491af52dd0"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-131-_jpg.rf.3dccd359864294689b2b3712af187782.jpg",
+      "file_size": 38772,
+      "sha256": "27813d5da6c99d5026fe62adb465bde60ab5454c0a6a488c5ecbf2736a9d400f"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-145-_jpg.rf.c3dabb8c32e8535b5bec3381d1f18c86.jpg",
+      "file_size": 26347,
+      "sha256": "c8a286f0e9da4a01aa2a454e38d7db31c1e8518cd04f2e2aecc1f759c50a4682"
+    },
+    {
+      "relative_path": "images/train/waterlogging_waterloggingt-31-_jpg.rf.3856f69d93858c8e57d49bfead20d9d9.jpg",
+      "file_size": 42914,
+      "sha256": "652ed9ab921331fcf356a0ecf7b8f595809d5d683169f705cd6c8877c5e041ce"
+    },
+    {
+      "relative_path": "images/val/manhole_img-100.jpg",
+      "file_size": 156455,
+      "sha256": "119e1495b6572fca432c89caffa98ccbc6d2d11143ccf984ac6a9cc839f6af02"
+    },
+    {
+      "relative_path": "images/val/manhole_img-12.jpg",
+      "file_size": 112714,
+      "sha256": "c4330fac77d1b0e50a7b73ae9ffe3c11a66d913df333324ef13ed5e99ecaddc1"
+    },
+    {
+      "relative_path": "images/val/manhole_img-15.jpg",
+      "file_size": 115059,
+      "sha256": "8944e23c2b89451cf921379af47f68d4f82ade32f25220bb934ec5e305331270"
+    },
+    {
+      "relative_path": "images/val/manhole_img-16.jpg",
+      "file_size": 106880,
+      "sha256": "b8a4bb5d11251843f1561095142bbe8b3ac15a8b28571c201fa7eee2c30afd5a"
+    },
+    {
+      "relative_path": "images/val/manhole_img-17.jpg",
+      "file_size": 103352,
+      "sha256": "4f2e72c6bbb482cb6442a2bfa92e979134b0e76f1591402a3a6918199829f79a"
+    },
+    {
+      "relative_path": "images/val/manhole_img-2.jpg",
+      "file_size": 95289,
+      "sha256": "896452f7c333db108a2cea7d79520d675bdc626088743524d876c870a7d1046a"
+    },
+    {
+      "relative_path": "images/val/manhole_img-20.jpg",
+      "file_size": 117500,
+      "sha256": "b58d5b29db2f35d8f16f4388c0c93e2459d575fcc0da8c6e9ecae13ff4816171"
+    },
+    {
+      "relative_path": "images/val/manhole_img-23.jpg",
+      "file_size": 138459,
+      "sha256": "fe53859cdb45feaf936fb85916b776b7156ce4c6c5098be0e13153f69b461493"
+    },
+    {
+      "relative_path": "images/val/manhole_img-32.jpg",
+      "file_size": 106860,
+      "sha256": "d530f0cebbbad533265bed0c05d1ec32578b3f0847184a89f998bc7ef2dc5d88"
+    },
+    {
+      "relative_path": "images/val/manhole_img-34.jpg",
+      "file_size": 125111,
+      "sha256": "1e2217a9109d130c419e39727763fdbc0376b277f18b750e6433d8db10420ef7"
+    },
+    {
+      "relative_path": "images/val/manhole_img-36.jpg",
+      "file_size": 114534,
+      "sha256": "dc749a3b1c77d8196b5818a330767e54077219c1364ec12d0476ac65e17c538c"
+    },
+    {
+      "relative_path": "images/val/manhole_img-45.jpg",
+      "file_size": 158093,
+      "sha256": "de450a897dd8ce44a756a1562ff71b15678c906005a3885b45438e69efa8c803"
+    },
+    {
+      "relative_path": "images/val/manhole_img-53.jpg",
+      "file_size": 160521,
+      "sha256": "02c16e31c02577d94ab3b8d64b001d3350851baacb86d5554cf63fbfba3459fa"
+    },
+    {
+      "relative_path": "images/val/manhole_img-62.jpg",
+      "file_size": 104130,
+      "sha256": "ce370a185d923e65fac4e5c3dd5a1f3360ef9a3a969199d930549add3798de0e"
+    },
+    {
+      "relative_path": "images/val/manhole_img-68.jpg",
+      "file_size": 70426,
+      "sha256": "0de627e28ba7b4fb1352058866791a21d0b3bb0f2bdc91f8bf29d3c4ed0758a1"
+    },
+    {
+      "relative_path": "images/val/manhole_img-77.jpg",
+      "file_size": 113008,
+      "sha256": "141c1a6be8e453dd49163443e0553b03ed10fb69b41ebd92b1b4a0ba66592f25"
+    },
+    {
+      "relative_path": "images/val/manhole_img-87.jpg",
+      "file_size": 74277,
+      "sha256": "10d5ecef8ff736b028c0997686fc864a85f2f736342aa017c0a8aa040bc346c9"
+    },
+    {
+      "relative_path": "images/val/manhole_img-91.jpg",
+      "file_size": 137799,
+      "sha256": "bfef440d8ae16eca49b7928aa3e55148020a976085f6fabc85e4a89e4dc81331"
+    },
+    {
+      "relative_path": "images/val/manhole_img-93.jpg",
+      "file_size": 154735,
+      "sha256": "5d4017f91ff88aa6759dd8f49e6f30e448d7f8fcdd64ce88a2828f94bddb7446"
+    },
+    {
+      "relative_path": "images/val/manhole_img-95.jpg",
+      "file_size": 139066,
+      "sha256": "c458d2788a2c78595d3077f2fd3bad21e4201d44791427c9b6ae132addf62c61"
+    },
+    {
+      "relative_path": "images/val/roadsign_IMG_8089_jpg.rf.d88d66b336700a7227c7e6dfd32781f8.jpg",
+      "file_size": 32966,
+      "sha256": "73d76fa1cc874f21fa1d7ba995c9bd89ef3f4013221b2a153dbf084bb75747b9"
+    },
+    {
+      "relative_path": "images/val/roadsign_IMG_8090_jpg.rf.3300d84f8175ad4f004288530ef3bc4d.jpg",
+      "file_size": 32109,
+      "sha256": "983a8f6bfffaad7b6f0a724ae7564e9169b2f912f813285621ee627605096e2b"
+    },
+    {
+      "relative_path": "images/val/roadsign_IMG_8107_jpg.rf.3a6cdb866ff10812b39e59fa6012c48e.jpg",
+      "file_size": 27289,
+      "sha256": "47020b6b996597e2859127c08139a71b8aa42fd3a8e7bc417959d324265d8d89"
+    },
+    {
+      "relative_path": "images/val/roadsign_IMG_8116_jpg.rf.4e89b65b9027b447761db8f0ac286c13.jpg",
+      "file_size": 24199,
+      "sha256": "77115cce4f53804df7dc7c5b5321e02c64b26fc60ca350ec58e3cdff5e8d4a46"
+    },
+    {
+      "relative_path": "images/val/roadsign_IMG_8191_jpg.rf.b6d858d205940011c9ec968ee737d5c9.jpg",
+      "file_size": 34836,
+      "sha256": "d5a5a366ba106f97576fc2506c19be9cdaab61532963e218643db4e462c1227e"
+    },
+    {
+      "relative_path": "images/val/roadsign_IMG_8241_jpg.rf.ccb1ff63430e9a5c8252dbbd35b222d8.jpg",
+      "file_size": 27213,
+      "sha256": "68e69ab37e2b70319cbce8df5f5e369448bf0d9aae2ce4959ee0c43fdafa5453"
+    },
+    {
+      "relative_path": "images/val/roadsign_IMG_8359_jpg.rf.fa5eb3d521b50f7b4307bf7dbec9e5f1.jpg",
+      "file_size": 19724,
+      "sha256": "f155d116719fd77c4fa76544247859917a03f834020d4a8e6330e25beeb78f18"
+    },
+    {
+      "relative_path": "images/val/roadsign_IMG_8374_jpg.rf.0f23b566057ed1b7c46374521aa959bd.jpg",
+      "file_size": 34440,
+      "sha256": "7714ec72228873cd9c2693ee6c5bd47071040d61d41c2999312aec57d188287f"
+    },
+    {
+      "relative_path": "images/val/roadsign_IMG_8691_jpg.rf.dfffca34b69d5620f91d659aa6e5a1a7.jpg",
+      "file_size": 66349,
+      "sha256": "51f406a446de26f0b87b70dd7765728cbd847f514d4cca97cd5022194de90cf1"
+    },
+    {
+      "relative_path": "images/val/roadsign_IMG_8692_jpg.rf.3dca3f58a7ecf693e82b16fd5b83c05c.jpg",
+      "file_size": 73767,
+      "sha256": "25f249bee4dbed8b3ac313ea6b7a27ca9ef9a5d8bbf54bd57ddcbd7d36ed180c"
+    },
+    {
+      "relative_path": "images/val/roadsign_IMG_8728_jpg.rf.06a642b2e63efb9bc6383006329f831b.jpg",
+      "file_size": 20284,
+      "sha256": "8b807bd5f24c80dbae91494eb2c828d233bf717c25f5501a2529e10f62d4f895"
+    },
+    {
+      "relative_path": "images/val/roadsign_IMG_8748_jpg.rf.39e374f57242019d5b74b0b914c7a0c2.jpg",
+      "file_size": 22169,
+      "sha256": "8c1f02098783a13a4bf530e89d2422a9c1ea0f5bf65d21c44b63ed9ca4c9d7d0"
+    },
+    {
+      "relative_path": "images/val/roadsign_IMG_8783_jpg.rf.2bc6dd1455e2aecfbe58df0958e86b63.jpg",
+      "file_size": 31432,
+      "sha256": "584a4885cdbb8468f2eaff27f203e8f662507cf6f04344b5f5f499cdf79a1c78"
+    },
+    {
+      "relative_path": "images/val/roadsign_IMG_8806_jpg.rf.9f45e4a6aee4bac49ad6cf5438e2cc29.jpg",
+      "file_size": 29824,
+      "sha256": "94b9f536d68f2291f3b462d90908d3687eda1eee5e10f72963df7ec1ede8cb7e"
+    },
+    {
+      "relative_path": "images/val/roadsign_IMG_8901_jpg.rf.1b28a0dd72ac328e0aea7ea202a141a5.jpg",
+      "file_size": 39827,
+      "sha256": "045a6c9ce035a0339da65fe59f1e6c37fbb2f5ab24ec02f3fcba4a882d36d62e"
+    },
+    {
+      "relative_path": "images/val/roadsign_IMG_8905_jpg.rf.dc472929cfeae9c008d64be5162b552a.jpg",
+      "file_size": 33118,
+      "sha256": "f694acd73a118f639be874b72129359947df6bfb30171900f8422fa5beb1fe7a"
+    },
+    {
+      "relative_path": "images/val/roadsign_IMG_8926_jpg.rf.546697558752b0a2b8e17e2b01d3f603.jpg",
+      "file_size": 29666,
+      "sha256": "94a2acacd0a27924b0897ea3512d7be3bc29417145990392724bcba2b2f3e195"
+    },
+    {
+      "relative_path": "images/val/roadsign_IMG_8956_jpg.rf.8a06ea25e04c63e44fda3443f959b8fa.jpg",
+      "file_size": 70824,
+      "sha256": "3a0b76becf58dad6f02c714d44df314bce320e04d62ec467bc5875d17e3d93da"
+    },
+    {
+      "relative_path": "images/val/roadsign_IMG_9005_jpg.rf.1324149272c1ca5511d149789cad9076.jpg",
+      "file_size": 52050,
+      "sha256": "3c2630e482f32e309b6f6e36a7af6606de53fcf385ab47e5a80f698db2ccaea1"
+    },
+    {
+      "relative_path": "images/val/roadsign_IMG_9130_jpg.rf.0b8df3381f09df2ad516403b5a22920f.jpg",
+      "file_size": 24447,
+      "sha256": "91e14094fed8d147b6c5a7bf8475f3a4e7033ecbf20a633ab032cf66095645c4"
+    },
+    {
+      "relative_path": "images/val/waterlogging_improved_waterloggingt-167-_jpg.rf.1a1c60089139b062aee44ac851155112.jpg",
+      "file_size": 38216,
+      "sha256": "2ec3f93333a80f5da94b274e0166f0e1ee1064d5d7a376821126ba26e9a81b8c"
+    },
+    {
+      "relative_path": "images/val/waterlogging_improved_waterloggingt-191-_jpg.rf.871eb9c841d1c511ad057cbcae9f4def.jpg",
+      "file_size": 29973,
+      "sha256": "3918a75cccd8230efd23f2bb720ca91acb393f41eb15f8afcaa5bf4d1c9eac3c"
+    },
+    {
+      "relative_path": "images/val/waterlogging_improved_waterloggingt-24-_jpg.rf.dd497ffe9cdbb58adca9efa576e66a48.jpg",
+      "file_size": 25469,
+      "sha256": "82a5bd4eebd59da178e4f27a8eac911e568845c2f7f6f0267a124f80fe8ba624"
+    },
+    {
+      "relative_path": "images/val/waterlogging_improved_waterloggingt-3-_jpg.rf.848d8568d5c2bc51d15c82dc3f59f0ca.jpg",
+      "file_size": 40080,
+      "sha256": "6e18e2c379df18f2b02a9d22268721b0fed9bbd734758ba3792e7e19e399ed5a"
+    },
+    {
+      "relative_path": "images/val/waterlogging_improved_waterloggingt-30-_jpg.rf.dee227ae5b63c709d02db18eda8f3177.jpg",
+      "file_size": 36158,
+      "sha256": "530cb9046fb889d7194101a1096801f93375bdce5665ab64d79d1a8456aa13ee"
+    },
+    {
+      "relative_path": "images/val/waterlogging_improved_waterloggingt-40-_jpg.rf.7958e4dc10d82506fc43f3e5328bc2f8.jpg",
+      "file_size": 50638,
+      "sha256": "6f1ee865cfe0877ea5288c1f04d0ed9968ebeccfc9a8bc68e77e285a15e18f8f"
+    },
+    {
+      "relative_path": "images/val/waterlogging_improved_waterloggingt-75-_jpg.rf.a1a6cdde7599856d4de7cc792169e66d.jpg",
+      "file_size": 37609,
+      "sha256": "498cc5e8f4aba14b22fdd933d19aebd104f35f03f5efbce90bb2d26e4adbc83e"
+    },
+    {
+      "relative_path": "images/val/waterlogging_negative_IMG_8085_jpg.rf.031ac12f207c1bbf7ef06a7c17aceef9.jpg",
+      "file_size": 15915,
+      "sha256": "97983109e87099835e0c1fd69ffb4190b10f63c4b6a768ec5f8fef3c15e21579"
+    },
+    {
+      "relative_path": "images/val/waterlogging_negative_IMG_8090_jpg.rf.3d4e77d2273668503c23f9c63aca2b35.jpg",
+      "file_size": 33370,
+      "sha256": "d3fd7bf9da1207b18342a25731904b3c462ef54a9399fa77753b7d284d8c369d"
+    },
+    {
+      "relative_path": "images/val/waterlogging_negative_IMG_8100_jpg.rf.7642bf46aa23e873f3acdb6a5c2f2d3b.jpg",
+      "file_size": 31389,
+      "sha256": "0ef351931ddf13aa659710c18d9fb2076415e430d4ff360ce0d9212faac50a95"
+    },
+    {
+      "relative_path": "images/val/waterlogging_negative_IMG_8105_jpg.rf.7ed729ee572134567821aa29cccda4e9.jpg",
+      "file_size": 31408,
+      "sha256": "809d68b1ee0578e1b26223555676b476943fe53a76699b2117794ed6148764f7"
+    },
+    {
+      "relative_path": "images/val/waterlogging_negative_IMG_8110_jpg.rf.40bdc31e5a529dc302502186288d912c.jpg",
+      "file_size": 19463,
+      "sha256": "260ba018c80f9bbc1f8a60a70c0b18a16f2fabd136d52ce6d4cea42fc9d78de4"
+    },
+    {
+      "relative_path": "images/val/waterlogging_negative_IMG_8114_jpg.rf.13142766f1db4b92fde6165e07b7610c.jpg",
+      "file_size": 28512,
+      "sha256": "1b97b732d04a3650f2873ceca5ec062266a6354f82470da22c9115d00d2104ad"
+    },
+    {
+      "relative_path": "images/val/waterlogging_negative_IMG_8115_jpg.rf.3908bb24cd509e2a64dd4dd5e34c2fd2.jpg",
+      "file_size": 26020,
+      "sha256": "79c57c5a44147323d41636862c0fab3661546f4e4c56cd02713942cbf5e472b1"
+    },
+    {
+      "relative_path": "images/val/waterlogging_waterloggingt-10-_jpg.rf.6907c533b135a400dc53b46585bb1ed4.jpg",
+      "file_size": 28425,
+      "sha256": "a887e6eff5439f67d49416610640a0fedff6318449dd956c96b4c57758aa320a"
+    },
+    {
+      "relative_path": "images/val/waterlogging_waterloggingt-101-_jpg.rf.8e414c06e616a1356b33962850a7a4f6.jpg",
+      "file_size": 37827,
+      "sha256": "a30a2201cfe9bc5f218198af8836801d0b1c49c0e1e24f88bd1d30a718e12dfd"
+    },
+    {
+      "relative_path": "images/val/waterlogging_waterloggingt-109-_jpg.rf.1cc60e8461b447fb2defd811e040f9ee.jpg",
+      "file_size": 41621,
+      "sha256": "fddcbc8b9a21cb6a2fb4f354bf1663b717edbe9b0001521f56a6ca1e61ce7071"
+    },
+    {
+      "relative_path": "images/val/waterlogging_waterloggingt-117-_jpg.rf.708bc840f8b74b7e44d18b76dcbb25e9.jpg",
+      "file_size": 34889,
+      "sha256": "5fd0f54e399de7bf444fa599b0caa524483ba5f386689705b73d32da28f1a59b"
+    },
+    {
+      "relative_path": "images/val/waterlogging_waterloggingt-126-_jpg.rf.208aedeeba1a9ae54e0fea4926806386.jpg",
+      "file_size": 34090,
+      "sha256": "291862f9531a25d489218c619a4961eb2d2e292bb4e9e1cde9eda793d1cb46b4"
+    },
+    {
+      "relative_path": "images/val/waterlogging_waterloggingt-126-_jpg.rf.7fb34317e3d3f434615e307ac961cd89.jpg",
+      "file_size": 25640,
+      "sha256": "3b98db7c563758a2ac128c689f7940f6f2f739b8a8e03c209e87d4d70529bff4"
+    },
+    {
+      "relative_path": "images/val/waterlogging_waterloggingt-126-_jpg.rf.adc92026324c92e8065ad301202dfa9a.jpg",
+      "file_size": 34154,
+      "sha256": "1e9b134500b2dbb3732db5d660d260647742f74a7c8647164f49f1dd19b9c79f"
+    },
+    {
+      "relative_path": "images/val/waterlogging_waterloggingt-14-_jpg.rf.fc4f85a9cfcb85e9014fe91f7ab045b0.jpg",
+      "file_size": 39155,
+      "sha256": "a3ecbfee27be6d38cc2028456c0a5acd5819fa40fe2c9bd6441d3046b997ff5c"
+    },
+    {
+      "relative_path": "labels/test/manhole_img-14.txt",
+      "file_size": 78,
+      "sha256": "8badfe2aebaf62593beae4b4b1670c36d9ff47840db43bc49da215d180044b09"
+    },
+    {
+      "relative_path": "labels/test/manhole_img-21.txt",
+      "file_size": 78,
+      "sha256": "c4e965b1eeec1590da00e102988b4a76c383a820a376cf0430c59b54d8047fd0"
+    },
+    {
+      "relative_path": "labels/test/manhole_img-33.txt",
+      "file_size": 78,
+      "sha256": "1cfca2c8c1e2f8befbd83d374525bf2766ed15d89890cfb3e6407ff3d20ad9cf"
+    },
+    {
+      "relative_path": "labels/test/manhole_img-38.txt",
+      "file_size": 78,
+      "sha256": "697ddd78b82503c093edb43d60aa19e68bf327e0ce98417d57e0c58415e7a4c6"
+    },
+    {
+      "relative_path": "labels/test/manhole_img-57.txt",
+      "file_size": 39,
+      "sha256": "6b50471be3b5a47668a3090768c56cc48fa535f5a79188d4ffe396bd3089cc3b"
+    },
+    {
+      "relative_path": "labels/test/manhole_img-71.txt",
+      "file_size": 78,
+      "sha256": "b64f378454184dd13dc816b7fd688558debcdbc3e175f673cf7b99bd9703b262"
+    },
+    {
+      "relative_path": "labels/test/manhole_img-82.txt",
+      "file_size": 78,
+      "sha256": "ac13b06ae2f0882a4f65ea56b58bc2e9e97f152f69cd4debf904ef82b4af9977"
+    },
+    {
+      "relative_path": "labels/test/manhole_img-88.txt",
+      "file_size": 39,
+      "sha256": "435c92326816a2e6555e05e06301c1d081003538b8826f2022188d14cbba589e"
+    },
+    {
+      "relative_path": "labels/test/manhole_img-92.txt",
+      "file_size": 39,
+      "sha256": "d069937bb15a860bec160c8a78cf5685ff9f40cdd8b835049e21581ae2c25480"
+    },
+    {
+      "relative_path": "labels/test/manhole_img-94.txt",
+      "file_size": 39,
+      "sha256": "146c9efec26e55cd9b01c883f94479c6e4944e6610505bde574c0b6566c04e0f"
+    },
+    {
+      "relative_path": "labels/test/roadsign_IMG_8100_jpg.rf.efaa0d300ce6c59199fb9f6203b98715.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/test/roadsign_IMG_8105_jpg.rf.7d4a4ebca73d1b48e99a5255dbbdd24b.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/test/roadsign_IMG_8177_jpg.rf.c0514d0b597f4c360f8b9359ac662be9.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/test/roadsign_IMG_8364_jpg.rf.9cb8dcfa2b6c97fc3a4d5db1899b9331.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/test/roadsign_IMG_8385_jpg.rf.bdf28ca3ab2a803ca457af9bd1142571.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/test/roadsign_IMG_8666_jpg.rf.e79ba09cf8bbb4ca1d2e1e223e5244be.txt",
+      "file_size": 39,
+      "sha256": "905c6cb6943ef14e8a586662b32c91f521d3a333393b152a4adb8b9039bc5f67"
+    },
+    {
+      "relative_path": "labels/test/roadsign_IMG_8678_jpg.rf.bb0bc3d760e66d124ab6970b838a7b11.txt",
+      "file_size": 39,
+      "sha256": "24d7f35b005a307c96ca6fcc942b4a28d2a6ed73607cb77a9738558788a72e8d"
+    },
+    {
+      "relative_path": "labels/test/roadsign_IMG_8695_jpg.rf.6aa4dafe486b4048103989e84791eb39.txt",
+      "file_size": 39,
+      "sha256": "bf9441a1711c67bfa601aadc4550f43d4d36dee780f0b7fb3d08121a8b6f8a73"
+    },
+    {
+      "relative_path": "labels/test/roadsign_IMG_8770_jpg.rf.ce11afa1ea33a0a7ced58feed7416701.txt",
+      "file_size": 39,
+      "sha256": "447bd9946199d8945822c113024733ca85f30106301c9e6da7cbfdeacd2664b5"
+    },
+    {
+      "relative_path": "labels/test/roadsign_IMG_8955_jpg.rf.a7a0ee13ea9a42ce421604641ed8063d.txt",
+      "file_size": 39,
+      "sha256": "a907a41d61ed6222bde0e73c925381f052dcce4ddf06535f1550d9344e1c3572"
+    },
+    {
+      "relative_path": "labels/test/waterlogging_improved_waterloggingt-25-_jpg.rf.9b72dfc19a0a62cc28ccc7e9cb169b2c.txt",
+      "file_size": 39,
+      "sha256": "c411c1541eced151ba5d10fd5205e8b02d1823124144648e58e94a64cb23c969"
+    },
+    {
+      "relative_path": "labels/test/waterlogging_waterloggingt-11-_jpg.rf.c46d95b368505ce2e2b4d56d0fb6101f.txt",
+      "file_size": 39,
+      "sha256": "0dde96892a193c6204f279a19b6ac45ca001763f2a258619de75c58ec065dc87"
+    },
+    {
+      "relative_path": "labels/test/waterlogging_waterloggingt-11-_jpg.rf.d3926ae9649b48019ad0de93247b8776.txt",
+      "file_size": 117,
+      "sha256": "2efb5c8de37484040a739de853463ebc85589e1dbf29fe520c579d5e3ee7ce25"
+    },
+    {
+      "relative_path": "labels/test/waterlogging_waterloggingt-110-_jpg.rf.e64ab83a5986ee642135179a119dde32.txt",
+      "file_size": 234,
+      "sha256": "b566eff09445c04970d5b73731aa2b9014dae5d27445c57bd96ad107923dbdc7"
+    },
+    {
+      "relative_path": "labels/test/waterlogging_waterloggingt-114-_jpg.rf.59969ea013a1a3687220d18eb0c84d06.txt",
+      "file_size": 78,
+      "sha256": "6335ee987c6d46c517b8dbe5f6649a5fd5bc71554fcccd972fad784e490fadc3"
+    },
+    {
+      "relative_path": "labels/test/waterlogging_waterloggingt-114-_jpg.rf.5eda7421696a9f024c32d928f3a39eab.txt",
+      "file_size": 78,
+      "sha256": "8723f80a7a42954ea877af9cc21d1c021956aff4472daf65eb061eff0fc3499e"
+    },
+    {
+      "relative_path": "labels/test/waterlogging_waterloggingt-114-_jpg.rf.a77c20c66646123b6ed8f2712dc711a2.txt",
+      "file_size": 195,
+      "sha256": "a10cf13cfc6cae325788c3a07b1c20cb30cdeca7cf753b73d5155b820670981f"
+    },
+    {
+      "relative_path": "labels/test/waterlogging_waterloggingt-127-_jpg.rf.0e8185f58b2e06d71649cff3a82df08c.txt",
+      "file_size": 78,
+      "sha256": "f9e723023abb05099c7bdc31d3e1a6f764da5185eb470d74c8d37b91154a1b8c"
+    },
+    {
+      "relative_path": "labels/test/waterlogging_waterloggingt-127-_jpg.rf.5b6ee9589c8ebaa451f0d866f47c0e2a.txt",
+      "file_size": 78,
+      "sha256": "e34fea5dc2d06945adaf166bf17e6305fb7e635844192c9b7d135b4247c56ec0"
+    },
+    {
+      "relative_path": "labels/test/waterlogging_waterloggingt-128-_jpg.rf.5f4420da5b81992ba7693869e96d14ee.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/test/waterlogging_waterloggingt-128-_jpg.rf.da43c075e1a93e1a7d1948b6f9febdee.txt",
+      "file_size": 39,
+      "sha256": "53a99f79457982076d2c39203e8c45d72781367bb79f62f1d058f2a9ac97449b"
+    },
+    {
+      "relative_path": "labels/train.cache",
+      "file_size": 55553,
+      "sha256": "c9b508b9014831d5a9282329530720ae9a88f8da163b8fcd5f05e5198155617e"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-1.txt",
+      "file_size": 39,
+      "sha256": "1db4d1287eabf1f28df0e6c1ac69e4efd348dcdf371930691d5e068b45d018f7"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-10.txt",
+      "file_size": 39,
+      "sha256": "0b54ec37d57faad5cd1a2818f5d1199858a80194ead67f0ef1346d1936d57444"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-11.txt",
+      "file_size": 39,
+      "sha256": "86aa6873182325e3ff4f9841cf1c1fcda542cd13045743113eb255db7c3d45c5"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-13.txt",
+      "file_size": 156,
+      "sha256": "dceff7fb75fab85fe0fb9eedbc5dc324326b87866f4200b93214babd67bdf148"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-18.txt",
+      "file_size": 195,
+      "sha256": "03c25839191f60a0548286e20bebbc6e1578d5906318f2ce04ec610a5dc4cb4b"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-19.txt",
+      "file_size": 78,
+      "sha256": "afeb7033b3ffd615bb4bf77a798550742e86f9146c394128d287e7b576a26c46"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-22.txt",
+      "file_size": 39,
+      "sha256": "a122c0f24ccc9b6a4a388c03bb75cc8b2f8be8cac6a74b29b1dfc75e55475e7e"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-24.txt",
+      "file_size": 78,
+      "sha256": "df40bf371e38323b749feac5cc2afb98ecb4d14cb2f57cd1fc9601106c772fb7"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-25.txt",
+      "file_size": 39,
+      "sha256": "621473cd121e9b0c15fdeed8c04e9d6df71a0d1900b9464811045a40bd55ea01"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-26.txt",
+      "file_size": 78,
+      "sha256": "82ae743e18aca7ae7cee3dae2793aa3dc1e443dcf4001dc06c2c4c01fd42aba4"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-27.txt",
+      "file_size": 39,
+      "sha256": "08bd7f7050f8575c34cedccd34f47bf7906fd76ac5d85de5bc5bb9a27a1e9de2"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-28.txt",
+      "file_size": 156,
+      "sha256": "75ddefcba3c028e4d85730480f9018d260bfc102081836988c32be22b80f1329"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-29.txt",
+      "file_size": 78,
+      "sha256": "675ce583a972c1d439db11fd65412d886c3b522b2bb6aa4e6a16705af15e340a"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-3.txt",
+      "file_size": 39,
+      "sha256": "be82b9d2df860c63a1a8ac4a23cc20a0ef22501256e22b53b6367a7ca19808e2"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-30.txt",
+      "file_size": 117,
+      "sha256": "728a5640a0e85796da581b89883ca0e57bc89173b6e7c9294f600110929d60da"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-31.txt",
+      "file_size": 39,
+      "sha256": "2377ce40410bc3ce4a1de7cc9dd11b4b74e348b1b8b42ffcc602ff1f32f3bded"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-35.txt",
+      "file_size": 39,
+      "sha256": "1f5880e105f0c05e4828a250b607b8d31aa23fd3e53ff99fce8f4f33188532af"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-37.txt",
+      "file_size": 117,
+      "sha256": "c367b30d26c22ebdc2999cd516ec42d0430b632856cbf614dd289258dd0ba501"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-39.txt",
+      "file_size": 39,
+      "sha256": "89e156d791aca74ac823a829cfc578b9b282f76493781bd97285d8b89d5cf8e1"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-4.txt",
+      "file_size": 39,
+      "sha256": "ee628e1947335edd7f2026e2f237d62ee3e2266589d812d7c4f175f5a995d45f"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-40.txt",
+      "file_size": 39,
+      "sha256": "ec4045c9a937830f7586880b423ecc2b0e7f0ce3d58e6db8a78bdf609f25607e"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-41.txt",
+      "file_size": 78,
+      "sha256": "d3db3e6f833a4fc642ef36cf1fe4ae739a056e46a608aeac77251d9094befb91"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-42.txt",
+      "file_size": 78,
+      "sha256": "8629d4fb087da2fe0e5a2576988b1f282039fd01c382381b5fbdffdffc189859"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-43.txt",
+      "file_size": 117,
+      "sha256": "de9e71c3104414ad2975ba6eda2e6a5182852aef91f1136041bbb772e40f5ab4"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-44.txt",
+      "file_size": 78,
+      "sha256": "69b6739fb809b86a9adea70f45e0284fda6f5ecd408bb4a0955ba92a1085964e"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-46.txt",
+      "file_size": 39,
+      "sha256": "f7304f1dec83486e6d144f402484c573cd2519f57235533b04f1e7b0867d76c6"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-47.txt",
+      "file_size": 39,
+      "sha256": "4c2967eb6b0316c025424c9a42cbbc52702112b6959454266d6edd16f178f685"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-48.txt",
+      "file_size": 78,
+      "sha256": "8d131a09a5e16ea6fc13aa6dae77814c002c72bcb901c866569370ae2b634931"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-49.txt",
+      "file_size": 78,
+      "sha256": "493f815d10e4d5d274713e1f837b773944931e7c64033d53e5a4cc8d7940c252"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-5.txt",
+      "file_size": 78,
+      "sha256": "3770334e4d8390af9ec67d0d953092c772fab5478c1bf9aeeedb4dc40afa8169"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-50.txt",
+      "file_size": 39,
+      "sha256": "9aba1463c9add843cb63c51a48024109e997494711261eb8c403c9cbad1f21e9"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-51.txt",
+      "file_size": 78,
+      "sha256": "c7973dbd8ba5e3c38ff0c14ddc08568a437673dd689b986ee6ee3110bd3bdefd"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-52.txt",
+      "file_size": 78,
+      "sha256": "1041f7909fc743511ff82158824244300b22e5e01b4cc8b0514002539b967c0e"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-54.txt",
+      "file_size": 39,
+      "sha256": "d53884cab8b5ecde1b54271981e3c75bcf700eb7d5c6c198e1b141230af661ca"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-55.txt",
+      "file_size": 195,
+      "sha256": "1e3e5264257c7f6314bca5030d6401022480feee58285e890e5be1437611449c"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-56.txt",
+      "file_size": 78,
+      "sha256": "7994674b329015f8a9d5e72bfc76310d0a43685ae8e026b05ebcd545e29c90f6"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-58.txt",
+      "file_size": 117,
+      "sha256": "329b6824d88267c16cdae47560efd30f9b8306e91b7cea641acfd48328f43a76"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-59.txt",
+      "file_size": 78,
+      "sha256": "56b9bb6f4ce0f14fc8952842a0eec9b7b2cdcd7fd30a124f2478bd8d6f0367d1"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-6.txt",
+      "file_size": 78,
+      "sha256": "0a311a503520059aa57a8e75876f37fcbc13fd256f49bd1c4c26a312fd2cf5c1"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-60.txt",
+      "file_size": 78,
+      "sha256": "e256ecef2d4193372adef3bd58470e34cf37821db2e946acb1feecc2159e7b3d"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-61.txt",
+      "file_size": 39,
+      "sha256": "60d3c396f0ac86a6b155220bce82c49ad339906e04f4a13faf3f29df9e113774"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-63.txt",
+      "file_size": 39,
+      "sha256": "8bc4b4c8560db465b2cceb8e4c09a9b78656387868211c34990a427eb62bf31f"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-64.txt",
+      "file_size": 39,
+      "sha256": "efa6d7107d82e566b730c93b25fb6fe1dba7f86cd1688ec9a6f63a316a0263ab"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-65.txt",
+      "file_size": 39,
+      "sha256": "4689bd4ec48cad02fe07368f066f1c974f005a693efe939ad7ae14852375ae03"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-66.txt",
+      "file_size": 234,
+      "sha256": "db4445a601271bcf5f3f32062583f1eddbaa3b20350afd6d70ff6393aa78aab3"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-67.txt",
+      "file_size": 117,
+      "sha256": "d38f2ef10cd0764310a1d2a1ec250616afdb2f684593391b8360a9c3d10ad166"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-69.txt",
+      "file_size": 78,
+      "sha256": "20df34cd9117949693a97dec26a41a54ef026bff1a8282db4f76ec9c32910475"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-7.txt",
+      "file_size": 39,
+      "sha256": "e70b79008ee01de1eca731644e76569ef8868a8361d15065c1a4ae6c18dd849a"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-70.txt",
+      "file_size": 78,
+      "sha256": "fc94aee3b44075afb4a26c15be469b878fd58dee21113a98c03b6620d32e2c50"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-72.txt",
+      "file_size": 39,
+      "sha256": "44d94aa0ae18bb7bbc18f726a48f038dba51f857dcb845cfc8e113a410c60735"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-73.txt",
+      "file_size": 78,
+      "sha256": "b23deb385e79c5b896f1db4c0d9d5447b009385cc121d94853ff2a57acc5309c"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-74.txt",
+      "file_size": 39,
+      "sha256": "c5bbf6c249d4e4f05eaeafe91b55438c4cfb84e464e6d0cacacf73bf9815387c"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-75.txt",
+      "file_size": 39,
+      "sha256": "d14bc3cdd7f74e45a863ba7f8364f1e952eff8bf35f72d9c32b2784686b4fe30"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-76.txt",
+      "file_size": 78,
+      "sha256": "4b4cc58db5bf92de8683c74ef4947b29e34f98405a191cbe6736e06fa0462993"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-78.txt",
+      "file_size": 78,
+      "sha256": "30718cca68fbffd0cf8a4553db02acdf841577ede0dfe1134af10bb9a6c7c6bf"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-79.txt",
+      "file_size": 39,
+      "sha256": "4e0f77c5b06bd9555b8debda789aed0f7466264d8926aec5e977e8eb0c426cca"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-8.txt",
+      "file_size": 78,
+      "sha256": "2127410e49f205cef525e09b4a1260167fdeef31595b2093d18abe4aa4e37bcb"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-80.txt",
+      "file_size": 39,
+      "sha256": "f35dcda2ec89ec105c997c7e2d7b1faa985dbfe1cb1736f7b61f6d403b36cd75"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-81.txt",
+      "file_size": 78,
+      "sha256": "99b635adcf7ac82af0b79c569ba72867a7619c4371c9d26e40c5cb7a21ce4419"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-83.txt",
+      "file_size": 39,
+      "sha256": "4467c4bdb4d62a8dd2b1143169bbcfc1299ac8dfe5ef2be9b580b53dbde58c7c"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-84.txt",
+      "file_size": 117,
+      "sha256": "a8952062167984f013005240e7d5e7edf77c7c9361aa7046714847e33c95a9ab"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-85.txt",
+      "file_size": 78,
+      "sha256": "b1289d2860653b37163b355326a47edeff8d5cad2d03b5589ef3f1c06e488e4c"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-86.txt",
+      "file_size": 78,
+      "sha256": "a0ab8eeec18f955e6a0d028ad2632a8f9ae17ed6eb800cf4c5ce4a90709fa4f9"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-89.txt",
+      "file_size": 78,
+      "sha256": "8636649f10816f55483b067964557b81ab79b81a75a6280068d9fedb9e6ea2a5"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-9.txt",
+      "file_size": 78,
+      "sha256": "7e9eb6f66ba5da0e094cf3b34d9829ec03aa6e86ae93fd35a73f89906f84f6e7"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-90.txt",
+      "file_size": 39,
+      "sha256": "3a2f92509bd0bc9a83cc0009351830699ff7c108ca7ff2c99fc5a0299e0d42ab"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-96.txt",
+      "file_size": 39,
+      "sha256": "519d101baae6e18c74554c11bd111ef8aa0d8dfd3881750ed4fb8dc7507c950e"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-97.txt",
+      "file_size": 117,
+      "sha256": "3455a13d86aa9da83a4a26226d6f7693f16ea33dbc03258eea14c3c32386827a"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-98.txt",
+      "file_size": 156,
+      "sha256": "06cbf5a180a850f82abf97512473f84ab9b433e97b3c994c5ba74e01f96e3036"
+    },
+    {
+      "relative_path": "labels/train/manhole_img-99.txt",
+      "file_size": 39,
+      "sha256": "7c6a25174032753f823460e0bf8f26455aca3ad8d43b02326058fa3f47b677f7"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8073_jpg.rf.9163ae422e2c9e7ce09935524c48ac45.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8087_jpg.rf.794668ab97e5f13c372785cb90fc6354.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8087_jpg.rf.f2438568feccf315a62621e6ce71d2d6.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8106_jpg.rf.4f7cbc8381810784ed363d38fa6a6925.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8106_jpg.rf.8d160e11f0d971014935202b89f94c12.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8113_jpg.rf.dbd7b522220575d43889a80f88a8ad86.txt",
+      "file_size": 39,
+      "sha256": "bd5ea2f1dbfc75f38cca28fd382b4ba6f8465d38a2b9c2a9492eab150ad7dc65"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8121_jpg.rf.c6c742d01d11db2700a86a91fd935c72.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8121_jpg.rf.ef798e00c15eb0c6a2c01ff31e667b9d.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8122_jpg.rf.fc979538ea458e9698d4cb3cf353aecb.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8125_jpg.rf.916546aa5384f625e1a0308812fe2000.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8128_jpg.rf.b17b28d9ace18bdae99b61de6553d2f7.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8128_jpg.rf.f5d5650f0e4713cd10d5f08f421e1b0c.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8156_jpg.rf.e359e1437b412861e33a3efe95cd89b9.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8161_jpg.rf.b44fc056eeea67893d7b5f86a7446fbc.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8162_jpg.rf.4a661c09d362cb49b7f00c0069aef17e.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8162_jpg.rf.a45e967cba9e65fb7d4c280853f86f99.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8163_jpg.rf.e3dad279156e4569ec410c8600550cd0.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8165_jpg.rf.83345b226f9f368f1ada468f58344b05.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8182_jpg.rf.d0d70f074356fc2c798381b68084014a.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8195_jpg.rf.f08c077512e09643e7d23a54ad77de8c.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8231_jpg.rf.13ed71392ed69ff7ec897e48bd515423.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8245_jpg.rf.973f7dc0a0e279e0fef796e0a0bedb6f.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8252_jpg.rf.665eb53db93325c8ee65d1cd01a29fda.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8256_jpg.rf.d89d7a76e2e474b974f271d4531b1f01.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8261_jpg.rf.abc10f7c8b39eb75878c6b03ee698cf1.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8266_jpg.rf.056790686b77a191092857e9082c07d8.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8280_jpg.rf.57b644863dfe0784bdaa3cc11ca82601.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8285_jpg.rf.15391a4adf5bd9145becb507d0ddf4cf.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8308_jpg.rf.5af1cce884957933ad04f5968370b1b4.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8355_jpg.rf.fcda9e37ac50cc6576c5b17ce81dabfc.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8379_jpg.rf.99445c98efc204f3787b27496a5c2f7d.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8655_jpg.rf.45544adfcdd97c94f9db3407648a52a1.txt",
+      "file_size": 80,
+      "sha256": "c37946192e5584af7c87c7f4c205c0bc737991ac7fbef4b02ba90466db77a937"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8669_jpg.rf.52e74a17e8c276a3b37e03d3742b3beb.txt",
+      "file_size": 39,
+      "sha256": "58f137170519e8a50e8e802878eb5177048ec01318118e37117ec69637eecae6"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8669_jpg.rf.876cb547a20ac0519b150763a3f7e5d4.txt",
+      "file_size": 39,
+      "sha256": "776ca828e52a102304614b27dc7a735396c863a318e38ff0664f4d99fce2e4c4"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8677_jpg.rf.a471346b213226c37f3b8c2853d85f72.txt",
+      "file_size": 39,
+      "sha256": "92ad4a842c198445990c571c44e6410daa4d0a44224f440caadb7bf386b387b7"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8702_jpg.rf.06c73635e3a4fe0e5f612862ae8144e5.txt",
+      "file_size": 39,
+      "sha256": "f9c00455d207fb39d5299f9e910ea5cc16f07f9a39ccde50bf76af3980ebd7a0"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8711_jpg.rf.50e1d285f370c2d6984cae252b700b4e.txt",
+      "file_size": 39,
+      "sha256": "9c988f36e78c297c116fc4c6d3336e975b370482be497e40385a6897041de481"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8716_jpg.rf.baf77b003dec3e73880906eab87fdb27.txt",
+      "file_size": 39,
+      "sha256": "14a45a3c449758aab9dfa6a88dcd2ffd2980a012338f37b1ad55f8fea4ee34ef"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8725_jpg.rf.1c6802aebb5d2ae4eb86a86edc09054b.txt",
+      "file_size": 39,
+      "sha256": "6a1adaecc4177d0573bedafb180dae6a261626af802e77d0e7bb03f7dab98d28"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8744_jpg.rf.a9c09cbdcc2b228f62aa9ee3fb7ff8ae.txt",
+      "file_size": 39,
+      "sha256": "d9fdad0205b187bf588f319fc4e66877d6eda97bf3bb11c61d245052619e4aa1"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8750_jpg.rf.d564325675a78c06111472a423828109.txt",
+      "file_size": 39,
+      "sha256": "7040490ab13259fd0fb77dc41a2a71b1562ee7eb43f904539e54732e3e22d888"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8772_jpg.rf.bcb65e078a47da94b52e2400d946f221.txt",
+      "file_size": 39,
+      "sha256": "2f1775c32c42f08d22d69b3b07f40c5a1c4fa95d9f9b0dda5590b83a15d033eb"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8775_jpg.rf.c9b7dd7ade91cb9f309b7a270812edaa.txt",
+      "file_size": 39,
+      "sha256": "10ab96ec35d7d70640ad236bcc0c5ae307167f64e97250030980df4c0c92ad18"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8776_jpg.rf.06a91ea69ba33f868eecd63ae2816d6d.txt",
+      "file_size": 39,
+      "sha256": "70ce3474436fb878a338bcea0eee98ffab8a90a788983f0544b2efe504cb332a"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8776_jpg.rf.f68f4335acf5b546b264562161076554.txt",
+      "file_size": 39,
+      "sha256": "7cacde81226f3816da16ffe92b739ab7a450b27d371a34bce0ff095943e46351"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8778_jpg.rf.9764a64b899a1e6ea64744b9079ed01f.txt",
+      "file_size": 39,
+      "sha256": "b9b132640be1f8ddd56b3bd1c81e47b6d8714bb0e1328c03a8240ce5df906144"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8790_jpg.rf.ea0f1332461df3a62d7940d45fb36c37.txt",
+      "file_size": 39,
+      "sha256": "6cae02403304e929055dee82a1fa97368d28232e5a62579cafe77cb52afe6846"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8793_jpg.rf.f178865b76fc1cff86f30298de115481.txt",
+      "file_size": 39,
+      "sha256": "736e0afc9dd421abba18f555ef3d3f2d4a20f2c8881ce19696d6b35a6274d3f3"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8795_jpg.rf.1494bfedc8d16c1542454d551cf0d199.txt",
+      "file_size": 39,
+      "sha256": "28f95e35c3dbac90484aee5d1040c7e4b2178a4840be03f691a2e3350f7dce1f"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8804_jpg.rf.f1a1f7577a34f6d04a06842185f53a8d.txt",
+      "file_size": 39,
+      "sha256": "cbbedf973e1e15c36febfc33cbeeef7c37cb126b431c2606b4262d1170b9fe68"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8805_jpg.rf.cd4be44991191ab8787630c44403ad79.txt",
+      "file_size": 39,
+      "sha256": "72a903d2836b5c19d588ab1134fafa04a71bba32741ce9c44e1181a676a8dc86"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8813_jpg.rf.079f3b18937040f9721b68b1f1df5a35.txt",
+      "file_size": 39,
+      "sha256": "386a34343448e4df7e62f180410024aa5aa6464a659fb459db4fc0bde7640520"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8819_jpg.rf.9c0fdefabb03abb0c40b12736041c3ac.txt",
+      "file_size": 39,
+      "sha256": "711ebf0ba3b3ea8a55648f09f53c651095b30ce0b633fac7025e92ee9e2e3573"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8855_jpg.rf.997762138de3a84b2d2658a920edb366.txt",
+      "file_size": 39,
+      "sha256": "eaa6e63f0e449bfa05a4cc8c053da16fbecbe64220cafc188f38d73f77c89108"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8900_jpg.rf.83825b9de282a8411b65972cbf3892fe.txt",
+      "file_size": 39,
+      "sha256": "daab88e550de99cc42069734d59d283dbeca3768d5c88df26e0c0fbdeef01b51"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8902_jpg.rf.dc64d0017973742a4bdc97a02ee6c7f6.txt",
+      "file_size": 39,
+      "sha256": "cb2fdca4c0f3e4e95ee8679a8e038ac0b2b0f87b9689d60592e31b18068bc71c"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8911_jpg.rf.170aabf2cd3fca939793864731bce81d.txt",
+      "file_size": 39,
+      "sha256": "0c9a1a3915e5798401a9c766733da4e7f196e06d4e5a50d60fd81a893c3c72d0"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8931_jpg.rf.66a35baf2bc4719ce5992e3896c64db6.txt",
+      "file_size": 39,
+      "sha256": "8979cdd56baba09d678d246484dd1d4ff047fb7ee5dfd1db30bc9fda4d303b13"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8949_jpg.rf.5bb7d6cddec57210521198df34f1847b.txt",
+      "file_size": 39,
+      "sha256": "725debe92982b8a9d5c14f5f4d7cd06e2876b7c650c21321c9cce7427c8dc10a"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8971_jpg.rf.d40fb8b6f651dc4de7771025284e99b9.txt",
+      "file_size": 39,
+      "sha256": "a5181c45435a99ca73be18ca5fdf11a6db807af1045cf810882fcfa9703b0da9"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8981_jpg.rf.1ad2c67e810979a1e5a4168a0e75b7a7.txt",
+      "file_size": 39,
+      "sha256": "7c0505e72cb9fedf5fce99b877062190e2bb94bf4407529e299b7d84b6c2e5db"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8984_jpg.rf.f3a1dbce9461b377b891da9cd712e67c.txt",
+      "file_size": 39,
+      "sha256": "66eb066d15480175a20754b224d6d13b640c74044895ffbf8a7435bb60f9b186"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_8997_jpg.rf.c0edbb9e5d8461f038392b1a28784822.txt",
+      "file_size": 39,
+      "sha256": "fe40c1da48381fa421905b5630e8e53df9b91e9f276608c63aa4b5469a4344a9"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_9029_jpg.rf.cfced0352f72a57dadb7c273c636d444.txt",
+      "file_size": 39,
+      "sha256": "eee728a51c0dc71bee574a52e775d0ea37650e4fddc0e1394c2d2ae067035e07"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_9029_jpg.rf.fd037d113b091d214657c4d461e6413f.txt",
+      "file_size": 39,
+      "sha256": "18f3027f103611efb7586cbaad5f9818f29455b1f6ee0e6045d77d0b4cc710cc"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_9075_jpg.rf.54044419da9e36c6c5cd368c4f7be48f.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_9076_jpg.rf.efea528e2025e746438a477bd8121fbd.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_9109_jpg.rf.a75842e104d6f89285d2f1cb7b3aa1d6.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_IMG_9131_jpg.rf.2be5a568ebce2d424c9c78c53e06d5d8.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/roadsign_image5-14-_jpeg_jpg.rf.29ea84afdc9b9e4d9d9041e0d7d67c20.txt",
+      "file_size": 39,
+      "sha256": "b3ca474a3b156be3ef002f83144e5efa7e62108fa7c4d448b2ce48e6446f2ec5"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_improved_waterloggingt-118-_jpg.rf.9f5101c986e46658c6aeca1712944f37.txt",
+      "file_size": 78,
+      "sha256": "ccdde90755e4c65beaabe4f853ef8fe4a4b47fbcfe6552be971eedb50c35d496"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_improved_waterloggingt-132-_jpg.rf.aa4d62b466c200c94d69ef20035d75ca.txt",
+      "file_size": 117,
+      "sha256": "9da8a82d9d38336232d3c52ec88544c28bff16215497cb791a77c0f2ee42b5d9"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_improved_waterloggingt-138-_jpg.rf.21c39f2535d3ba848811f1aed549245f.txt",
+      "file_size": 78,
+      "sha256": "ce12f7346ecdf9565ec0aa3d434a6c635a0e3f4571e3c072eb75c30bd28e9d2c"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_improved_waterloggingt-143-_jpg.rf.7eb50cf74c473096439de90024ba7fe8.txt",
+      "file_size": 39,
+      "sha256": "54ecb5bfffd41c877e701db4018be03ba096883ff0efc90179e29f614e0b9b39"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_improved_waterloggingt-169-_jpg.rf.f639ae5611d8a484589c5642bb3c5b84.txt",
+      "file_size": 39,
+      "sha256": "888cc1d15b1c119bab86530a5bd2f77ade5cb018f5a43e3b804dfd823570a73c"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_improved_waterloggingt-181-_jpg.rf.05cabf9934fcf532374d815f9fa935d4.txt",
+      "file_size": 39,
+      "sha256": "ae8b76d97e171dc8c8ef84a347281cdbcfb0487cd36fdd5d0583636dbf5b62e9"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_improved_waterloggingt-184-_jpg.rf.02ac69ccbb5b2d217eaf3bbd5f1e6c8e.txt",
+      "file_size": 78,
+      "sha256": "05f2550ec836104377ce8cc5c30dca9a032cf8fb89bddc08e4c7c292ba01de50"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_improved_waterloggingt-22-_jpg.rf.4d5205173cddf9b96af9550d779bc053.txt",
+      "file_size": 39,
+      "sha256": "72962f03ff045b8d447acdfc8e7530a736ca24429eda3766eb6dd350a356d984"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_improved_waterloggingt-27-_jpg.rf.1fadb20b17c352cea1abc8af2232d7e9.txt",
+      "file_size": 39,
+      "sha256": "8d726417aa4bea779d9df40935cb8ecdbed7451e80e3c5d15eeb3dc2397a754f"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_improved_waterloggingt-28-_jpg.rf.07bc55e849d0f707b8bd445153ba71c2.txt",
+      "file_size": 39,
+      "sha256": "c694209c923f34d194b9a24ce682b362fe3e8c65d93297ec44d213c541383ce8"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_improved_waterloggingt-35-_jpg.rf.9ca699bb867160845544bf94c95dd4cc.txt",
+      "file_size": 39,
+      "sha256": "6b29322cdb5f182dc8159167f880f7dcc96d882cf3a336415aa33b9277fe0016"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_improved_waterloggingt-41-_jpg.rf.11272e810874bf05da4324d71d4f1f44.txt",
+      "file_size": 39,
+      "sha256": "a68644c3ab15e11fd6807733c7b3d85f9fb1f56ccbae30a4fc25a115c1b5b2e2"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_improved_waterloggingt-42-_jpg.rf.2efeaedaf7c1921e4d1dfc9a6651cc19.txt",
+      "file_size": 39,
+      "sha256": "1918858d28bc8d6ff15b0cd0ce9e41c3da0ed28a57d30483a7791f8ee0da3000"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_improved_waterloggingt-53-_jpg.rf.f6e918ef4bee62811d5f182421e51022.txt",
+      "file_size": 39,
+      "sha256": "81cddeba860c2447f0a386b76fde12cb78b61a61d1b097680f5e128fd92d46f7"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_improved_waterloggingt-55-_jpg.rf.d27c000374aef60d429146d6330cd6af.txt",
+      "file_size": 39,
+      "sha256": "14257891f19606548acf701655519bf33176d77fca58411c3dc1fd62cb042128"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_improved_waterloggingt-61-_jpg.rf.bfc1a334a8e482965107e23a96ebced0.txt",
+      "file_size": 39,
+      "sha256": "1c96d4ce824d6c87de9e0c214451136f01fbfe59c94961b074d8b39f62aead47"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_improved_waterloggingt-62-_jpg.rf.0f85b101d494bbbe189e59e604e80df7.txt",
+      "file_size": 39,
+      "sha256": "9baf2970571da748b3b0f04f035be217d956b9ae04064ffad6fdc7f5aeec4680"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_improved_waterloggingt-78-_jpg.rf.3b3649658bb68d0c56e8a3eb121b66e9.txt",
+      "file_size": 39,
+      "sha256": "5d48f80432921536e40873175e23f9a8d4f930e034c573a54dcdd3897ea762aa"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_improved_waterloggingt-79-_jpg.rf.2ae06d3e1bad730417c010f5bf2ee14c.txt",
+      "file_size": 39,
+      "sha256": "311d8c99f75a5f0c141fe8f81558f207e74793bcee58a2f25dde806e1826f854"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_improved_waterloggingt-91-_jpg.rf.bd07d96b4b118bbfbc019c1e8d575c68.txt",
+      "file_size": 39,
+      "sha256": "e1b37aab04e8d87573d08fe5582eda59e3765876d25039ca07186dc568797f7b"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_negative_IMG_8070_jpg.rf.440f012d444257140b9845a79cb7e5e2.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_negative_IMG_8080_jpg.rf.1372954eaaa1b7729dd3137086c621df.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_negative_IMG_8084_jpg.rf.8384dc639784c2ec83763b45b671961c.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_negative_IMG_8101_jpg.rf.54fc93e82f99572622d85e89925f203c.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_negative_IMG_8103_jpg.rf.3e045aa4476f11f7ceeaf51f68676585.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_negative_IMG_8117_jpg.rf.0962bc1c5109d929cf3b5055e6ae2c54.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_negative_IMG_8118_jpg.rf.2f48636bc3811382dcc0b61e658004af.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-100-_jpg.rf.8d02cd2363f09b6518f2883086323a66.txt",
+      "file_size": 78,
+      "sha256": "2c690e1f816961a265cde34e2cedebeae145a6236d02077c7554a6145af42ddd"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-100-_jpg.rf.faa3900c35a78d29abfcf58dbaca2aa9.txt",
+      "file_size": 78,
+      "sha256": "5c02064987258de90e85f2bb7dd39f51d62e6a6e786f804e5dfc45503c94eaa6"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-102-_jpg.rf.1a8bd735d4844c6f6494c70d16f69d38.txt",
+      "file_size": 39,
+      "sha256": "da58e7acebede52e36be1fb94b3356518787886ce09f5e4faafb9be6060f4f1c"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-102-_jpg.rf.3301021e42eb5a35c62cf11b8447dc39.txt",
+      "file_size": 78,
+      "sha256": "3eb12d8806e16fbbb38afc6156f0658bd6608a604029f20bdfc87b5b3e9c91a5"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-102-_jpg.rf.95cf776cada9a363d357dddcdc8e5ecc.txt",
+      "file_size": 39,
+      "sha256": "e8dd643ede2b65b905bb513ca1ded675d36dcf512a7b49e9f888fce358c479c0"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-103-_jpg.rf.10009ec111cdef89d0e5a8fae80e493c.txt",
+      "file_size": 117,
+      "sha256": "be3eb5d1a4607bddf272a29d6665b2ae636331b4568379c8e7beb05bf0392142"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-103-_jpg.rf.7a139c90e83d52a9682e34f6dd618690.txt",
+      "file_size": 195,
+      "sha256": "6ab0f8c406f928a89b217c0e63ef9ba78fe35db0f2d5b3910f4dfdb58e43ea17"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-103-_jpg.rf.de47130eec1ca2bcbc2f43090193e729.txt",
+      "file_size": 117,
+      "sha256": "20080f4fc62007d53e4f4b4567329dae5d7bda54cb5b49c30b960e03a8a1b51c"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-104-_jpg.rf.e4c15f449ef45024a3943a6acf09bab0.txt",
+      "file_size": 156,
+      "sha256": "7055458e05d045089255716cd2ed79117cda7e848adc2acec5be08ebac57429b"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-104-_jpg.rf.f2605b716c7e33df7ed2ead8ad891e0f.txt",
+      "file_size": 39,
+      "sha256": "cb930dcfb6a46b3bb7f3b36f75e513a8e203f0dff3d219c582b35666671e6262"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-105-_jpg.rf.bd686139c974f5367749f1387efcf515.txt",
+      "file_size": 78,
+      "sha256": "3e75ec62843589db9c869074e49054d25a7d0cec31ef614868c6ca286cc12c8a"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-105-_jpg.rf.c8c800d329a2fa4ad5b4bfc37baac5bf.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-106-_jpg.rf.bf822268668aa55e6cb14bcc6b8ce4d0.txt",
+      "file_size": 78,
+      "sha256": "e69a093ac411b02b52c10401d79e7fb4455bf3b4c771125ac4e3bbe205b514d9"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-107-_jpg.rf.37a60c585529ac8b042830ea34865fb6.txt",
+      "file_size": 39,
+      "sha256": "acb218500944b812ef67398418b245b0cbda4016916e6cceaaa244740bd5768b"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-108-_jpg.rf.20f6dc1548e3f13ae30796ae0538b4c2.txt",
+      "file_size": 78,
+      "sha256": "901b5c424fd04aaabe09ba2ec868c400141c027d8ec6c4be491a5b372e860ef8"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-108-_jpg.rf.c334dc1b4bfcb7fb553987058e797de9.txt",
+      "file_size": 78,
+      "sha256": "c36fb60d6f06163853f445c1bf0ee0b744bccd881f1cc38f9a939eb68aede81d"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-108-_jpg.rf.c35fae837ff65421354ae69a8cbbeae4.txt",
+      "file_size": 78,
+      "sha256": "4911b972b46aae5852a025b2aa9ab349b612f86d3a8959d75ccb45a113f504e6"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-112-_jpg.rf.43728c3f784660f141a1c0f0d453740e.txt",
+      "file_size": 78,
+      "sha256": "3c4fd3166cbefae83dbf63dba7732fdc50c856ee6749d0f5f908c3878cb2bc03"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-113-_jpg.rf.061b92e64768f9e0a9848a4682e9420b.txt",
+      "file_size": 156,
+      "sha256": "98647a0a98851fc853845e74ea5e449ae359af350b04f28b8d48da07d411f146"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-113-_jpg.rf.084d6f23234cbf6314345867c4f698d7.txt",
+      "file_size": 234,
+      "sha256": "6d8a309e038c9abae0df055f8243728d5a5f4219de3464cc04a744080940c46b"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-113-_jpg.rf.f2c4b9d7dad956dd35c29f8fb0501154.txt",
+      "file_size": 117,
+      "sha256": "b7316be124540abb43304545067aafd3f3b7663feebeaa28371f4f0092c6e39a"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-115-_jpg.rf.635c01c23fc97d12f874cf603283a994.txt",
+      "file_size": 117,
+      "sha256": "3c22ea0ec8ccf7f66223dddd7368112bbbb1730420a8b3d49f635f9835fccce7"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-116-_jpg.rf.32551d1138be7e0c4bdb64925c0f44eb.txt",
+      "file_size": 156,
+      "sha256": "8aeab111c01bd16a2eeee96594d07cbab5c53b8cf589e5f209772f02375acafd"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-119-_jpg.rf.af2d38b799d2d210df7b22efe0df8bdd.txt",
+      "file_size": 117,
+      "sha256": "fb53e93622e9e5b0ea57331a0c3bf57000db5c809a7394dda80721de14e807d9"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-119-_jpg.rf.d93db3522f1c92d5f1cc5ad0b5515f88.txt",
+      "file_size": 117,
+      "sha256": "267ac6fc9164e65522f62b09cfccd1a2d7f241d3dacf398a2696fbbad6dc85b4"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-12-_jpg.rf.20f65b01928efa45d61cc5f969d78a7d.txt",
+      "file_size": 117,
+      "sha256": "5e975d9ff7ff288d6dc1f17cb653fb7aa37056c699b66ae52ea19ec13ed1eb04"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-12-_jpg.rf.c064ee6b5e0eeacf45920ff9dbe16e91.txt",
+      "file_size": 156,
+      "sha256": "0f3fc9851e238bf55e94fbada7a04d9305e3b3ee973c59a0d8b99fbd90ba7e8b"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-121-_jpg.rf.148214b683fb45d57f49ca772181d434.txt",
+      "file_size": 39,
+      "sha256": "06e2fe8771f94e12ba4899f16c2bc3a00b102c0fb80d96085822ec82fa3a012b"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-121-_jpg.rf.71504412e4ffe90699727d8deaddf58e.txt",
+      "file_size": 156,
+      "sha256": "def4b934ddf3154bf911e91a1df1980509c83b919c1fb1e03252516a6ed3cdcb"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-122-_jpg.rf.2e00e51a0e70223ad6d729e0a3257b4c.txt",
+      "file_size": 78,
+      "sha256": "6fbbcffeed991888a17110e32cbd9143a8ef2c6560219f17e132d292c7a4d2f3"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-123-_jpg.rf.caafec34b2c9f23b90ebaa43223ffb59.txt",
+      "file_size": 117,
+      "sha256": "13ef5459b1be40db57d2fa40ab6e75d2b3fd95ed55164bed5235a295cfb24088"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-124-_jpg.rf.db98b0141ebde1e782c5ae2ba94df6b7.txt",
+      "file_size": 39,
+      "sha256": "779c06debe3d7b3530c5bcfa281901e57d8dec2dcb927a3e93ad074b68093982"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-125-_jpg.rf.558568c9421be9bcd2a50ac467f2cf92.txt",
+      "file_size": 117,
+      "sha256": "326a3a4f856d3c74e347a4f2eabea703b06aa493ebf01b30a2667d16f6a43fd9"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-129-_jpg.rf.1cdb041261ac454e7418539144ff25fc.txt",
+      "file_size": 117,
+      "sha256": "b23244dd764b1ef1d71d80e45358ab667c3dfd7d9f6b0a50efd9f9bc06722a5d"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-129-_jpg.rf.ee7df173f24985f313e4e622cb363852.txt",
+      "file_size": 117,
+      "sha256": "cbfa92ca03ce5dd1f3b337811f597912ff9bf886a35468ec3894ad24ad4cd619"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-13-_jpg.rf.7e8e5ba053c088ef775de376799ade88.txt",
+      "file_size": 78,
+      "sha256": "9e24374600586e91e890530d33aeef1f56cd4666e68b86d5a5f12c80e9c08303"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-130-_jpg.rf.bf6b00d8d05de67c449d034c3bc794c6.txt",
+      "file_size": 78,
+      "sha256": "5ed757c941df9636e06bc5c0fe589ed2adcff993ef0bad870c2c623d82c0c484"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-131-_jpg.rf.3dccd359864294689b2b3712af187782.txt",
+      "file_size": 39,
+      "sha256": "55e25f2abcdd0a62828a1ea403015845012efe0072d4389b1e5fcc8c11ab0ed5"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-145-_jpg.rf.c3dabb8c32e8535b5bec3381d1f18c86.txt",
+      "file_size": 78,
+      "sha256": "2a23f963b9e1c3330aa9fdaaeeb335c559638ed3b14c72b418b171cc8bf2bd00"
+    },
+    {
+      "relative_path": "labels/train/waterlogging_waterloggingt-31-_jpg.rf.3856f69d93858c8e57d49bfead20d9d9.txt",
+      "file_size": 78,
+      "sha256": "357d1557b0f8dc1b794c36b936c4484dd1a3f598c35991b8314f37406e42c5fe"
+    },
+    {
+      "relative_path": "labels/val.cache",
+      "file_size": 16748,
+      "sha256": "4b657cc9790f1cc584d37f4d2e19cdc204a53ab11734375329b98e821a781e99"
+    },
+    {
+      "relative_path": "labels/val/manhole_img-100.txt",
+      "file_size": 39,
+      "sha256": "729e60589d12634b78249c5a7eb61c2f057b604e59ad44c0e103826678b5bbc1"
+    },
+    {
+      "relative_path": "labels/val/manhole_img-12.txt",
+      "file_size": 39,
+      "sha256": "5ee64b77cc358873310f225f505dcbf42e2b321ccedd375a75c5e49267aae234"
+    },
+    {
+      "relative_path": "labels/val/manhole_img-15.txt",
+      "file_size": 39,
+      "sha256": "8a4f40b540e87cd6cf4022f2918c44c029905a12cd325b0c40fa2a6186a45383"
+    },
+    {
+      "relative_path": "labels/val/manhole_img-16.txt",
+      "file_size": 39,
+      "sha256": "ae4754cfde1b04468dbeb3efeb7fb1d255b1d78f1359287d98143094963cbf69"
+    },
+    {
+      "relative_path": "labels/val/manhole_img-17.txt",
+      "file_size": 78,
+      "sha256": "ee153cf3a428b747f3f932d28fa5fce197457ce592d2c4710992983128c59502"
+    },
+    {
+      "relative_path": "labels/val/manhole_img-2.txt",
+      "file_size": 117,
+      "sha256": "b0b5ef5773f153a7b765d69e4ac28cb9c745e629a3df1d038c06a8d5468a5075"
+    },
+    {
+      "relative_path": "labels/val/manhole_img-20.txt",
+      "file_size": 117,
+      "sha256": "55c2562ee79cd71b03809f22d66879bb73b1057d34b0298197e14fd06fecc645"
+    },
+    {
+      "relative_path": "labels/val/manhole_img-23.txt",
+      "file_size": 195,
+      "sha256": "0f451eedf8ff2302f40c3f90c7c6ec121df94b9ea5a1dbcf031ecde54de44b60"
+    },
+    {
+      "relative_path": "labels/val/manhole_img-32.txt",
+      "file_size": 78,
+      "sha256": "108badc7068e25a86a4fa945c0ea0ff0e4dccc882a096a2ea716ae73f909efd3"
+    },
+    {
+      "relative_path": "labels/val/manhole_img-34.txt",
+      "file_size": 39,
+      "sha256": "11283d9b1fc15c19849ca626acb519d775f12a24770df99c40aaed2887db5675"
+    },
+    {
+      "relative_path": "labels/val/manhole_img-36.txt",
+      "file_size": 39,
+      "sha256": "5b09ad35ee4a100bb44dde0e4cb89a2079647cfb17c8fab9749c67597caa4fed"
+    },
+    {
+      "relative_path": "labels/val/manhole_img-45.txt",
+      "file_size": 39,
+      "sha256": "fce9b25a1206b0664ab35bc3f7e2361f44797351d0ce895180becc5aa3c1af30"
+    },
+    {
+      "relative_path": "labels/val/manhole_img-53.txt",
+      "file_size": 78,
+      "sha256": "924e959c8935c2759d6f9ce7efbae7ed001e5bb48236a9402ab7d1099aebf08a"
+    },
+    {
+      "relative_path": "labels/val/manhole_img-62.txt",
+      "file_size": 78,
+      "sha256": "84327af53dca0a9439636f76dc4a92295ff1eeaa19b7acdf6d0a61559e1e0745"
+    },
+    {
+      "relative_path": "labels/val/manhole_img-68.txt",
+      "file_size": 78,
+      "sha256": "096e9e731a852614f84b4ac95270e797320e79a58c6447abc6393a458cc0fef3"
+    },
+    {
+      "relative_path": "labels/val/manhole_img-77.txt",
+      "file_size": 156,
+      "sha256": "6f8876b463d2426d4bb815cfcc26f1af12df101ff661470ebe66abe1e874a949"
+    },
+    {
+      "relative_path": "labels/val/manhole_img-87.txt",
+      "file_size": 39,
+      "sha256": "2d95cf07ee62cbb25ad7c854474f97b9ea31101b5e2828ea0c3b6d3e52ea4c35"
+    },
+    {
+      "relative_path": "labels/val/manhole_img-91.txt",
+      "file_size": 39,
+      "sha256": "03c4dc77848b414d6587be1cbcca254ac29f2294e9dda03829e77691129ca79c"
+    },
+    {
+      "relative_path": "labels/val/manhole_img-93.txt",
+      "file_size": 117,
+      "sha256": "166c316cbce52a4056f1491c829c609d3ffe39d9d1d476f6f41e6c39ef5109ff"
+    },
+    {
+      "relative_path": "labels/val/manhole_img-95.txt",
+      "file_size": 78,
+      "sha256": "32e207ea273c73b2fa06eb1b0d2b8459de44c9d1f9638c21b1fae144f6482761"
+    },
+    {
+      "relative_path": "labels/val/roadsign_IMG_8089_jpg.rf.d88d66b336700a7227c7e6dfd32781f8.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/val/roadsign_IMG_8090_jpg.rf.3300d84f8175ad4f004288530ef3bc4d.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/val/roadsign_IMG_8107_jpg.rf.3a6cdb866ff10812b39e59fa6012c48e.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/val/roadsign_IMG_8116_jpg.rf.4e89b65b9027b447761db8f0ac286c13.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/val/roadsign_IMG_8191_jpg.rf.b6d858d205940011c9ec968ee737d5c9.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/val/roadsign_IMG_8241_jpg.rf.ccb1ff63430e9a5c8252dbbd35b222d8.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/val/roadsign_IMG_8359_jpg.rf.fa5eb3d521b50f7b4307bf7dbec9e5f1.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/val/roadsign_IMG_8374_jpg.rf.0f23b566057ed1b7c46374521aa959bd.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/val/roadsign_IMG_8691_jpg.rf.dfffca34b69d5620f91d659aa6e5a1a7.txt",
+      "file_size": 39,
+      "sha256": "dd5c302715967807b0f9c76979e7ec6f28171cbd6f51d6e83bb3912a7b859459"
+    },
+    {
+      "relative_path": "labels/val/roadsign_IMG_8692_jpg.rf.3dca3f58a7ecf693e82b16fd5b83c05c.txt",
+      "file_size": 39,
+      "sha256": "d2aeb8cc8412e5ee0e1348bfc601e3b5de9436494502fc9b3fa2539ce95aeb0e"
+    },
+    {
+      "relative_path": "labels/val/roadsign_IMG_8728_jpg.rf.06a642b2e63efb9bc6383006329f831b.txt",
+      "file_size": 39,
+      "sha256": "a83e67b09b1eb398e2de8ccb8c650c8f5d541151eee312f6629570a0135434ca"
+    },
+    {
+      "relative_path": "labels/val/roadsign_IMG_8748_jpg.rf.39e374f57242019d5b74b0b914c7a0c2.txt",
+      "file_size": 39,
+      "sha256": "0f528569a824da7edbb951b909b699c44db790c6fbcb172fabf9937b61e6200c"
+    },
+    {
+      "relative_path": "labels/val/roadsign_IMG_8783_jpg.rf.2bc6dd1455e2aecfbe58df0958e86b63.txt",
+      "file_size": 39,
+      "sha256": "e4a2edb9b7d772ed84f56f25e19e24f28038e3069ba24b8ca0b40bf6f6f24f18"
+    },
+    {
+      "relative_path": "labels/val/roadsign_IMG_8806_jpg.rf.9f45e4a6aee4bac49ad6cf5438e2cc29.txt",
+      "file_size": 39,
+      "sha256": "ed5ef1135631889a0a1af80d5289a4c9eabbe5448ff8a5497ce261e6942d9cbc"
+    },
+    {
+      "relative_path": "labels/val/roadsign_IMG_8901_jpg.rf.1b28a0dd72ac328e0aea7ea202a141a5.txt",
+      "file_size": 39,
+      "sha256": "e18a7498c006b9eeae172583613833f4556d7c2fda7b96371f09fb1fa7907b51"
+    },
+    {
+      "relative_path": "labels/val/roadsign_IMG_8905_jpg.rf.dc472929cfeae9c008d64be5162b552a.txt",
+      "file_size": 39,
+      "sha256": "ba9dce92a90b0244104bdd610ec0bee6b8b35e8d3284936bd853879426ffc7ca"
+    },
+    {
+      "relative_path": "labels/val/roadsign_IMG_8926_jpg.rf.546697558752b0a2b8e17e2b01d3f603.txt",
+      "file_size": 39,
+      "sha256": "91338ebce24c98d5b2f613d310a79b2f8a45073bd71862622b86979926555f9a"
+    },
+    {
+      "relative_path": "labels/val/roadsign_IMG_8956_jpg.rf.8a06ea25e04c63e44fda3443f959b8fa.txt",
+      "file_size": 39,
+      "sha256": "e6bf9627cd609ec2449bed451bf91b53e7fa2964279ef0ced425ea01f311e83a"
+    },
+    {
+      "relative_path": "labels/val/roadsign_IMG_9005_jpg.rf.1324149272c1ca5511d149789cad9076.txt",
+      "file_size": 39,
+      "sha256": "6862ca7234a302abf34294dfca956a8674131bd989810e5c7ea167c0982baccf"
+    },
+    {
+      "relative_path": "labels/val/roadsign_IMG_9130_jpg.rf.0b8df3381f09df2ad516403b5a22920f.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_improved_waterloggingt-167-_jpg.rf.1a1c60089139b062aee44ac851155112.txt",
+      "file_size": 78,
+      "sha256": "a603bf8913df529a16c185dba8a3c06a12e0af28a2f829211a1aa64f88d82b0a"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_improved_waterloggingt-191-_jpg.rf.871eb9c841d1c511ad057cbcae9f4def.txt",
+      "file_size": 78,
+      "sha256": "34d71d638f9edf55e86338817b44d11f0b2512298c6382a0f1930f4c267884f1"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_improved_waterloggingt-24-_jpg.rf.dd497ffe9cdbb58adca9efa576e66a48.txt",
+      "file_size": 39,
+      "sha256": "c3caff04e66da8eb37f482dd6207a16334b2e129b67974201c0b59bcef485d48"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_improved_waterloggingt-3-_jpg.rf.848d8568d5c2bc51d15c82dc3f59f0ca.txt",
+      "file_size": 78,
+      "sha256": "a6db2c4e7a21ed799b875f236ea4eeb0862fe08085b9c10c6aaba011f105fd15"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_improved_waterloggingt-30-_jpg.rf.dee227ae5b63c709d02db18eda8f3177.txt",
+      "file_size": 39,
+      "sha256": "e6f961e90f60325f3a4d5e0ef76ec1e5b6fd7e310083f97cc699fc3bcc3ca22c"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_improved_waterloggingt-40-_jpg.rf.7958e4dc10d82506fc43f3e5328bc2f8.txt",
+      "file_size": 39,
+      "sha256": "2b658e602be7151772c955387b28358340b49d1ced6274d79ff0561910b9f434"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_improved_waterloggingt-75-_jpg.rf.a1a6cdde7599856d4de7cc792169e66d.txt",
+      "file_size": 78,
+      "sha256": "40e52a0e625c6d5b4cb53b460bd9384b83af854bc9369229270b741d8ec9d9fc"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_negative_IMG_8085_jpg.rf.031ac12f207c1bbf7ef06a7c17aceef9.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_negative_IMG_8090_jpg.rf.3d4e77d2273668503c23f9c63aca2b35.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_negative_IMG_8100_jpg.rf.7642bf46aa23e873f3acdb6a5c2f2d3b.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_negative_IMG_8105_jpg.rf.7ed729ee572134567821aa29cccda4e9.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_negative_IMG_8110_jpg.rf.40bdc31e5a529dc302502186288d912c.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_negative_IMG_8114_jpg.rf.13142766f1db4b92fde6165e07b7610c.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_negative_IMG_8115_jpg.rf.3908bb24cd509e2a64dd4dd5e34c2fd2.txt",
+      "file_size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_waterloggingt-10-_jpg.rf.6907c533b135a400dc53b46585bb1ed4.txt",
+      "file_size": 78,
+      "sha256": "497acf33fc23f2ffe1f90b5513e4b43ac684c5c9fc29d33dce482f013f7872cc"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_waterloggingt-101-_jpg.rf.8e414c06e616a1356b33962850a7a4f6.txt",
+      "file_size": 39,
+      "sha256": "e8e76033ad8074737b8306b8842e4a88c5fd299f0a29aae2807352524318db5d"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_waterloggingt-109-_jpg.rf.1cc60e8461b447fb2defd811e040f9ee.txt",
+      "file_size": 78,
+      "sha256": "e7a5d0c26d4ab5da817b0afec2462dc0104e62636c40f7b527dbc2653ef64249"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_waterloggingt-117-_jpg.rf.708bc840f8b74b7e44d18b76dcbb25e9.txt",
+      "file_size": 156,
+      "sha256": "9ad82b7151719dd809233ce1b41c00311a715b2b5e45bfa495e357ee8a610e2e"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_waterloggingt-126-_jpg.rf.208aedeeba1a9ae54e0fea4926806386.txt",
+      "file_size": 39,
+      "sha256": "045536ce53e7b3955a5d4da13ee4dfcce70885ac53f5a994e727dadbc292cc36"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_waterloggingt-126-_jpg.rf.7fb34317e3d3f434615e307ac961cd89.txt",
+      "file_size": 117,
+      "sha256": "2d0a61ef7531becc6ed41af09c0e5b47430ee87cc58090b8a662439830740829"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_waterloggingt-126-_jpg.rf.adc92026324c92e8065ad301202dfa9a.txt",
+      "file_size": 39,
+      "sha256": "411c9d460ad2a85a03da133f540725af2ef4165dfdd3c4a25a69ffc1278267cc"
+    },
+    {
+      "relative_path": "labels/val/waterlogging_waterloggingt-14-_jpg.rf.fc4f85a9cfcb85e9014fe91f7ab045b0.txt",
+      "file_size": 78,
+      "sha256": "7d8a71ca3ee779b516d47c02bc73b036c6a0548b90fe760c47a3dc0fc0fee98a"
+    },
+    {
+      "relative_path": "qa_report.md",
+      "file_size": 2984,
+      "sha256": "b1743f360067d005086dc4d7b156ac6322f3cf030da441950662940197d0346a"
+    }
+  ]
+}

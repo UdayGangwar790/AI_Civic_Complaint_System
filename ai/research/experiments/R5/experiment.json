@@ -1,0 +1,155 @@
+{
+  "checkpoint_sha256": "72c57f6f052321abfe798edbef862848a2441a3b17fa16997376db93711bbc28",
+  "d0_file_count_reference": 605,
+  "environment": {
+    "architecture": "AMD64",
+    "cpu": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+    "cuda_available": "False",
+    "cuda_version": "N/A (CPU only)",
+    "git_commit": "30732e2f10a3cc032f90e152942bcac637f9ca51",
+    "gpu_devices": [
+      "None"
+    ],
+    "libraries": {
+      "fastapi": "0.141.1",
+      "numpy": "2.5.3",
+      "opencv-python": "5.0.0.93",
+      "pydantic": "2.13.5",
+      "pyyaml": "6.0.3",
+      "scikit-learn": "1.9.1",
+      "torch": "2.14.0",
+      "torchvision": "0.29.0",
+      "transformers": "unknown",
+      "ultralytics": "8.4.149"
+    },
+    "os": "Windows 11 (10.0.26200)",
+    "python_version": "3.13.1"
+  },
+  "evaluation_code_sha256": "4ef56fd7183181478fa8e70c78424df6a86b4c470701547aa2983b163a29e67a",
+  "excluded_transformations": {
+    "crop_viewpoint": {
+      "minimum_box_border_margin": 0.0078,
+      "minimum_retained_fraction": 0.9844,
+      "reason": "The D1 held-out test box for d1_road_waterlogging_019.jpg has a 0.0078 minimum normalized border margin. A centered crop must retain at least 0.9844 of each dimension to keep this box whole (at most 1.56% total dimension crop); this is too small to define three meaningful severity levels. Stronger crops truncate the annotated target.",
+      "source_image": "images/d1_road_waterlogging_019.jpg",
+      "status": "EXCLUDED_INVALID_FOR_MEANINGFUL_LEVELS"
+    }
+  },
+  "experiment_id": "CVR2-CV-016",
+  "generation_manifest_sha256": "d36bd0f653c5650f628ad26d9397b5e843154931f23177918235b94b2f899f0e",
+  "hypothesis": "Performance and confidence may degrade with increasing controlled perturbation severity; this is an association within the fixed D1 test images.",
+  "m1_13_sha256": "602160d4851e0d79c34cb23b828bde474fc4c164eaf1a1c2a884cfb372f4bda3",
+  "master_seed": 20261019,
+  "metrics_sha256": "a07f0ac9271b5af85689346632e181201fb453918408539505ed23059c39b13e",
+  "model_id": "R3-YOLO-ROBUST-BASE",
+  "output_manifest_sha256": "d36bd0f653c5650f628ad26d9397b5e843154931f23177918235b94b2f899f0e",
+  "production_integration": false,
+  "research_only": true,
+  "source_dataset": "D1",
+  "source_dataset_composite_sha256": "c93dc3c2f3c25fe09c1f6aa23bce91684d60528694ef7036f2d7932c9775f68e",
+  "source_dataset_manifest_file_sha256": "9cd74a15bbfe6e152fffb558eea99b60c69881eeea903efe9b31437a6cdc31b8",
+  "source_split": "test",
+  "status": "PARTIALLY_VALIDATED",
+  "thresholds": {
+    "IoU": 0.5,
+    "no_per_condition_tuning": true,
+    "primary_confidence": 0.1,
+    "secondary_confidence": 0.25
+  },
+  "timestamp": "2026-10-19T17:27:51.881532+00:00",
+  "title": "Controlled Domain-Shift & Robustness Study",
+  "transformations": {
+    "blur": {
+      "L1": {
+        "radius": 0.5
+      },
+      "L2": {
+        "radius": 1.0
+      },
+      "L3": {
+        "radius": 2.0
+      }
+    },
+    "brightness": {
+      "L1": {
+        "factor": 0.8
+      },
+      "L2": {
+        "factor": 0.6
+      },
+      "L3": {
+        "factor": 0.4
+      }
+    },
+    "contrast": {
+      "L1": {
+        "factor": 0.8
+      },
+      "L2": {
+        "factor": 0.6
+      },
+      "L3": {
+        "factor": 0.4
+      }
+    },
+    "jpeg": {
+      "L1": {
+        "quality": 75
+      },
+      "L2": {
+        "quality": 45
+      },
+      "L3": {
+        "quality": 20
+      }
+    },
+    "noise": {
+      "L1": {
+        "sigma": 5.0
+      },
+      "L2": {
+        "sigma": 12.0
+      },
+      "L3": {
+        "sigma": 24.0
+      }
+    },
+    "rain": {
+      "L1": {
+        "alpha": 45,
+        "length": 12,
+        "streaks_per_640px": 35,
+        "width": 1
+      },
+      "L2": {
+        "alpha": 70,
+        "length": 20,
+        "streaks_per_640px": 70,
+        "width": 1
+      },
+      "L3": {
+        "alpha": 100,
+        "length": 30,
+        "streaks_per_640px": 120,
+        "width": 2
+      }
+    },
+    "shadow": {
+      "L1": {
+        "alpha": 0.12,
+        "mask_blur": 24,
+        "polygon_vertices": 6
+      },
+      "L2": {
+        "alpha": 0.27,
+        "mask_blur": 18,
+        "polygon_vertices": 6
+      },
+      "L3": {
+        "alpha": 0.45,
+        "mask_blur": 12,
+        "polygon_vertices": 6
+      }
+    }
+  }
+}

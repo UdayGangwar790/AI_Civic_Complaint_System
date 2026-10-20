@@ -1,0 +1,24 @@
+{
+  "python_version": "3.13.1",
+  "os": "Windows 11 (10.0.26200)",
+  "architecture": "AMD64",
+  "cpu": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+  "cuda_available": "False",
+  "cuda_version": "N/A (CPU only)",
+  "gpu_devices": [
+    "None"
+  ],
+  "git_commit": "30732e2f10a3cc032f90e152942bcac637f9ca51",
+  "libraries": {
+    "torch": "2.14.0",
+    "torchvision": "0.29.0",
+    "ultralytics": "8.4.149",
+    "numpy": "2.5.3",
+    "opencv-python": "5.0.0.93",
+    "scikit-learn": "1.9.1",
+    "transformers": "unknown",
+    "pydantic": "2.13.5",
+    "fastapi": "0.141.1",
+    "pyyaml": "6.0.3"
+  }
+}

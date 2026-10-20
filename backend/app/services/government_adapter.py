@@ -456,7 +456,7 @@ class CPGRAMSIntegrationAdapter(GovernmentIntegrationAdapter):
                 "state": case.location.state if case.location else None,
             },
             "evidence": {
-                "vision_model": "M1.13-yolov8n",
+                "vision_model": (case.metadata.get("model_version") if hasattr(case, "metadata") and case.metadata and case.metadata.get("model_version") else "M1.13-yolov8n"),
                 "confidence": case.issue.confidence if case.issue else None,
                 "detected_class": case.issue.class_name if case.issue else None,
             },

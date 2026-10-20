@@ -1,0 +1,46 @@
+{
+  "experiment_id": "CVKI-R9",
+  "title": "Multimodal Civic-Case Evaluation",
+  "research_only": true,
+  "production_integration": false,
+  "autonomous_decisions": false,
+  "human_review_required": true,
+  "input_dataset": "R8_civic_cases",
+  "input_r8_status": "CASE_DATASET_NOT_AVAILABLE",
+  "eligible_case_count": 0,
+  "empirical_evaluation_status": "NOT_VALIDATED",
+  "protocol_validation_status": "PARTIALLY_VALIDATED",
+  "overall_status": "CASE_DATASET_NOT_AVAILABLE",
+  "reason": "R9 uses only frozen R8 cases. R8 contains zero admitted cases; therefore only protocol, schema, and safety infrastructure are evaluated.",
+  "research_question": "Does combining independently represented civic evidence improve the consistency, completeness, and explainability of civic-issue assessment?",
+  "frozen_references": {
+    "m1_13_sha256": "602160d4851e0d79c34cb23b828bde474fc4c164eaf1a1c2a884cfb372f4bda3",
+    "r3_checkpoint_sha256": "72c57f6f052321abfe798edbef862848a2441a3b17fa16997376db93711bbc28",
+    "r8_dataset_manifest_sha256": "c63d427251ee12cf8d284c3f29a5fa6ad0f3c051b713186582b467ee2f45b2f6",
+    "r8_freeze_manifest_sha256": "ab165c7e5d62a001103c160869c1879c7a7725c6c8f22529c991783ab494a249",
+    "r5_manifest_sha256": "d36bd0f653c5650f628ad26d9397b5e843154931f23177918235b94b2f899f0e",
+    "r5_metrics_sha256": "a07f0ac9271b5af85689346632e181201fb453918408539505ed23059c39b13e",
+    "r6_manifest_sha256": "2c793e05dbc068d0ea1907e466a352a06b0728330fef580cd20485464408b348",
+    "r6_metrics_sha256": "907fc80c19372d344f67b7eb9990169fd47d1315c812b98cdf743513feca7831"
+  },
+  "epistemic_invariants": {
+    "MODEL_OBSERVATION_is_verified_evidence": false,
+    "USER_REPORTED_is_verified_evidence": false,
+    "SYSTEM_DERIVED_is_physical_truth": false,
+    "cv_confidence_is_severity": false,
+    "weather_is_causal_proof": false,
+    "traffic_is_causal_proof": false,
+    "government_resolved_is_automatic_cvki_resolution": false,
+    "field_audit_is_physical_truth": false,
+    "recommendation_is_government_order": false,
+    "multimodal_agreement_is_ground_truth": false,
+    "human_review_required": true
+  },
+  "final_state": {
+    "R8": "FROZEN RESEARCH RECORD",
+    "R9": "FROZEN RESEARCH RECORD",
+    "PRODUCTION INTEGRATION": false,
+    "NO GIT COMMIT": true,
+    "NO GIT PUSH": true
+  }
+}

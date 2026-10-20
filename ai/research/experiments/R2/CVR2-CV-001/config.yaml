@@ -1,0 +1,50 @@
+experiment_id: CVR2-CV-001
+experiment_type: baseline
+dataset:
+  id: D1
+  version: '1.0'
+  train_split: train
+  val_split: val
+  test_split: test
+model:
+  id: R2-YOLO-D1-BASE
+  version: '1.0'
+  architecture: YOLOv8n
+  input_size: 640
+  confidence_threshold: 0.25
+  iou_threshold: 0.45
+training:
+  seed: 42
+  epochs: 3
+  batch_size: 8
+  learning_rate: 0.001
+  optimizer: AdamW
+  device: cpu
+evaluation:
+  metrics:
+  - precision
+  - recall
+  - mAP50
+  - mAP50_95
+  evaluated_on: test
+  reproducibility_class: REPRODUCIBLE CONFIGURATION
+hypothesis:
+  question: Can YOLOv8n learn civic road hazards effectively from D1 without cross-split
+    leakage?
+  hypothesis: D1 training yields stable convergence across the 3 target classes.
+  independent_variable: D1 curated dataset
+  dependent_variables:
+  - mAP50
+  - mAP50-95
+  - precision
+  - recall
+  controls:
+  - YOLOv8n backbone
+  - seed 42
+  - imgsz 640
+  - batch 8
+  - 3 epochs
+  expected_outcome: Positive mAP50 > 0.40 on validation set.
+  actual_outcome: unknown
+  conclusion: unknown
+metadata: {}

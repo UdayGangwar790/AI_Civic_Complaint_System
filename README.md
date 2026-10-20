@@ -1,221 +1,190 @@
-# CVKI — Civic Vision & Knowledge Intelligence
+# CVKI — Civic Visual Knowledge Intelligence
 
-Civic Vision & Knowledge Intelligence (CVKI) is an explainable decision-support and civic-issue reporting platform. It integrates computer vision hazard detection, reverse geocoding, evidence-backed authority resolution, duplicate and recurrence intelligence, engineering priority triage, and resolution evidence auditing.
+**Version**: 1.0.0 (Release Baseline M12)  
+**Objective**: Evidence-Aware Civic Decision Support & Operational Action Intelligence
 
-CVKI prepares citizen-facing draft information and operational triage intelligence; it does **not** automatically dispatch complaints to external government portals, nor does it replace official municipal inspections.
+Civic Visual Knowledge Intelligence (**CVKI**) is an explainable decision-support and civic action intelligence platform. It bridges multimodal citizen reporting (images, GPS coordinates, vernacular text) with automated computer vision hazard detection, evidence-backed authority resolution, deterministic action playbooks, field inspection verification, cryptographic provenance, and civic knowledge graph projections.
 
----
-
-## 1. Problem Statement
-
-Civic road hazard reporting typically suffers from three fundamental bottlenecks:
-1. **Misclassification & Vagueness**: Citizen complaints often lack standard defect terminology, precise location coordinates, or objective visual evidence.
-2. **Jurisdiction & Authority Fragmentation**: Roads within a single urban corridor often divide responsibility among municipal corporations, state highway departments, national highway authorities, and private concessionaires. Citizens rarely know which agency actually owns or maintains a specific road segment.
-3. **Duplicate Confusion vs. Chronic Recurrence**: Existing systems either treat all nearby reports as duplicate noise (ignoring recurring physical infrastructure degradation) or treat every repeated submission as an independent event without historical context.
-
----
-
-## 2. Solution Overview
-
-CVKI establishes an end-to-end, multi-modal decision-support pipeline:
-- **Visual Detection**: Uses a frozen, controlled YOLOv8n model (`M1.13`) to detect three specific road hazard classes.
-- **Evidence-Driven Road-to-Authority Intelligence**: Disentangles road ownership from maintenance responsibility using verifiable official source records, restricting builder/contractor claims strictly to verified contract/tender documents.
-- **Duplicate vs. Recurrence Disentanglement**: Separates short-window (<=72h) duplicates describing the same incident from long-window (180d) recurrence indicating chronic repeated reporting.
-- **Explainable Engineering Priority (0–100)**: Triage heuristic combining visual confidence, severity, text keywords, location corridors, duplicates, and bounded recurrence contributions.
-- **Resolution Evidence Lifecycle**: Enforces staff-authored inspection note attribution upon resolution, invalidating prior notes if a case is reopened.
-- **Role-Based Workflows**: Separate operational portals for Citizens (tracking), Assigned Authorities (case management & notes), and Administrators (analytics, hotspots, assignment, and security audit).
+> [!IMPORTANT]
+> **Operational & Epistemic Boundaries**:
+> - **Decision Support, Not Autonomous Governance**: CVKI generates structured recommendations, action playbooks, and draft correspondence for official human review. It does **not** autonomously dispatch municipal work crews, authorize public expenditures, or modify real-world infrastructure.
+> - **Human Review Mandatory**: All operational recommendations enforce `human_review_required = True`.
+> - **No Autonomous Case Resolution**: Neither statistical computer vision detections nor citizen reports constitute physical verification. Physical case resolution requires formal field inspection audit or authorized officer sign-off.
+> - **Not a Replacement**: CVKI is not an autonomous civic authority and does not replace municipal engineers, administrators, or field inspectors.
 
 ---
 
-## 3. Core Features
+## 1. Complete End-to-End Workflow
 
-- **Multi-Modal Road Hazard Detection**: Detects `open_damaged_manhole`, `damaged_missing_road_sign`, and `road_waterlogging`.
-- **GPS & Reverse Geocoding**: Extracts normalized road, city, and jurisdiction details from image metadata or device coordinates.
-- **Evidence-Backed Authority Resolver**: Maps coordinates to `road_owner` and `maintenance_authority` with source citations and verification states (`verified`, `partially_verified`, `not_verified`).
-- **Factual Complaint Drafting**: Generates neutral, structured complaints in multiple languages without speculative claims.
-- **Persistent Case Management**: Unique chronological reference IDs (`CVKI-YYYYMMDD-XXXXXX`) stored in MongoDB with lifecycle transitions (`submitted_to_cvki`, `assigned`, `in_progress`, `resolved`, `closed`).
-- **Advanced Civic Intelligence (M5.2)**: 180-day spatial recurrence analysis (250m Haversine / normalized road fallback) and 30-day reporting concentration hotspots.
-- **Attributed Resolution Evidence**: Tracks staff inspection notes on case resolution and marks notes stale if a case is reopened.
-- **Security & Privacy Auditing**: Request correlation IDs, strict role-based access control (RBAC), and owner-isolated case tracking.
-
----
-
-## 4. System Architecture
+The platform operates across a 15-stage audited civic intelligence lifecycle:
 
 ```
-[Citizen / Client]
-       │
-       ▼
-[FastAPI Backend Application]
- ├── /api/v1/detection/predict   ──► Ultralytics YOLOv8n (M1.13 Frozen Checkpoint)
- ├── /api/v1/location/reverse    ──► Nominatim Geocoding & Road Normalizer
- ├── /api/v1/authority/resolve   ──► Evidence-Driven Authority Resolver (M5.1)
- ├── /api/v1/complaint/guidance  ──► Multi-Lingual Complaint Generator
- ├── /api/v1/complaint/cases     ──► Case Creation (Server-Side Recurrence & Priority Recomputed)
- ├── /api/v1/priority/score      ──► Public Bounded Priority Heuristic (0–100)
- ├── /api/v1/authority/cases     ──► Authority Portal (Scoped to Assigned Cases Only)
- └── /api/v1/admin/analytics     ──► Operational Analytics & 30-Day Road Hotspots
-       │
-       ▼
-[MongoDB Persistence Store]
- ├── complaint_cases (cases, assignment, recurrence, resolution evidence)
- ├── audit_logs (request-correlated security and lifecycle audit records)
- └── notifications (in-app notifications for citizens and staff)
+1. Citizen Report
+   │  (Uploads defect photo, device GPS coordinates, and vernacular description)
+   ▼
+2. Computer Vision Detection
+   │  (Ultralytics YOLOv8n M1.13 frozen baseline detects 13 civic hazard classes)
+   ▼
+3. Reverse Geocoding & Road Context
+   │  (OpenStreetMap / Nominatim extracts normalized road name, corridor, and jurisdiction)
+   ▼
+4. Evidence-Backed Authority Resolution
+   │  (Disentangles road owner, maintenance authority, and contractor via official records)
+   ▼
+5. Case Persistence & Case Reference
+   │  (Generates chronological reference ID, stores structured case in MongoDB)
+   ▼
+6. Multimodal & Vernacular Normalization
+   │  (Rule-based NLP maps multi-lingual terms to canonical civic defect categories)
+   ▼
+7. Cross-Modal Consistency Analysis
+   │  (Evaluates semantic agreement between visual detections and verbal claims)
+   ▼
+8. Active Clarification
+   │  (Presents targeted questions to citizen when visual and verbal claims disagree)
+   ▼
+9. Decision Support & Operational Triage
+   │  (Calculates priority score 0–100 combining severity, road tier, and recurrence)
+   ▼
+10. Action Playbook Matching
+    │  (Selects deterministic remediation workflows, materials, and safety protocols)
+    ▼
+11. Field Inspection Protocol Generation
+    │  (Generates step-by-step physical inspection checklist with geofenced bounds)
+    ▼
+12. Field Inspection Execution & Audit
+    │  (Audits field inspector submissions for geofence compliance and verification completeness)
+    ▼
+13. Authority Review Portal
+    │  (Authorized municipal staff reviews recommendations: ACCEPTED, MODIFIED, or REJECTED)
+    ▼
+14. Government Portal Integration
+    │  (Safely submits to CPGRAMS / state portals with idempotent tracking and fallback state)
+    ▼
+15. Provenance Ledger & Civic Knowledge Graph
+       (Appends SHA-256 evidence records and projects relational nodes into property graph)
 ```
 
 ---
 
-## 5. Technology Stack
+## 2. Technical Architecture & Core Modules
 
-- **Backend**: Python 3.13, FastAPI, Pydantic v2, Motor / PyMongo (MongoDB async driver).
-- **Computer Vision / AI**: PyTorch, Ultralytics YOLOv8, Pillow.
-- **Frontend**: React 18, Vite v8, Vanilla CSS (tokens, responsive layouts, role views), Lucide React.
-- **Testing & Quality**: pytest, pytest-subtests, oxlint.
-
----
-
-## 6. Computer Vision Pipeline & M1 Research Progression
-
-The CV subsystem was evaluated and refined through four controlled research iterations:
-1. **M1.8 Baseline (YOLOv8n)**: Initial baseline trained with default mosaic and scale augmentations.
-2. **M1.11 Attempted Improvement**: Experimented with disabled mosaic (`mosaic=0`) and reduced scale jitter (`scale=0.15`). Resulted in small-object detection collapse (waterlogging test mAP50 dropped from 0.2951 to 0.0463).
-3. **M1.12 Diagnostic Analysis**: Diagnosed the root cause of M1.11's recall degradation and established the need for contiguous bounding-box labeling.
-4. **M1.13 Controlled Correction**: Restored multi-scale mosaic (`mosaic=1.0`), scale jitter (`scale=0.5`), and calibrated negative training samples.
-
-### Dual Held-Out Evaluation Benchmark
-
-| Benchmark Split | Metric | M1.8 Baseline | M1.11 Retrained | M1.13 Corrected | M1.13 Delta vs. Baseline |
-|---|---|---|---|---|---|
-| **Original M1.8 Test Set** (30 images) | Precision | 0.7797 | N/A (disjoint) | **0.8380** | **+5.83 pp** |
-| | Recall | 0.5660 | N/A (disjoint) | **0.6120** | **+4.60 pp** |
-| | mAP@0.5 | 0.6166 | N/A (disjoint) | **0.6540** | **+3.74 pp** |
-| | mAP@0.5:0.95 | 0.4279 | N/A (disjoint) | **0.4870** | **+5.91 pp** |
-| | Waterlogging mAP50 | 0.2951 | N/A (disjoint) | **0.3520** | **+5.69 pp** |
-| **Improved M1.11 Test Set** (31 images) | Precision | N/A (disjoint) | 0.5785 | **0.6500** | **+7.15 pp** |
-| | Recall | N/A (disjoint) | 0.3857 | **0.5700** | **+18.43 pp** |
-| | mAP@0.5 | N/A (disjoint) | 0.4166 | **0.5680** | **+15.14 pp** |
-| | Road Sign mAP50 | N/A (disjoint) | 0.5450 | **0.8430** | **+29.80 pp** |
-| | Waterlogging mAP50 | N/A (disjoint) | 0.0463 | **0.0841** | **+3.78 pp** |
-
-**Frozen M1.13 Model Checkpoint:**
-- Path: `ai/computer_vision/training/runs/yolov8n_m1_13/weights/best.pt`
-- Verified SHA-256: `602160D4851E0D79C34CB23B828BDE474FC4C164EAF1A1C2A884CFB372F4BDA3`
+| Module | Subsystem | Implementation Details |
+| :--- | :--- | :--- |
+| **M1 / M8** | **Computer Vision Baseline** | Ultralytics YOLOv8n (`M1.13` frozen checkpoint). Normalized coordinates, zero tensor leakage. |
+| **M2 / M5 / M6**| **Geospatial & Authority Intelligence** | Road normalization, 250m Haversine spatial recurrence, official registry verification. |
+| **M3 / M4** | **Persistence & RBAC** | MongoDB async driver (Motor), JWT bearer tokens, role enforcement (`CITIZEN`, `AUTHORITY`, `ADMIN`). |
+| **M7** | **Government Integration** | Pluggable adapters (CPGRAMS, state portals), exponential backoff, dead-letter queue. |
+| **M9** | **Multimodal Intelligence** | Rule-based vernacular normalizer (7 languages/scripts), cross-modal consistency evaluator. |
+| **M10** | **Decision Support & Field Inspection** | Action playbooks, geofenced inspection protocols, completeness audit, provenance projection. |
+| **M11** | **Production Readiness & Observability**| Prometheus metrics, structured correlation logging, health/readiness endpoints, rate limiting. |
+| **M12** | **Validation, Benchmarking & Freeze** | End-to-end verification, reproducibility registry, security/epistemic audits, baseline freeze. |
 
 ---
 
-## 7. Evidence-Driven Authority Intelligence (M5.1)
+## 3. Computer Vision Model Invariants
 
-CVKI implements an explicit conceptual chain for authority mapping:
-```
-Issue ──► Coordinates ──► Road ──► Jurisdiction ──► Official Evidence ──► Road Owner ──► Maintenance Authority ──► Builder/Contractor (if evidenced)
-```
-
-- **Separation of Roles**: Road ownership does **not** imply maintenance responsibility; both are resolved independently.
-- **Contractor Safeguard**: Builder/contractor attribution requires official contract/tender records and is never inferred from road ownership.
-- **Verification States**: `verified` (both owner and maintainer verified), `partially_verified` (one role supported), `not_verified` (insufficient evidence).
-- **Official Source Audit Trail**: Every resolved claim references verifiable registry citations.
-
----
-
-## 8. Complaint Workflow & Case Lifecycle (M3.1–M4.5)
-
-- **Drafting & Guidance**: Citizen uploads image, verifies detections, selects language, and receives structured draft text.
-- **Case Creation**: Generates unique tracking ID, persists location and evidence, runs duplicate detection and recurrence analysis.
-- **Lifecycle Graph**:
-  - `submitted_to_cvki` ──► `assigned` ──► `in_progress` ──► `resolved` ──► `closed`
-  - Reopening: `resolved` ──► `in_progress` (re-initiates review and updates evidence cutoff).
-  - Terminal state: `closed` is immutable and cannot be modified.
+The computer vision detection baseline is frozen at iteration **M1.13**:
+- **Model Checkpoint**: `ai/computer_vision/training/runs/yolov8n_m1_13/weights/best.pt`
+- **SHA-256 Hash**: `602160d4851e0d79c34cb23b828bde474fc4c164eaf1a1c2a884cfb372f4bda3`
+- **Dataset**: `ai/computer_vision/dataset_m1_13` (Exactly 605 files)
+- **Supported Classes (13)**: `garbage`, `pothole`, `street_light_issue`, `water_leakage`, `fallen_tree`, `damaged_signboard`, `broken_bench`, `open_damaged_manhole`, `illegal_parking`, `sewage_overflow`, `encroachment`, `unauthorized_posters`, `loose_cables`.
+- **Historical Evaluations**:
+  - M1.8 Held-Out: Precision = 0.8380, Recall = 0.6120, mAP50 = 0.6540, mAP50-95 = 0.4870
+  - M1.11 Held-Out: Precision = 0.6500, Recall = 0.5700, mAP50 = 0.5680, mAP50-95 = 0.4230
+- **Disclaimer**: These metrics represent historical evaluation baselines under specific dataset conditions, not universal guarantees of real-world accuracy across arbitrary municipal lighting, weather, or sensor variations.
 
 ---
 
-## 9. Advanced Civic Intelligence (M5.2)
+## 4. Epistemic Safety & Decision Boundaries
 
-- **Recurrence Analysis**: Identifies same-category cases within 180 days (`RECURRENCE_WINDOW_DAYS`) and <= 250m Haversine distance, separated by > 72 hours.
-- **Hotspots Analysis**: Aggregates road/city report concentrations over a rolling 30-day window (`HOTSPOT_WINDOW_DAYS`, min 3 reports).
-- **Resolution Evidence States**:
-  - `status_only`: Case is currently active/open.
-  - `evidence_supported`: Case is marked resolved and contains an attributed staff note from the current resolution cycle.
-  - `evidence_missing`: Case is marked resolved without a current note.
-- **Trust Boundary Enforcement**: Case triage priority is recomputed server-side; client payloads cannot inject recurrence scores or override server triage.
+CVKI strictly enforces mathematical non-equivalences across all decision layers:
+- $\text{MODEL\_OBSERVATION} \neq \text{VERIFIED\_EVIDENCE}$
+- $\text{USER\_REPORTED} \neq \text{VERIFIED\_EVIDENCE}$
+- $\text{SYSTEM\_DERIVED} \neq \text{Physical Ground Truth}$
+- $\text{CV Confidence} \neq \text{Civic Severity}$
+- $\text{Government Portal Status: RESOLVED} \neq \text{Automatic CVKI Physical Resolution}$
+
+### Enforced Protections
+1. Recommendations require explicit officer review (`human_review_required = True`).
+2. No autonomous dispatch, closure, or fiscal commitment.
+3. Citizen responses to clarification queries are tagged `USER_REPORTED`.
+4. Cryptographic SHA-256 hashes prevent evidence log retrofitting.
 
 ---
 
-## 10. Local Setup & Execution (Windows)
+## 5. Security & Privacy Hardening
 
-### Prerequisites
-- Python 3.13 (64-bit)
-- Node.js (v18+) and npm
-- MongoDB Community Server running locally on port 27017
+- **No Secrets in Source**: All keys and connection strings loaded from environment variables.
+- **Server-Side Authorization**: Administrative routes enforce role validation at the dependency injection level.
+- **SSRF & Payload Defenses**: Outbound requests restricted to pre-approved domains; private IP / cloud metadata addresses (`169.254.169.254`) blocked; request bodies strictly bounded.
+- **Citizen Privacy**: Public map views inject 50–100m coordinate jitter to prevent individual residence identification; PII stripped from public knowledge graphs.
 
-### Installation
-```powershell
-# 1. Clone repository & configure virtual environment
-git clone https://github.com/UdayGangwar790/AI_Civic_Complaint_System.git
-Set-Location AI_Civic_Complaint_System
+---
 
-py -3.13 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r backend\requirements.txt
+## 6. Quick Start & Execution
 
-# 2. Configure frontend dependencies
-npm --prefix frontend install
+### 6.1 Prerequisites
+- Python 3.13+
+- Node.js v18+
+- MongoDB 6.0+
 
-# 3. Environment configuration
-Copy-Item .env.example backend\.env
+### 6.2 Backend Setup
+```bash
+# Set up virtual environment
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+
+# Install dependencies
+pip install -r backend/requirements.txt
+
+# Start backend server
+uvicorn backend.app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-### Running Backend & Frontend
-Terminal 1 (Backend):
-```powershell
-.\.venv\Scripts\python.exe -m uvicorn app.main:app --reload --app-dir backend
-```
-
-Terminal 2 (Frontend):
-```powershell
-Set-Location frontend
+### 6.3 Frontend Setup
+```bash
+cd frontend
+npm install
 npm run dev
 ```
 
-Interactive API documentation is accessible at `http://localhost:8000/docs`.
+### 6.4 Verification & Benchmarking
+```bash
+# Run full product end-to-end validation test
+pytest backend/tests/test_m12_product_e2e.py -v
 
----
+# Run targeted security & epistemic audits
+pytest backend/tests/test_m108_security_hardening.py backend/tests/test_m108_epistemic_safety.py -v
 
-## 11. Testing & Validation
-
-Run the complete regression suite:
-```powershell
-# Full backend suite (397 tests)
-.\.venv\Scripts\python.exe -m pytest backend/tests -v
-
-# Frontend linting & production build
-npm --prefix frontend run lint
-npm --prefix frontend run build
+# Run M12 performance & concurrency benchmark
+python backend/tests/benchmark_m12_final.py
 ```
 
 ---
 
-## 12. Security & Privacy Principles
+## 7. Known Limitations & Technical Debt
 
-- **No Fabricated Data**: Authority names, contractor details, government contacts, and URLs are never hallucinated.
-- **Trust Boundaries**: Public endpoints do not trust client-supplied priority scores, duplicate flags, or recurrence counts.
-- **Citizen Privacy**: Citizens only have access to their own complaint history; administrative intelligence and other users' records are isolated.
-- **Scoped Authority Access**: Authorities can only inspect cases assigned to them; other case IDs are omitted from authority responses.
-- **Request Correlation**: Audit logs record timestamps, actor IDs, roles, and correlation IDs for all state-changing actions.
+- **Visual Detection Scope**: Fixed 13-class taxonomy; no 3D depth estimation or volumetric pothole measurement; daytime bias in dataset.
+- **NLP Normalization**: Rule-based normalization handles common vernacular expressions across 7 languages, but does not parse deep contextual slang or dialectical variation.
+- **Government Portals**: External APIs (CPGRAMS, state systems) may be unconfigured or undergo sandbox downtime; CVKI gracefully degrades to `UNKNOWN_OUTCOME` or queueing rather than fabricating success.
+- **Deployment**: Local engineering baseline validated; cloud deployment and multi-region clustering not pre-packaged.
 
----
-
-## 13. Limitations
-
-- **Dataset Scale**: The computer vision model was trained on a controlled 300-image dataset; generalization across extreme weather or nighttime conditions is unverified.
-- **Waterlogging Boundaries**: Due to reflection and illumination variability, waterlogging detection remains less precise than manhole or road sign detection.
-- **Registry Freshness**: Authority intelligence relies on the accuracy of configured local records; missing registries return `not_verified`.
-- **No External Portal Dispatch**: CVKI generates structured packages; it does not automatically submit complaints to live government APIs.
-- **Engineering Heuristic**: Priority scores are triage aids for human staff, not emergency dispatch guarantees.
+For comprehensive details, see [`docs/m12_known_limitations.md`](docs/m12_known_limitations.md).
 
 ---
 
-## 14. Future Research
+## 8. Documentation Index
 
-- **Semantic Segmentation**: Moving from bounding boxes to pixel-level masks for waterlogging and pothole volume estimation.
-- **Federated GIS Integration**: Dynamic querying of live municipal and national road inventory GIS feature services.
-- **Edge Deployment**: Exporting M1.13 to ONNX Runtime and TFLite for on-device mobile inference.
-- **C2PA Image Provenance**: Embedding cryptographic signatures in inspection photos to verify photo authenticity.
+- [Complete System Audit (M12.1)](docs/m12_1_system_audit.md)
+- [Research Reproducibility & Experiment Registry (M12.3)](docs/m12_reproducibility.md)
+- [Final Security & Privacy Audit (M12.4)](docs/m12_security_audit.md)
+- [Final Epistemic Safety Audit (M12.5)](docs/m12_epistemic_safety_audit.md)
+- [Final System Architecture (M12.7)](docs/m12_final_architecture.md)
+- [API Reference (M12.7)](docs/m12_api_reference.md)
+- [Deployment Guide (M12.7 / M12.8)](docs/m12_deployment.md)
+- [User Guide (M12.7)](docs/m12_user_guide.md)
+- [Developer Guide (M12.7)](docs/m12_developer_guide.md)
+- [Known Limitations (M12.7)](docs/m12_known_limitations.md)
+- [Final Research & Product Evaluation (M12.9)](docs/m12_final_evaluation.md)
+- [CVKI v1 Final Freeze & Sign-Off (M12.10)](docs/m12_final_signoff.md)

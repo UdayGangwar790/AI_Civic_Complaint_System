@@ -1,0 +1,1039 @@
+{
+  "count": 122,
+  "labels": [
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_003.txt",
+      "sha256": "4455be76a5d35fae3e3fc52343fd1494031f3849cddeda1b1f38f597d56fe720",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_004.txt",
+      "sha256": "9053447de3c4ab6146996d141dd74e680f5d4f74394bdf1f933b0384bad56058",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_005.txt",
+      "sha256": "651d713f2b91ad8cfc7cde5c5ac5d3eecac67e1619105d53537c1f40deda7e1c",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_006.txt",
+      "sha256": "c5e1a9c741cab5ea1af2e71c93a4bd7604128629d147e2973bb443c05d6c2555",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_007.txt",
+      "sha256": "5c3d6a6cb2a47f6deb20389ca610137e460c8afa46a2f91564a49b03f31b2dd6",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_008.txt",
+      "sha256": "9d92a42a49720fec612ab2f6f0834663533656f447313107832af930167eb8bf",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_009.txt",
+      "sha256": "2b226d3752d95ce63cea54c9c79e4fe15ae2401b51ee633ae709587a636a2590",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_011.txt",
+      "sha256": "85d420a3297b9c6deda4b03240b458207536dcb004205c217d42749aef682f67",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_010.txt",
+      "sha256": "9af4d391588ad0ddd258d94d4bc584f54e1003aaefb7906850860f76b5065e16",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_closed_manhole_002.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_030.txt",
+      "sha256": "d50ebe9dd7e52fdc7bb31ff44d212366904c0cf50e84b3b3faada25d56b0775b",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_closed_manhole_001.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_012.txt",
+      "sha256": "909015055867e37a4932aeaffeb5d2a68eb4d1139158aa551ef53f4a6374148a",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_013.txt",
+      "sha256": "fb80e17453a763e3875cd504b76fdd949f2a948faeb4241869e4f0a3a0132882",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_014.txt",
+      "sha256": "79c53a2829cb0078b3477569fada615f46210951fcbae0c088f7725033c714e9",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_015.txt",
+      "sha256": "16342f15e8dda5bef6dd95de718214dca1e12aee7163c07abf1339f23124d20b",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_016.txt",
+      "sha256": "3d74d4f31d0f7a8a961b64286be500eed08d4e1cded7f40745d4f61d4830fe16",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_017.txt",
+      "sha256": "9e47fa573268a5d05f3fc80006b44bda1441adf54534b574d3e38fd8292ca962",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_018.txt",
+      "sha256": "0ef8704787b38063390a0e2915af09a2d87313e7a8c6efdd309b178883dbdecc",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_019.txt",
+      "sha256": "edcfe04c779f550e038bc3951f0f23ef5f9072147a5cf93cca9ccf6461bdb3da",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_020.txt",
+      "sha256": "8dd2d0c515cb1de8ffaa2865dd55b65a7c168e10ed79319e02aab38ad7651c04",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_021.txt",
+      "sha256": "21c0bcd9f1e65c0d42a20202a845a75af76ae6f335f3c69be9f8171638712014",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_022.txt",
+      "sha256": "103af9466093f6a0fd60b1b05957ff665192ee21a4eeafc5a3d0ad382b1c474c",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_023.txt",
+      "sha256": "e6331770b2db56c7a52f0293737939c560b6124b516318cf275bfeb40de30c88",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_024.txt",
+      "sha256": "5b7c83c61d1bd7c00f9c66ab20fbbb531b2e45ed891915241a5975f0ad81f6b4",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_025.txt",
+      "sha256": "412121046d587e784a45ff67c57bee5d805e042a3f6124dcd4f2423cabe2db73",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_026.txt",
+      "sha256": "810ee41afadbf1a9a181c94a349950ec651b0de679bcb6fa33f55c7128e345e7",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_027.txt",
+      "sha256": "6fe7ea68f39a1f5c18b56d985c12fff85eb96063eab96ed7e3699986818ff600",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_028.txt",
+      "sha256": "8530338b54e1f3a580e58c8e757836f47682a483a6898f0fe7b0a0e2dcedfe4e",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_029.txt",
+      "sha256": "dc302bae4661b475ad5d2cf54933fa8e9ec037d5d62f8d3b8fef10f7f10ab6d7",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_030.txt",
+      "sha256": "35b2d101cc801310cec0f1f282cf64536b20063051246eccfe12995ccdeddd02",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_001.txt",
+      "sha256": "56a29f8fda3453909a6b0ffb876983218645857c458fd48ad453883c66fd45e1",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_002.txt",
+      "sha256": "f067442cfd58ef59430c27b2b44c3d9edb58fb98f6a422af11af386c161a47bc",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_closed_manhole_003.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_closed_manhole_004.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_closed_manhole_005.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_closed_manhole_006.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_closed_manhole_007.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_closed_manhole_008.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_healthy_sign_001.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_healthy_sign_002.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_healthy_sign_003.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_healthy_sign_007.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_healthy_sign_008.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_wet_road_puddle_001.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_reflection_003.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_reflection_004.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_reflection_005.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_wet_road_puddle_002.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_wet_road_puddle_003.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_wet_road_puddle_004.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_wet_road_puddle_005.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_wet_road_puddle_007.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_wet_road_puddle_006.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_wet_road_puddle_008.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_reflection_001.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_reflection_002.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_001.txt",
+      "sha256": "4cf79f7289b6aec5501007df7c67ad0adfe04c9ca59b58adeaa286e35eede45a",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_002.txt",
+      "sha256": "ed82c41df5fbab6d50ece66453e63b9135a9c09b5d90384f34891fe75cf55ba3",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_003.txt",
+      "sha256": "28ec3cf715b3ad2200b56a407c4aa085c3a1a1b182ae5c77505383739fe4369b",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_004.txt",
+      "sha256": "9049858033a955ef51b0c4d4b5218ba539c2adfdf6bf4576722954aac5ce4314",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_005.txt",
+      "sha256": "727b9e44bbedc1671cf91a140186e138dc3e6ad4f2f8eba70de9a946029fb24e",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_006.txt",
+      "sha256": "2db25b463df2578967deebfee9ec13996a9adbb170e7d0b394ec3c28446d1dfe",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_007.txt",
+      "sha256": "7e74ebc9911f97e6a384abaa114f5fbddd5ed2313c195bc8b7fb95ddf4d3d416",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_008.txt",
+      "sha256": "e840ea2192774e08dac202f5509a50c6aa29a54503e19c0d254bc516f615ebff",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_009.txt",
+      "sha256": "822f7f62b05f91d32c09e41bcd19282108df698ed39c16fdce324bdf2f79fde4",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_010.txt",
+      "sha256": "d27797ae6dc011aa3cbec730e283ecae3c59b23191d1e5ab530053919ea3125f",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_011.txt",
+      "sha256": "03f259d6669b1d7c86f587feb23650b0faa5e356fee144a2cdec727f8444b15e",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_012.txt",
+      "sha256": "398b8702e1d0afbbf064eff895a548d123ad32bce53417424d3826bd55ad7a60",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_013.txt",
+      "sha256": "3e6a28509362319a3821d46716a5303ef3e2e4ac710e2032e461895cd95bd944",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_014.txt",
+      "sha256": "a83b1ac69efffeb234de14e841e26d5767fe3b76bb6dfb7f155a8485d348bbd6",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_015.txt",
+      "sha256": "9cf2ce311b2c6069f040662436b4bb95782155a6bb849d5b1e74daf98d2b950a",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_017.txt",
+      "sha256": "529d6592380f4a0a0d3201b31db87a4c1d43b784d09195b0e1c8a8f249501bdd",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_016.txt",
+      "sha256": "96322d92d310193ee77bcc81984473b240e0c25bd2c09be9ce8bfc1c6ae8c1db",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_018.txt",
+      "sha256": "6b9af56184efbf9e2bf3e313b9591b40a68e017277ef022d75d67f921891c602",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_019.txt",
+      "sha256": "b228352fd96e186af2ab8783f9bda9a32b6eca5dcf913d62d25cb33f947f085a",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_020.txt",
+      "sha256": "f72a5646e2a600d6147a4cd0dc841c463bd49a2dfc1ec7a00fa1e6bf74019f7d",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_reflection_006.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_reflection_007.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_reflection_008.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_021.txt",
+      "sha256": "57df6e788a3a46012458baff276c210d8fda0064592e687828ebc7af4adf6369",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_022.txt",
+      "sha256": "093c3a6fa24904e0fc446eb38013561cec2038be5bc1a083299bda60f2468e08",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_023.txt",
+      "sha256": "befe6f4bc2740917b40c0cf14a213ff1814f507d9dade96d1346bfe504bcc0d6",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_024.txt",
+      "sha256": "05c974fe27bce7d86a6a1f05f63c7841eb0496bd66ef0d438e9121b05110d16b",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_025.txt",
+      "sha256": "1606b410b0db5ec9d1f70cdaa230012b990707f47a39e3acfcf1907c12777b10",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_026.txt",
+      "sha256": "77ac28fb9e87f9ed91a1fb8a19eb4ece71e57cecaf660a4dda4443e5797e6616",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_027.txt",
+      "sha256": "f248036877dbc6a7ca62744f00e6c15358f6599e9c02da2dfdef9ed95371c126",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_028.txt",
+      "sha256": "c6ac170581bfb887344015ca3474c9686a8e024a38cee9caac9113867b7ad938",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_029.txt",
+      "sha256": "cd77fc780b936bd1a234581bec81f76a5ccf298df4dd781e5b624473c3eedb49",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_open_damaged_manhole_030.txt",
+      "sha256": "f45fe66b756cfb65a687bff81520425b2eb9ec76fc1ab802d1817061a35b0219",
+      "annotation_count": 1,
+      "classes": [
+        "open_damaged_manhole"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_001.txt",
+      "sha256": "543ba18cfea30f3bc3ea1681abd7ea98a1f7c9b79b9ce466921758d100f048ae",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_damaged_missing_road_sign_002.txt",
+      "sha256": "90e575addf2a46c37095f1bc588c82e166dace8527e8b32e770d35a615281a9d",
+      "annotation_count": 1,
+      "classes": [
+        "damaged_missing_road_sign"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_003.txt",
+      "sha256": "3f59f4638fa49480757a70f063d509b4f7ad07711ca5178cdd29644e143f3aab",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_005.txt",
+      "sha256": "a196c13bda759520da5d0fd766a452bf06fd8b29df526f3a34a269639dc3a294",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_004.txt",
+      "sha256": "9e2d14c691ff692a04bed9725b63de0d8dc27fb50543226117d66054744f447b",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_006.txt",
+      "sha256": "fdc2603d12ce4043e2e8cbcde46fa26d6ad174b7c1374df3d66132a6a671062a",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_007.txt",
+      "sha256": "c864b0bb899914bc7ba5b5876c85c0bfcbfe348604d98131879e45c322daad86",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_008.txt",
+      "sha256": "bb17dead7a536c5ac3587e5f38b82104145a66e7232d6d363e72a0c90d00e67c",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_009.txt",
+      "sha256": "e0ef7feae28cc71017df416b0b613643dae159124fe9e62e04488779d86fb0d0",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_010.txt",
+      "sha256": "a51860a1ba13090c0e1a1c73c7dee9c2f286e85733d60d6f72d8fb9e6448e5ba",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_011.txt",
+      "sha256": "3421ddbe3bbd24f19c4ace4d3d84b4e2d6a1dc851c81fea9655821b752011f83",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_012.txt",
+      "sha256": "8bee8598e2d1ee1dc40fbaeadcd3272c225589d0e9b8a169064f6b4266b8e88c",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_013.txt",
+      "sha256": "37709666a112ae40092fcb45353d6cc158f89a0a35918d1105e51bdc9b17ab0e",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_014.txt",
+      "sha256": "ace3c1f93e0d9e2a44bf3dbccc8d69e4664fbbc194cbbeaa82c46578f151e1d9",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_015.txt",
+      "sha256": "325a1f0dd3b62ce73ab969ea9d681f5a31d13fcaaa9c25702176419f952c9450",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_016.txt",
+      "sha256": "0f9b2a536e5b0acb099fd9bcc624c8c77d5337025094654270399516cbdb5742",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_017.txt",
+      "sha256": "fff5e97be4b55a4537881854ad6e4186ad5e4b840707f422e85b215cb6fcf3b7",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_healthy_sign_005.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_healthy_sign_004.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_027.txt",
+      "sha256": "d0e77a7ea58c397e2c886b051ad0770f8908f1a4b3a637c0a392ee5e1c15d59e",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_hn_healthy_sign_006.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_count": 0,
+      "classes": [],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_029.txt",
+      "sha256": "c8d7c0d52affd65799c54181f996cfc2425cefbda67272821e9e328efe6b9256",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_028.txt",
+      "sha256": "a7d6a2049357a81ea42cc71340014bcb07750dd06d3b5be27d677f9e658d5fcc",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_023.txt",
+      "sha256": "230d0b7f030f0f52e062eb89a6d3549c3a03e294c68734731b9a5e7db9411066",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_021.txt",
+      "sha256": "9236b9c496c7feb034c370c37ec81cbeca9998913c90bd6f1dad3e243f052e5c",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_022.txt",
+      "sha256": "bbcef20286f6120d5b38da52b504a20bd6d9b8f2eab537fc05a023f3912c7f54",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_018.txt",
+      "sha256": "6efc8eb963d6d63f23db79a7f30cfa1ae35b607dc67d2e5b23886bedd142857d",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_019.txt",
+      "sha256": "006e8e6a8b5de79f8f480bf3ab80200739b8f8ec195bedc21c2a34a64cb08dbb",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_020.txt",
+      "sha256": "b0e7ba5740b8aa89c8691f7b025dcda60cfd46f494ef05b72d0c8dc1e0abd14e",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_024.txt",
+      "sha256": "1acb01a86bcf17894f0ea081c5b358819eb820dc449469dd77bd8384361ae06e",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_025.txt",
+      "sha256": "098f74b71f2d5c572405948615c7d51352971338740cd93b392d02ddb5e61ed8",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    },
+    {
+      "relative_path": "labels/d1_road_waterlogging_026.txt",
+      "sha256": "5eb67e151d50767efb8a9c0de2088a9dad2e1e5574f1eb3cb0a9a54e42092208",
+      "annotation_count": 1,
+      "classes": [
+        "road_waterlogging"
+      ],
+      "validation_status": "VALID"
+    }
+  ]
+}

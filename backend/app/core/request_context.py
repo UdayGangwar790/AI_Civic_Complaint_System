@@ -8,6 +8,10 @@ class RequestContext:
     request_id: str
     ip_address: Optional[str] = None
     user_agent: Optional[str] = None
+    correlation_id: Optional[str] = None
+    case_reference_id: Optional[str] = None
+    operation_name: Optional[str] = None
+    error_category: Optional[str] = None
 
 
 current_request_context: ContextVar[Optional[RequestContext]] = ContextVar(

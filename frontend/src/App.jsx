@@ -38,6 +38,9 @@ import { GeospatialContextPanel } from './components/GeospatialContextPanel';
 import { EvidenceProvenancePanel } from './components/EvidenceProvenancePanel';
 import { KnowledgeGraphPanel } from './components/KnowledgeGraphPanel';
 import { GovernmentIntegrationPanel } from './components/GovernmentIntegrationPanel';
+import { AuthorityDecisionPanel } from './components/decision-support/AuthorityDecisionPanel';
+import { FieldInspectionPanel } from './components/inspection/FieldInspectionPanel';
+import { CitizenCaseView } from './components/decision-support/CitizenCaseView';
 import {
   API_UPLOAD_LIMIT_BYTES,
   DetectionApiError,
@@ -635,6 +638,8 @@ function CaseDetailModal({ referenceId, onClose }) {
                 )}
               </div>
             </div>
+
+            <CitizenCaseView referenceId={caseData.reference_id} />
 
             <GeospatialContextPanel
               referenceId={caseData.reference_id}
@@ -1959,6 +1964,7 @@ function AdminCaseDetailModal({ referenceId, onClose, onAssignmentChanged }) {
   const [actionLoading, setActionLoading] = useState(false);
   const [error, setError] = useState(null);
   const [actionMessage, setActionMessage] = useState(null);
+  const [showInspectionModal, setShowInspectionModal] = useState(false);
 
   useEffect(() => {
     let isMounted = true;
@@ -2381,6 +2387,22 @@ function AdminCaseDetailModal({ referenceId, onClose, onAssignmentChanged }) {
                     <p className="text-muted">No duplicate evaluation stored.</p>
                   )}
                 </div>
+
+                <AuthorityDecisionPanel
+                  referenceId={caseData.reference_id}
+                  onOpenInspection={() => setShowInspectionModal(true)}
+                />
+
+                {showInspectionModal && (
+                  <div className="fixed inset-0 bg-black/75 z-50 flex items-center justify-center p-4 overflow-y-auto">
+                    <div className="w-full max-w-3xl my-8">
+                      <FieldInspectionPanel
+                        referenceId={caseData.reference_id}
+                        onClose={() => setShowInspectionModal(false)}
+                      />
+                    </div>
+                  </div>
+                )}
 
                 <GeospatialContextPanel
                   referenceId={caseData.reference_id}

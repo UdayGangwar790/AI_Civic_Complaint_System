@@ -1,0 +1,2137 @@
+{
+  "count": 122,
+  "images": [
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_003.jpg",
+      "sha256": "a720e140d60c1e3e2c5a39a06f3fb701a895f9e5f858003f817e9a8e4b163b9d",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-12",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_004.jpg",
+      "sha256": "f0e543ea7989d065a7c7b7272f6b3cb538dbf9044799b8b4f9c546dcf6a4e65d",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-12",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_005.jpg",
+      "sha256": "32096fbdc2d47fe154e8822779a6bfe4d38e818aba4a314facbcb8a2a476f758",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-12",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_006.jpg",
+      "sha256": "ca03b7bcd1332645ce6f166589f08643b347f335c6ba1ada65994fa36d6468d9",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-13",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_007.jpg",
+      "sha256": "e67ceb70f2cda5810fe3f1981c758357926d2523d9eff3befea8a1c3e6b679af",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-13",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_008.jpg",
+      "sha256": "ef94912bc70b004ffa0486a3ea5fd2f616cc672e990bfad1e4044d5b55852dc2",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-13",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_009.jpg",
+      "sha256": "22c1ad0b7fb3a6b8ed4a271e72c42e4f4f532b0b535e9617ee1f41a3fa583ef8",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-14",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_011.jpg",
+      "sha256": "34898ef852c58a6f672ecbc3db0e38662401b91e091ee8a03f4438823fcc61e7",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-14",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_010.jpg",
+      "sha256": "af04721b1b5c6dcd13055eb0d36aa496a83c0bedf0a9279c98f1e1752ee54c24",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-14",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_closed_manhole_002.jpg",
+      "sha256": "e719114b8aa5122e43f4bc9d9775b2cc537d2123146120ba0789ee2abb339030",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-31",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_030.jpg",
+      "sha256": "5e29ddafd5f7160f5b96dcebbf601634ceebc19fe5c9c6c59d9d750691c8b7d3",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-31",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_closed_manhole_001.jpg",
+      "sha256": "d26b0a5ded9ae5a1ac59ad0e61b05a0bb6614994b071e02876714269944d6053",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-31",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_012.jpg",
+      "sha256": "a652d6af08eea8e84823d0dcfd2b98113a1485fb1b48b4b0690115dde16efa0e",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-15",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_013.jpg",
+      "sha256": "ae66be229445f0c41afd87aea8dc6b408a479f34a4b5630005fd35a0e3da8de3",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-15",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_014.jpg",
+      "sha256": "117e914d26cdd7d87bb89a0d5ade32a8a3ab39c018070f724f9c3d2a1f732316",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-15",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_015.jpg",
+      "sha256": "14027bc00ef8572e95496358cf278cc6cef9b1c6ae329c4e735b03af80d0a947",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-16",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_016.jpg",
+      "sha256": "51e9a1ecf32ed13d1ddb45dbf4bb1df91b0318f90a1adc79fa0fa57494d7d098",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-16",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_017.jpg",
+      "sha256": "2a891cb61681d5dca7f5e78f16ff8479812f0f152b2ef8046a1d42bf14154d81",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-16",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_018.jpg",
+      "sha256": "f67a113275c929d464c7519a2a92ec44e5c4ab559f4e9ab5cbfd5b548d88b457",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-17",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_019.jpg",
+      "sha256": "f7fe10dbbd3eb661a728f7b445472f5d316c5561faaa4a15e4417094a87c30c5",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-17",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_020.jpg",
+      "sha256": "143f33dfc06b5107b5d09b1c5066629ceea79e0f93d060d5fb412c49e5e71ada",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-17",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_021.jpg",
+      "sha256": "3dae44664ac1ef1f50d6b1875d78ba37cbf04ac4cdf5219e5089b840e750513c",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-18",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_022.jpg",
+      "sha256": "0f28c129a4623b7c183902f5675f7a3206ca753583fca7fbb262ecab32444190",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-18",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_023.jpg",
+      "sha256": "762fa4e282cf0bf3e1c8d473f0516d4df062ce8608bdd9b7ab885d94baf08cdc",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-18",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_024.jpg",
+      "sha256": "b6cb2563af659ef30374c319a6d217d1c2dfa8270f7a3792f27a8a78a3c10787",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-19",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_025.jpg",
+      "sha256": "b37f36706272fea3b56a034a6c52b183325128783a2ff313b03adfd0ffbb5620",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-19",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_026.jpg",
+      "sha256": "fbaf7d1acb56c8be888ecceacaf06d300092767bec1a3ce692f3c297aa7932c7",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-19",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_027.jpg",
+      "sha256": "4faac72d3e97978c150927a69881ac467862d8a37f22d34f4892bdff504f6b35",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-20",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_028.jpg",
+      "sha256": "c578edf5c77c05842123536ecd33c15c105162e24ed7c1d1b26b83995aa3b4d0",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-20",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_029.jpg",
+      "sha256": "65a401b21693a000327cb996a5a4c74f57c5dee939294081e521fba65d2bc95f",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-20",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_030.jpg",
+      "sha256": "986a1c5a8cb9fae6895bcd64a870053b125f74c19b8013ef2734c7d762fe6ee3",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-21",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_001.jpg",
+      "sha256": "b9c413e0586a1561e5a009d2062a51263be8a2ebf9f586c6f16418b130cd1773",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-21",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_002.jpg",
+      "sha256": "5409c8f17eaeb5bfd7182b4a1b5dd2b89b9f2f0ef6a9a454cc34846cc6030d8b",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-21",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_closed_manhole_003.jpg",
+      "sha256": "7938c9a068c54e8481d2b5afc061b2c763d5941b301d36b7dd605b2bf84046ce",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-32",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_closed_manhole_004.jpg",
+      "sha256": "9e99f99a79bfc08a4e870264be9f1b0860dccf4041d8328c1def80f0cdb72af2",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-32",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_closed_manhole_005.jpg",
+      "sha256": "ac7cb4936a7cc46b87ad35670028a8a6b4b4ef836e29e6c189f8da535157fccd",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-32",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_closed_manhole_006.jpg",
+      "sha256": "5debf7a9d11ff8397a626856ace00d7cf72929f9a97a73ec5373932dbe42cd10",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-33",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_closed_manhole_007.jpg",
+      "sha256": "4aa1ba510ea8065d47bd4d1be1ff997b66883f5c10bd927dc6818281f5d2bfd3",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-33",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_closed_manhole_008.jpg",
+      "sha256": "755e2388c9b1f48969eeadb89ecd07e7d5f559d187455eed7adb29be263c9500",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-33",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_healthy_sign_001.jpg",
+      "sha256": "04a8d97befe1fb6e5fbecb12d431ba69480fc3094b2005d2c85a88823427905d",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-34",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_healthy_sign_002.jpg",
+      "sha256": "2e15a615bedd4a8c0c390c046a9c7e884c489368bb25d23ebad7d4e4efbb94ee",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-34",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_healthy_sign_003.jpg",
+      "sha256": "48b360cec8f5d79855ca25ba19caa844c81feec3ebd4c296773033c5b75c0272",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-34",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_healthy_sign_007.jpg",
+      "sha256": "d8b9e7a1703162a94f04ec99cbdc0cf940ffe6491fda843babecd0462f84d756",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-36",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_healthy_sign_008.jpg",
+      "sha256": "534caeabbc9ca35d3dc446db4c362386b6d93c9102dca39eaf710a0d02da0671",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-36",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_wet_road_puddle_001.jpg",
+      "sha256": "a4e1a38c8f1c19974d956ab81811a0af9423c84fb56ae6a1acde2f1cac7d89d0",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-36",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_reflection_003.jpg",
+      "sha256": "72072c0e95a377266e6c0ff4ec445df71ce3a6e2ba5a26609c5c7c040fdabc1e",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-40",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_reflection_004.jpg",
+      "sha256": "6323e26a68f181d4818a3ee1ef2f2dd65e86a7663a8baef83182b08ca790b9ea",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-40",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_reflection_005.jpg",
+      "sha256": "ab4d653448556a8338a3aca8a513af6ec70b3b0d89c4f87920715048b3f9edf7",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-40",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_wet_road_puddle_002.jpg",
+      "sha256": "9c9b1c6df56ff7b1dc7c8e95dd37105f0692723e4f305be0238ef9aa5f386bd2",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-37",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_wet_road_puddle_003.jpg",
+      "sha256": "29c8910ca3ad53364291493cff55d5b0035fd2be3dc06239edb75de62ac3d09f",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-37",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_wet_road_puddle_004.jpg",
+      "sha256": "ff91721f93c11948d55bf8ba9ce40014963f93fc7c7fbbd5385d742bc7547582",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-37",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_wet_road_puddle_005.jpg",
+      "sha256": "0e09ae1b7983f544b7c8faa2220a32436d92589055103e5f03a4846723e56943",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-38",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_wet_road_puddle_007.jpg",
+      "sha256": "e91abe08b1e21bcaf14758e63b206142e0079668c401c663ace55e0fc5e1e108",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-38",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_wet_road_puddle_006.jpg",
+      "sha256": "87f222d03024cd6dcb94f9af161d5a69c3c4849c08dfe222c751c680a9871dfd",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-38",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_wet_road_puddle_008.jpg",
+      "sha256": "fdf2a06013d9c59327c1ded21f0f607b496f069eb6644e77d9ae3440d07a4e35",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-39",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_reflection_001.jpg",
+      "sha256": "603589f1e0248808aa96284be4159316f103e11f658ed422f38d3f79fbb7a71c",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-39",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_reflection_002.jpg",
+      "sha256": "d3d25a1ce9c5b9965582e2e0d0946518a1d923d3b12c94f1dacb914f8cd3b404",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-39",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_001.jpg",
+      "sha256": "1de5f129390d104470914891932bf6f5409233b54cda1f917c9ee598b49a085f",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-01",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_002.jpg",
+      "sha256": "728b0a7475c488a9da9a98ffcba3dd2e1d8369f13e7fd063e2a8046c57f2ca1c",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-01",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_003.jpg",
+      "sha256": "d9296dc17d0223f80a94607bdc203728c69f94b6e2c3ec3f0d3badb9a7e8ede3",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-02",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_004.jpg",
+      "sha256": "5df842ed0ef0fa0c5ef3d3ed68db26291930e888d7a78defadb2c0011f0a5d5f",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-02",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_005.jpg",
+      "sha256": "984c817470019027ae4ea48a8543605f5a752e67a90a8bd12e83d9eb5d93cf39",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-02",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_006.jpg",
+      "sha256": "bcbf8307439bfd66fa703238d29614f9ea2ce0c459dc2d1cf6b0bba13e1448c8",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-03",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_007.jpg",
+      "sha256": "a64a1d1c1092fc30c5625ceee2c0103f677ef8696aa8f0f15e4f7c0a08487733",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-03",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_008.jpg",
+      "sha256": "a1bf6978b68a0d21c95e36be546120d58c49f4b4fcca89b30803232ce1f0e53f",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-03",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_009.jpg",
+      "sha256": "38d63714dd510b3900b6d5339982714ac25e90816911824002be6fcd98cb92f7",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-04",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_010.jpg",
+      "sha256": "5003b9f02c0b49f606e2eb269d1e2d7e2838aeddafdcf2d6e5c0d6af2af8c841",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-04",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_011.jpg",
+      "sha256": "015fa10a659776ea0db34931da485824f475a061bf0e96ec02e121d1b8f890c3",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-04",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_012.jpg",
+      "sha256": "b9a89bd038b24caa079375a8d276d59c04e9636fe5b48e70da5f77d8f4358d2c",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-05",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_013.jpg",
+      "sha256": "1d8f0b5a5fb1c8c524974455e28980f4084f2ef93b11d3d44f2c185eeb1fcd7e",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-05",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_014.jpg",
+      "sha256": "3be515f99efbc2152d2e1fa8f47b214563f5efd28a951940c2aef5b399af120a",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-05",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_015.jpg",
+      "sha256": "993378a4b4a38710d31d186b4c5e2bb55b2650fe4afbf85024dd24a1f12dfd3a",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-06",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_017.jpg",
+      "sha256": "29e4a3a9167efcecb669ab7cd839d153b4176cd5e17be56e1b706fd6149e6e05",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-06",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_016.jpg",
+      "sha256": "fd1bccb71d804a420280ef2639b61d15867a10eb976b036f02e976fca7ac4083",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-06",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_018.jpg",
+      "sha256": "2d4b602eca057bb8007ba4febe043286f121efddcd2a648ef58214ce8b94c28c",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-07",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_019.jpg",
+      "sha256": "23a7af20a0327e496be7443a9bdaf5f0b2795c947886ffac4b058e70203d16ee",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-07",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_020.jpg",
+      "sha256": "f13853240adb468038b4d2374acd676139f5f1c5d99d3b1d8f656bfb9196ced1",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-07",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_reflection_006.jpg",
+      "sha256": "218695ad9801b3742098b99311d42ecc84569089aa7803bea771a8ac857080f8",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-41",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_reflection_007.jpg",
+      "sha256": "2a96b97cfaa7fc80d15e4f63dd877d5db6355daa7e3a721b8675168c96fd2eaf",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-41",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_hn_reflection_008.jpg",
+      "sha256": "e4950572e0d6439f62e5ebd2e56405f73d32942676e75c2360ca02a5c9a71b35",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-41",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_021.jpg",
+      "sha256": "1840b66e5c602992af9749244e94e7fa0833cd7c0645cc243274137393b5852e",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-08",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_022.jpg",
+      "sha256": "688df637bf1c54cf3a330ab0cfe1aa853b79a8c0926c62f4bbb64c884888ec90",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-08",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_023.jpg",
+      "sha256": "40dcec8fb33bd26605364c7b7857e3d9eb79a643f917ae0f10a98ec3ca6b4288",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-08",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_024.jpg",
+      "sha256": "bd75a169213e1c62c0d659779339f82a5504280bb6b8508012c5b3bfb319add6",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-09",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_025.jpg",
+      "sha256": "cc3ecfd9ddb0e17a81cbedf8edbda022ee2c3d08c4db3169bca7aaf246296304",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-09",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_026.jpg",
+      "sha256": "4c50d836c0e4f1c7d394f3a08c0658ee3372e2fb5d6b37b7172aa158aea5036c",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-09",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "train"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_027.jpg",
+      "sha256": "d6ffe1dd3679b5818faff70f0b34f7fa4f779667cf2043bfce55c920e471ce12",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-10",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "val"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_028.jpg",
+      "sha256": "92f8341a8d529a88031806b0b7a3c4b60a0647e3cb5e63ce100a698a39185f4d",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-10",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "val"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_029.jpg",
+      "sha256": "ab46c1c2a40cbcb71925d32abfe3b9fdf2b7d96f680e2b19ab4c61bb22e8412b",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-10",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "val"
+    },
+    {
+      "relative_path": "images/d1_open_damaged_manhole_030.jpg",
+      "sha256": "846f563b2b626bf3dd933f5fb429aa73b9e68f8de864a1e10c59223a0f26f72a",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-11",
+      "is_hard_negative": false,
+      "class_presence": [
+        "open_damaged_manhole"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "val"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_001.jpg",
+      "sha256": "40565fde4fa7a881453fd589f26eebe93ffae997e616581d89c36b6bf1aa8383",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-11",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "val"
+    },
+    {
+      "relative_path": "images/d1_damaged_missing_road_sign_002.jpg",
+      "sha256": "40a0bb9d5bb8c0162550e59168479c6be3e6f9bc3055d96bf117a959e936016e",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-11",
+      "is_hard_negative": false,
+      "class_presence": [
+        "damaged_missing_road_sign"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "val"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_003.jpg",
+      "sha256": "199bc3dea38a797b5be3f9e8d0643051e8d6f9cca5d38836c0ddc93eb1d63c59",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-22",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "val"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_005.jpg",
+      "sha256": "c7d7e4522c92f1e6836bf19d5aa6ccca4cbf84f20dd5f07fe2ef4f5cbbdda55b",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-22",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "val"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_004.jpg",
+      "sha256": "1ecd0a18fa674ba0cf9b243e2878bca657642470021b69dc0e11e71ba52bf8f2",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-22",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "val"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_006.jpg",
+      "sha256": "ce319076330eff91e1701765769eb144da0b4c2b37fbe9ea7830fa9cd96bea68",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-23",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "val"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_007.jpg",
+      "sha256": "d9a8de8ff948dbd0f57783411d709422538b1224f377562d073edbe5167114ab",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-23",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "val"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_008.jpg",
+      "sha256": "8babb228a869b09afa0131148b39eb5267643702ee800701e49afd61982e0a90",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-23",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "val"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_009.jpg",
+      "sha256": "a6a2ab0e997644b12e79b01c5919b38d1749ae664aae25d543d7f2348d6bb788",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-24",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "val"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_010.jpg",
+      "sha256": "f8e48730f35f6799c6a95821c195950a3cb64b8dee4cddb2627c1004b4590a11",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-24",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "val"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_011.jpg",
+      "sha256": "e691deb6ee7eeb384e9ff6b802e29b907fa7f8cd640a3d07b6931ce0298567bd",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-24",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "val"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_012.jpg",
+      "sha256": "764d99fa8599e068b0dbc5a4af6970e08030e91e61478a5ddee8ab7f80f201bb",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-25",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "val"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_013.jpg",
+      "sha256": "fd1c6ed14e04d1e31cbf0417d5430d26a7b74ed6b6c002d7ab0a9d4d07e7e4f3",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-25",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "val"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_014.jpg",
+      "sha256": "1a1efd299e233e7a9433800a651c5e8f1d9b7d1fa3249b35d4458db40ced2eac",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-25",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "val"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_015.jpg",
+      "sha256": "cd6c1c125faf01c5816b64a38c1e2776f1da81768be4f3c0edce73e92ae6875f",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-26",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "test"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_016.jpg",
+      "sha256": "28176c8a0ebba1239f12fa61962969915a495cf7bad925ca27a502972d745557",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-26",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "test"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_017.jpg",
+      "sha256": "310244cc613713af8ff064a8578e619591911e0c04b23a428ffe59099739fc6d",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-26",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "test"
+    },
+    {
+      "relative_path": "images/d1_hn_healthy_sign_005.jpg",
+      "sha256": "e7b57f726fb002d157901c9177d4675022bbb37c4f74e6eb96e7d08435e6d80b",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-35",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "test"
+    },
+    {
+      "relative_path": "images/d1_hn_healthy_sign_004.jpg",
+      "sha256": "f25776df0e3560488c07a27ed7664a63acee345affbfab15077e8e3d5e8f683d",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-35",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "test"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_027.jpg",
+      "sha256": "1d5e12107ae499b63769d00dfad8e2f5f185c97d6e568f5001d27076777aef9c",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-30",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "test"
+    },
+    {
+      "relative_path": "images/d1_hn_healthy_sign_006.jpg",
+      "sha256": "20cc242dd01698b1434f513ac666bb4c256f8d274d9c869dfd541f6517a55c89",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-35",
+      "is_hard_negative": true,
+      "class_presence": [],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "test"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_029.jpg",
+      "sha256": "27c534396c9e10c4f9a1b0eca06fa2a81c42ef4a2822071d1fa0742fb988b964",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-30",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "test"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_028.jpg",
+      "sha256": "37ff888ff8a928a04c329f79531d3fbf11245a9c306d615c4dfee672e6dda2a6",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-30",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "test"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_023.jpg",
+      "sha256": "1da7cba7fa95e3fa8cb051ba46ac92a1f1691d7d33a991239104589613c8fb71",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-28",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "test"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_021.jpg",
+      "sha256": "eff5ebac8853ac23df4b41bbf5067f8c6163919a64dedb6c15f8c66bc51d42df",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-28",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "test"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_022.jpg",
+      "sha256": "b21940bb6182f1dd70f7782adf0a15c13b1d111f3b6590add16ec1cc55411bd7",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-28",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "test"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_018.jpg",
+      "sha256": "1527cdb2426c8bc798e5153321b3df1ce1edc4b76aae92688f3c62c6e1415cea",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-27",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "test"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_019.jpg",
+      "sha256": "5f1b8aa33cb6ffff0b09666df0b0885a66394975c3dc432bc9e4d0b3afdd35d1",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-MUMBAI-03",
+      "license": "ODbL-1.0",
+      "sequence_id": "SEQ-27",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "test"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_020.jpg",
+      "sha256": "f7f60fae00bae11f18af782a95d3e7df21e957376a1bb801c22d5f025fb87a5d",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-27",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "test"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_024.jpg",
+      "sha256": "65dfeb02a934159154c1f96a7077053e7feba153e094b3d1488583d4a23a8fca",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-CHENNAI-04",
+      "license": "CC-BY-SA-4.0",
+      "sequence_id": "SEQ-29",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "test"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_025.jpg",
+      "sha256": "1b95f1797bc2502bca4d88fc6c93f51eaa3a268dde8c9fd90ecbc920e35d01e3",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-BLR-01",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-29",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "test"
+    },
+    {
+      "relative_path": "images/d1_road_waterlogging_026.jpg",
+      "sha256": "e67644d15ee1753888adb6844e849f01b006bb9b8e16cd01ad19919695451452",
+      "width": 640,
+      "height": 640,
+      "format": "JPEG",
+      "source_id": "SRC-DELHI-02",
+      "license": "CC-BY-4.0",
+      "sequence_id": "SEQ-29",
+      "is_hard_negative": false,
+      "class_presence": [
+        "road_waterlogging"
+      ],
+      "quality_status": "ACCEPT",
+      "privacy_status": "CLEAR",
+      "duplicate_group": "unique",
+      "split": "test"
+    }
+  ]
+}

@@ -34,6 +34,12 @@ class NodeType(str, Enum):
     GOVERNMENT_STATUS = "government_status"
     ESCALATION_DECISION = "escalation_decision"
     RESOLUTION_VERIFICATION = "resolution_verification"
+    VERNACULAR_NORMALIZATION = "vernacular_normalization"
+    VISUAL_RESOLUTION_AUDIT = "visual_resolution_audit"
+    OPERATIONAL_PLAYBOOK = "operational_playbook"
+    FIELD_INSPECTION = "field_inspection"
+    DECISION_RECOMMENDATION = "decision_recommendation"
+
 
 
 class RelationType(str, Enum):
@@ -66,6 +72,18 @@ class RelationType(str, Enum):
     HAS_GOVERNMENT_STATUS = "HAS_GOVERNMENT_STATUS"
     HAS_ESCALATION_DECISION = "HAS_ESCALATION_DECISION"
     HAS_RESOLUTION_VERIFICATION = "HAS_RESOLUTION_VERIFICATION"
+    HAS_VERNACULAR_NORMALIZATION = "HAS_VERNACULAR_NORMALIZATION"
+    NORMALIZED_AS = "NORMALIZED_AS"
+    VISUAL_AUDIT_OF = "VISUAL_AUDIT_OF"
+    BEFORE_OBSERVATION = "BEFORE_OBSERVATION"
+    AFTER_OBSERVATION = "AFTER_OBSERVATION"
+    RECOMMENDS_PLAYBOOK = "RECOMMENDS_PLAYBOOK"
+    REQUIRES_INSPECTION = "REQUIRES_INSPECTION"
+    INSPECTION_SATISFIES = "INSPECTION_SATISFIES"
+    DECISION_SUPPORTED_BY = "DECISION_SUPPORTED_BY"
+    DECISION_REQUIRES_EVIDENCE = "DECISION_REQUIRES_EVIDENCE"
+    INSPECTION_AUDITS = "INSPECTION_AUDITS"
+
 
 
 def normalize_string_key(val: Optional[str]) -> str:
@@ -169,6 +187,26 @@ def canonical_escalation_decision_key(cvki_reference_id: str, decision_id: str) 
 
 def canonical_resolution_verification_key(cvki_reference_id: str, verification_id: str) -> str:
     return f"resolution_verification:{normalize_string_key(cvki_reference_id)}:{normalize_string_key(verification_id)}"
+
+
+def canonical_vernacular_normalization_key(cvki_reference_id: str, norm_id: str) -> str:
+    return f"vernacular_norm:{normalize_string_key(cvki_reference_id)}:{normalize_string_key(norm_id)}"
+
+
+def canonical_visual_audit_key(cvki_reference_id: str, audit_id: str) -> str:
+    return f"visual_audit:{normalize_string_key(cvki_reference_id)}:{normalize_string_key(audit_id)}"
+
+
+def canonical_playbook_key(playbook_id: str) -> str:
+    return f"playbook:{normalize_string_key(playbook_id)}"
+
+
+def canonical_decision_key(recommendation_id: str) -> str:
+    return f"decision_rec:{normalize_string_key(recommendation_id)}"
+
+
+def canonical_inspection_key(inspection_id: str) -> str:
+    return f"field_inspection:{normalize_string_key(inspection_id)}"
 
 
 def canonical_edge_key(from_key: str, relation: Any, to_key: str) -> str:

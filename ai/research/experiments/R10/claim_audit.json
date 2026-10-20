@@ -1,0 +1,77 @@
+{
+  "study_id": "CVKI-R10",
+  "claims": [
+    {
+      "claim": "R3 produces the recorded detections on the D1 held-out test split at the pinned thresholds.",
+      "classification": "PARTIALLY_SUPPORTED",
+      "evidence": "R3/CVR2-CV-006 records 18 images, 15 boxes, P/R/F1 at 0.100 and 0.250.",
+      "limitation": "Small test split; all positive support is road_waterlogging; D1 source claims remain unresolved."
+    },
+    {
+      "claim": "Aggressive augmentation degraded results relative to conservative augmentation in the recorded R2 comparison.",
+      "classification": "PARTIALLY_SUPPORTED",
+      "evidence": "R2.1 audit records controlled config comparison; mAP50 0.9649 conservative vs 0.5714 strong.",
+      "limitation": "Small, provenance-uncertain D1 corpus; no broad generalization claim."
+    },
+    {
+      "claim": "Hard negatives caused suppression of false positives.",
+      "classification": "NOT_SUPPORTED",
+      "evidence": "R2.1 found zero false positives at the evaluated 0.25 threshold for both arms; R3-008 calls causal suppression insufficiently evidenced.",
+      "limitation": "Threshold gating and small negative-scene samples do not isolate a hard-negative causal effect."
+    },
+    {
+      "claim": "R3 generalizes across independent civic datasets.",
+      "classification": "NOT_EVALUATED",
+      "evidence": "R4 did not admit D2 or run cross-dataset evaluation.",
+      "limitation": "No independent dataset or comparable evaluation exists."
+    },
+    {
+      "claim": "R3 is robust to the tested controlled visual perturbations.",
+      "classification": "PARTIALLY_SUPPORTED",
+      "evidence": "R3 and R5 report fixed-threshold measurements on controlled conditions.",
+      "limitation": "Small repeated D1 source set, synthetic shifts, class support limitations; severe transformations produce errors."
+    },
+    {
+      "claim": "R3 is temporally robust on real-world civic videos.",
+      "classification": "NOT_EVALUATED",
+      "evidence": "R6 uses synthetic sequences from still images and explicitly reports real video unavailable.",
+      "limitation": "No recorded video."
+    },
+    {
+      "claim": "Multimodal context improves assessment consistency or evidence quality.",
+      "classification": "NOT_EVALUATED",
+      "evidence": "R7 and R9 contain zero eligible civic cases; R8 case dataset unavailable.",
+      "limitation": "No legitimate independent modalities linked to cases."
+    },
+    {
+      "claim": "Authority evidence supports legal or maintenance responsibility attribution.",
+      "classification": "NOT_EVALUATED",
+      "evidence": "R8/R9 contain no verified road, jurisdiction, authority, or project records.",
+      "limitation": "No legal responsibility assessment or statutory authority established."
+    },
+    {
+      "claim": "The existing geographic slices establish geographic generalization.",
+      "classification": "NOT_SUPPORTED",
+      "evidence": "R3 slices are small and rely on D1 recorded geographic labels; R4 reports unresolved provenance.",
+      "limitation": "No independent verified geography or external domain test."
+    },
+    {
+      "claim": "Synthetic R5 rain-like transforms demonstrate weather or rainfall evidence.",
+      "classification": "NOT_SUPPORTED",
+      "evidence": "R5 manifest and report describe procedural image overlays.",
+      "limitation": "No physical weather observation or causal data."
+    },
+    {
+      "claim": "Research results establish broad real-world civic applicability.",
+      "classification": "NOT_EVALUATED",
+      "evidence": "Only small internal CV test data and controlled synthetic variants were evaluated.",
+      "limitation": "No field evaluation, independent dataset, or civic-case outcome study."
+    },
+    {
+      "claim": "CV confidence measures physical severity or verified truth.",
+      "classification": "NOT_SUPPORTED",
+      "evidence": "The research protocol explicitly separates confidence, severity, observation, and verification.",
+      "limitation": "No severity ground truth is available in this research record."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "study_id": "CVKI-R8",
+  "status": "PARTIALLY_VALIDATED",
+  "case_records_reviewed": 0,
+  "case_records_admitted": 0,
+  "policy": {
+    "location": "Generalize to an area/road segment; suppress precise coordinates unless separately justified and authorized.",
+    "faces": "Detect/review; blur or remove unless explicit lawful consent and research necessity are documented.",
+    "license_plates": "Detect/review; redact before distribution unless explicit lawful consent and research necessity are documented.",
+    "personal_names": "Remove or pseudonymize; do not publish citizen/official names absent necessity and authorization.",
+    "phone_numbers": "Redact from free text and metadata.",
+    "email_addresses": "Redact from free text and metadata.",
+    "exact_home_addresses": "Remove; do not include in research case records.",
+    "other_identifiers": "Review contextual and embedded identifiers; minimize retained data."
+  },
+  "prior_artifact_claims": {
+    "source": "ai/research/datasets/D1/qa/dataset_audit_report.json",
+    "reported_images_reviewed": 122,
+    "reported_privacy_clear": 122,
+    "reported_review_required": 0,
+    "reported_redaction_required": 0,
+    "independently_re_reviewed_in_r8": false
+  },
+  "result": "No personal civic-case data was admitted. The prior D1 privacy result is carried as a reported QA result only, not a new privacy certification."
+}

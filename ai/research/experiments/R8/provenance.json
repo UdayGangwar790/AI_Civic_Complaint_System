@@ -1,0 +1,121 @@
+{
+  "study_id": "CVKI-R8",
+  "status": "COMPLETE_FOR_AUDITED_LOCAL_ARTIFACTS",
+  "case_provenance_status": "NOT_AVAILABLE",
+  "sources": [
+    {
+      "source_id": "D1_IMAGE_MANIFEST",
+      "path": "ai/research/datasets/D1/manifests/images_manifest.json",
+      "sha256": "0186adc5eadc2b9fbf86bd8037fa5e1c320f83498b1c28eb293814e4361745a3",
+      "role": "Reported asset lineage and split metadata; not independently verified source evidence."
+    },
+    {
+      "source_id": "D1_DATASET_MANIFEST",
+      "path": "ai/research/datasets/D1/manifests/dataset_manifest.json",
+      "sha256": "9cd74a15bbfe6e152fffb558eea99b60c69881eeea903efe9b31437a6cdc31b8",
+      "role": "D1 identity and composite checksum; D1 is not admitted as an R8 civic case set."
+    },
+    {
+      "source_id": "D1_SOURCE_REGISTRY",
+      "path": "ai/research/datasets/D1/metadata/sources.json",
+      "sha256": "1e1b01114e873abf2ef78b62a7713c5dd5583178eb63c0ba7e3b7f5972ea3e05",
+      "role": "Recorded license and source claims; not independently verified."
+    },
+    {
+      "source_id": "D1_LEAKAGE_REPORT",
+      "path": "ai/research/datasets/D1/qa/leakage_report.json",
+      "sha256": "aca2f17d565a9aca78df616a20a51ebebfd9971294411a52e4897de5a78a2f81",
+      "role": "Prior D1 QA report states no known exact or near cross-split leakage."
+    },
+    {
+      "source_id": "R4_D2_ADMISSION_AUDIT",
+      "path": "ai/research/experiments/R4/dataset_construction_audit.json",
+      "sha256": "875adb4c15911a46dd830185c141075904141f63ae883ccf64dd18af2178f653",
+      "role": "Documents upstream source-provenance inconsistencies and no admitted D2 assets."
+    },
+    {
+      "source_id": "D1_QUARANTINE_LOG",
+      "path": "ai/research/datasets/D1/raw/quarantine_log.json",
+      "sha256": "860613f266e34b978c078e60a96b7985829e06ae3165862c8501faa1566ad893",
+      "role": "Confirms the unverified web candidate was quarantined."
+    },
+    {
+      "source_id": "D0_TREE",
+      "path": "ai/computer_vision/dataset_m1_13",
+      "file_count": 605,
+      "tree_sha256": "e609ad2e701b1e668d5d1f9474be6b1e2a8240bc61a4adbe1fee096db4ec2658",
+      "role": "Frozen baseline compared read-only for exact and perceptual image overlap."
+    },
+    {
+      "source_id": "M1_13_CHECKPOINT",
+      "path": "ai/computer_vision/training/runs/yolov8n_m1_13/weights/best.pt",
+      "sha256": "602160d4851e0d79c34cb23b828bde474fc4c164eaf1a1c2a884cfb372f4bda3",
+      "role": "Frozen identity check only."
+    },
+    {
+      "source_id": "R3_CHECKPOINT",
+      "path": "ai/research/experiments/R3/CVR2-CV-006/weights/best.pt",
+      "sha256": "72c57f6f052321abfe798edbef862848a2441a3b17fa16997376db93711bbc28",
+      "role": "Frozen identity check only."
+    },
+    {
+      "source_id": "R5_MANIFEST",
+      "path": "ai/research/datasets/R5_controlled_shift/manifest.json",
+      "sha256": "d36bd0f653c5650f628ad26d9397b5e843154931f23177918235b94b2f899f0e",
+      "role": "Synthetic controlled derivatives of D1 test images."
+    },
+    {
+      "source_id": "R5_METRICS",
+      "path": "ai/research/experiments/R5/metrics.json",
+      "sha256": "a07f0ac9271b5af85689346632e181201fb453918408539505ed23059c39b13e",
+      "role": "Aggregate controlled CV evaluation."
+    },
+    {
+      "source_id": "R6_MANIFEST",
+      "path": "ai/research/datasets/R6_controlled_sequences/manifest.json",
+      "sha256": "2c793e05dbc068d0ea1907e466a352a06b0728330fef580cd20485464408b348",
+      "role": "Synthetic temporal sequences derived from D1 test still images."
+    },
+    {
+      "source_id": "R6_METRICS",
+      "path": "ai/research/experiments/R6/metrics.json",
+      "sha256": "907fc80c19372d344f67b7eb9990169fd47d1315c812b98cdf743513feca7831",
+      "role": "Aggregate temporal CV evaluation; real-world video unavailable."
+    },
+    {
+      "source_id": "R7_EXPERIMENT",
+      "path": "ai/research/experiments/R7/experiment.json",
+      "sha256": "db075478277425a249dd48366406db95142018569eb58f91df4dca9d1d5b0ce0",
+      "role": "Frozen R7 research record."
+    },
+    {
+      "source_id": "R7_CASE_SET",
+      "path": "ai/research/experiments/R7/case_set.json",
+      "sha256": "cf38f78740d6bd0f724eb8f45e7321514572c8fa55a68f65c01da8df16e866e4",
+      "role": "Frozen R7 zero-case inventory."
+    },
+    {
+      "source_id": "R7_PROVENANCE",
+      "path": "ai/research/experiments/R7/provenance.json",
+      "sha256": "ddaf0f692f812eeeeffcd38122b2bebd052a3df252c0a42243e34de4bacf72ee",
+      "role": "Frozen R7 source audit."
+    },
+    {
+      "source_id": "R7_METRICS",
+      "path": "ai/research/experiments/R7/metrics.json",
+      "sha256": "40c17c692b58c364b462431f53a4b0d3e9aaac3ed2e0c0b687fc937756f96447",
+      "role": "Frozen R7 descriptive metrics."
+    },
+    {
+      "source_id": "R7_CONFIG",
+      "path": "ai/research/experiments/R7/config.yaml",
+      "sha256": "cc9227a6a4e824863e054d42d2dcabed518a4ccb49f01b35cd407fe3ea8d36d0",
+      "role": "Frozen R7 protocol."
+    }
+  ],
+  "limitations": [
+    "No civic case records were acquired.",
+    "D1 source registry claims and dataset lineage are internally inconsistent and were not independently reconciled.",
+    "R5 and R6 derive from D1 test images and are not independent case data."
+  ]
+}

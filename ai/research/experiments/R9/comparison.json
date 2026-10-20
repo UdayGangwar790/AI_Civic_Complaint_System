@@ -1,0 +1,54 @@
+{
+  "study_id": "CVKI-R9",
+  "status": "INSUFFICIENT_SAMPLE",
+  "input_case_count": 0,
+  "common_case_count": 0,
+  "comparison_dimensions": [
+    "agreement",
+    "conflict_detection",
+    "evidence_completeness",
+    "explanation_completeness",
+    "uncertainty_preservation"
+  ],
+  "baselines": [
+    {
+      "id": "BASELINE_A",
+      "name": "CV only",
+      "modalities": ["CV_OBSERVATION"],
+      "status": "INSUFFICIENT_SAMPLE"
+    },
+    {
+      "id": "BASELINE_B",
+      "name": "CV + citizen language",
+      "modalities": ["CV_OBSERVATION", "CITIZEN_REPORT"],
+      "status": "CASE_DATASET_NOT_AVAILABLE"
+    },
+    {
+      "id": "BASELINE_C",
+      "name": "CV + location",
+      "modalities": ["CV_OBSERVATION", "GPS_LOCATION", "ROAD_IDENTITY", "JURISDICTION"],
+      "status": "CASE_DATASET_NOT_AVAILABLE"
+    },
+    {
+      "id": "BASELINE_D",
+      "name": "CV + authority",
+      "modalities": ["CV_OBSERVATION", "AUTHORITY_EVIDENCE"],
+      "status": "CASE_DATASET_NOT_AVAILABLE"
+    },
+    {
+      "id": "BASELINE_E",
+      "name": "CV + environmental context",
+      "modalities": ["CV_OBSERVATION", "WEATHER_RAINFALL", "TRAFFIC"],
+      "status": "CASE_DATASET_NOT_AVAILABLE"
+    },
+    {
+      "id": "BASELINE_F",
+      "name": "All available modalities",
+      "modalities": "all_available",
+      "status": "INSUFFICIENT_SAMPLE"
+    }
+  ],
+  "results": null,
+  "preferred_baseline_assumed": false,
+  "interpretation": "No baseline is ranked. Missing results cannot establish that adding or removing a modality helps or harms."
+}

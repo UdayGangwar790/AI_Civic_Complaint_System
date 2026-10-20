@@ -1,0 +1,40 @@
+study_id: CVKI-R8
+research_only: true
+production_integration: false
+model_training: false
+case_dataset_target: 20-30
+case_dataset_target_is_requirement: false
+case_inclusion:
+  require_per_asset_provenance: true
+  require_documented_permission_and_license: true
+  require_case_linked_source: true
+  require_human_auditable_origin: true
+  permit_missing_optional_fields: true
+  fabricate_missing_records: false
+privacy:
+  generalize_location: true
+  expose_precise_coordinates: false
+  review_faces: true
+  review_license_plates: true
+  redact_personal_names: true
+  redact_phone_numbers: true
+  redact_email_addresses: true
+  redact_exact_home_addresses: true
+  review_other_identifiers: true
+  current_case_records: 0
+independence:
+  exact_duplicate_method: SHA-256
+  near_duplicate_method: 64-bit dHash
+  near_duplicate_hamming_distance_max: 4
+  verify_sequence_group_split: true
+  verify_source_overlap: true
+  verify_train_test_contamination: true
+  compare_d0: true
+  compare_r5_r6_derivatives: true
+  count_synthetic_variants_as_independent_real_world_cases: false
+frozen_references:
+  m1_13_sha256: 602160d4851e0d79c34cb23b828bde474fc4c164eaf1a1c2a884cfb372f4bda3
+  r3_checkpoint_sha256: 72c57f6f052321abfe798edbef862848a2441a3b17fa16997376db93711bbc28
+  r3_primary_confidence: 0.100
+  r3_secondary_confidence: 0.250
+  r3_iou: 0.50

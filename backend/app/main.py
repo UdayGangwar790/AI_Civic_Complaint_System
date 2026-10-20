@@ -24,6 +24,9 @@ from app.api.v1.priority import router as priority_router
 from app.api.v1.provenance import router as provenance_router
 from app.api.v1.knowledge_graph import router as knowledge_graph_router
 from app.api.v1.government_integration import router as government_integration_router
+from app.api.v1.multimodal import router as multimodal_router
+from app.api.v1.decision_support import router as decision_support_router
+from app.api.v1.field_inspection import router as field_inspection_router
 from app.core.config import settings
 from app.core.csrf import verify_csrf_token
 from app.core.database import close_mongo_connection, connect_to_mongo
@@ -130,19 +133,28 @@ app.add_middleware(
 
 @app.middleware("http")
 async def protect_cookie_authenticated_requests(request, call_next):
+    from app.core.observability import metrics_collector
     candidate_request_id = request.headers.get("X-Request-ID", "")
     request_id = (
         candidate_request_id
         if re.fullmatch(r"[A-Za-z0-9._-]{1,64}", candidate_request_id)
         else uuid4().hex
     )
+    candidate_corr_id = request.headers.get("X-Correlation-ID", "")
+    correlation_id = (
+        candidate_corr_id
+        if re.fullmatch(r"[A-Za-z0-9._-]{1,64}", candidate_corr_id)
+        else request_id
+    )
     started_at = time.perf_counter()
     request.state.request_id = request_id
+    request.state.correlation_id = correlation_id
     request.state.request_started_at = started_at
     client_ip = request.client.host if request.client else None
     request_context_token = current_request_context.set(
         RequestContext(
             request_id=request_id,
+            correlation_id=correlation_id,
             ip_address=client_ip,
             user_agent=request.headers.get("User-Agent"),
         )
@@ -175,18 +187,28 @@ async def protect_cookie_authenticated_requests(request, call_next):
         else:
             response = await call_next(request)
 
+        duration_ms = (time.perf_counter() - started_at) * 1000
         response.headers["X-Request-ID"] = request_id
+        response.headers["X-Correlation-ID"] = correlation_id
         logger.info(
-            "HTTP request completed (request_id=%s, method=%s, path=%s, status=%s, duration_ms=%.2f).",
+            "HTTP request completed (request_id=%s, correlation_id=%s, method=%s, path=%s, status=%s, duration_ms=%.2f).",
             request_id,
+            correlation_id,
             request.method,
             request.url.path,
             response.status_code,
-            (time.perf_counter() - started_at) * 1000,
+            duration_ms,
+        )
+        metrics_collector.record_api_request(
+            method=request.method,
+            path=request.url.path,
+            status_code=response.status_code,
+            duration_ms=duration_ms,
         )
         return response
     finally:
         current_request_context.reset(request_context_token)
+
 
 
 # Include routers
@@ -209,6 +231,9 @@ app.include_router(notifications_router, prefix=f"{settings.API_V1_STR}/notifica
 app.include_router(provenance_router, prefix=f"{settings.API_V1_STR}/provenance", tags=["provenance"])
 app.include_router(knowledge_graph_router, prefix=f"{settings.API_V1_STR}/knowledge-graph", tags=["knowledge-graph"])
 app.include_router(government_integration_router, prefix=settings.API_V1_STR, tags=["government-integration"])
+app.include_router(multimodal_router, prefix=f"{settings.API_V1_STR}/multimodal", tags=["multimodal"])
+app.include_router(decision_support_router, prefix=f"{settings.API_V1_STR}/decision-support", tags=["decision-support"])
+app.include_router(field_inspection_router, prefix=f"{settings.API_V1_STR}/inspection", tags=["field-inspection"])
 
 
 @app.get("/")

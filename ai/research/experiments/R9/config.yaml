@@ -1,0 +1,78 @@
+study_id: CVKI-R9
+research_only: true
+production_integration: false
+empirical_evaluation: false
+input_dataset: R8_civic_cases
+eligible_case_count: 0
+empirical_evaluation_status: NOT_VALIDATED
+protocol_validation_status: PARTIALLY_VALIDATED
+thresholds:
+  primary_cv_confidence: 0.100
+  secondary_cv_confidence: 0.250
+  iou: 0.50
+  thresholds_are_severity: false
+modalities:
+  - id: CV_OBSERVATION
+    epistemic_state: MODEL_OBSERVATION
+  - id: CITIZEN_REPORT
+    epistemic_state: USER_REPORTED
+  - id: GPS_LOCATION
+    epistemic_state: SYSTEM_DERIVED
+  - id: ROAD_IDENTITY
+    epistemic_state: SYSTEM_DERIVED
+  - id: JURISDICTION
+    epistemic_state: SYSTEM_DERIVED
+  - id: AUTHORITY_EVIDENCE
+    epistemic_state: AUTHORITY_REPORTED
+  - id: WEATHER_RAINFALL
+    epistemic_state: OBSERVATION
+    causal_inference_allowed: false
+  - id: TRAFFIC
+    epistemic_state: OBSERVATION
+    causal_inference_allowed: false
+  - id: TEMPORAL_FOLLOW_UP
+    epistemic_state: USER_REPORTED
+  - id: RESOLUTION_EVIDENCE
+    epistemic_state: AUTHORITY_REPORTED
+baselines:
+  - id: BASELINE_A
+    modalities: [CV_OBSERVATION]
+  - id: BASELINE_B
+    modalities: [CV_OBSERVATION, CITIZEN_REPORT]
+  - id: BASELINE_C
+    modalities: [CV_OBSERVATION, GPS_LOCATION, ROAD_IDENTITY, JURISDICTION]
+  - id: BASELINE_D
+    modalities: [CV_OBSERVATION, AUTHORITY_EVIDENCE]
+  - id: BASELINE_E
+    modalities: [CV_OBSERVATION, WEATHER_RAINFALL, TRAFFIC]
+  - id: BASELINE_F
+    modalities: all_available
+  - common_case_count: 0
+  - preferred_arm_assumed: false
+consistency_labels: [ALIGNED, PARTIAL, CONFLICT, AMBIGUOUS, MISSING]
+evidence_quality:
+  probability: false
+  levels:
+    E0: no usable evidence
+    E1: single weak observation
+    E2: single structured observation
+    E3: multiple independent observations
+    E4: corroborated evidence
+    E5: verified official evidence
+authority:
+  builder_supported_only_by_explicit_tender_contract_concession_project_document_or_official_registry: true
+conflicts:
+  preserve_observations: true
+  auto_select_winner: false
+  material_conflict_output: CONFLICT_REQUIRES_REVIEW
+explanation:
+  required_fields:
+    - observed
+    - supporting_evidence
+    - conflicting_evidence
+    - missing_evidence
+    - verification_state
+    - uncertainty
+    - provenance_references
+    - human_review
+  human_review_value: REQUIRED

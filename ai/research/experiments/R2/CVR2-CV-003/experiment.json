@@ -1,0 +1,22 @@
+{
+  "experiment_id": "CVR2-CV-003",
+  "research_version": "2.0.0",
+  "experiment_type": "ablation",
+  "created_at": "2026-10-19T15:01:20.047433+00:00",
+  "status": "PLANNED",
+  "owner": "CVKI Research Team",
+  "description": "Hard-Negative Ablation comparing D1 training WITH hard negatives vs WITHOUT hard negatives",
+  "hypothesis": "Hard negatives significantly reduce background false positives on visually confusing non-defect scenes without degrading defect recall.",
+  "dataset_id": "D1",
+  "dataset_version": "1.0",
+  "model_id": "R2-YOLO-HN-ABLATION",
+  "model_version": "1.0.0",
+  "config_id": "CFG-CVR2-003",
+  "random_seed": 42,
+  "hardware": "CPU",
+  "software_environment": "PyTorch 2.14.0+cpu",
+  "metrics": {},
+  "artifact_paths": [],
+  "parent_experiment": null,
+  "notes": ""
+}

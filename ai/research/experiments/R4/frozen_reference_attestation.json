@@ -1,0 +1,19 @@
+{
+  "status": "UPSTREAM_INTEGRITY_GATE_PASSED_NOT_RECOMPUTED",
+  "d0": {
+    "file_count": 605,
+    "status": "FROZEN"
+  },
+  "m1_13": {
+    "sha256": "602160d4851e0d79c34cb23b828bde474fc4c164eaf1a1c2a884cfb372f4bda3",
+    "status": "FROZEN"
+  },
+  "r3_checkpoint": {
+    "path": "ai/research/experiments/R3/CVR2-CV-006/weights/best.pt",
+    "sha256": "72c57f6f052321abfe798edbef862848a2441a3b17fa16997376db93711bbc28",
+    "status": "FROZEN_RESEARCH_CHECKPOINT"
+  },
+  "r3_checkpoint_manifest_sha256": "72c57f6f052321abfe798edbef862848a2441a3b17fa16997376db93711bbc28",
+  "d1_manifest_composite_sha256": "c93dc3c2f3c25fe09c1f6aa23bce91684d60528694ef7036f2d7932c9775f68e",
+  "note": "Frozen artifact values are carried forward from the integrity gate supplied for this task. R4 did not rerun that gate or modify the referenced artifacts."
+}

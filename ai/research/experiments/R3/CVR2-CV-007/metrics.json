@@ -1,0 +1,1191 @@
+{
+  "experiment_id": "CVR2-CV-007",
+  "status": "COMPLETED",
+  "evaluated_on": "D1 held-out test split (18 images)",
+  "selected_operating_threshold": 0.1,
+  "clean_baseline_test_metrics": {
+    "confidence_threshold": 0.1,
+    "iou_threshold": 0.5,
+    "total_images": 18,
+    "total_ground_truth_boxes": 15,
+    "total_predicted_boxes": 19,
+    "true_positives": 15,
+    "false_positives": 4,
+    "false_negatives": 0,
+    "precision": 0.7895,
+    "recall": 1.0,
+    "f1_score": 0.8824,
+    "per_class": {
+      "open_damaged_manhole": {
+        "gt": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "damaged_missing_road_sign": {
+        "gt": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "road_waterlogging": {
+        "gt": 15,
+        "tp": 15,
+        "fp": 4,
+        "fn": 0,
+        "precision": 0.7895,
+        "recall": 1.0
+      }
+    }
+  },
+  "photometric_corruptions": {
+    "brightness_reduction": {
+      "LOW": {
+        "parameter": 0.75,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 15,
+          "true_positives": 15,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 15,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": -0.2105,
+          "recall_degradation": 0.0,
+          "f1_degradation": -0.1176
+        }
+      },
+      "MEDIUM": {
+        "parameter": 0.5,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 16,
+          "true_positives": 14,
+          "false_positives": 2,
+          "false_negatives": 1,
+          "precision": 0.875,
+          "recall": 0.9333,
+          "f1_score": 0.9032,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 14,
+              "fp": 2,
+              "fn": 1,
+              "precision": 0.875,
+              "recall": 0.9333
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": -0.0855,
+          "recall_degradation": 0.0667,
+          "f1_degradation": -0.0208
+        }
+      },
+      "HIGH": {
+        "parameter": 0.25,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 0,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 15,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 0,
+              "fp": 0,
+              "fn": 15,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": 0.7895,
+          "recall_degradation": 1.0,
+          "f1_degradation": 0.8824
+        }
+      }
+    },
+    "brightness_increase": {
+      "LOW": {
+        "parameter": 1.25,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 19,
+          "true_positives": 15,
+          "false_positives": 4,
+          "false_negatives": 0,
+          "precision": 0.7895,
+          "recall": 1.0,
+          "f1_score": 0.8824,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 15,
+              "fp": 4,
+              "fn": 0,
+              "precision": 0.7895,
+              "recall": 1.0
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": 0.0,
+          "recall_degradation": 0.0,
+          "f1_degradation": 0.0
+        }
+      },
+      "MEDIUM": {
+        "parameter": 1.5,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 16,
+          "true_positives": 15,
+          "false_positives": 1,
+          "false_negatives": 0,
+          "precision": 0.9375,
+          "recall": 1.0,
+          "f1_score": 0.9677,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 15,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.9375,
+              "recall": 1.0
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": -0.148,
+          "recall_degradation": 0.0,
+          "f1_degradation": -0.0853
+        }
+      },
+      "HIGH": {
+        "parameter": 2.0,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 17,
+          "true_positives": 15,
+          "false_positives": 2,
+          "false_negatives": 0,
+          "precision": 0.8824,
+          "recall": 1.0,
+          "f1_score": 0.9375,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 15,
+              "fp": 2,
+              "fn": 0,
+              "precision": 0.8824,
+              "recall": 1.0
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": -0.0929,
+          "recall_degradation": 0.0,
+          "f1_degradation": -0.0551
+        }
+      }
+    },
+    "contrast_reduction": {
+      "LOW": {
+        "parameter": 0.75,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 17,
+          "true_positives": 14,
+          "false_positives": 3,
+          "false_negatives": 1,
+          "precision": 0.8235,
+          "recall": 0.9333,
+          "f1_score": 0.875,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 14,
+              "fp": 3,
+              "fn": 1,
+              "precision": 0.8235,
+              "recall": 0.9333
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": -0.034,
+          "recall_degradation": 0.0667,
+          "f1_degradation": 0.0074
+        }
+      },
+      "MEDIUM": {
+        "parameter": 0.5,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 11,
+          "true_positives": 11,
+          "false_positives": 0,
+          "false_negatives": 4,
+          "precision": 1.0,
+          "recall": 0.7333,
+          "f1_score": 0.8461,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 11,
+              "fp": 0,
+              "fn": 4,
+              "precision": 1.0,
+              "recall": 0.7333
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": -0.2105,
+          "recall_degradation": 0.2667,
+          "f1_degradation": 0.0363
+        }
+      },
+      "HIGH": {
+        "parameter": 0.25,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 7,
+          "true_positives": 6,
+          "false_positives": 1,
+          "false_negatives": 9,
+          "precision": 0.8571,
+          "recall": 0.4,
+          "f1_score": 0.5454,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 6,
+              "fp": 1,
+              "fn": 9,
+              "precision": 0.8571,
+              "recall": 0.4
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": -0.0676,
+          "recall_degradation": 0.6,
+          "f1_degradation": 0.337
+        }
+      }
+    },
+    "contrast_increase": {
+      "LOW": {
+        "parameter": 1.25,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 17,
+          "true_positives": 15,
+          "false_positives": 2,
+          "false_negatives": 0,
+          "precision": 0.8824,
+          "recall": 1.0,
+          "f1_score": 0.9375,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 15,
+              "fp": 2,
+              "fn": 0,
+              "precision": 0.8824,
+              "recall": 1.0
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": -0.0929,
+          "recall_degradation": 0.0,
+          "f1_degradation": -0.0551
+        }
+      },
+      "MEDIUM": {
+        "parameter": 1.5,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 15,
+          "true_positives": 15,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 15,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": -0.2105,
+          "recall_degradation": 0.0,
+          "f1_degradation": -0.1176
+        }
+      },
+      "HIGH": {
+        "parameter": 2.0,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 15,
+          "true_positives": 15,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 15,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": -0.2105,
+          "recall_degradation": 0.0,
+          "f1_degradation": -0.1176
+        }
+      }
+    },
+    "gaussian_blur": {
+      "LOW": {
+        "parameter": 1.0,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 8,
+          "true_positives": 8,
+          "false_positives": 0,
+          "false_negatives": 7,
+          "precision": 1.0,
+          "recall": 0.5333,
+          "f1_score": 0.6956,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 8,
+              "fp": 0,
+              "fn": 7,
+              "precision": 1.0,
+              "recall": 0.5333
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": -0.2105,
+          "recall_degradation": 0.4667,
+          "f1_degradation": 0.1868
+        }
+      },
+      "MEDIUM": {
+        "parameter": 2.0,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 3,
+          "true_positives": 0,
+          "false_positives": 3,
+          "false_negatives": 15,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 0,
+              "fp": 3,
+              "fn": 15,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": 0.7895,
+          "recall_degradation": 1.0,
+          "f1_degradation": 0.8824
+        }
+      },
+      "HIGH": {
+        "parameter": 4.0,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 0,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 15,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 0,
+              "fp": 0,
+              "fn": 15,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": 0.7895,
+          "recall_degradation": 1.0,
+          "f1_degradation": 0.8824
+        }
+      }
+    },
+    "sensor_noise": {
+      "LOW": {
+        "parameter": 10,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 0,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 15,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 0,
+              "fp": 0,
+              "fn": 15,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": 0.7895,
+          "recall_degradation": 1.0,
+          "f1_degradation": 0.8824
+        }
+      },
+      "MEDIUM": {
+        "parameter": 25,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 0,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 15,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 0,
+              "fp": 0,
+              "fn": 15,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": 0.7895,
+          "recall_degradation": 1.0,
+          "f1_degradation": 0.8824
+        }
+      },
+      "HIGH": {
+        "parameter": 50,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 0,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 15,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 0,
+              "fp": 0,
+              "fn": 15,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": 0.7895,
+          "recall_degradation": 1.0,
+          "f1_degradation": 0.8824
+        }
+      }
+    },
+    "jpeg_compression": {
+      "LOW": {
+        "parameter": 60,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 18,
+          "true_positives": 15,
+          "false_positives": 3,
+          "false_negatives": 0,
+          "precision": 0.8333,
+          "recall": 1.0,
+          "f1_score": 0.9091,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 15,
+              "fp": 3,
+              "fn": 0,
+              "precision": 0.8333,
+              "recall": 1.0
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": -0.0438,
+          "recall_degradation": 0.0,
+          "f1_degradation": -0.0267
+        }
+      },
+      "MEDIUM": {
+        "parameter": 30,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 10,
+          "true_positives": 10,
+          "false_positives": 0,
+          "false_negatives": 5,
+          "precision": 1.0,
+          "recall": 0.6667,
+          "f1_score": 0.8,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 10,
+              "fp": 0,
+              "fn": 5,
+              "precision": 1.0,
+              "recall": 0.6667
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": -0.2105,
+          "recall_degradation": 0.3333,
+          "f1_degradation": 0.0824
+        }
+      },
+      "HIGH": {
+        "parameter": 10,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 0,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 15,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 0,
+              "fp": 0,
+              "fn": 15,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": 0.7895,
+          "recall_degradation": 1.0,
+          "f1_degradation": 0.8824
+        }
+      }
+    },
+    "combined_degradation": {
+      "LOW": {
+        "parameter": 1,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 0,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 15,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 0,
+              "fp": 0,
+              "fn": 15,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": 0.7895,
+          "recall_degradation": 1.0,
+          "f1_degradation": 0.8824
+        }
+      },
+      "MEDIUM": {
+        "parameter": 2,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 0,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 15,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 0,
+              "fp": 0,
+              "fn": 15,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": 0.7895,
+          "recall_degradation": 1.0,
+          "f1_degradation": 0.8824
+        }
+      },
+      "HIGH": {
+        "parameter": 3,
+        "metrics": {
+          "confidence_threshold": 0.1,
+          "iou_threshold": 0.5,
+          "total_images": 18,
+          "total_ground_truth_boxes": 15,
+          "total_predicted_boxes": 0,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 15,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "per_class": {
+            "open_damaged_manhole": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "damaged_missing_road_sign": {
+              "gt": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "road_waterlogging": {
+              "gt": 15,
+              "tp": 0,
+              "fp": 0,
+              "fn": 15,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          }
+        },
+        "absolute_degradation": {
+          "precision_degradation": 0.7895,
+          "recall_degradation": 1.0,
+          "f1_degradation": 0.8824
+        }
+      }
+    }
+  }
+}

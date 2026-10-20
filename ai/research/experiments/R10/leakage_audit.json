@@ -1,0 +1,51 @@
+{
+  "study_id": "CVKI-R10",
+  "overall_status": "INCONCLUSIVE",
+  "checks": {
+    "d1_train_test_exact_duplicates": {
+      "status": "PASS_REPORTED",
+      "result": "0 exact cross-split duplicates in D1 leakage_report.json"
+    },
+    "d1_train_test_near_duplicates": {
+      "status": "PASS_REPORTED",
+      "result": "0 near cross-split pairs in D1 leakage_report.json"
+    },
+    "d1_sequence_group_split": {
+      "status": "PASS_RECOMPUTED",
+      "result": "41 sequence groups; none span train/validation/test"
+    },
+    "d1_to_d0_exact_image_overlap": {
+      "status": "PASS_RECOMPUTED",
+      "result": "0 of 122 D1 images match SHA-256 of 300 D0 images"
+    },
+    "d1_to_d0_near_image_overlap": {
+      "status": "PASS_RECOMPUTED",
+      "result": "0 matching pairs at 64-bit dHash Hamming distance <= 4"
+    },
+    "synthetic_r5_source_overlap": {
+      "status": "KNOWN_DERIVATIVE_NOT_LEAKAGE_CLAIM",
+      "result": "R5 variants derive from D1 test images; they are not independent test observations."
+    },
+    "synthetic_r6_sequence_overlap": {
+      "status": "KNOWN_DERIVATIVE_NOT_LEAKAGE_CLAIM",
+      "result": "R6 sequences derive from D1 test stills and repeat source objects across frames."
+    },
+    "r3_training_vs_d1_test": {
+      "status": "INCONCLUSIVE",
+      "result": "D1 split QA reports no known image/sequence overlap, but source provenance is unreconciled and only a small test split is available."
+    },
+    "d1_source_overlap_independence": {
+      "status": "INCONCLUSIVE",
+      "result": "D1 source-to-asset identity and licenses cannot be independently verified; no cross-source independence claim."
+    },
+    "r8_r9_civic_cases": {
+      "status": "NOT_APPLICABLE_NO_CASES",
+      "result": "No R8 cases; R9 has no empirical case evaluation."
+    }
+  },
+  "limitations": [
+    "Hash and dHash tests do not establish source legitimacy, semantic identity, or dataset independence.",
+    "Near-duplicate threshold 4 is the recorded D1 QA setting, not proof that all semantic duplicates are found.",
+    "R5/R6 generated variants share source images by design and must never be counted as independent samples."
+  ]
+}

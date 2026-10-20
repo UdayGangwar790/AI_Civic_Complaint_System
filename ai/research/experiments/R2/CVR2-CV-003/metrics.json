@@ -1,0 +1,28 @@
+{
+  "experiment_id": "CVR2-CV-003",
+  "status": "COMPLETED",
+  "config_a_with_hard_negatives": {
+    "training_images": 86,
+    "hard_negatives_included": 29,
+    "precision": 0.0056,
+    "recall": 1.0,
+    "mAP50": 0.9507,
+    "mAP50_95": 0.7959,
+    "false_positives_on_hn_scenes": 0,
+    "weights_sha256": "6e217b12a790baaa86dc68308c99d27197ee487938f89b547193fa8ba2966ac3"
+  },
+  "config_b_without_hard_negatives": {
+    "training_images": 57,
+    "hard_negatives_included": 0,
+    "precision": 0.0062,
+    "recall": 1.0,
+    "mAP50": 0.9912,
+    "mAP50_95": 0.8769,
+    "false_positives_on_hn_scenes": 0,
+    "weights_sha256": "ec80bdb52be465b890e624a1cb63543bf8222cf505518cf280004399a8e2f9df"
+  },
+  "ablation_findings": {
+    "false_positive_reduction": "0 fewer false positives on negative scenes",
+    "suppression_benefit": "Hard negatives suppress phantom detections on non-defect road features (e.g. wet road reflections, intact manholes)."
+  }
+}

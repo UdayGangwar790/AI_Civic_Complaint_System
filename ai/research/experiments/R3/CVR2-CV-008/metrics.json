@@ -1,0 +1,89 @@
+{
+  "experiment_id": "CVR2-CV-008",
+  "status": "COMPLETED",
+  "total_negative_scenes_evaluated": 32,
+  "selected_operating_threshold": 0.1,
+  "false_positives_at_selected_threshold": 0,
+  "highest_candidate_confidence_on_negative_scenes": 0.0231,
+  "threshold_sweep_on_negative_scenes": {
+    "0.001": {
+      "confidence_threshold": 0.001,
+      "total_negative_images_evaluated": 32,
+      "total_false_positives": 9600,
+      "false_positives_per_image": 300.0,
+      "category_triggers": {
+        "CLOSED_MANHOLE": 2400,
+        "HEALTHY_SIGN": 2400,
+        "WET_ROAD_PUDDLE": 2400,
+        "ROAD_REFLECTION": 2400,
+        "OTHER": 0
+      }
+    },
+    "0.01": {
+      "confidence_threshold": 0.01,
+      "total_negative_images_evaluated": 32,
+      "total_false_positives": 39,
+      "false_positives_per_image": 1.22,
+      "category_triggers": {
+        "CLOSED_MANHOLE": 2,
+        "HEALTHY_SIGN": 14,
+        "WET_ROAD_PUDDLE": 8,
+        "ROAD_REFLECTION": 15,
+        "OTHER": 0
+      }
+    },
+    "0.05": {
+      "confidence_threshold": 0.05,
+      "total_negative_images_evaluated": 32,
+      "total_false_positives": 0,
+      "false_positives_per_image": 0.0,
+      "category_triggers": {
+        "CLOSED_MANHOLE": 0,
+        "HEALTHY_SIGN": 0,
+        "WET_ROAD_PUDDLE": 0,
+        "ROAD_REFLECTION": 0,
+        "OTHER": 0
+      }
+    },
+    "0.1": {
+      "confidence_threshold": 0.1,
+      "total_negative_images_evaluated": 32,
+      "total_false_positives": 0,
+      "false_positives_per_image": 0.0,
+      "category_triggers": {
+        "CLOSED_MANHOLE": 0,
+        "HEALTHY_SIGN": 0,
+        "WET_ROAD_PUDDLE": 0,
+        "ROAD_REFLECTION": 0,
+        "OTHER": 0
+      }
+    },
+    "0.25": {
+      "confidence_threshold": 0.25,
+      "total_negative_images_evaluated": 32,
+      "total_false_positives": 0,
+      "false_positives_per_image": 0.0,
+      "category_triggers": {
+        "CLOSED_MANHOLE": 0,
+        "HEALTHY_SIGN": 0,
+        "WET_ROAD_PUDDLE": 0,
+        "ROAD_REFLECTION": 0,
+        "OTHER": 0
+      }
+    },
+    "0.5": {
+      "confidence_threshold": 0.5,
+      "total_negative_images_evaluated": 32,
+      "total_false_positives": 0,
+      "false_positives_per_image": 0.0,
+      "category_triggers": {
+        "CLOSED_MANHOLE": 0,
+        "HEALTHY_SIGN": 0,
+        "WET_ROAD_PUDDLE": 0,
+        "ROAD_REFLECTION": 0,
+        "OTHER": 0
+      }
+    }
+  },
+  "scientific_determination": "INSUFFICIENT_EVIDENCE_FOR_HARD_NEGATIVE_SUPPRESSION_CLAIM: While zero false positives are observed at the operating threshold, this represents threshold gating rather than isolated causal hard-negative suppression."
+}

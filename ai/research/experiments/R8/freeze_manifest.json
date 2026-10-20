@@ -1,0 +1,18 @@
+{
+  "study_id": "CVKI-R8",
+  "freeze_status": "FROZEN_RESEARCH_RECORD",
+  "algorithm": "SHA-256",
+  "files": {
+    "README.md": "c72a6627b2312ed3ee210650094e2303ceb6bb420e5d452eaa2154fc255f4d39",
+    "case_schema.json": "1a36e3c66c63800b0c1785c1007f12e5ad3d22129a55a0661925d091ff805150",
+    "config.yaml": "06fb2edb2acb02e9683acd7e4b7605ec20533726897eff7d72268bea4b945d01",
+    "dataset_manifest.json": "c63d427251ee12cf8d284c3f29a5fa6ad0f3c051b713186582b467ee2f45b2f6",
+    "experiment.json": "0de1414033277e01ca0a64776802d5a95a3f38dc15a97a8620002031c1707f31",
+    "independence_audit.json": "3e6d06eebf4349c73a8843c86750f486dc9239d7944406da42ed601ee2a60401",
+    "metrics.json": "d62ac7e7d9e02bab7bf3ff62a9b93a602c6ee2f1737ed361a9bd4467a5178ce5",
+    "privacy_audit.json": "454a63673cb2eb3289364200da9debd76cf4b61cc2e1c6464ad9f345002345e9",
+    "provenance.json": "bd950d4c55fcff193494479e4de6bf7422b6632275c6dc2214c1ff80be0979aa",
+    "source_inventory.json": "ef0091d3032790df4d88d5e7ddad6946ce1794e998ff4c5ec3bd8003298e985d"
+  },
+  "note": "R8 records are immutable inputs to R9 and R10. The freeze manifest does not hash itself."
+}

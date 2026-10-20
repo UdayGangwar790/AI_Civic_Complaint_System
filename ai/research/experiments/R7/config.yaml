@@ -1,0 +1,92 @@
+study_id: CVKI-R7
+research_only: true
+production_integration: false
+autonomous_decisions: false
+lifecycle_mutation: false
+human_review_required: true
+case_inclusion:
+  require_case_linked_cv_observation: true
+  require_legitimate_provenance_for_each_present_modality: true
+  allow_synthetic_context_as_real_evidence: false
+  current_eligible_case_count: 0
+frozen_cv_protocol:
+  model: M1.13/R3 frozen references only
+  primary_confidence: 0.1
+  secondary_confidence: 0.25
+  iou: 0.5
+  confidence_is_severity: false
+modalities:
+  CV_OBSERVATION:
+    epistemic_state: MODEL_OBSERVATION
+    availability: INSUFFICIENT_SAMPLE
+    reason: Existing R5/R6 evaluation outputs are not case-linked civic observations.
+  USER_REPORTED:
+    epistemic_state: USER_REPORTED
+    availability: NOT_AVAILABLE
+  GPS:
+    epistemic_state: SYSTEM_DERIVED
+    availability: NOT_AVAILABLE
+  ROAD_IDENTITY:
+    epistemic_state: SYSTEM_DERIVED
+    availability: NOT_AVAILABLE
+  JURISDICTION:
+    epistemic_state: SYSTEM_DERIVED
+    availability: NOT_AVAILABLE
+  ROAD_OWNER:
+    epistemic_state: SYSTEM_DERIVED
+    availability: NOT_AVAILABLE
+  MAINTENANCE_AUTHORITY:
+    epistemic_state: SYSTEM_DERIVED
+    availability: NOT_AVAILABLE
+  BUILDER_CONTRACTOR:
+    epistemic_state: SYSTEM_DERIVED
+    availability: NOT_AVAILABLE
+    explicit_tender_contract_concession_or_project_evidence_required: true
+  WEATHER:
+    epistemic_state: OBSERVATION
+    availability: NOT_AVAILABLE
+    causal_inference_allowed: false
+  RAINFALL:
+    epistemic_state: OBSERVATION
+    availability: NOT_AVAILABLE
+    causal_inference_allowed: false
+  TRAFFIC:
+    epistemic_state: OBSERVATION
+    availability: NOT_AVAILABLE
+    causal_inference_allowed: false
+  CASE_HISTORY:
+    epistemic_state: SYSTEM_DERIVED
+    availability: NOT_AVAILABLE
+  AUTHORITY_UPDATE:
+    epistemic_state: AUTHORITY_REPORTED
+    availability: NOT_AVAILABLE
+conflict_policy:
+  preserve_all_modality_observations: true
+  output_when_material_conflict: CONFLICT_REQUIRES_REVIEW
+  automatically_select_winning_modality: false
+  treat_disagreement_as_model_failure: false
+evidence_quality:
+  probability: false
+  levels:
+    E0: no usable evidence
+    E1: single weak observation
+    E2: single structured observation
+    E3: multiple independent observations
+    E4: corroborated evidence
+    E5: verified official evidence
+  current_case_scores: NOT_AVAILABLE
+ablation_arms:
+  - id: A
+    modalities: [CV_OBSERVATION]
+  - id: B
+    modalities: [CV_OBSERVATION, USER_REPORTED]
+  - id: C
+    modalities: [CV_OBSERVATION, GPS, ROAD_IDENTITY, JURISDICTION]
+  - id: D
+    modalities: [CV_OBSERVATION, ROAD_OWNER, MAINTENANCE_AUTHORITY, BUILDER_CONTRACTOR]
+  - id: E
+    modalities: [CV_OBSERVATION, WEATHER, RAINFALL, TRAFFIC]
+  - id: F
+    modalities: all_available
+  - common_case_count: 0
+  - result_status: INSUFFICIENT_SAMPLE

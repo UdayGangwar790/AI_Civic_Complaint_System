@@ -1,0 +1,25 @@
+{
+  "study_id": "CVKI-R10",
+  "freeze_status": "FINAL_RESEARCH_RECORD",
+  "algorithm": "SHA-256",
+  "files": {
+    "README.md": "ff8d42447b0078681de89a80b241d4eee2ed6c32f4b29388a266f03a1e9e897a",
+    "claim_audit.json": "e1ff9062379be7db7b320677e16a247f8a353a6fe3dd713ed376f5fc698f014e",
+    "comparison.json": "9b4523ad65a82cafd201ba0418f04a1e05e4cf3cf9395c63b161833c15d7ed57",
+    "config.yaml": "afe0fe52852dfa31be281a0a1846fa9db155f4b57b6d3f26e90b33787390df4a",
+    "epistemic_audit.json": "a5c8665d21325f3a7c9ff156bc0429254dc9fd15c421c31964786fa4e1c0cd13",
+    "experiment.json": "c140435ce9e9285651809938ba6b2d3644fdd0c96738996b43e4b97f418f74ca",
+    "leakage_audit.json": "f2a9804ecaa7a0da79505a52b73c230a565c75b4fc9042d2d14cdf4158781bdd",
+    "metrics.json": "a49e0717468c8f505d3ce9b41a333f397c52a9c44b6609eeaac43024a9dad65d",
+    "reproducibility_audit.json": "84f695658bd743a09995f402b50f452adbbb24a94ab3087572529a2450b24157"
+  },
+  "external_files": {
+    "docs/r10_final_research_evaluation.md": "18a2df29c70a1ea02b5d37e9a9818cd111818320339087d1f631defc7782aebf",
+    "backend/tests/test_research_r10.py": "101722544b743ebd65c427be420067975a70ad6d3a4ca86338699d5eafba7096"
+  },
+  "frozen_inputs": {
+    "r8_freeze_manifest_sha256": "ab165c7e5d62a001103c160869c1879c7a7725c6c8f22529c991783ab494a249",
+    "r9_freeze_manifest_sha256": "730f0e08b66d34391b3c3d3816cad1f9447775296895eba3af931d2f8ede2fad"
+  },
+  "note": "The R10 freeze manifest excludes itself."
+}

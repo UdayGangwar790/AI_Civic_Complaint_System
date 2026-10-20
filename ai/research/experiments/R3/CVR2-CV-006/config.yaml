@@ -1,0 +1,51 @@
+experiment_id: CVR2-CV-006
+experiment_type: baseline
+dataset:
+  id: D1
+  version: '1.0'
+  train_split: train
+  val_split: val
+  test_split: test
+model:
+  id: R3-YOLO-ROBUST-BASE
+  version: '1.0'
+  architecture: YOLOv8n
+  input_size: 640
+  confidence_threshold: 0.25
+  iou_threshold: 0.45
+training:
+  seed: 42
+  epochs: 10
+  batch_size: 8
+  learning_rate: 0.001
+  optimizer: AdamW
+  device: cpu
+evaluation:
+  metrics:
+  - precision
+  - recall
+  - mAP50
+  - mAP50_95
+  evaluated_on: test
+  reproducibility_class: REPRODUCIBLE CONFIGURATION
+hypothesis:
+  question: Can an expanded training budget calibrate YOLOv8n confidence onto D1 without
+    cross-split leakage?
+  hypothesis: A 10-epoch training regime provides sufficient logit scaling to establish
+    an optimal operating threshold on validation data.
+  independent_variable: Training epoch budget (10 epochs)
+  dependent_variables:
+  - Confidence distribution
+  - Operating threshold F1
+  - mAP50
+  - mAP50-95
+  controls:
+  - YOLOv8n backbone
+  - Seed 42
+  - Conservative augmentation
+  - D1 train split
+  - D1 val split
+  expected_outcome: Validation sweep identifies an optimal F1 threshold > 0.001.
+  actual_outcome: unknown
+  conclusion: unknown
+metadata: {}

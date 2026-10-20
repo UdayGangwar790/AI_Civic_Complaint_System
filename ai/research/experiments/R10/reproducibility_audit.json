@@ -1,0 +1,179 @@
+{
+  "study_id": "CVKI-R10",
+  "status": "PARTIALLY_VALIDATED",
+  "verified_current_references": {
+    "m1_13_sha256": {
+      "expected": "602160d4851e0d79c34cb23b828bde474fc4c164eaf1a1c2a884cfb372f4bda3",
+      "verification": "R8/R9/R10 regression tests"
+    },
+    "d0_file_count": {
+      "expected": 605,
+      "verification": "R8/R10 regression tests"
+    },
+    "d0_tree_sha256": {
+      "expected": "e609ad2e701b1e668d5d1f9474be6b1e2a8240bc61a4adbe1fee096db4ec2658",
+      "verification": "R8/R10 regression tests"
+    },
+    "r3_checkpoint_sha256": {
+      "expected": "72c57f6f052321abfe798edbef862848a2441a3b17fa16997376db93711bbc28",
+      "verification": "R8/R9/R10 regression tests"
+    },
+    "r5_manifest_and_metrics": {
+      "manifest_sha256": "d36bd0f653c5650f628ad26d9397b5e843154931f23177918235b94b2f899f0e",
+      "metrics_sha256": "a07f0ac9271b5af85689346632e181201fb453918408539505ed23059c39b13e",
+      "verification": "R5/R8/R9/R10 regression tests"
+    },
+    "r6_manifest_and_metrics": {
+      "manifest_sha256": "2c793e05dbc068d0ea1907e466a352a06b0728330fef580cd20485464408b348",
+      "metrics_sha256": "907fc80c19372d344f67b7eb9990169fd47d1315c812b98cdf743513feca7831",
+      "verification": "R6/R8/R9/R10 regression tests"
+    },
+    "r8_freeze_manifest_sha256": "ab165c7e5d62a001103c160869c1879c7a7725c6c8f22529c991783ab494a249",
+    "r9_freeze_manifest_sha256": "730f0e08b66d34391b3c3d3816cad1f9447775296895eba3af931d2f8ede2fad"
+  },
+  "prior_experiments": {
+    "r2_experiment_ids": [
+      "CVR2-CV-001",
+      "CVR2-CV-002",
+      "CVR2-CV-003",
+      "CVR2-CV-004",
+      "CVR2-CV-005"
+    ],
+    "r3_experiment_ids": [
+      "CVR2-CV-006",
+      "CVR2-CV-007",
+      "CVR2-CV-008",
+      "CVR2-CV-009",
+      "CVR2-CV-010"
+    ],
+    "r2_r3_experiment_config_metrics_environment_files": "PRESENT_AND_SHA256_RECORDED_IN_REPRODUCIBILITY_SNAPSHOT",
+    "recorded_random_seed": 42,
+    "software_environment": "Recorded in per-experiment environment.json; CPU execution.",
+    "known_record_mismatch": "All R2 experiment.json files retain status PLANNED while their metrics.json files say COMPLETED.",
+    "sha256_snapshots": [
+      {
+        "experiment_id": "CVR2-CV-001",
+        "experiment_json": "e2541276e56e486f0eaeac68e505af9d3f586c771786eeb3d2f0c814582bc1ef",
+        "metrics_json": "5ca9241583fb4cc1533a9c80562875684e5c68dc397ba9bfe9e27be2d70cd7a7",
+        "config_yaml": "3606ebb007d4b913cfcfbde42511198272cb6ec656f1c467f65df45ddaeb3509",
+        "environment_json": "538baf016bd48e55de9376a7d0b11691473fe4d054953772f327940ecded957f",
+        "random_seed": 42,
+        "recorded_status": "PLANNED",
+        "metrics_status": "COMPLETED"
+      },
+      {
+        "experiment_id": "CVR2-CV-002",
+        "experiment_json": "c75ebadf6f1e6c67c2fc1d745c6b325b3e6f11cc11d30a707cd703dae44eba12",
+        "metrics_json": "5a3f892c6b29a8222d2327db2372f9a2e335030d1d25ee59ec3417251b53b580",
+        "config_yaml": "b08082ca58c5411bb57c5df8005e85983c282d3af814f66a0221ba978f4394ff",
+        "environment_json": "538baf016bd48e55de9376a7d0b11691473fe4d054953772f327940ecded957f",
+        "random_seed": 42,
+        "recorded_status": "PLANNED",
+        "metrics_status": "COMPLETED"
+      },
+      {
+        "experiment_id": "CVR2-CV-003",
+        "experiment_json": "b8ad844e123ac4ccaed40fff731add33454e9c5207f266581592351fd248078d",
+        "metrics_json": "0dec856e8ab1e9fb46746aa7bf0accba011b62c8eb76788b1465a1005490981e",
+        "config_yaml": "7dabf7d08ff7dd5bfca2a322c4adf3f56da4c1d693e1e1d33ab4234f6e11dfd8",
+        "environment_json": "538baf016bd48e55de9376a7d0b11691473fe4d054953772f327940ecded957f",
+        "random_seed": 42,
+        "recorded_status": "PLANNED",
+        "metrics_status": "COMPLETED"
+      },
+      {
+        "experiment_id": "CVR2-CV-004",
+        "experiment_json": "319e789956ff3df1672668fe9a34214980787b098445a4490894530acd8b78ed",
+        "metrics_json": "4bb895f2584ed94f2368a912f2d0d3868189e55f983a73b0fa2c513ade79f319",
+        "config_yaml": "75066b4962ef00086df7044b552a5bc453c1225e7968370f4902e9dfdf561991",
+        "environment_json": "538baf016bd48e55de9376a7d0b11691473fe4d054953772f327940ecded957f",
+        "random_seed": 42,
+        "recorded_status": "PLANNED",
+        "metrics_status": "COMPLETED"
+      },
+      {
+        "experiment_id": "CVR2-CV-005",
+        "experiment_json": "df24c89db0c77032e97956bad56937fbd45a33c69017a3153386278e0cd929b3",
+        "metrics_json": "76f932101eeb19f3d18cf63c20acbec82ac44f5f37f1932ae6b6b6ca4977fbbc",
+        "config_yaml": "5dbb50e54ecb584908a1fd6c0bfe6a3956b5de2c9d3986650cc686a46e7ddfbd",
+        "environment_json": "538baf016bd48e55de9376a7d0b11691473fe4d054953772f327940ecded957f",
+        "random_seed": 42,
+        "recorded_status": "PLANNED",
+        "metrics_status": "COMPLETED"
+      },
+      {
+        "experiment_id": "CVR2-CV-006",
+        "experiment_json": "273ba41050449e08175c7d588a0f74a02c10f3cddfff8c3a471fcb0de7fcfb6d",
+        "metrics_json": "a7a2c72f55c3d1c205058c03ae99ad2be43dfe5b4ec5963961fc0228f4c1244b",
+        "config_yaml": "4e86f2ff0d2249d9749000cc02d35edb76f525da422aac3cb446bb2f15698e5a",
+        "environment_json": "538baf016bd48e55de9376a7d0b11691473fe4d054953772f327940ecded957f",
+        "random_seed": 42,
+        "recorded_status": "COMPLETED",
+        "metrics_status": "COMPLETED"
+      },
+      {
+        "experiment_id": "CVR2-CV-007",
+        "experiment_json": "efc11a4257be3ddc009ebc503494730068425d45ef6d3c1c1ba83a1c781b5d25",
+        "metrics_json": "b460685c36b4eea23ef5103888d880a5d037bf31076036a0d847467927458443",
+        "config_yaml": "165bd497c575c1d5d284532f1ef4805e8ca645e5fc14c475938bf18882b5f967",
+        "environment_json": "538baf016bd48e55de9376a7d0b11691473fe4d054953772f327940ecded957f",
+        "random_seed": 42,
+        "recorded_status": "COMPLETED",
+        "metrics_status": "COMPLETED"
+      },
+      {
+        "experiment_id": "CVR2-CV-008",
+        "experiment_json": "ae353be56feeda1410e0e2d3066ec80e58102cb758ce292fb15247150e48335e",
+        "metrics_json": "88110b4e40bf4300be1871bbb45c1bbc4ef33aea0e8d8c4a37ac3d4c1d99569a",
+        "config_yaml": "8eca56ca97da9246f7e6b555823b043dfde127df1a684e21e70bba1b89eb7d58",
+        "environment_json": "538baf016bd48e55de9376a7d0b11691473fe4d054953772f327940ecded957f",
+        "random_seed": 42,
+        "recorded_status": "COMPLETED",
+        "metrics_status": "COMPLETED"
+      },
+      {
+        "experiment_id": "CVR2-CV-009",
+        "experiment_json": "b737d04f71e84a73c8e508d85e2f9971034d22c661affbb7aeeccc9ad602cbb9",
+        "metrics_json": "7d08af2ac8e07a137838169d8e83052c3aed2f342f5d77f13d2f728e0088e772",
+        "config_yaml": "dd325ec0239c963cc7f7b92cab155f55a3b2e7a936bbf8bbea39996b160eab38",
+        "environment_json": "538baf016bd48e55de9376a7d0b11691473fe4d054953772f327940ecded957f",
+        "random_seed": 42,
+        "recorded_status": "COMPLETED",
+        "metrics_status": "COMPLETED"
+      },
+      {
+        "experiment_id": "CVR2-CV-010",
+        "experiment_json": "1d4312bd5c2ade579c860dfe062d63b7b2de32ea25e4042f2a206a5690d9d8fd",
+        "metrics_json": "2a41120b1f0a88e218d0c6af6b2d766b660c85d83758a472dd967db8f0dd4082",
+        "config_yaml": "1a3c6e0b25badc9b7a6fc40be57e8b3ea5e343cea55d93dc752da55afea0eac1",
+        "environment_json": "538baf016bd48e55de9376a7d0b11691473fe4d054953772f327940ecded957f",
+        "random_seed": 42,
+        "recorded_status": "COMPLETED",
+        "metrics_status": "COMPLETED"
+      }
+    ]
+  },
+  "additional_manifests": {
+    "d1_dataset_manifest_sha256": "9cd74a15bbfe6e152fffb558eea99b60c69881eeea903efe9b31437a6cdc31b8",
+    "r5_experiment_id": "CVR2-CV-016",
+    "r6_experiment_ids": [
+      "CVR2-CV-017",
+      "CVR2-CV-018",
+      "CVR2-CV-019",
+      "CVR2-CV-020",
+      "CVR2-CV-021",
+      "CVR2-CV-022",
+      "CVR2-CV-023",
+      "CVR2-CV-024"
+    ],
+    "r7_r8_r9": "Frozen research records with pinned hashes and tests."
+  },
+  "missing_or_inconsistent_elements": [
+    "R2 experiment.json statuses remain PLANNED while metrics.json statuses are COMPLETED.",
+    "R2 early metric records used different confidence protocols; R2.1 documents this mismatch.",
+    "R0 and R1 are represented by framework/tests and dataset artifacts but no standalone R0/R1 experiment dossier was found in ai/research/experiments.",
+    "D1 source-to-asset and license grants are not independently verifiable; dataset lineage conflicts across records.",
+    "D2 and an independent civic case dataset have no manifest/checksum because no assets were admitted.",
+    "R7/R8/R9 contain no empirical multimodal evidence, by design."
+  ]
+}

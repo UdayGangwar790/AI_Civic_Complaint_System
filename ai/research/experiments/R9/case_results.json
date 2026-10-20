@@ -1,0 +1,9 @@
+{
+  "study_id": "CVKI-R9",
+  "dataset_id": "R8_civic_cases",
+  "input_dataset_manifest_sha256": "c63d427251ee12cf8d284c3f29a5fa6ad0f3c051b713186582b467ee2f45b2f6",
+  "case_count": 0,
+  "results": [],
+  "status": "CASE_DATASET_NOT_AVAILABLE",
+  "reason": "R8 has no admitted cases. No CV observation, report, location, authority, environment, follow-up, resolution, label, or explanation was fabricated."
+}

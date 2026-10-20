@@ -1,0 +1,9 @@
+{
+  "verdict": "NO KNOWN LEAKAGE",
+  "total_images": 122,
+  "train_count": 86,
+  "val_count": 18,
+  "test_count": 18,
+  "exact_cross_duplicates": [],
+  "near_cross_duplicates": []
+}

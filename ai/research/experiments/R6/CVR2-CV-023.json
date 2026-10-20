@@ -1,0 +1,49 @@
+{
+  "IoU_threshold": 0.5,
+  "checkpoint_hash": "72c57f6f052321abfe798edbef862848a2441a3b17fa16997376db93711bbc28",
+  "confidence_threshold": 0.1,
+  "dataset_manifest_sha256": "2c793e05dbc068d0ea1907e466a352a06b0728330fef580cd20485464408b348",
+  "environment": {
+    "device": "CPU",
+    "numpy": "2.5.3",
+    "pillow": "12.3.0",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.1",
+    "ultralytics": "8.4.149"
+  },
+  "experiment_id": "CVR2-CV-023",
+  "frame_count": 10,
+  "metrics_file": "metrics.json",
+  "model_hash": "72c57f6f052321abfe798edbef862848a2441a3b17fa16997376db93711bbc28",
+  "model_id": "R3-YOLO-ROBUST-BASE",
+  "output_manifest_sha256": "2c793e05dbc068d0ea1907e466a352a06b0728330fef580cd20485464408b348",
+  "production_integration": false,
+  "research_code_sha256": "478f91a1ebd70c818c44e0987424a215240f0a0576b44ea578a5d3510841b742",
+  "research_only": true,
+  "secondary_confidence_threshold": 0.25,
+  "seed": 20261020,
+  "sequence_generation_method": "Deterministic controlled synthetic temporal frames derived from D1 test still images; not recorded video",
+  "source_dataset": "D1",
+  "source_hash": "c93dc3c2f3c25fe09c1f6aa23bce91684d60528694ef7036f2d7932c9775f68e",
+  "source_split": "test",
+  "temporal_association_rule": {
+    "filter_rules": [
+      "NO_TEMPORAL_FILTER",
+      "2_FRAME_PERSISTENCE",
+      "3_FRAME_PERSISTENCE",
+      "1_FRAME_GAP_TOLERANCE"
+    ],
+    "matching": "confidence-ranked greedy one-to-one matching to frame annotations",
+    "rule": "class-consistent greedy highest IoU at or above 0.50; candidate may re-associate within two sampled steps to permit one missing sampled frame",
+    "threshold": 0.5
+  },
+  "temporal_filter": [
+    "NO_TEMPORAL_FILTER",
+    "2_FRAME_PERSISTENCE",
+    "3_FRAME_PERSISTENCE",
+    "1_FRAME_GAP_TOLERANCE"
+  ],
+  "timestamp": "2026-10-19T17:59:15.930630+00:00",
+  "title": "Temporal error analysis",
+  "transformation_parameters": "Per-frame records in the checksummed sequence manifest"
+}

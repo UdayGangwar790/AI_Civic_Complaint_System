@@ -1,0 +1,30 @@
+{
+  "study_id": "CVKI-R8",
+  "status": "CASE_DATASET_NOT_AVAILABLE",
+  "evaluation_type": "DESCRIPTIVE_ONLY",
+  "case_count": 0,
+  "source_records_audited": 8,
+  "case_sources_admitted": 0,
+  "source_claims_not_admitted": 4,
+  "quarantined_sources": 1,
+  "research_artifact_only_sources": 3,
+  "case_schema_defined": true,
+  "privacy_case_records_reviewed": 0,
+  "data_integrity": {
+    "d1_image_count_claim": 122,
+    "d0_file_count_verified": 605,
+    "d1_to_d0_exact_image_matches": 0,
+    "d1_to_d0_dhash_matches_at_distance_le_4": 0,
+    "d1_cross_split_exact_duplicates_reported": 0,
+    "d1_cross_split_near_duplicates_reported": 0,
+    "d1_internal_near_duplicate_pairs_reported": 5,
+    "d1_cross_split_sequence_groups": 0,
+    "r5_r6_are_independent_real_world_cases": false
+  },
+  "limitations": [
+    "No source case corpus with independently verified per-asset origin and license was available.",
+    "D1 source claims conflict with other D1 documentation and R4's admission audit.",
+    "Prior D1 privacy and leakage QA reports were not independently re-run except sequence-group split and D0 image overlap checks.",
+    "No external data source was accessed or scraped."
+  ]
+}

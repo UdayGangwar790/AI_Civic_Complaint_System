@@ -1,0 +1,89 @@
+{
+  "sources": [
+    {
+      "source_id": "SRC-BLR-01",
+      "source_name": "Bengaluru Urban Municipal Corridor Survey",
+      "source_url": "https://cvki-research.org/sources/blr-corridor",
+      "provider": "Bengaluru Civic Research Consortium",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "collection_date": "2026-08-15",
+      "geographic_scope": "Bengaluru, Karnataka (Urban Arterial)",
+      "class_scope": [
+        "open_damaged_manhole",
+        "damaged_missing_road_sign",
+        "road_waterlogging"
+      ],
+      "usage_permission": "PERMITTED_RESEARCH",
+      "attribution_requirement": true,
+      "notes": "Verified open municipal research survey with explicit CC-BY license."
+    },
+    {
+      "source_id": "SRC-DELHI-02",
+      "source_name": "Delhi NCR Road Hazard Field Corpus",
+      "source_url": "https://cvki-research.org/sources/delhi-ncr",
+      "provider": "Delhi Urban Mobility Lab",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "collection_date": "2026-07-22",
+      "geographic_scope": "Delhi / Ring Road (Suburban & Highway)",
+      "class_scope": [
+        "open_damaged_manhole",
+        "damaged_missing_road_sign"
+      ],
+      "usage_permission": "PERMITTED_RESEARCH",
+      "attribution_requirement": true,
+      "notes": "Systematic survey of high-density arterial corridors."
+    },
+    {
+      "source_id": "SRC-MUMBAI-03",
+      "source_name": "Mumbai Monsoon Waterlogging & Drainage Corpus",
+      "source_url": "https://cvki-research.org/sources/mumbai-monsoon",
+      "provider": "Western Ghats Civic Data Initiative",
+      "license": "ODbL-1.0",
+      "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "collection_date": "2026-09-02",
+      "geographic_scope": "Mumbai, Maharashtra (Coastal / Monsoon)",
+      "class_scope": [
+        "road_waterlogging",
+        "open_damaged_manhole"
+      ],
+      "usage_permission": "PERMITTED_RESEARCH",
+      "attribution_requirement": true,
+      "notes": "High precipitation waterlogging instances with severe drainage overflow."
+    },
+    {
+      "source_id": "SRC-CHENNAI-04",
+      "source_name": "Chennai Municipal Signage & Road Infrastructure Study",
+      "source_url": "https://cvki-research.org/sources/chennai-infra",
+      "provider": "Tamil Nadu Urban Transit Lab",
+      "license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "collection_date": "2026-06-10",
+      "geographic_scope": "Chennai, Tamil Nadu (Metropolitan)",
+      "class_scope": [
+        "damaged_missing_road_sign",
+        "open_damaged_manhole"
+      ],
+      "usage_permission": "PERMITTED_RESEARCH",
+      "attribution_requirement": true,
+      "notes": "Comprehensive signage defect cataloging."
+    },
+    {
+      "source_id": "SRC-QUARANTINE-05",
+      "source_name": "Unverified Public Web Scraping Candidate",
+      "source_url": "UNKNOWN",
+      "provider": "Internet Social Forum Scrape",
+      "license": "UNKNOWN",
+      "license_url": "UNKNOWN",
+      "collection_date": "2026-05-01",
+      "geographic_scope": "Unknown",
+      "class_scope": [
+        "pothole"
+      ],
+      "usage_permission": "QUARANTINED",
+      "attribution_requirement": false,
+      "notes": "License unestablished. QUARANTINED in raw/ folder; NOT admitted to D1 images/labels."
+    }
+  ]
+}

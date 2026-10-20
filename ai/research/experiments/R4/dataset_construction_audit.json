@@ -1,0 +1,46 @@
+{
+  "experiment_id": "CVR2-CV-011",
+  "dataset_id": "D2",
+  "status": "D2_NOT_AVAILABLE",
+  "dataset_created": false,
+  "dataset_checksum": null,
+  "evaluation_manifest_frozen": false,
+  "evaluation_performed": false,
+  "reviewed_sources": [
+    "R1 D1 dataset card",
+    "R1 dataset quality report",
+    "D1 metadata/sources.json",
+    "D1 manifests/images_manifest.json",
+    "D1 registry entry"
+  ],
+  "admitted_assets": 0,
+  "reason": [
+    "The R1 dataset card and report claim five admitted institutional source streams, but the D1 source registry contains four permitted source records and one quarantined record; the source names and scopes also differ across the records.",
+    "The D1 registry describes its samples as scientifically synthesized and controlled real-world simulated samples, while image manifests assert specific real-world source IDs and licenses. The reviewed artifacts do not reconcile these claims or provide independently auditable per-asset source capture and license grants.",
+    "No separate R1-approved, independently traceable raw source corpus was available to construct D2 without reusing or potentially sharing D1 imagery.",
+    "D1-to-D2 exact, near-duplicate, sequence, transformed-copy, and shared-source-image independence therefore cannot be established."
+  ],
+  "duplicate_audit": {
+    "exact_duplicates": "NOT_RUN_NO_D2_ASSETS",
+    "near_duplicates": "NOT_RUN_NO_D2_ASSETS",
+    "same_sequence": "NOT_RUN_NO_D2_ASSETS",
+    "transformed_copies": "NOT_RUN_NO_D2_ASSETS",
+    "shared_source_imagery": "NOT_ESTABLISHED",
+    "independence_established": false
+  },
+  "class_distribution": {
+    "0_open_damaged_manhole": 0,
+    "1_damaged_missing_road_sign": 0,
+    "2_road_waterlogging": 0,
+    "status": "D2_NOT_CREATED; counts are zero admitted assets, not an evaluated class distribution"
+  },
+  "annotation_audit": {
+    "status": "NOT_APPLICABLE_NO_D2_ANNOTATIONS",
+    "annotation_count": 0
+  },
+  "source": "R1 source records reviewed; no source admitted",
+  "license": "unknown for D2; no assets admitted",
+  "geography": "unknown for D2; no assets admitted",
+  "environment": "Dataset-admission review only; model evaluation was not initialized.",
+  "timestamp": "2026-10-19T22:19:14.458+05:30"
+}

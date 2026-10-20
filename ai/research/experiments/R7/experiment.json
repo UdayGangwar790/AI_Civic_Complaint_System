@@ -1,0 +1,99 @@
+{
+  "experiment_id": "CVKI-R7",
+  "title": "Multimodal Civic Context & Evidence Fusion Study",
+  "research_only": true,
+  "production_integration": false,
+  "autonomous_decisions": false,
+  "lifecycle_mutation": false,
+  "human_review_required": true,
+  "status": "NOT_VALIDATED",
+  "status_reason": "No eligible case-linked multimodal civic evidence was available. R5/R6 provide controlled computer-vision research artifacts, not citizen complaints or real-world civic context.",
+  "case_count": 0,
+  "evaluation_type": "DESCRIPTIVE_ONLY",
+  "execution_order": [
+    {
+      "id": "CVR2-E-001",
+      "name": "Multimodal evidence representation audit",
+      "status": "PARTIALLY_VALIDATED",
+      "result": "R5/R6 provenance and modality availability were audited; no eligible case-linked multimodal evidence set exists."
+    },
+    {
+      "id": "CVR2-E-002",
+      "name": "CV observation + citizen-language consistency",
+      "status": "NOT_AVAILABLE",
+      "result": "No legitimate case-linked citizen-language examples or case-level CV observations were available."
+    },
+    {
+      "id": "CVR2-E-003",
+      "name": "CV observation + geographic-context consistency",
+      "status": "NOT_AVAILABLE",
+      "result": "No case-linked GPS, road identity, or jurisdiction evidence was available."
+    },
+    {
+      "id": "CVR2-E-004",
+      "name": "CV observation + authority-evidence consistency",
+      "status": "NOT_AVAILABLE",
+      "result": "No case-linked road ownership, maintenance authority, or explicit builder evidence was available."
+    },
+    {
+      "id": "CVR2-E-005",
+      "name": "CV observation + environmental-context consistency",
+      "status": "NOT_AVAILABLE",
+      "result": "No case-linked real weather, rainfall, or traffic observations were available."
+    },
+    {
+      "id": "CVR2-E-006",
+      "name": "Cross-modal conflict analysis",
+      "status": "INSUFFICIENT_SAMPLE",
+      "result": "No independent case-linked modalities were available to compare or classify conflicts."
+    },
+    {
+      "id": "CVR2-E-007",
+      "name": "Evidence-quality fusion study",
+      "status": "INSUFFICIENT_SAMPLE",
+      "result": "The deterministic E0-E5 synthesis protocol is specified; no eligible evidence cases can be scored."
+    },
+    {
+      "id": "CVR2-E-008",
+      "name": "Ablation study",
+      "status": "INSUFFICIENT_SAMPLE",
+      "result": "All six ablation arms are defined; no case-level comparison is possible."
+    },
+    {
+      "id": "CVR2-E-009",
+      "name": "Multimodal explainability analysis",
+      "status": "INSUFFICIENT_SAMPLE",
+      "result": "Traceable explanation fields are specified; there are no eligible cases to explain."
+    },
+    {
+      "id": "CVR2-E-010",
+      "name": "Final R7 evaluation",
+      "status": "PARTIALLY_VALIDATED",
+      "result": "Frozen references, provenance inventory, research isolation, and epistemic guardrails are validated; multimodal claims remain untested."
+    }
+  ],
+  "frozen_references": {
+    "m1_13_sha256": "602160d4851e0d79c34cb23b828bde474fc4c164eaf1a1c2a884cfb372f4bda3",
+    "d0_file_count": 605,
+    "d0_r7_tree_fingerprint_sha256": "e609ad2e701b1e668d5d1f9474be6b1e2a8240bc61a4adbe1fee096db4ec2658",
+    "r3_checkpoint_sha256": "72c57f6f052321abfe798edbef862848a2441a3b17fa16997376db93711bbc28",
+    "r3_primary_confidence": 0.1,
+    "r3_secondary_confidence": 0.25,
+    "r3_iou": 0.5,
+    "r5_manifest_sha256": "d36bd0f653c5650f628ad26d9397b5e843154931f23177918235b94b2f899f0e",
+    "r5_metrics_sha256": "a07f0ac9271b5af85689346632e181201fb453918408539505ed23059c39b13e",
+    "r6_manifest_sha256": "2c793e05dbc068d0ea1907e466a352a06b0728330fef580cd20485464408b348",
+    "r6_metrics_sha256": "907fc80c19372d344f67b7eb9990169fd47d1315c812b98cdf743513feca7831"
+  },
+  "final_state": {
+    "D0": "FROZEN",
+    "M1.13": "FROZEN",
+    "R3": "FROZEN",
+    "R5": "FROZEN",
+    "R6": "FROZEN",
+    "R7": "RESEARCH ONLY",
+    "PRODUCTION INTEGRATION": false,
+    "NO GIT COMMIT": true,
+    "NO GIT PUSH": true
+  }
+}

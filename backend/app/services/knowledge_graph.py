@@ -42,6 +42,8 @@ from app.schemas.knowledge_graph import (
     canonical_road_segment_key,
     canonical_traffic_key,
     canonical_user_actor_key,
+    canonical_vernacular_normalization_key,
+    canonical_visual_audit_key,
     canonical_weather_key,
 )
 from app.schemas.provenance import (
@@ -610,13 +612,24 @@ class CivicKnowledgeGraphService:
             metadata={"confidence": case.issue.confidence},
         )
 
-        # 3. Detection Node
+        # 3. Detection Node (Model Observation)
+        det_meta = {
+            "confidence": case.issue.confidence,
+            "model": "YOLOv8 M1.13",
+            "model_id": det_ev.metadata.get("model_id", "m1.13-yolov8n") if det_ev else "m1.13-yolov8n",
+            "model_version": det_ev.metadata.get("model_version", "M1.13-yolov8n") if det_ev else "M1.13-yolov8n",
+            "provider_id": det_ev.metadata.get("provider_id", "m113_yolo_provider") if det_ev else "m113_yolo_provider",
+            "observation_type": "model_observation",
+        }
+        if det_ev and det_ev.metadata.get("model_hash"):
+            det_meta["model_hash"] = det_ev.metadata.get("model_hash")
+
         det_node = self._ensure_node(
             node_type=NodeType.DETECTION,
             canonical_key=canonical_detection_key(ref, issue_cat),
             display_name=f"Detection ({case.issue.confidence:.0%})",
             case_reference=ref,
-            metadata={"confidence": case.issue.confidence, "model": "YOLOv8 M1.13"},
+            metadata=det_meta,
         )
         self._ensure_edge(
             from_node=case_node,
@@ -1280,6 +1293,245 @@ class CivicKnowledgeGraphService:
             metadata={"is_physical_resolution_verified": is_physical_resolution_verified},
         )
 
+    def record_vernacular_normalization_graph(
+        self,
+        case_reference_id: str,
+        norm_id: str,
+        original_text: str,
+        normalized_text: str,
+        detected_language: str,
+        script: str,
+        canonical_civic_concepts: list[str],
+        assertion_type: str = "AFFIRMATIVE",
+        confidence: float = 0.0,
+        evidence_id: Optional[str] = None,
+        explanation: Optional[str] = None,
+    ) -> KnowledgeNode:
+        """
+        Integrates M9.4 Vernacular Normalization into the knowledge graph (M9.6).
+        Case -> HAS_VERNACULAR_NORMALIZATION -> VernacularNormalization Node.
+        VernacularNormalization Node -> NORMALIZED_AS -> CivicIssue Node.
+        VernacularNormalization Node -> SUPPORTED_BY -> Evidence Node (if evidence_id).
+        Strict Epistemic Bound: USER_REPORTED / SYSTEM_DERIVED only, NEVER VERIFIED.
+        """
+        norm_key = canonical_vernacular_normalization_key(case_reference_id, norm_id)
+        norm_node = self._ensure_node(
+            node_type=NodeType.VERNACULAR_NORMALIZATION,
+            canonical_key=norm_key,
+            display_name=f"Vernacular Norm: {detected_language} ({assertion_type})",
+            case_reference=case_reference_id,
+            metadata={
+                "norm_id": norm_id,
+                "original_text": original_text,
+                "normalized_text": normalized_text,
+                "detected_language": detected_language,
+                "script": script,
+                "canonical_civic_concepts": canonical_civic_concepts,
+                "assertion_type": assertion_type,
+                "lexical_confidence": confidence,
+                "epistemic_state": "SYSTEM_DERIVED",
+            },
+        )
+
+        case_key = canonical_case_key(case_reference_id)
+        case_node = self.repository.get_node_by_key(case_key)
+        if not case_node:
+            case_node = self._ensure_node(
+                node_type=NodeType.CASE,
+                canonical_key=case_key,
+                display_name=f"Case {case_reference_id}",
+                case_reference=case_reference_id,
+            )
+
+        v_state = (
+            VerificationState.NOT_VERIFIED
+            if assertion_type in ("NEGATED", "UNCERTAIN")
+            else VerificationState.SYSTEM_DERIVED
+        )
+
+        self._ensure_edge(
+            from_node=case_node,
+            to_node=norm_node,
+            relation_type=RelationType.HAS_VERNACULAR_NORMALIZATION,
+            verification_state=v_state,
+            evidence_ids=[evidence_id] if evidence_id else [],
+            source_type=SourceType.SYSTEM_DERIVED,
+            case_reference=case_reference_id,
+            explanation=explanation or f"Citizen vernacular text normalized to canonical concepts ({assertion_type}).",
+            metadata={"assertion_type": assertion_type, "language": detected_language},
+        )
+
+        for concept in canonical_civic_concepts:
+            issue_node = self._ensure_node(
+                node_type=NodeType.CIVIC_ISSUE,
+                canonical_key=canonical_issue_key(concept),
+                display_name=concept.replace("_", " ").title(),
+                case_reference=case_reference_id,
+            )
+            self._ensure_edge(
+                from_node=norm_node,
+                to_node=issue_node,
+                relation_type=RelationType.NORMALIZED_AS,
+                verification_state=v_state,
+                evidence_ids=[evidence_id] if evidence_id else [],
+                source_type=SourceType.SYSTEM_DERIVED,
+                case_reference=case_reference_id,
+                explanation=f"Vernacular term mapped to canonical civic issue concept '{concept}'.",
+                metadata={"concept": concept, "assertion_type": assertion_type},
+            )
+
+        if evidence_id:
+            ev_key = canonical_evidence_key(evidence_id)
+            ev_node = self.repository.get_node_by_key(ev_key)
+            if not ev_node:
+                ev_node = self._ensure_node(
+                    node_type=NodeType.EVIDENCE,
+                    canonical_key=ev_key,
+                    display_name=f"Evidence {evidence_id}",
+                    case_reference=case_reference_id,
+                    metadata={"evidence_id": evidence_id},
+                )
+            self._ensure_edge(
+                from_node=norm_node,
+                to_node=ev_node,
+                relation_type=RelationType.SUPPORTED_BY,
+                verification_state=v_state,
+                evidence_ids=[evidence_id],
+                source_type=SourceType.SYSTEM_DERIVED,
+                case_reference=case_reference_id,
+                explanation=f"Vernacular normalization supported by evidence record {evidence_id}.",
+            )
+
+        return norm_node
+
+    def record_visual_audit_graph(
+        self,
+        case_reference_id: str,
+        audit_id: str,
+        outcome: str,
+        evidence_quality: str,
+        issue_category: str,
+        temporal_consistency: bool = True,
+        spatial_consistency: bool = True,
+        evidence_id: Optional[str] = None,
+        before_detection_key: Optional[str] = None,
+        after_detection_key: Optional[str] = None,
+        explanation: Optional[str] = None,
+        metadata: Optional[dict[str, Any]] = None,
+    ) -> KnowledgeNode:
+        """
+        Integrates M9.5 Visual Resolution Audit into the knowledge graph (M9.6).
+        Case -> VISUAL_AUDIT_OF -> VisualResolutionAudit Node.
+        VisualResolutionAudit Node -> BEFORE_OBSERVATION -> Before Detection Node (optional).
+        VisualResolutionAudit Node -> AFTER_OBSERVATION -> After Detection Node (optional).
+        VisualResolutionAudit Node -> SUPPORTED_BY -> Evidence Node (optional).
+
+        Strict Epistemic Guard:
+        - NEVER emits REPAIRED, FIXED, or REPAIR_CONFIRMED edge.
+        - Outcome DEFECT_NOT_OBSERVED remains MODEL_OBSERVATION / SYSTEM_DERIVED.
+        - VerificationState is SYSTEM_DERIVED or NOT_VERIFIED, NEVER VERIFIED.
+        """
+        audit_key = canonical_visual_audit_key(case_reference_id, audit_id)
+        meta = dict(metadata or {})
+        meta.update({
+            "audit_id": audit_id,
+            "outcome": outcome,
+            "evidence_quality": evidence_quality,
+            "issue_category": issue_category,
+            "temporal_consistency": temporal_consistency,
+            "spatial_consistency": spatial_consistency,
+            "epistemic_state": "MODEL_OBSERVATION",
+            "is_repair_confirmed": False,
+        })
+
+        audit_node = self._ensure_node(
+            node_type=NodeType.VISUAL_RESOLUTION_AUDIT,
+            canonical_key=audit_key,
+            display_name=f"Visual Audit: {outcome}",
+            case_reference=case_reference_id,
+            metadata=meta,
+        )
+
+        case_key = canonical_case_key(case_reference_id)
+        case_node = self.repository.get_node_by_key(case_key)
+        if not case_node:
+            case_node = self._ensure_node(
+                node_type=NodeType.CASE,
+                canonical_key=case_key,
+                display_name=f"Case {case_reference_id}",
+                case_reference=case_reference_id,
+            )
+
+        v_state = (
+            VerificationState.SYSTEM_DERIVED
+            if outcome in ("DEFECT_PERSISTS", "DEFECT_NOT_OBSERVED")
+            else VerificationState.NOT_VERIFIED
+        )
+
+        self._ensure_edge(
+            from_node=case_node,
+            to_node=audit_node,
+            relation_type=RelationType.VISUAL_AUDIT_OF,
+            verification_state=v_state,
+            evidence_ids=[evidence_id] if evidence_id else [],
+            source_type=SourceType.SYSTEM_DERIVED,
+            case_reference=case_reference_id,
+            explanation=explanation or f"Visual resolution audit of case {case_reference_id}: outcome {outcome}.",
+            metadata={"outcome": outcome, "is_repair_confirmed": False},
+        )
+
+        if before_detection_key:
+            before_node = self.repository.get_node_by_key(before_detection_key)
+            if before_node:
+                self._ensure_edge(
+                    from_node=audit_node,
+                    to_node=before_node,
+                    relation_type=RelationType.BEFORE_OBSERVATION,
+                    verification_state=v_state,
+                    evidence_ids=[evidence_id] if evidence_id else [],
+                    source_type=SourceType.SYSTEM_DERIVED,
+                    case_reference=case_reference_id,
+                    explanation=f"Visual audit before observation linked to detection {before_detection_key}.",
+                )
+
+        if after_detection_key:
+            after_node = self.repository.get_node_by_key(after_detection_key)
+            if after_node:
+                self._ensure_edge(
+                    from_node=audit_node,
+                    to_node=after_node,
+                    relation_type=RelationType.AFTER_OBSERVATION,
+                    verification_state=v_state,
+                    evidence_ids=[evidence_id] if evidence_id else [],
+                    source_type=SourceType.SYSTEM_DERIVED,
+                    case_reference=case_reference_id,
+                    explanation=f"Visual audit after observation linked to detection {after_detection_key}.",
+                )
+
+        if evidence_id:
+            ev_key = canonical_evidence_key(evidence_id)
+            ev_node = self.repository.get_node_by_key(ev_key)
+            if not ev_node:
+                ev_node = self._ensure_node(
+                    node_type=NodeType.EVIDENCE,
+                    canonical_key=ev_key,
+                    display_name=f"Evidence {evidence_id}",
+                    case_reference=case_reference_id,
+                    metadata={"evidence_id": evidence_id},
+                )
+            self._ensure_edge(
+                from_node=audit_node,
+                to_node=ev_node,
+                relation_type=RelationType.SUPPORTED_BY,
+                verification_state=v_state,
+                evidence_ids=[evidence_id],
+                source_type=SourceType.SYSTEM_DERIVED,
+                case_reference=case_reference_id,
+                explanation=f"Visual resolution audit supported by evidence record {evidence_id}.",
+            )
+
+        return audit_node
+
     def rebuild_case_graph(
         self, reference_id: str, case: Optional[ComplaintCase] = None
     ) -> KnowledgeGraphSubgraph:
@@ -1478,13 +1730,27 @@ class CivicKnowledgeGraphService:
 
         explanation_text = edge.explanation or f"{from_node.display_name} is connected to {to_node.display_name} via {edge.relation_type.value}."
 
+        # Check if supporting evidence was invalidated
+        has_invalidated_evidence = any(
+            ev.get("status") == "invalidated" or ev.get("verification_state") == VerificationState.NOT_VERIFIED.value
+            for ev in ev_records
+        )
+        effective_verification_state = edge.verification_state
+        limitations = [
+            "Evidence establishes traceability of system claims to underlying data sources; it does not replace statutory ground inspection.",
+            "Environmental relationships represent contextual correlations and do not establish causation.",
+        ]
+        if has_invalidated_evidence and edge.evidence_ids:
+            effective_verification_state = VerificationState.NOT_VERIFIED
+            limitations.append("Supporting evidence was invalidated; this edge cannot support a verified conclusion.")
+
         return RelationshipExplanationResponse(
             edge_id=edge.edge_id,
             canonical_edge_key=edge.canonical_edge_key,
             from_node=from_node,
             to_node=to_node,
             relation_type=edge.relation_type,
-            verification_state=edge.verification_state,
+            verification_state=effective_verification_state,
             evidence_ids=edge.evidence_ids,
             evidence_records=ev_records,
             source=source_name,
@@ -1493,10 +1759,7 @@ class CivicKnowledgeGraphService:
             explanation=explanation_text,
             retrieved_at=retrieved_at,
             freshness=freshness,
-            limitations=[
-                "Evidence establishes traceability of system claims to underlying data sources; it does not replace statutory ground inspection.",
-                "Environmental relationships represent contextual correlations and do not establish causation.",
-            ],
+            limitations=limitations,
         )
 
     def find_related_cases(self, reference_id: str, limit: int = 20) -> list[str]:
