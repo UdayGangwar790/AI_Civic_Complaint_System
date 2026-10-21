@@ -57,6 +57,7 @@ def test_production_rejects_default_unauthenticated_mongodb_uri():
             JWT_SECRET="abcdef1234567890abcdef1234567890_strong_secret!",
             CORS_ALLOWED_ORIGINS="https://civic.karnataka.gov.in",
             MONGODB_URI="mongodb://localhost:27017",
+            COOKIE_SECURE=True,
         )
 
 
@@ -71,6 +72,7 @@ def test_production_rejects_unconfigured_cpmgrams_when_enabled():
             CPGRAMS_API_KEY="",
             CPGRAMS_CLIENT_ID="client123",
             CPGRAMS_BASE_URL="https://pgportal.gov.in/api/v1",
+            COOKIE_SECURE=True,
         )
 
 

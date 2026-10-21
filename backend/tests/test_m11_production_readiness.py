@@ -102,7 +102,7 @@ def test_auth_readiness_citizen_forbidden_from_admin_endpoints(client):
 # ============================================================================
 
 def test_cv_m113_exact_sha_and_provider_contract():
-    model_path = Path(settings.YOLO_MODEL_PATH)
+    model_path = settings.get_resolved_model_path()
     assert model_path.exists(), f"Model file not found at {model_path}"
     with open(model_path, "rb") as f:
         file_sha = hashlib.sha256(f.read()).hexdigest()
