@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "project": "CVKI - AI Civic Complaint Intelligence System",
+  "milestone": "M12 - Final Baseline & Reproducibility Registry",
+  "frozen_baseline": {
+    "model_id": "yolov8n_m1_13",
+    "model_architecture": "YOLOv8n",
+    "weights_path": "ai/computer_vision/training/runs/yolov8n_m1_13/weights/best.pt",
+    "sha256": "602160d4851e0d79c34cb23b828bde474fc4c164eaf1a1c2a884cfb372f4bda3",
+    "dataset": "ai/computer_vision/dataset_m1_13",
+    "dataset_file_count": 605,
+    "num_classes": 13,
+    "classes": [
+      "garbage",
+      "pothole",
+      "street_light_issue",
+      "water_leakage",
+      "fallen_tree",
+      "damaged_signboard",
+      "broken_bench",
+      "open_damaged_manhole",
+      "illegal_parking",
+      "sewage_overflow",
+      "encroachment",
+      "unauthorized_posters",
+      "loose_cables"
+    ],
+    "inference_config": {
+      "confidence_threshold": 0.25,
+      "iou_threshold": 0.45,
+      "image_size": 640
+    },
+    "epistemic_designation": "MODEL_OBSERVATION",
+    "status": "FROZEN_PRODUCTION_BASELINE"
+  },
+  "historical_evaluations": [
+    {
+      "model": "M1.13",
+      "evaluated_on": "M1.8 held-out test split",
+      "evaluation_type": "Historical evaluated baseline (not universal guarantee)",
+      "metrics": {
+        "precision": 0.8380,
+        "recall": 0.6120,
+        "mAP50": 0.6540,
+        "mAP50_95": 0.4870
+      }
+    },
+    {
+      "model": "M1.13",
+      "evaluated_on": "M1.11 held-out test split",
+      "evaluation_type": "Historical evaluated baseline (not universal guarantee)",
+      "metrics": {
+        "precision": 0.6500,
+        "recall": 0.5700,
+        "mAP50": 0.5680,
+        "mAP50_95": 0.4230
+      }
+    }
+  ],
+  "experiment_lineage": [
+    {
+      "experiment_id": "EXP-M1.8",
+      "phase": "Baseline Ingestion",
+      "description": "Initial 13-class YOLOv8n detector with core civic categories.",
+      "outcome": "Solid foundational baseline on initial held-out benchmark."
+    },
+    {
+      "experiment_id": "EXP-M1.11",
+      "phase": "Degraded Data Expansion",
+      "description": "Exploratory ingestion of expanded noisy dataset annotations.",
+      "outcome": "Degradation observed: precision dropped, false positives on complex background clutter increased. Diagnosed as label noise and domain distribution shift.",
+      "lesson_learned": "Unverified auto-annotations and dataset class imbalance compromise precision. Strict curation protocol required."
+    },
+    {
+      "experiment_id": "EXP-M1.13",
+      "phase": "Correction & Dual Held-Out Evaluation",
+      "description": "Curation down to 605 high-quality, verified samples across 13 classes with deduplication and bounding box validation.",
+      "outcome": "Recovery of precision and mAP metrics; designated as frozen production baseline with dual held-out test evaluations."
+    }
+  ],
+  "environment": {
+    "framework": "Ultralytics YOLOv8 / PyTorch",
+    "python_version": "3.13+",
+    "target_hardware": "NVIDIA GPU / CUDA 12 compatible (or CPU fallback for edge evaluation)",
+    "training_resolution": 640
+  }
+}

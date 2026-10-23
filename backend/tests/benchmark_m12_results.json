@@ -1,0 +1,123 @@
+{
+  "subsystems": {
+    "1_health": {
+      "n": 100,
+      "mean_ms": 5.031,
+      "median_ms": 4.627,
+      "p95_ms": 5.836,
+      "p99_ms": 36.819,
+      "max_ms": 36.819,
+      "errors": 0
+    },
+    "2_authentication": {
+      "n": 100,
+      "mean_ms": 0.038,
+      "median_ms": 0.037,
+      "p95_ms": 0.049,
+      "p99_ms": 0.121,
+      "max_ms": 0.121,
+      "errors": 0
+    },
+    "3_cv_inference": {
+      "n": 100,
+      "mean_ms": 101.774,
+      "median_ms": 71.016,
+      "p95_ms": 99.189,
+      "p99_ms": 2890.317,
+      "max_ms": 2890.317,
+      "errors": 0
+    },
+    "4_multimodal_gateway": {
+      "n": 100,
+      "mean_ms": 0.606,
+      "median_ms": 0.567,
+      "p95_ms": 0.679,
+      "p99_ms": 3.834,
+      "max_ms": 3.834,
+      "errors": 0
+    },
+    "5_authority_resolution": {
+      "n": 100,
+      "mean_ms": 0.006,
+      "median_ms": 0.005,
+      "p95_ms": 0.006,
+      "p99_ms": 0.095,
+      "max_ms": 0.095,
+      "errors": 0
+    },
+    "6_decision_support": {
+      "n": 100,
+      "mean_ms": 0.035,
+      "median_ms": 0.033,
+      "p95_ms": 0.043,
+      "p99_ms": 0.168,
+      "max_ms": 0.168,
+      "errors": 0
+    },
+    "7_field_inspection": {
+      "n": 100,
+      "mean_ms": 0.035,
+      "median_ms": 0.031,
+      "p95_ms": 0.058,
+      "p99_ms": 0.124,
+      "max_ms": 0.124,
+      "errors": 0
+    },
+    "8_provenance": {
+      "n": 100,
+      "mean_ms": 0.125,
+      "median_ms": 0.067,
+      "p95_ms": 0.106,
+      "p99_ms": 5.188,
+      "max_ms": 5.188,
+      "errors": 0
+    },
+    "9_knowledge_graph": {
+      "n": 100,
+      "mean_ms": 0.425,
+      "median_ms": 0.411,
+      "p95_ms": 0.664,
+      "p99_ms": 0.802,
+      "max_ms": 0.802,
+      "errors": 0
+    },
+    "10_complete_e2e": {
+      "n": 100,
+      "mean_ms": 10.151,
+      "median_ms": 7.638,
+      "p95_ms": 17.198,
+      "p99_ms": 162.432,
+      "max_ms": 162.432,
+      "errors": 0
+    }
+  },
+  "concurrency": {
+    "10_workers": {
+      "n": 50,
+      "mean_ms": 59.743,
+      "median_ms": 62.191,
+      "p95_ms": 81.231,
+      "p99_ms": 87.083,
+      "max_ms": 87.083,
+      "errors": 0
+    },
+    "50_workers": {
+      "n": 250,
+      "mean_ms": 238.11,
+      "median_ms": 254.507,
+      "p95_ms": 287.784,
+      "p99_ms": 297.87,
+      "max_ms": 303.102,
+      "errors": 0
+    },
+    "100_workers": {
+      "n": 500,
+      "mean_ms": 626.755,
+      "median_ms": 655.071,
+      "p95_ms": 843.992,
+      "p99_ms": 896.893,
+      "max_ms": 1167.027,
+      "errors": 0
+    }
+  }
+}

@@ -25,17 +25,32 @@ from app.services.user import (
 router = APIRouter()
 
 
-def _set_auth_cookies(response: Response, token: str) -> None:
-    cookie_options = {
+def _cookie_options() -> dict:
+    """
+    Common cookie configuration for production and local development.
+    """
+    return {
         "max_age": settings.ACCESS_TOKEN_EXPIRE_MINUTES * 60,
         "path": "/",
         "secure": settings.auth_cookie_secure,
         "samesite": settings.COOKIE_SAMESITE,
     }
 
-    # Authentication cookie:
-    # - Host-only: sent only to the backend host
-    # - HttpOnly: JavaScript cannot access the JWT
+
+def _set_auth_cookies(response: Response, token: str) -> None:
+    """
+    Establish the authenticated browser session.
+
+    AUTH cookie:
+      - HttpOnly so JavaScript cannot access the JWT.
+
+    CSRF cookie:
+      - Not HttpOnly because the frontend must read the token
+        and send it in X-CSRF-Token.
+    """
+
+    cookie_options = _cookie_options()
+
     response.set_cookie(
         key=settings.AUTH_COOKIE_NAME,
         value=token,
@@ -43,14 +58,34 @@ def _set_auth_cookies(response: Response, token: str) -> None:
         **cookie_options,
     )
 
-    # CSRF cookie:
-    # - Shared across the Render subdomains so the frontend can read it
-    # - Not HttpOnly because frontend JavaScript needs the token
     response.set_cookie(
         key=settings.CSRF_COOKIE_NAME,
         value=create_csrf_token(token),
         httponly=False,
-        domain=".onrender.com",
+        **cookie_options,
+    )
+
+
+def _clear_auth_cookies(response: Response) -> None:
+    """
+    Remove both authentication and CSRF cookies.
+    """
+
+    cookie_options = {
+        "path": "/",
+        "secure": settings.auth_cookie_secure,
+        "samesite": settings.COOKIE_SAMESITE,
+    }
+
+    response.delete_cookie(
+        key=settings.AUTH_COOKIE_NAME,
+        httponly=True,
+        **cookie_options,
+    )
+
+    response.delete_cookie(
+        key=settings.CSRF_COOKIE_NAME,
+        httponly=False,
         **cookie_options,
     )
 
@@ -74,6 +109,7 @@ async def register(
     request: UserRegisterRequest,
     response: Response,
 ) -> AuthResponse:
+
     try:
         user = await register_user(request)
 
@@ -94,26 +130,26 @@ async def register(
                 role=role,
                 created_at=user["created_at"],
                 is_active=user["is_active"],
-            ),
+            )
         )
 
-    except UserAlreadyExistsError as exc:
+    except UserAlreadyExistsError:
         raise HTTPException(
             status_code=status.HTTP_409_CONFLICT,
             detail="An account with this email already exists.",
-        ) from exc
+        )
 
-    except UserRepositoryUnavailableError as exc:
+    except UserRepositoryUnavailableError:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
             detail="Account service is temporarily unavailable.",
-        ) from exc
+        )
 
     except ValueError as exc:
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
             detail=str(exc),
-        ) from exc
+        )
 
 
 @router.post(
@@ -134,6 +170,7 @@ async def login(
     request: UserLoginRequest,
     response: Response,
 ) -> AuthResponse:
+
     try:
         user = await authenticate_user(request)
 
@@ -145,6 +182,7 @@ async def login(
             role=role,
         )
 
+        # Audit login event.
         try:
             from app.services.audit import AuditService
 
@@ -159,6 +197,7 @@ async def login(
                 },
             )
         except Exception:
+            # Audit failure must not prevent successful authentication.
             pass
 
         _set_auth_cookies(response, token)
@@ -170,10 +209,11 @@ async def login(
                 role=role,
                 created_at=user["created_at"],
                 is_active=user["is_active"],
-            ),
+            )
         )
 
-    except InvalidCredentialsError as exc:
+    except InvalidCredentialsError:
+
         try:
             from app.services.audit import AuditService
 
@@ -193,9 +233,10 @@ async def login(
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Invalid email or password.",
-        ) from exc
+        )
 
-    except UserInactiveError as exc:
+    except UserInactiveError:
+
         try:
             from app.services.audit import AuditService
 
@@ -216,13 +257,13 @@ async def login(
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Invalid email or password.",
-        ) from exc
+        )
 
-    except UserRepositoryUnavailableError as exc:
+    except UserRepositoryUnavailableError:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
             detail="Account service is temporarily unavailable.",
-        ) from exc
+        )
 
 
 @router.post(
@@ -231,29 +272,10 @@ async def login(
     summary="Clear the current session",
 )
 async def logout(response: Response) -> Response:
+
+    _clear_auth_cookies(response)
+
     response.status_code = status.HTTP_204_NO_CONTENT
-
-    cookie_options = {
-        "path": "/",
-        "secure": settings.auth_cookie_secure,
-        "samesite": settings.COOKIE_SAMESITE,
-    }
-
-    # Delete host-only authentication cookie.
-    response.delete_cookie(
-        key=settings.AUTH_COOKIE_NAME,
-        httponly=True,
-        **cookie_options,
-    )
-
-    # Delete the shared CSRF cookie using the same domain
-    # that was used when the cookie was created.
-    response.delete_cookie(
-        key=settings.CSRF_COOKIE_NAME,
-        httponly=False,
-        domain=".onrender.com",
-        **cookie_options,
-    )
 
     return response
 
@@ -266,6 +288,7 @@ async def logout(response: Response) -> Response:
 async def get_me(
     current_user: AuthenticatedUser = Depends(get_current_user),
 ) -> UserResponse:
+
     return UserResponse(
         user_id=current_user.user_id,
         email=current_user.email,
